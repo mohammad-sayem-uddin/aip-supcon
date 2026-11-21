@@ -1,0 +1,11 @@
+embeddings/
+data/raw/
+.venv/
+__pycache__/
+*.npy
+*.pyc
+.DS_Store
+/*.docx
+/*.fasta
+.pytest_cache/
+results/models/*.pt
