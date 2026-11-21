@@ -1,0 +1,2 @@
+checkpoint,hf_id,device,gpu,dim,n_sequences,batch_size,embed_seconds,download_seconds,peak_rss_mb,timestamp
+esm2_t6_8M,facebook/esm2_t6_8M_UR50D,cpu,,320,4641,32,26.31,15.41,341.7,2026-11-21T17:20:50
