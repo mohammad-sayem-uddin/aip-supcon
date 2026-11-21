@@ -1,0 +1,86 @@
+[
+  {
+    "check": "benchmark_n",
+    "expected": 3790,
+    "actual": 3790,
+    "match": true
+  },
+  {
+    "check": "benchmark_pos",
+    "expected": 1451,
+    "actual": 1451,
+    "match": true
+  },
+  {
+    "check": "benchmark_neg",
+    "expected": 2339,
+    "actual": 2339,
+    "match": true
+  },
+  {
+    "check": "benchmark_unique",
+    "expected": 3753,
+    "actual": 3753,
+    "match": true
+  },
+  {
+    "check": "benchmark_label_conflicts",
+    "expected": 37,
+    "actual": 37,
+    "match": true
+  },
+  {
+    "check": "benchmark_clean_n",
+    "expected": 3716,
+    "actual": 3716,
+    "match": true
+  },
+  {
+    "check": "bench_x_ind425_overlap",
+    "expected": 211,
+    "actual": 211,
+    "match": true
+  },
+  {
+    "check": "bench_x_ind425_same_label",
+    "expected": 204,
+    "actual": 204,
+    "match": true
+  },
+  {
+    "check": "bench_x_ind425_conflicting",
+    "expected": 7,
+    "actual": 7,
+    "match": true
+  },
+  {
+    "check": "ind425_regime_b_n",
+    "expected": 214,
+    "actual": 214,
+    "match": true
+  },
+  {
+    "check": "bench_x_ind1049_overlap",
+    "expected": 298,
+    "actual": 298,
+    "match": true
+  },
+  {
+    "check": "bench_x_ind1049_same_label",
+    "expected": 286,
+    "actual": 286,
+    "match": true
+  },
+  {
+    "check": "bench_x_ind1049_conflicting",
+    "expected": 12,
+    "actual": 12,
+    "match": true
+  },
+  {
+    "check": "ind1049_regime_b_n",
+    "expected": 751,
+    "actual": 751,
+    "match": true
+  }
+]

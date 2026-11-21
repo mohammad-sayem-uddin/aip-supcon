@@ -1,0 +1,79 @@
+section,subject,metric,value
+dataset,Benchmark,n,3790.0
+dataset,Benchmark,n_positive,1451.0
+dataset,Benchmark,n_negative,2339.0
+dataset,Benchmark,pos_rate,0.3828496042216359
+dataset,Benchmark,n_unique_sequences,3753.0
+dataset,Benchmark,len_min,11.0
+dataset,Benchmark,len_max,30.0
+dataset,Benchmark,len_mean,16.361213720316623
+dataset,Benchmark,n_duplicate_rows,37.0
+dataset,Benchmark,n_duplicated_sequences,37.0
+dataset,Benchmark,n_label_conflicts,37.0
+dataset,Ind_425,n,425.0
+dataset,Ind_425,n_positive,173.0
+dataset,Ind_425,n_negative,252.0
+dataset,Ind_425,pos_rate,0.40705882352941175
+dataset,Ind_425,n_unique_sequences,425.0
+dataset,Ind_425,len_min,7.0
+dataset,Ind_425,len_max,30.0
+dataset,Ind_425,len_mean,16.176470588235293
+dataset,Ind_425,n_duplicate_rows,0.0
+dataset,Ind_425,n_duplicated_sequences,0.0
+dataset,Ind_425,n_label_conflicts,0.0
+dataset,Ind_1049,n,1049.0
+dataset,Ind_1049,n_positive,420.0
+dataset,Ind_1049,n_negative,629.0
+dataset,Ind_1049,pos_rate,0.4003813155386082
+dataset,Ind_1049,n_unique_sequences,1049.0
+dataset,Ind_1049,len_min,11.0
+dataset,Ind_1049,len_max,25.0
+dataset,Ind_1049,len_mean,16.36510962821735
+dataset,Ind_1049,n_duplicate_rows,0.0
+dataset,Ind_1049,n_duplicated_sequences,0.0
+dataset,Ind_1049,n_label_conflicts,0.0
+dataset,Benchmark_clean,n,3716.0
+dataset,Benchmark_clean,n_positive,1414.0
+dataset,Benchmark_clean,n_negative,2302.0
+dataset,Benchmark_clean,pos_rate,0.3805166846071044
+dataset,Benchmark_clean,n_unique_sequences,3716.0
+dataset,Benchmark_clean,len_min,11.0
+dataset,Benchmark_clean,len_max,30.0
+dataset,Benchmark_clean,len_mean,16.333961248654468
+dataset,Benchmark_clean,n_duplicate_rows,0.0
+dataset,Benchmark_clean,n_duplicated_sequences,0.0
+dataset,Benchmark_clean,n_label_conflicts,0.0
+overlap,Benchmark_clean x Ind_425,n_overlap,211.0
+overlap,Benchmark_clean x Ind_425,same_label,204.0
+overlap,Benchmark_clean x Ind_425,conflicting_label,7.0
+overlap,Benchmark_clean x Ind_425,ambiguous,0.0
+overlap,Benchmark_clean x Ind_425,share_of_a,0.05678148546824543
+overlap,Benchmark_clean x Ind_425,share_of_b,0.4964705882352941
+overlap,Benchmark_clean x Ind_1049,n_overlap,298.0
+overlap,Benchmark_clean x Ind_1049,same_label,286.0
+overlap,Benchmark_clean x Ind_1049,conflicting_label,12.0
+overlap,Benchmark_clean x Ind_1049,ambiguous,0.0
+overlap,Benchmark_clean x Ind_1049,share_of_a,0.08019375672766416
+overlap,Benchmark_clean x Ind_1049,share_of_b,0.2840800762631077
+overlap,Ind_425 x Ind_1049,n_overlap,77.0
+overlap,Ind_425 x Ind_1049,same_label,76.0
+overlap,Ind_425 x Ind_1049,conflicting_label,1.0
+overlap,Ind_425 x Ind_1049,ambiguous,0.0
+overlap,Ind_425 x Ind_1049,share_of_a,0.1811764705882353
+overlap,Ind_425 x Ind_1049,share_of_b,0.07340324118207817
+overlap,Benchmark_raw x Ind_425,n_overlap,211.0
+overlap,Benchmark_raw x Ind_425,same_label,204.0
+overlap,Benchmark_raw x Ind_425,conflicting_label,7.0
+overlap,Benchmark_raw x Ind_425,ambiguous,0.0
+overlap,Benchmark_raw x Ind_425,share_of_a,0.05622168931521449
+overlap,Benchmark_raw x Ind_425,share_of_b,0.4964705882352941
+overlap,Benchmark_raw x Ind_1049,n_overlap,298.0
+overlap,Benchmark_raw x Ind_1049,same_label,286.0
+overlap,Benchmark_raw x Ind_1049,conflicting_label,12.0
+overlap,Benchmark_raw x Ind_1049,ambiguous,0.0
+overlap,Benchmark_raw x Ind_1049,share_of_a,0.07940314415134558
+overlap,Benchmark_raw x Ind_1049,share_of_b,0.2840800762631077
+regime_b,Ind_425,n_regime_a,425.0
+regime_b,Ind_425,n_regime_b,214.0
+regime_b,Ind_1049,n_regime_a,1049.0
+regime_b,Ind_1049,n_regime_b,751.0
