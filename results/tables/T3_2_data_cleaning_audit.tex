@@ -1,0 +1,20 @@
+\begin{table}[ht]
+\centering\small
+\caption{Data-cleaning audit: duplicates, label conflicts, cross-set overlap}
+\label{tab:T3_2_data_cleaning_audit}
+\begin{tabular}{lllllll}
+\hline
+item & duplicate\_rows & label\_conflicts & overlap & same\_label & conflicting\_label & share\_of\_second\_set \\
+\hline
+Benchmark & 37 & 37 & <NA> & <NA> & <NA> &  \\
+Benchmark\_clean & 0 & 0 & <NA> & <NA> & <NA> &  \\
+Ind\_1049 & 0 & 0 & <NA> & <NA> & <NA> &  \\
+Ind\_425 & 0 & 0 & <NA> & <NA> & <NA> &  \\
+Benchmark\_clean x Ind\_1049 & <NA> & <NA> & 298 & 286 & 12 & 0.2841 \\
+Benchmark\_clean x Ind\_425 & <NA> & <NA> & 211 & 204 & 7 & 0.4965 \\
+Benchmark\_raw x Ind\_1049 & <NA> & <NA> & 298 & 286 & 12 & 0.2841 \\
+Benchmark\_raw x Ind\_425 & <NA> & <NA> & 211 & 204 & 7 & 0.4965 \\
+Ind\_425 x Ind\_1049 & <NA> & <NA> & 77 & 76 & 1 & 0.0734 \\
+\hline
+\end{tabular}
+\end{table}

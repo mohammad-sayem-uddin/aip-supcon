@@ -1,0 +1,14 @@
+{
+  "F5.1 ROC Ind_425 B": "ok: figures/fig5_1_roc_ind_425_regimeB.pdf, figures/fig5_1_roc_ind_425_regimeB.png",
+  "F5.1 ROC Ind_1049 B": "ok: figures/fig5_1_roc_ind_1049_regimeB.pdf, figures/fig5_1_roc_ind_1049_regimeB.png",
+  "F5.1 ROC Ind_425 A": "ok: figures/fig5_1_roc_ind_425_regimeA.pdf, figures/fig5_1_roc_ind_425_regimeA.png",
+  "F5.1 ROC Ind_1049 A": "ok: figures/fig5_1_roc_ind_1049_regimeA.pdf, figures/fig5_1_roc_ind_1049_regimeA.png",
+  "F5.2 PR Ind_425 B": "ok: figures/fig5_2_pr_ind_425_regimeB.pdf, figures/fig5_2_pr_ind_425_regimeB.png",
+  "F5.2 PR Ind_1049 B": "ok: figures/fig5_2_pr_ind_1049_regimeB.pdf, figures/fig5_2_pr_ind_1049_regimeB.png",
+  "F5.3 t-SNE Ind_1049": "ok: figures/fig5_3_tsne_ind_1049.pdf, figures/fig5_3_tsne_ind_1049.png",
+  "F5.3 t-SNE Ind_425": "ok: figures/fig5_3_tsne_ind_425.pdf, figures/fig5_3_tsne_ind_425.png",
+  "F5.4 lambda sweep": "ok: figures/fig5_4_lambda_sweep.pdf, figures/fig5_4_lambda_sweep.png",
+  "F5.5 leakage gap": "ok: figures/fig5_5_leakage_gap.pdf, figures/fig5_5_leakage_gap.png",
+  "F5.6 confusion matrices": "ok: figures/fig5_6_confusion_matrices.pdf, figures/fig5_6_confusion_matrices.png",
+  "FA training curves": "ok: figures/figA_training_curves.pdf, figures/figA_training_curves.png"
+}

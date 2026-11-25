@@ -1,0 +1,19 @@
+setting,value
+Encoder,"512-256, Linear-BatchNorm-ReLU-Dropout"
+Dropout,0.3
+Projection dim,128
+Optimiser,AdamW
+Learning rate,0.001
+Weight decay,0.0001
+LR schedule,"CosineAnnealingLR, T_max=200"
+Batch size,128
+Max epochs / patience,200 / 20 (early stopping on validation MCC)
+pos_weight,n_negative / n_positive of the training fold
+lambda (search),"0, 0.1, 0.25, 0.5, 1.0, 2.0"
+"tau (search, at best lambda)","0.05, 0.07, 0.1, 0.5"
+Seeds,0-4
+CV,"5-fold stratified, scaler fitted on training fold only"
+"CPU time per training run, 8M, median (s)","9.1 (Apple M1, 1 thread/run; measured while other jobs were running)"
+Embedding time esm2_t6_8M (cpu),26.3 s for 4641 sequences
+Embedding time esm2_t12_35M (cpu),57.0 s for 4641 sequences
+Embedding time esm2_t30_150M (cpu),66.0 s for 4641 sequences

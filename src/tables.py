@@ -83,6 +83,9 @@ def t3_tables() -> None:
         ov[["subject", "n_overlap", "same_label", "conflicting_label", "share_of_b"]].rename(
             columns={"subject": "item", "n_overlap": "overlap", "share_of_b": "share_of_second_set"})], ignore_index=True)
     rb = a[a["section"] == "regime_b"].pivot(index="subject", columns="metric", values="value").reset_index()
+    for c in ("duplicate_rows", "label_conflicts", "overlap", "same_label", "conflicting_label"):
+        t32[c] = t32[c].astype("Int64")
+    t32["share_of_second_set"] = t32["share_of_second_set"].round(4)
     save(t32, "T3_2_data_cleaning_audit", "Data-cleaning audit: duplicates, label conflicts, cross-set overlap")
     idf = pd.read_csv(R / "identity_screen.csv")
     save(pd.concat([rb.rename(columns={"subject": "test_set"}).assign(note="Regime B sizes"), idf], ignore_index=True),
@@ -143,7 +146,7 @@ def t52_53(sel: dict, tuned: bool = False) -> None:
 def t54(sel: dict) -> None:
     cv = pd.read_csv(R / "cv_results.csv")
     cv = cv[(cv["family"] == "deep") & (cv["checkpoint"] == HEAD) & (cv["temperature"] == 0.07)]
-    t = agg(cv, ["lambda_supcon"])
+    t = agg(cv.sort_values("lambda_supcon", kind="stable"), ["lambda_supcon"])
     fin = pd.read_csv(R / "final_results.csv") if (R / "final_results.csv").exists() else None
     if fin is not None:
         f = fin[(fin["checkpoint"] == HEAD) & (fin["regime"] == "B") & (fin["temperature"] == 0.07)]

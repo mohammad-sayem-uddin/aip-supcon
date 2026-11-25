@@ -1,0 +1,10 @@
+item,duplicate_rows,label_conflicts,overlap,same_label,conflicting_label,share_of_second_set
+Benchmark,37,37,,,,
+Benchmark_clean,0,0,,,,
+Ind_1049,0,0,,,,
+Ind_425,0,0,,,,
+Benchmark_clean x Ind_1049,,,298,286,12,0.2841
+Benchmark_clean x Ind_425,,,211,204,7,0.4965
+Benchmark_raw x Ind_1049,,,298,286,12,0.2841
+Benchmark_raw x Ind_425,,,211,204,7,0.4965
+Ind_425 x Ind_1049,,,77,76,1,0.0734
