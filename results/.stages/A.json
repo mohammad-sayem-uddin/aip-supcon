@@ -1,7 +1,7 @@
 {
   "stage": "A",
   "status": "complete",
-  "wall_seconds": 4.126379728317261,
+  "wall_seconds": 6.187575578689575,
   "notes": "overlap reproduces: True",
-  "finished_at": "2026-11-25T09:34:48"
+  "finished_at": "2026-11-25T11:36:32"
 }
