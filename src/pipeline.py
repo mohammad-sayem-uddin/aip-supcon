@@ -97,10 +97,10 @@ def s7() -> int:
     return 0
 
 
-def s8() -> int:
+def s8(only: list[str] | None = None) -> int:
     t = Timer()
     failed = []
-    for ck in CHECKPOINTS:
+    for ck in (only or CHECKPOINTS):
         if ck not in available_checkpoints():
             failed.append(ck)
             append_note("BLOCKERS.md", f"S8 {ck}: no embeddings",
@@ -118,8 +118,9 @@ def s8() -> int:
             failed.append(ck)
             append_note("BLOCKERS.md", f"S8 {ck} failed", "```\n" + traceback.format_exc() + "\n```")
             log.exception("S8 %s failed", ck)
-    mark_stage("S8", "partial" if failed else "complete", t.elapsed(),
-               "lambda + temperature sweeps; missing/failed: " + (", ".join(failed) or "none"))
+    if only is None:
+        mark_stage("S8", "partial" if failed else "complete", t.elapsed(),
+                   "lambda + temperature sweeps; missing/failed: " + (", ".join(failed) or "none"))
     return 0
 
 
@@ -147,7 +148,10 @@ def s9() -> int:
     rows, rows_tuned, failed = [], [], []
     (RESULTS / "predictions").mkdir(exist_ok=True)
     (RESULTS / "latents").mkdir(exist_ok=True)
-    selected = {}
+    sel_file = RESULTS / "selected_models.json"
+    selected = json.loads(sel_file.read_text()) if sel_file.exists() else {}
+    done_models = set(pd.read_csv(RESULTS / "final_results.csv", usecols=["model"])["model"]) \
+        if (RESULTS / "final_results.csv").exists() else set()
     for ck in available_checkpoints():
         try:
             cfgs = final_configs(ck)
@@ -159,6 +163,9 @@ def s9() -> int:
         X, y, _ = load_benchmark(ck)
         tests = {(ts, rg): load_test(ck, ts, rg) for ts in TEST_SETS for rg in REGIMES}
         for i, cfg in enumerate(cfgs):
+            if cfg.model_name() in done_models:
+                log.info("S9 skip %s (already in final_results.csv)", cfg.model_name())
+                continue
             role = "baseline" if cfg.lambda_supcon == 0 else ("best" if i == 1 else "sweep")
             selected[cfg.model_name()] = {"checkpoint": ck, "lambda": cfg.lambda_supcon, "tau": cfg.temperature,
                                           "role": role}
@@ -187,10 +194,13 @@ def s9() -> int:
                     d[f"prob_seed{SEEDS[i]}"] = p
                 pd.DataFrame(d).to_csv(RESULTS / "predictions" / f"{cfg.model_name()}_{ts}_{rg}.csv", index=False)
             log.info("S9 done %s", cfg.model_name())
-    append_results(pd.DataFrame(rows)[RESULT_COLUMNS], RESULTS / "final_results.csv")
-    append_results(pd.DataFrame(rows_tuned)[RESULT_COLUMNS], RESULTS / "final_results_tuned.csv")
-    (RESULTS / "selected_models.json").write_text(json.dumps(selected, indent=2))
-    mark_stage("S9", "partial" if failed else "complete", t.elapsed(), f"final models for {list(selected)}")
+    if rows:
+        append_results(pd.DataFrame(rows)[RESULT_COLUMNS], RESULTS / "final_results.csv")
+        append_results(pd.DataFrame(rows_tuned)[RESULT_COLUMNS], RESULTS / "final_results_tuned.csv")
+    sel_file.write_text(json.dumps(selected, indent=2))
+    missing = [c for c in CHECKPOINTS if c not in {d["checkpoint"] for d in selected.values()}]
+    mark_stage("S9", "partial" if (failed or missing) else "complete", t.elapsed(),
+               f"final models for {len(selected)} configs; checkpoints without final models: {missing or 'none'}")
     return 0
 
 
@@ -248,5 +258,7 @@ def s10() -> int:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("stage", choices=["configs", "s7", "s8", "s9", "s10"])
+    ap.add_argument("--only", nargs="+", help="s8 only: run just these checkpoints (does not mark the stage)")
     a = ap.parse_args()
-    sys.exit({"configs": lambda: print(write_configs()) or 0, "s7": s7, "s8": s8, "s9": s9, "s10": s10}[a.stage]())
+    sys.exit({"configs": lambda: print(write_configs()) or 0, "s7": s7, "s8": lambda: s8(a.only), "s9": s9,
+              "s10": s10}[a.stage]())
