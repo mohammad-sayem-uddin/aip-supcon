@@ -22,3 +22,8 @@ logs/*.out
 logs/.run_id
 .claude/
 data/external/
+results/v2/final_cache/
+results/v2/final_cache_c/
+results/v2/cross_cache/
+results/v2/cross_feats/
+results/v2/features/

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import multiprocessing as mp
+import os
 import time
 import warnings
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -112,30 +113,79 @@ def fit_predict(kind: str, clf: str, lam: float, tau: float, Xtr, ytr, Xtests, s
     return [_predict(model, torch.as_tensor(t, dtype=torch.float32)) for t in tests]
 
 
+CACHE_D = V2 / "cross_cache"
+FEAT_D = V2 / "cross_feats"
+PROG_D = R / "phase_d_progress.log"
+
+
+def _prog(line: str) -> None:
+    with open(PROG_D, "a") as f:
+        f.write(line + "\n")
+        f.flush()
+        os.fsync(f.fileno())
+
+
 def task(args):
+    """One (train set, model, seed) job: features come from npy files written once by the parent."""
+    import pickle
     torch.set_num_threads(1)
-    tr_name, mkey, seed, tr_df, tests, store = args
+    tr_name, mkey, seed, test_names = args
     kind, clf, lam, tau = MODELS[mkey]
-    Xtr, ytr = feats(kind, tr_df["sequence"].tolist(), store), tr_df["label"].to_numpy()
-    Xt = [feats(kind, d["sequence"].tolist(), store) for d in tests.values()]
+    Xtr = np.load(FEAT_D / f"{tr_name}__{kind}__train.npy")
+    ytr = np.load(FEAT_D / f"{tr_name}__ytrain.npy")
+    Xt = [np.load(FEAT_D / f"{en}__{kind}__test.npy") for en in test_names]
     probs = fit_predict(kind, clf, lam, tau, Xtr, ytr, Xt, seed)
-    return tr_name, mkey, seed, dict(zip(tests, probs))
+    CACHE_D.mkdir(parents=True, exist_ok=True)
+    with open(CACHE_D / f"{tr_name}__{mkey.replace(' ', '_').replace('+', 'p')}__s{seed}.pkl", "wb") as fh:
+        pickle.dump(dict(zip(test_names, probs)), fh)
+    return tr_name, mkey, seed
 
 
-def run() -> int:
+def run(budget: float | None = None, n_jobs: int = 6) -> int:
+    import pickle
+    from datetime import datetime
+    from src.v2.phaseB import rolling
     t0 = Timer()
     S = load_sources()
     trains = {n: clean_train(S[k]) for n, k in TRAINS.items()}
     tests = {n: S[k].drop_duplicates("sequence").reset_index(drop=True) for n, k in TESTS.items()}
-    allseqs = sorted({s for d in list(trains.values()) + list(tests.values()) for s in d["sequence"]})
-    store = {"esm8": ext_embeddings("esm2_t6_8M", allseqs)}
-    try:
-        store["esm650"] = ext_embeddings("esm2_t33_650M", allseqs)
-        models = list(MODELS)
-    except Exception as e:  # e.g. disk or download problem: continue without 650M models and say so
-        block("Phase D: 650M embeddings for external sequences failed", f"{type(e).__name__}: {e}. 650M-based models were skipped in Phase D.")
-        models = [m for m in MODELS if "650" not in m]
-    # regime masks per (train, test)
+    models = list(MODELS)
+    FEAT_D.mkdir(parents=True, exist_ok=True)
+    if not (FEAT_D / "done").exists():
+        allseqs = sorted({s for d in list(trains.values()) + list(tests.values()) for s in d["sequence"]})
+        store = {"esm8": ext_embeddings("esm2_t6_8M", allseqs)}
+        try:
+            import shutil
+            from pathlib import Path
+            hub = Path.home() / ".cache" / "huggingface" / "hub" / "models--facebook--esm2_t33_650M_UR50D"
+            pre = hub.exists()
+            c650 = V2.parent.parent / "embeddings" / "v2" / "ext_esm2_t33_650M.json"
+            if not c650.exists() and shutil.disk_usage(V2).free / 1e9 < 3.6 and not pre:
+                raise RuntimeError("less than 3.6 GB free; not downloading the 2.6 GB 650M checkpoint")
+            store["esm650"] = ext_embeddings("esm2_t33_650M", allseqs)
+            if not pre and hub.exists():
+                shutil.rmtree(hub)  # purge the checkpoint this step downloaded
+        except Exception as e:
+            block("Phase D: 650M embeddings for external sequences failed", f"{type(e).__name__}: {e}. 650M-based models were skipped in Phase D.")
+            models = [m for m in models if "650" not in m]
+        kinds = sorted({MODELS[m][0] for m in models})
+        for kind in kinds:
+            for tn, tdf in trains.items():
+                np.save(FEAT_D / f"{tn}__{kind}__train.npy", feats(kind, tdf["sequence"].tolist(), store).astype(np.float32))
+            for en, edf in tests.items():
+                np.save(FEAT_D / f"{en}__{kind}__test.npy", feats(kind, edf["sequence"].tolist(), store).astype(np.float32))
+        for tn, tdf in trains.items():
+            np.save(FEAT_D / f"{tn}__ytrain.npy", tdf["label"].to_numpy())
+        (FEAT_D / "done").write_text(json.dumps(models))
+    models = json.loads((FEAT_D / "done").read_text())
+    jobs = [(tn, m, s, list(tests)) for tn in trains for m in models for s in SEEDS
+            if not (CACHE_D / f"{tn}__{m.replace(' ', '_').replace('+', 'p')}__s{s}.pkl").exists()]
+    _prog(f"# {datetime.now().isoformat(timespec='seconds')} Phase D: {len(jobs)} jobs left")
+    left = rolling(jobs, task, lambda r: _prog(f"{datetime.now().isoformat(timespec='seconds')}, {r[0]}, {r[1]}, seed={r[2]} cached"), n_jobs, budget)
+    _prog(f"# slice end: {left} jobs not started")
+    if left:
+        return left
+    # ---- assemble: regime masks, per-seed metrics, ensemble predictions
     masks = {}
     for tn, tdf in trains.items():
         trs = tdf["sequence"].tolist()
@@ -143,40 +193,38 @@ def run() -> int:
             mx = max_identity_to_train(edf["sequence"].tolist(), trs, floor=0.8)
             exact = edf["sequence"].isin(set(trs)).to_numpy()
             masks[(tn, en)] = {"A": np.ones(len(edf), bool), "B": ~exact, "C": mx < 0.9 - 1e-12}
-    done = set()
-    if OUT.exists():
-        d = pd.read_csv(OUT, usecols=["train_set", "model", "seed"])
-        done = set(map(tuple, d.drop_duplicates().to_numpy()))
-    jobs = [(tn, m, s, trains[tn], tests, store) for tn in trains for m in models for s in SEEDS if (tn, m, s) not in done]
-    log.info("Phase D: %d training jobs", len(jobs))
     rows, ens = [], {}
-    with ProcessPoolExecutor(max_workers=6, mp_context=mp.get_context("spawn")) as ex:
-        for fu in as_completed([ex.submit(task, j) for j in jobs]):
-            tn, mkey, seed, probs = fu.result()
-            for en, p in probs.items():
-                y = tests[en]["label"].to_numpy()
-                ens.setdefault((tn, en, mkey), []).append(p)
-                for rg, m in masks[(tn, en)].items():
-                    if m.sum() < 20 or len(np.unique(y[m])) < 2:
-                        continue
-                    r = {"train_set": tn, "test_set": en, "regime": rg, "model": mkey, "seed": seed, "n_train": len(trains[tn]),
-                         "n_eval": int(m.sum()), "analysis_tier": "exploratory"}
-                    r.update(compute_metrics(y[m], (p[m] >= 0.5).astype(int), p[m]))
-                    rows.append(r)
-    if rows:
-        pd.DataFrame(rows)[COLS].to_csv(OUT, mode="a", header=not OUT.exists(), index=False)
-    # ensemble predictions (for paired tests in Phase E)
+    for tn in trains:
+        for m in models:
+            for s in SEEDS:
+                probs = pickle.load(open(CACHE_D / f"{tn}__{m.replace(' ', '_').replace('+', 'p')}__s{s}.pkl", "rb"))
+                for en, p in probs.items():
+                    y = tests[en]["label"].to_numpy()
+                    ens.setdefault((tn, en, m), []).append(p)
+                    for rg, mk in masks[(tn, en)].items():
+                        if mk.sum() < 20 or len(np.unique(y[mk])) < 2:
+                            continue
+                        r = {"train_set": tn, "test_set": en, "regime": rg, "model": m, "seed": s, "n_train": len(trains[tn]),
+                             "n_eval": int(mk.sum()), "analysis_tier": "exploratory"}
+                        r.update(compute_metrics(y[mk], (p[mk] >= 0.5).astype(int), p[mk]))
+                        rows.append(r)
+    pd.DataFrame(rows)[COLS].to_csv(OUT, index=False)
     pdir = V2 / "predictions_cross"
     pdir.mkdir(exist_ok=True)
-    for (tn, en, mkey), plist in ens.items():
+    for (tn, en, m), plist in ens.items():
         pm = np.mean(plist, axis=0)
         df = pd.DataFrame({"sequence": tests[en]["sequence"], "y_true": tests[en]["label"], "y_prob": pm, "y_pred": (pm >= 0.5).astype(int)})
-        for rg, m in masks[(tn, en)].items():
-            df[f"in_{rg}"] = m
-        df.to_csv(pdir / f"{tn}__{en}__{mkey.replace(' ', '_').replace('+', 'p')}.csv", index=False)
-    mark("D_cross", "complete", t0.elapsed(), f"{len(jobs)} jobs")
+        for rg, mk in masks[(tn, en)].items():
+            df[f"in_{rg}"] = mk
+        df.to_csv(pdir / f"{tn}__{en}__{m.replace(' ', '_').replace('+', 'p')}.csv", index=False)
+    mark("D_cross", "complete", t0.elapsed(), f"{len(jobs)} jobs this run; {len(rows)} metric rows")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(run())
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--budget", type=float, default=None)
+    ap.add_argument("--jobs", type=int, default=6)
+    a = ap.parse_args()
+    print("jobs not started:", run(a.budget, a.jobs))
