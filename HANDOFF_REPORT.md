@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T15:43:11 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-25T15:44:22 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -537,11 +537,11 @@ Ranked, most important first:
 | Chapter 2 Literature Review | complete | 4 | 0 | 0 | 10 | 0 | 0 |
 | Chapter 3 Materials and Methods | complete | 20 | 18 | 2 | 26 | 0 | 0 |
 | Chapter 4 Implementation and Experimental Setup | complete (with TODO) | 6 | 4 | 0 | 5 | 1 | 0 |
-| Chapter 5 Results and Discussion | complete (with TODO) | 26 | 17 | 6 | 10 | 1 | 0 |
+| Chapter 5 Results and Discussion | complete (with TODO) | 27 | 17 | 6 | 10 | 1 | 0 |
 | Chapter 6 Conclusions and Future Work | complete | 4 | 0 | 0 | 0 | 0 | 0 |
 
 
-**Total rendered length: 68 pages** including the references (3 pages), US Letter, 11 pt, as rendered by LibreOffice; check the page count in Word.
+**Total rendered length: 70 pages** including the references (4 pages), US Letter, 11 pt, as rendered by LibreOffice; check the page count in Word.
 
 **Remaining TODOs and what closes them**
 
