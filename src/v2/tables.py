@@ -100,7 +100,7 @@ def t58() -> pd.DataFrame:
                 g = src[(src.eval_set == ts) & (src.regime == "B")]["mcc"]
                 m.append(g.mean()); s.append(g.std(ddof=1))
             ax.bar(np.arange(len(archs)) + (k - 0.5) * 0.38, m, 0.38, yerr=s, capsize=3, label=lbl, color=OKABE[k])
-        ax.set_xticks(range(len(archs)), [a.split("_", 1)[0] + "\n" + a.split("_", 1)[1] for a in archs])
+        ax.set_xticks(range(len(archs)), [a.split("_", 1)[0] + "\n" + a.split("_", 1)[1].replace("cnn_bilstm", "cnn-\nbilstm").replace("transformer", "trans-\nformer") for a in archs], fontsize=9)
         ax.set(title=f"{ts.replace('ind_', 'Ind_')}, Regime B", ylabel="MCC (mean ± SD over 5 seeds)" if ts == TESTS[0] else "")
     axes[0].legend(frameon=False)
     fig.suptitle("Does the contrastive objective help across architectures? (8M residue embeddings)")

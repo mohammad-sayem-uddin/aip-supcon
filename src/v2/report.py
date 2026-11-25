@@ -55,7 +55,7 @@ def stage_v2() -> str:
             continue
         if f.exists():
             d = json.loads(f.read_text())
-            rows.append({"Stage": k, "What": desc, "Status": d["status"], "Compute wall-clock": v1._fmt_secs(d["wall_seconds"]), "Notes": d.get("notes", "")})
+            rows.append({"Stage": k, "What": desc, "Status": d["status"], "Compute wall-clock": v1._fmt_secs(d["wall_seconds"]) if d["wall_seconds"] else "n/a (sliced/remote; see notes)", "Notes": d.get("notes", "")})
         else:
             rows.append({"Stage": k, "What": desc, "Status": "skipped", "Compute wall-clock": "-", "Notes": "not reached or not run"})
     return md(pd.DataFrame(rows))

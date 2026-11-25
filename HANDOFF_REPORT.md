@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T10:25:55 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-25T13:58:52 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -8,17 +8,17 @@ _Generated 2026-11-25T10:25:55 by `python -m src.v2.report`; rebuilt after every
 |---|---|---|
 | LEAKAGE_FINDING.md | The Phase A result, stated precisely | True |
 | PREREGISTRATION.md | Primary hypothesis, committed before Phase B | True |
-| POWER_ANALYSIS.md | Detectable effect size at each n | False |
+| POWER_ANALYSIS.md | Detectable effect size at each n | True |
 | results/tables/T3.5_cross_benchmark_leakage.csv | T3.5 cross-benchmark leakage matrix | True |
-| results/tables/T5.8_architecture_comparison.csv | T5.8 architecture comparison | False |
-| results/tables/T5.9_representation_comparison.csv | T5.9 representation comparison | False |
-| results/tables/T5.10_cross_benchmark.csv | T5.10 cross-benchmark generalisation | False |
-| results/tables/T5.11_corrected_significance.csv | T5.11 FDR-corrected significance | False |
-| figures/fig5_8_architecture_lambda.png | F5.8 architectures x lambda | False |
-| figures/fig5_9_pooling_ablation.png | F5.9 pooling ablation | False |
-| figures/fig5_10_cross_benchmark_heatmap.png | F5.10 generalisation heatmap | False |
+| results/tables/T5.8_architecture_comparison.csv | T5.8 architecture comparison | True |
+| results/tables/T5.9_representation_comparison.csv | T5.9 representation comparison | True |
+| results/tables/T5.10_cross_benchmark.csv | T5.10 cross-benchmark generalisation | True |
+| results/tables/T5.11_corrected_significance.csv | T5.11 FDR-corrected significance | True |
+| figures/fig5_8_architecture_lambda.png | F5.8 architectures x lambda | True |
+| figures/fig5_9_pooling_ablation.png | F5.9 pooling ablation | True |
+| figures/fig5_10_cross_benchmark_heatmap.png | F5.10 generalisation heatmap | True |
 | figures/figF1_negative_resemblance.png | F5.11/F analysis figures (several) | True |
-| INTERPRETATION_v2.md | Honest reading of everything | False |
+| INTERPRETATION_v2.md | Honest reading of everything | True |
 | HANDOFF_REPORT.md | This report, rebuilt after every stage | True |
 | results/provenance.csv | A1 provenance | True |
 | results/overlap_sequences.csv | A2 every overlapping sequence with labels | True |
@@ -29,21 +29,21 @@ _Generated 2026-11-25T10:25:55 by `python -m src.v2.report`; rebuilt after every
 
 | Stage | What | Status | Compute wall-clock | Notes |
 |---|---|---|---|---|
-| A | Phase A: provenance, overlap verification (gate), cross-benchmark audit | complete | 4.1s | overlap reproduces: True |
+| A | Phase A: provenance, overlap verification (gate), cross-benchmark audit | complete | 6.2s | overlap reproduces: True |
 | E1 | E1: PREREGISTRATION.md committed before modelling | complete | - | PREREGISTRATION.md committed in c239f43dcb3719c7c40d6c2afd5217d6723a11f3 at 2026-11-25T14:36:00Z (UTC pushed to origin/main) |
 | V2_embed_esm2_t6_8M | Residue-level embeddings 8M | complete | 10.5s | (75589, 320), float32 |
 | V2_embed_esm2_t33_650M | Residue-level embeddings 650M | complete | 36.8 min | (75589, 1280), float16 |
-| B_cv | Phase B: 5 architectures x 6 lambdas x 5 seeds x 5 folds (CV) | skipped | - | not reached or not run |
-| B_final | Phase B: final models, Regimes A/B/C | skipped | - | not reached or not run |
-| C1_pooling | C1: pooling ablation on frozen 650M | skipped | - | not reached or not run |
-| C1_attention | C1: attention pooling at 650M | skipped | - | not reached or not run |
-| C2_fusion | C2: feature fusion (RF, LightGBM, MLP) | skipped | - | not reached or not run |
-| C3_finetune | C3: fine-tune 8M vs frozen control | skipped | - | not reached or not run |
-| D_cross | D1-D2: cross-benchmark generalisation | skipped | - | not reached or not run |
-| E5_nested | E5: nested CV for the headline comparison | skipped | - | not reached or not run |
-| E_stats | E2-E4, E6: BH correction, MDE, seed-vs-sample variance | skipped | - | not reached or not run |
-| F_analysis | Phase F: why AAC wins, motifs, errors, length | skipped | - | not reached or not run |
-| V2_tables | v2 tables and figures | skipped | - | not reached or not run |
+| B_cv | Phase B: 5 architectures x 6 lambdas x 5 seeds x 5 folds (CV) | complete | n/a (sliced/remote; see notes) | CV complete: B3,B4,B6 on local CPU; B2,B5 on Kaggle GPU (450 runs in ~27 min); 750 rows |
+| B_final | Phase B: final models, Regimes A/B/C | complete | 3.1 min | final models for B2-B6 (lambda=0 and lambda*), Regimes A/B/C, 5 seeds |
+| C1_pooling | C1: pooling ablation on frozen 650M | complete | 3.0 min | 5 models |
+| C1_attention | C1: attention pooling at 650M | complete | 5.2 min | attention pooling over 650M residues |
+| C2_fusion | C2: feature fusion (RF, LightGBM, MLP) | complete | 3.7 min | 15 models |
+| C3_finetune | C3: fine-tune 8M vs frozen control | complete | n/a (sliced/remote; see notes) | Kaggle 2xT4 GPU kernel aip-c3-finetune-gpu: ESM-2 8M fine-tune vs frozen control; CV seeds 0-2 x 5 folds, final seeds 0-4 |
+| D_cross | D1-D2: cross-benchmark generalisation | complete | 5.7 min | 105 jobs this run; 630 metric rows |
+| E5_nested | E5: nested CV for the headline comparison | complete | 5.2 min | 25 outer folds |
+| E_stats | E2-E4, E6: BH correction, MDE, seed-vs-sample variance | complete | 7.7 min | 124 comparisons |
+| F_analysis | Phase F: why AAC wins, motifs, errors, length | complete | 4.0s | 18 models |
+| V2_tables | v2 tables and figures | complete | n/a (sliced/remote; see notes) | T5.8, T5.9, T5.10 and figures |
 
 **v1 stages S1-S12 (complete; not re-run)**
 
@@ -92,6 +92,30 @@ Wall-clock is compute time recorded by the stage runners (it excludes code-writi
 ## 3. HEADLINE RESULT
 
 **Primary hypothesis H1 (preregistered; outcome known from v1, see PREREGISTRATION.md section 0):** not supported. v1 numbers and the full v1 results are kept in the original sections below.
+
+**H1, Regime B (recomputed with the v2 comparison code):**
+
+| test_set | n | mcc_diff | mcc_diff_lo | mcc_diff_hi | auroc_diff | delong_p | mcnemar_p | mcc_mde80 | auroc_mde80 |
+|---|---|---|---|---|---|---|---|---|---|
+| ind_425 | 214 | -0.0168 | -0.0869 | 0.0556 | 0.0036 | 0.7732 | 0.4545 | 0.1034 | 0.0357 |
+| ind_1049 | 751 | -0.0035 | -0.0484 | 0.0455 | 0.0018 | 0.8016 | 0.902 | 0.0658 | 0.02 |
+
+**H2: lambda* vs lambda=0 for each architecture (Regime B; raw and BH-adjusted p side by side):**
+
+| comparison | test_set | n | mcc_diff | mcc_diff_lo | mcc_diff_hi | delong_p | p_delong_bh_family | mcnemar_p | p_mcnemar_bh_family | supports_claim_rule |
+|---|---|---|---|---|---|---|---|---|---|---|
+| B3_bilstm lambda*=2 vs 0 | ind_425 | 214 | 0.1039 | 0.0051 | 0.2069 | 0.7924 | 0.7924 | 0.1859 | 0.6196 | False |
+| B3_bilstm lambda*=2 vs 0 | ind_1049 | 751 | 0.0158 | -0.0403 | 0.0724 | 0.5732 | 0.7734 | 1.0 | 1.0 | False |
+| B4_cnn_bilstm lambda*=2 vs 0 | ind_425 | 214 | 0.1274 | 0.0087 | 0.2378 | 0.3225 | 0.645 | 0.0258 | 0.2313 | False |
+| B4_cnn_bilstm lambda*=2 vs 0 | ind_1049 | 751 | -0.004 | -0.0671 | 0.0639 | 0.1042 | 0.3474 | 0.9121 | 1.0 | False |
+| B6_attnpool lambda*=2 vs 0 | ind_425 | 214 | -0.0582 | -0.1687 | 0.055 | 0.0566 | 0.283 | 0.4862 | 0.9725 | False |
+| B6_attnpool lambda*=2 vs 0 | ind_1049 | 751 | 0.0623 | -0.0065 | 0.1317 | 0.1905 | 0.4763 | 0.0462 | 0.2313 | False |
+| B2_cnn lambda*=0.1 vs 0 | ind_425 | 214 | -0.0282 | -0.1234 | 0.0696 | 0.6694 | 0.7734 | 1.0 | 1.0 | False |
+| B2_cnn lambda*=0.1 vs 0 | ind_1049 | 751 | -0.0254 | -0.0829 | 0.0345 | 0.0141 | 0.1408 | 0.8391 | 1.0 | False |
+| B5_transformer lambda*=2 vs 0 | ind_425 | 214 | -0.0294 | -0.1228 | 0.0546 | 0.5156 | 0.7734 | 0.8036 | 1.0 | False |
+| B5_transformer lambda*=2 vs 0 | ind_1049 | 751 | -0.037 | -0.0844 | 0.011 | 0.696 | 0.7734 | 0.2821 | 0.7052 | False |
+
+Comparisons meeting the preregistered support rule (BH-adjusted DeLong p < 0.05 and MCC-difference CI above 0): **0 of 10**.
 
 Full reading: [INTERPRETATION_v2.md](INTERPRETATION_v2.md). v1 reading: [INTERPRETATION.md](INTERPRETATION.md).
 
@@ -173,9 +197,27 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 |---|---|
 | results/tables/T3.5_cross_benchmark_leakage.csv | 9 |
 | results/tables/T3.5b_cdhit_style_clustering.csv | 16 |
+| results/tables/T5.10_cross_benchmark.csv | 126 |
+| results/tables/T5.11_corrected_significance.csv | 124 |
+| results/tables/T5.11b_seed_vs_sample_variance.csv | 56 |
+| results/tables/T5.11c_cv_effect_sizes.csv | 30 |
+| results/tables/T5.8_architecture_comparison.csv | 6 |
+| results/tables/T5.8b_architecture_all_regimes.csv | 72 |
+| results/tables/T5.9_representation_comparison.csv | 26 |
 | results/tables/TF1_negatives_fragment_test.csv | 10 |
 | results/tables/TF2_motif_enrichment.csv | 45 |
-| results/v2/cv_results_v2.csv | 26 |
+| results/tables/TF3_error_analysis.csv | 3 |
+| results/tables/TF3b_errors_by_number_of_models_wrong.csv | 19 |
+| results/tables/TF5_length_stratified.csv | 77 |
+| results/v2/comparisons_raw.csv | 124 |
+| results/v2/cross_benchmark_results_v2.csv | 630 |
+| results/v2/cv_results_v2.csv | 750 |
+| results/v2/final_results_v2.csv | 300 |
+| results/v2/finetune_results_v2.csv | 90 |
+| results/v2/hardest_sequences.csv | 61 |
+| results/v2/nested_cv_8M.csv | 25 |
+| results/v2/nested_cv_8M_partial.csv | 25 |
+| results/v2/repr_results_v2.csv | 1100 |
 
 v1 files:
 
@@ -193,14 +235,14 @@ v1 files:
 | results/stats_tests.csv | 54 | DeLong, McNemar and paired-bootstrap CIs, lambda>0 vs lambda=0 |
 | results/stats_per_seed.csv | 270 | Per-seed paired differences and DeLong p-values |
 | results/bootstrap_cis.csv | 78 | 95% bootstrap CIs for AUROC and MCC of every final model |
-| results/tables/ | 34 | Thesis tables as CSV + LaTeX |
+| results/tables/ | 44 | Thesis tables as CSV + LaTeX |
 | results/predictions/ | 114 | Per-sample predictions |
 | results/latents/ | 26 | Latent vectors for t-SNE |
 | results/models/ | 66 | Final model weights + scalers |
 
 ## 6. FIGURES
 
-fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png
+fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png, figF5_length_stratified.png
 
 v1 figure status:
 
@@ -219,7 +261,7 @@ v1 figure status:
 | F5.6 confusion matrices | ok: figures/fig5_6_confusion_matrices.pdf, figures/fig5_6_confusion_matrices.png |
 | FA training curves | ok: figures/figA_training_curves.pdf, figures/figA_training_curves.png |
 
-Files in figures/: fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png
+Files in figures/: fig5_10_cross_benchmark_heatmap.pdf, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.pdf, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.pdf, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.pdf, fig5_9b_fusion_finetune.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png, figF5_length_stratified.pdf, figF5_length_stratified.png
 
 ## 7. BLOCKERS
 
@@ -235,6 +277,21 @@ The plan cites AIPFusion-Net (doi 10.3389/fmolb.2026.1952395). The DOI resolves 
 _2026-11-25_
 
 The AIPStack paper (PMC9449674) returned a bot-check page, and the Nicole-DH/AIPStack GitHub repository returned 404 (and the GitHub API was rate-limited). Those datasets are therefore not in the cross-benchmark matrix. If you can get the files, drop them into `data/external/aipstack_*/` and re-run `python -m src.v2.phaseA`.
+
+## C4 (ProtBERT / ProtT5) not attempted
+_2026-11-25_
+
+C4 is optional in the plan. ProtBERT needs a 1.6 GB and ProtT5-XL (half, encoder) a 2.3 GB download; this Mac had 3.7 GB of free disk (which fluctuates), and the Kaggle kernels have no internet, so the weights would need uploading as a dataset. The question C4 asks (is the weakness ESM-2 specific?) is partly answered by C3: end-to-end adaptation of the same ESM-2 backbone changes the result, so the frozen-embedding setting rather than ESM-2 itself is implicated. To run it: `python -m src.v2.embed_res` generalised to `Rostlab/prot_bert` (sequences need spaces between residues), then `python -m src.v2.phaseC` with the new features.
+
+## D3 (AMP / ACP related-task transfer) not attempted
+_2026-11-25_
+
+D3 is optional. It needs antimicrobial or anticancer peptide datasets; no verified download URL was in the plan, and I did not guess one. Phase D2 (cross-dataset generalisation) was run on every AIP dataset that could be obtained (AIPpred, AntiInflam and the local composite).
+
+## Fine-tuning scope and GPU determinism
+_2026-11-25_
+
+Only ESM-2 8M was fine-tuned (CV seeds 0-2 x 5 folds, final seeds 0-4). Fine-tuning 150M or 650M was not run. B2, B5 and the fine-tuning ran on Kaggle T4 GPUs, whose floating-point reductions are not bit-identical to the CPU runs used for B3, B4, B6 and v1; each architecture's lambda grid is entirely on one device (results/v2/device_map.json).
 
 
 Everything that failed or could not run, with diagnosis.
@@ -293,6 +350,16 @@ Unadapted 320-d (and 1280-d) residue input made a single CNN fold take about 20 
 _2026-11-25_
 
 The 8 GB machine swapped heavily while the 650M embedding ran alongside training (swap 4.7 GB, 1.2 s per tiny step), so training was started only after the embedding finished. 650M residue vectors are stored as float16 (max abs difference from the v1 float32 pooled embedding 0.0018, relative 2e-4); the 8M residue cache is float32 and reproduces v1 pooled embeddings to 1e-6.
+
+## V2-D9: Kaggle GPU for Phase B (CNN, Transformer, attention-pool) and C3; foreground slices locally
+_2026-11-25_
+
+At your request the Kaggle GPU (new account, 2x Tesla T4, no internet) is used where it pays off: Phase B CV and final models for B2_cnn, B5_transformer and B6_attnpool, and the C3 fine-tuning. B3_bilstm was completed on CPU before the switch, and B4_cnn_bilstm is finished on CPU, so every architecture's lambda grid (and its lambda=0 baseline) is trained on one device; GPU and CPU runs of the same architecture are never mixed. Local jobs run in the foreground in time-budgeted slices that write a flushed line per CV run to `results/phase_b_progress.log`; the pool of 6 worker processes inside each foreground call is retained because serial execution would take about 20 hours (say if you want it serial). Kaggle inputs are a private dataset (code, splits, 8M embeddings, 8M weights) in the user's own account.
+
+## V2-D10: Resume bug found and fixed
+_2026-11-25_
+
+The first resumed slice re-ran 22 already-saved CNN-BiLSTM runs because `pd.read_csv(usecols=...)` returns columns in file order, not list order, so the resume keys never matched. The 22 duplicate rows were dropped (originals kept), the lookup now selects columns explicitly, and the fix is noted in `results/phase_b_progress.log`. Phases C, D, E and the fine-tuning script use `usecols` in an order that equals file order and were checked.
 
 
 Choices made autonomously during the overnight run, each with the reasoning.
@@ -369,11 +436,23 @@ The first S9 pass trained the 8M "best" model at the default tau=0.07 because th
 
 ## 9. NEXT ACTIONS
 
-_To be written at the end of the run._
+Ranked, most important first:
+
+1. **Read `LEAKAGE_FINDING.md` and `INTERPRETATION_v2.md`, then fix the thesis framing.** The data support: (a) the cross-lineage overlap mechanism as the headline contribution, (b) the contrastive objective as a well-powered null (no detectable effect larger than about 0.08-0.14 MCC; every Regime-B survivor of correction is negative), (c) end-to-end fine-tuning (+0.15 to +0.22 MCC over frozen) as the constructive finding. Soften Chapter 1's "superior predictive stability" accordingly.
+2. **Verify the AIPFusion-Net claims yourself.** The paper could not be fetched (HTTP 503) and I found no trace of it, so nothing about its training counts, overlap statement or CD-HIT thresholds is verified. If you can open it in a browser, check those three things before any sentence about it enters the thesis; keep the finding framed as a measurement on the distributed files.
+3. **Fine-tune larger checkpoints on the Kaggle GPU** (150M, then 650M). The fine-tune script and kernel pattern work (`data/external/kaggle_kernel_C3`), but the weights need uploading as a dataset (no internet on kernels). This tests whether the frozen-vs-fine-tuned gap persists at scale and whether fine-tuned models overtake AAC+RF on Ind_425.
+4. **Fill Table 5.7** with published AIPpred / PreAIP / AntiInflam numbers from the original papers (none were available to me; none were invented).
+5. **Optional extensions:** C4 (ProtBERT/ProtT5; needs 1.6-2.3 GB of weights), D3 (AMP/ACP transfer; needs verified dataset URLs), AIPStack independent sets (the GitHub repo returned 404). Details in `BLOCKERS_v2.md`.
+6. **Chapters 1-2 fixes and Chapters 3-6 drafting** (playbook Prompts 12-14) remain to do and now have far more material: the mechanism section, T3.5, T5.8-T5.11, the preregistration and the power analysis.
+7. **Housekeeping.** The Kaggle dataset `aip-supcon-data` and two kernels are private in the `yeasinarafatshihab` account and can be deleted if not wanted. Local free disk fluctuates (3-8 GB); the 650M weights are purged after use.
 
 ## Appendix: LEAKAGE_FINDING.md (verbatim)
 
 # LEAKAGE FINDING (Phase A)
+
+## Headline: two internally disjoint lineages, combined across a train/test boundary
+
+**The AIPpred and AntiInflam datasets are each internally disjoint, and the overlap appears only when data from the two lineages meet across a train/test boundary.** Each lineage's own partition is clean: AIPpred benchmark vs AIPpred independent has 0 exact overlap, and AntiInflam training vs AntiInflam validation has 0 exact overlap. Both lineages drew peptides from the same underlying source (IEDB), so a training set from one lineage and an independent set from the other share sequences: AIPpred's benchmark shares 211 sequences with AntiInflam's validation set, and AntiInflam's training set shares 298 with AIPpred's independent set. The distributed `Benchmark_Dataset.fasta` is the union of the AIPpred benchmark and part of the AntiInflam training set, so when it is paired with the two independent sets (`Ind_1049` = AIPpred's, `Ind_425` = AntiInflam's) it inherits both cross-lineage overlaps. The counts below (211 and 298) are the evidence for this mechanism; the mechanism is the finding. It is a consequence of combining two separately curated, correctly partitioned resources, not an error in either one.
 
 **Gate result: PASSED.** The overlap reproduces exactly under independent re-computation. This document states what was measured on specific files, what was not measured, and which alternative explanations were ruled out. It makes no statement about the conduct of any author.
 
@@ -405,7 +484,7 @@ The numbers are identical on the raw Benchmark (3,790 rows, 3,753 unique) and on
 - **Each source pair is clean on its own.** AIPpred benchmark vs AIPpred independent: 0 exact overlap (13 of its 1,049 independent sequences have >= 0.9 identity to a benchmark sequence, consistent with their stated 0.8 CD-HIT step plus alignment differences). AntiInflam training vs validation: 0 exact overlap.
 - **The cross-literature overlaps are what is inherited.** AIPpred benchmark and AntiInflam validation share 211 sequences (the whole Ind_425 overlap). AntiInflam training and AIPpred independent share 298 sequences (the whole Ind_1049 overlap, all among the 612 added sequences).
 
-So the contamination is a property of how the composite training file was assembled relative to two independent sets that came from a different curation lineage: each published split is internally disjoint, but IEDB-derived sequences recur across the two lineages.
+So the overlap is a property of pairing training data from one curation lineage with an independent set from the other: each published split is internally disjoint, but IEDB-derived sequences recur across the two lineages. Precisely: the 211 Ind_425 overlaps already exist between the *unmodified* AIPpred benchmark and the AntiInflam validation set; the 298 Ind_1049 overlaps arise because the local Benchmark also contains AntiInflam training sequences. Neither source dataset contains an error.
 
 ## 3. Alternative explanations tested
 
@@ -424,4 +503,4 @@ So the contamination is a property of how the composite training file was assemb
 
 ## 5. Safe wording for the thesis
 
-"On the distributed benchmark files, 211 of the 425 sequences in the AntiInflam validation set (49.6%) and 298 of the 1,049 sequences in the AIPpred independent set (28.4%) also occur in the combined training file. The training file is the union of the AIPpred benchmark and AntiInflam training sets; each source split is internally disjoint, but the two literatures share IEDB-derived peptides. Removing the overlap (Regime B) is therefore required for a leakage-free estimate; the effect on performance is measured in Chapter 5."
+"The AIPpred and AntiInflam datasets are each internally disjoint, but they were curated separately from the same source (IEDB) and therefore share peptides across lineages. The combined training file used here is the union of the AIPpred benchmark and part of the AntiInflam training set; paired with each lineage's independent set, 211 of 425 AntiInflam-validation sequences (49.6%) and 298 of 1,049 AIPpred-independent sequences (28.4%) also occur in the training file. Removing the overlap (Regime B) is therefore required for a leakage-free estimate; its effect on performance is measured in Chapter 5."

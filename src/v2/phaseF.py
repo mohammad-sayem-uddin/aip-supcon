@@ -230,15 +230,16 @@ def f3_errors(P: dict[str, pd.DataFrame]) -> pd.DataFrame:
     comp = pd.DataFrame([[s.count(a) / len(s) for a in AA] for s in seqs], columns=list(AA))
     rows = []
     for label, m in (("all models wrong", allwrong), ("all models right", allright), ("all sequences", np.ones(len(base), bool))):
-        sub = base[m.to_numpy()]
+        m = np.asarray(m)
+        sub = base[m]
         r = {"group": label, "n": int(m.sum()), "mean_length": sub["length"].mean(),
              "frac_true_AIP": sub["y_true"].mean(), "mean_n_models_wrong": sub["n_models_wrong"].mean()}
-        r.update({f"freq_{a}": comp[m.to_numpy()][a].mean() for a in AA})
+        r.update({f"freq_{a}": comp[m][a].mean() for a in AA})
         rows.append(r)
     out = pd.DataFrame(rows)
     out["n_models"] = len(names)
     out.to_csv(TABLES / "TF3_error_analysis.csv", index=False)
-    base[allwrong.to_numpy()].sort_values("length").to_csv(V2 / "hardest_sequences.csv", index=False)
+    base[np.asarray(allwrong)].sort_values("length").to_csv(V2 / "hardest_sequences.csv", index=False)
     # which classes are the all-wrong sequences?
     summary = base.groupby("n_models_wrong").agg(n=("sequence", "size"), frac_AIP=("y_true", "mean"), mean_len=("length", "mean"),
                                                  nn_agree=("nearest_train_label_agrees", "mean")).reset_index()

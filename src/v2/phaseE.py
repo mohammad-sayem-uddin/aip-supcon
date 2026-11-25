@@ -87,9 +87,38 @@ def collect() -> pd.DataFrame:
     rows += pair("representation: fine-tuning (C3)", "ESM-2 8M fine-tuned vs frozen (same head)", "esm2_t6_8M_finetune", "esm2_t6_8M_frozen", "exploratory")
     rows += pair("representation: ESM vs composition", "650M MLP lambda=0 vs AAC+RF", "esm2_t33_650M_lam0_tau0.07", "AAC_RF", "exploratory")
     rows += pair("representation: ESM vs composition", "8M MLP lambda=0 vs AAC+RF", "esm2_t6_8M_lam0_tau0.07", "AAC_RF", "exploratory")
+    rows += pair("representation: ESM vs composition", "8M fine-tuned vs AAC+RF", "esm2_t6_8M_finetune", "AAC_RF", "exploratory")
+    rows += pair("representation: ESM vs composition", "B5 Transformer (frozen 8M residues, lambda=0) vs AAC+RF", "B5_transformer_esm2_t6_8M_lam0_tau0.07", "AAC_RF", "exploratory")
     out: list[dict] = []
     rolling(rows, execute, out.append, 6, None)
-    return pd.DataFrame(out)
+    return pd.DataFrame(out + cross_contrasts())
+
+
+CROSS_PAIRS = [("ESM2-8M SupCon lam2", "ESM2-8M MLP lam0"), ("ESM2-650M SupCon lam1", "ESM2-650M MLP lam0")]
+
+
+def cross_contrasts() -> list[dict]:
+    """lambda>0 vs lambda=0 on every (train set, independent set) cell of Phase D, Regime B (A when B is identical)."""
+    from src.v2.stats import compare_arrays
+    d = V2 / "predictions_cross"
+    rows = []
+    if not d.exists():
+        return rows
+    for tn in ("AIPpred_benchmark", "AntiInflam_training", "local_Benchmark_clean"):
+        for en in ("AIPpred_independent", "AntiInflam_validation"):
+            for a, b in CROSS_PAIRS:
+                fa = d / f"{tn}__{en}__{a.replace(' ', '_').replace('+', 'p')}.csv"
+                fb = d / f"{tn}__{en}__{b.replace(' ', '_').replace('+', 'p')}.csv"
+                if not (fa.exists() and fb.exists()):
+                    continue
+                A, B = pd.read_csv(fa), pd.read_csv(fb)
+                m = A["in_B"].to_numpy()
+                r = compare_arrays(A["y_true"][m], A["y_prob"][m], B["y_prob"][m])
+                r.update({"family": "lambda contrast: cross-benchmark (D)", "comparison": f"{a} vs {b}; train={tn}",
+                          "model_a": a, "model_b": b, "test_set": en, "regime": "B", "analysis_tier": "exploratory",
+                          "note": "Regime B for this training set (exact matches removed; identical to A when the pair is internally disjoint)"})
+                rows.append(r)
+    return rows
 
 
 def correct(df: pd.DataFrame) -> pd.DataFrame:
@@ -104,7 +133,8 @@ def correct(df: pd.DataFrame) -> pd.DataFrame:
     df["p_mcnemar_bh_global_all"] = bh_adjust(df["mcnemar_p"].to_numpy())
     df["p_delong_bh_global_regimeB"] = np.nan
     df.loc[reg_b, "p_delong_bh_global_regimeB"] = bh_adjust(df.loc[reg_b, "delong_p"].to_numpy())
-    df["supports_claim_rule"] = (df["p_delong_bh_family"] < 0.05) & (df["mcc_diff_lo"] > 0) & reg_b
+    is_lambda_claim = df["family"].str.startswith("H1") | df["family"].str.startswith("H2")
+    df["supports_claim_rule"] = (df["p_delong_bh_family"] < 0.05) & (df["mcc_diff_lo"] > 0) & reg_b & is_lambda_claim
     df["significant_raw_delong_0.05"] = df["delong_p"] < 0.05
     df["significant_after_family_BH"] = df["p_delong_bh_family"] < 0.05
     df["significant_after_global_BH"] = df["p_delong_bh_global_all"] < 0.05
