@@ -1,0 +1,7 @@
+{
+  "stage": "S7",
+  "status": "complete",
+  "wall_seconds": 313.8333361148834,
+  "notes": "lambda sweep on esm2_t6_8M; best lambda>0 = 2 by mean CV MCC",
+  "finished_at": "2026-11-25T07:34:43"
+}
