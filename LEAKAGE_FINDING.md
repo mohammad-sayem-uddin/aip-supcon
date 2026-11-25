@@ -1,5 +1,9 @@
 # LEAKAGE FINDING (Phase A)
 
+## Headline: two internally disjoint lineages, combined across a train/test boundary
+
+**The AIPpred and AntiInflam datasets are each internally disjoint, and the overlap appears only when data from the two lineages meet across a train/test boundary.** Each lineage's own partition is clean: AIPpred benchmark vs AIPpred independent has 0 exact overlap, and AntiInflam training vs AntiInflam validation has 0 exact overlap. Both lineages drew peptides from the same underlying source (IEDB), so a training set from one lineage and an independent set from the other share sequences: AIPpred's benchmark shares 211 sequences with AntiInflam's validation set, and AntiInflam's training set shares 298 with AIPpred's independent set. The distributed `Benchmark_Dataset.fasta` is the union of the AIPpred benchmark and part of the AntiInflam training set, so when it is paired with the two independent sets (`Ind_1049` = AIPpred's, `Ind_425` = AntiInflam's) it inherits both cross-lineage overlaps. The counts below (211 and 298) are the evidence for this mechanism; the mechanism is the finding. It is a consequence of combining two separately curated, correctly partitioned resources, not an error in either one.
+
 **Gate result: PASSED.** The overlap reproduces exactly under independent re-computation. This document states what was measured on specific files, what was not measured, and which alternative explanations were ruled out. It makes no statement about the conduct of any author.
 
 All numbers come from `python -m src.v2.phaseA` (outputs: `results/provenance.csv`, `results/overlap_sequences.csv`, `results/external_sources.csv`, `results/tables/T3.5_cross_benchmark_leakage.csv`, `results/tables/T3.5b_cdhit_style_clustering.csv`, `results/v2/phaseA_summary.json`). The original published dataset files were downloaded (URLs and SHA-256 in `external_sources.csv`) and compared with the local files.
@@ -30,7 +34,7 @@ The numbers are identical on the raw Benchmark (3,790 rows, 3,753 unique) and on
 - **Each source pair is clean on its own.** AIPpred benchmark vs AIPpred independent: 0 exact overlap (13 of its 1,049 independent sequences have >= 0.9 identity to a benchmark sequence, consistent with their stated 0.8 CD-HIT step plus alignment differences). AntiInflam training vs validation: 0 exact overlap.
 - **The cross-literature overlaps are what is inherited.** AIPpred benchmark and AntiInflam validation share 211 sequences (the whole Ind_425 overlap). AntiInflam training and AIPpred independent share 298 sequences (the whole Ind_1049 overlap, all among the 612 added sequences).
 
-So the contamination is a property of how the composite training file was assembled relative to two independent sets that came from a different curation lineage: each published split is internally disjoint, but IEDB-derived sequences recur across the two lineages.
+So the overlap is a property of pairing training data from one curation lineage with an independent set from the other: each published split is internally disjoint, but IEDB-derived sequences recur across the two lineages. Precisely: the 211 Ind_425 overlaps already exist between the *unmodified* AIPpred benchmark and the AntiInflam validation set; the 298 Ind_1049 overlaps arise because the local Benchmark also contains AntiInflam training sequences. Neither source dataset contains an error.
 
 ## 3. Alternative explanations tested
 
@@ -49,4 +53,4 @@ So the contamination is a property of how the composite training file was assemb
 
 ## 5. Safe wording for the thesis
 
-"On the distributed benchmark files, 211 of the 425 sequences in the AntiInflam validation set (49.6%) and 298 of the 1,049 sequences in the AIPpred independent set (28.4%) also occur in the combined training file. The training file is the union of the AIPpred benchmark and AntiInflam training sets; each source split is internally disjoint, but the two literatures share IEDB-derived peptides. Removing the overlap (Regime B) is therefore required for a leakage-free estimate; the effect on performance is measured in Chapter 5."
+"The AIPpred and AntiInflam datasets are each internally disjoint, but they were curated separately from the same source (IEDB) and therefore share peptides across lineages. The combined training file used here is the union of the AIPpred benchmark and part of the AntiInflam training set; paired with each lineage's independent set, 211 of 425 AntiInflam-validation sequences (49.6%) and 298 of 1,049 AIPpred-independent sequences (28.4%) also occur in the training file. Removing the overlap (Regime B) is therefore required for a leakage-free estimate; its effect on performance is measured in Chapter 5."
