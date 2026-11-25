@@ -1,0 +1,11 @@
+comparison,n,value_or_fraction_ge_0.9,frac_identity_ge_0.8
+negative -> nearest POSITIVE,2302,0.02476107732406603,0.04300608166811468
+positive -> nearest NEGATIVE,1414,0.03606789250353607,0.06082036775106082
+negative -> nearest other NEGATIVE (n=800 sample),800,0.005,0.08875
+positive -> nearest other POSITIVE (n=800 sample),800,0.01125,0.07
+positives sharing an 8-mer with a NEGATIVE,1414,0.18316831683168316,
+negatives sharing an 8-mer with a POSITIVE,2302,0.1364031277150304,
+positives sharing an 8-mer with another POSITIVE,1414,0.3026874115983027,
+negatives sharing an 8-mer with another NEGATIVE,2302,0.7228496959165943,
+0.9-identity clusters with >=2 members that contain BOTH labels (47 of 55),55,0.8545454545454545,
+"AUROC of sequence length alone (benchmark_clean, positive = longer)",3716,0.6135102370855181,

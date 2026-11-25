@@ -1,8 +1,51 @@
-# HANDOFF REPORT
+# HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T08:52:51 by `python -m src.report`; rebuilt after every stage._
+_Generated 2026-11-25T10:25:55 by `python -m src.v2.report`; rebuilt after every stage._
+
+## Deliverables (EXECUTION_PLAN_v2.md)
+
+| Deliverable | Contents | Present |
+|---|---|---|
+| LEAKAGE_FINDING.md | The Phase A result, stated precisely | True |
+| PREREGISTRATION.md | Primary hypothesis, committed before Phase B | True |
+| POWER_ANALYSIS.md | Detectable effect size at each n | False |
+| results/tables/T3.5_cross_benchmark_leakage.csv | T3.5 cross-benchmark leakage matrix | True |
+| results/tables/T5.8_architecture_comparison.csv | T5.8 architecture comparison | False |
+| results/tables/T5.9_representation_comparison.csv | T5.9 representation comparison | False |
+| results/tables/T5.10_cross_benchmark.csv | T5.10 cross-benchmark generalisation | False |
+| results/tables/T5.11_corrected_significance.csv | T5.11 FDR-corrected significance | False |
+| figures/fig5_8_architecture_lambda.png | F5.8 architectures x lambda | False |
+| figures/fig5_9_pooling_ablation.png | F5.9 pooling ablation | False |
+| figures/fig5_10_cross_benchmark_heatmap.png | F5.10 generalisation heatmap | False |
+| figures/figF1_negative_resemblance.png | F5.11/F analysis figures (several) | True |
+| INTERPRETATION_v2.md | Honest reading of everything | False |
+| HANDOFF_REPORT.md | This report, rebuilt after every stage | True |
+| results/provenance.csv | A1 provenance | True |
+| results/overlap_sequences.csv | A2 every overlapping sequence with labels | True |
 
 ## 1. STATUS
+
+**v2 extension phases**
+
+| Stage | What | Status | Compute wall-clock | Notes |
+|---|---|---|---|---|
+| A | Phase A: provenance, overlap verification (gate), cross-benchmark audit | complete | 4.1s | overlap reproduces: True |
+| E1 | E1: PREREGISTRATION.md committed before modelling | complete | - | PREREGISTRATION.md committed in c239f43dcb3719c7c40d6c2afd5217d6723a11f3 at 2026-11-25T14:36:00Z (UTC pushed to origin/main) |
+| V2_embed_esm2_t6_8M | Residue-level embeddings 8M | complete | 10.5s | (75589, 320), float32 |
+| V2_embed_esm2_t33_650M | Residue-level embeddings 650M | complete | 36.8 min | (75589, 1280), float16 |
+| B_cv | Phase B: 5 architectures x 6 lambdas x 5 seeds x 5 folds (CV) | skipped | - | not reached or not run |
+| B_final | Phase B: final models, Regimes A/B/C | skipped | - | not reached or not run |
+| C1_pooling | C1: pooling ablation on frozen 650M | skipped | - | not reached or not run |
+| C1_attention | C1: attention pooling at 650M | skipped | - | not reached or not run |
+| C2_fusion | C2: feature fusion (RF, LightGBM, MLP) | skipped | - | not reached or not run |
+| C3_finetune | C3: fine-tune 8M vs frozen control | skipped | - | not reached or not run |
+| D_cross | D1-D2: cross-benchmark generalisation | skipped | - | not reached or not run |
+| E5_nested | E5: nested CV for the headline comparison | skipped | - | not reached or not run |
+| E_stats | E2-E4, E6: BH correction, MDE, seed-vs-sample variance | skipped | - | not reached or not run |
+| F_analysis | Phase F: why AAC wins, motifs, errors, length | skipped | - | not reached or not run |
+| V2_tables | v2 tables and figures | skipped | - | not reached or not run |
+
+**v1 stages S1-S12 (complete; not re-run)**
 
 Wall-clock is compute time recorded by the stage runners (it excludes code-writing time).
 
@@ -21,7 +64,11 @@ Wall-clock is compute time recorded by the stage runners (it excludes code-writi
 | S11 | Tables and figures | complete | 117.0s | figures: complete; tables: complete |
 | S12 | Honest interpretation | complete | 5.0s | INTERPRETATION.md written from results CSVs |
 
-## 2. S1 VERIFICATION
+## 2. S1 / PHASE A VERIFICATION
+
+**Phase A gate: PASSED** (overlap reproduces: 211 and 298). Details: [LEAKAGE_FINDING.md](LEAKAGE_FINDING.md).
+
+**S1 hard gate (v1):**
 
 **PASSED: all numbers match exactly.**
 
@@ -43,6 +90,12 @@ Wall-clock is compute time recorded by the stage runners (it excludes code-writi
 | ind1049_regime_b_n | 751 | 751 | True |
 
 ## 3. HEADLINE RESULT
+
+**Primary hypothesis H1 (preregistered; outcome known from v1, see PREREGISTRATION.md section 0):** not supported. v1 numbers and the full v1 results are kept in the original sections below.
+
+Full reading: [INTERPRETATION_v2.md](INTERPRETATION_v2.md). v1 reading: [INTERPRETATION.md](INTERPRETATION.md).
+
+**v1 detail:**
 
 **5-fold CV, 8M checkpoint, tau=0.07 (mean/std over seeds x folds):**
 
@@ -116,6 +169,16 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 
 ## 5. FULL RESULTS
 
+| File | Rows |
+|---|---|
+| results/tables/T3.5_cross_benchmark_leakage.csv | 9 |
+| results/tables/T3.5b_cdhit_style_clustering.csv | 16 |
+| results/tables/TF1_negatives_fragment_test.csv | 10 |
+| results/tables/TF2_motif_enrichment.csv | 45 |
+| results/v2/cv_results_v2.csv | 26 |
+
+v1 files:
+
 | File | Rows | Contents |
 |---|---|---|
 | results/data_audit.csv | 78 | Tidy dataset audit and cross-set overlap table (Table 3.1/3.2) |
@@ -130,12 +193,16 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 | results/stats_tests.csv | 54 | DeLong, McNemar and paired-bootstrap CIs, lambda>0 vs lambda=0 |
 | results/stats_per_seed.csv | 270 | Per-seed paired differences and DeLong p-values |
 | results/bootstrap_cis.csv | 78 | 95% bootstrap CIs for AUROC and MCC of every final model |
-| results/tables/ | 30 | Thesis tables as CSV + LaTeX |
+| results/tables/ | 34 | Thesis tables as CSV + LaTeX |
 | results/predictions/ | 114 | Per-sample predictions |
 | results/latents/ | 26 | Latent vectors for t-SNE |
 | results/models/ | 66 | Final model weights + scalers |
 
 ## 6. FIGURES
+
+fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png
+
+v1 figure status:
 
 | Figure | Status |
 |---|---|
@@ -152,9 +219,22 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 | F5.6 confusion matrices | ok: figures/fig5_6_confusion_matrices.pdf, figures/fig5_6_confusion_matrices.png |
 | FA training curves | ok: figures/figA_training_curves.pdf, figures/figA_training_curves.png |
 
-Files in figures/: fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, figA_training_curves.pdf, figA_training_curves.png
+Files in figures/: fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png
 
 ## 7. BLOCKERS
+
+
+Everything in the v2 extension that failed or could not be done.
+
+## AIPFusion-Net could not be read
+_2026-11-25_
+
+The plan cites AIPFusion-Net (doi 10.3389/fmolb.2026.1952395). The DOI resolves to frontiersin.org, which returned HTTP 503 to automated requests, and web search found no record of the paper. Every statement about what that paper claims or used (training counts, "no overlapping peptide sequences", CD-HIT thresholds, Ind-426) is therefore taken from the plan text and is UNVERIFIED by me. The leakage finding below is stated only as a measurement on the local files and on the original AIPpred / AntiInflam / PreAIP files.
+
+## AIPStack independent sets 2 and 3 not obtainable
+_2026-11-25_
+
+The AIPStack paper (PMC9449674) returned a bot-check page, and the Nicole-DH/AIPStack GitHub repository returned 404 (and the GitHub API was rate-limited). Those datasets are therefore not in the cross-benchmark matrix. If you can get the files, drop them into `data/external/aipstack_*/` and re-run `python -m src.v2.phaseA`.
 
 
 Everything that failed or could not run, with diagnosis.
@@ -170,6 +250,49 @@ _2026-11-25_
 `results/latents/*.npz` (36 MB; they contain copies of raw ESM-2 embeddings) were committed in f2c18a4 before the ignore rule existed, and untracked in ed4fdc8 (and gitignored). The repository has no remote, so nothing was pushed; the files remain in local history. To purge them: `git filter-repo --path results/latents --invert-paths` (rewrites history, so I did not do it unasked).
 
 ## 8. DECISIONS
+
+
+Choices made during the v2 extension (EXECUTION_PLAN_v2.md). The v1 DECISIONS.md and BLOCKERS.md are left untouched; HANDOFF_REPORT.md section 8 embeds both.
+
+## V2-D1: Plan wins; v2 writes only new files
+_2026-11-25_
+
+Per the run brief, nothing from S1-S12 is modified or re-run. New code lives in `src/v2/`, new results in `results/v2/` plus plan-named files (`results/provenance.csv`, `results/tables/T*.csv`), and v2 decisions/blockers go to `DECISIONS_v2.md` / `BLOCKERS_v2.md`. Only HANDOFF_REPORT.md is rewritten, by `src/v2/report.py`, which keeps the v1 status table and result sections.
+
+## V2-D2: latents purge already done before the first push
+_2026-11-25_
+
+The brief asks to purge `results/latents` from history with git filter-repo before the first push. git-filter-repo is not installed; I had already removed that directory from every commit with `git filter-branch --index-filter` (equivalent result) before the first push, and verified `git log --all` contains no latents path. No further action needed.
+
+## V2-D3: External downloads are plain-text data, each in its own directory
+_2026-11-25_
+
+All dataset downloads (AIPpred, PreAIP, AntiInflam) are small text files fetched from the authors' stated pages (AntiInflam and PreAIP via Wayback Machine snapshots because the original servers are offline). Each file sits in its own directory under `data/external/`, is parsed only as text with `python -I`, validated to contain only sequence lines, and recorded with URL and SHA-256 in `results/external_sources.csv`.
+
+## V2-D4: CD-HIT is re-implemented, not the binary
+_2026-11-25_
+
+CD-HIT / CD-HIT-2D are not installed and not available as a Homebrew formula. I implemented the CD-HIT greedy incremental algorithm (length-sorted, identity = matches over the shorter sequence's length) in `src/v2/common.py` and label every result "CD-HIT-style". It will not reproduce CD-HIT's exact cluster counts, so counts are compared as approximate corroboration only.
+
+## V2-D5: Third-party dataset files stay out of git
+_2026-11-25_
+
+`data/external/` (downloaded AIPpred / PreAIP / AntiInflam text files, ~0.3 MB) is added to `.gitignore` (a one-line housekeeping change to an existing file, necessary so redistributed third-party data is not published). Reproducibility is preserved by `results/external_sources.csv` (URL-derived path, byte count, SHA-256) and the download URLs in `results/provenance.csv`.
+
+## V2-D6: Phase A gate passed; the premise stands, with a refined mechanism
+_2026-11-25_
+
+The 211 / 298 overlap reproduced exactly, so the run continues. The measured mechanism is more specific than the plan's framing: the local Benchmark is a composite of the AIPpred benchmark and AntiInflam training sequences, and the overlaps come from each source's cross-literature overlap with the other's independent set. Claims about AIPFusion-Net remain unverified and are not made.
+
+## V2-D7: Residue-level architectures use a learned per-residue bottleneck (d -> 64)
+_2026-11-25_
+
+Unadapted 320-d (and 1280-d) residue input made a single CNN fold take about 20 minutes on one M1 core (1.2 s per step), which makes the pre-specified 750-run Phase B grid impossible. B2-B5 therefore start with a learned Linear(d, 64)+ReLU+Dropout(0.2) applied per residue, then the named architecture (CNN kernels 3/5/7 with 64 channels each; 2-layer BiLSTM with 64 hidden units per direction; CNN-BiLSTM with 64 channels and 64 hidden; 2-layer 4-head Transformer encoder with d_model 128 and learned positions). The LSTM hidden size is 64 rather than the 128 in the plan for the same reason. B6 (attention pooling) keeps the full-width vector so that B1 vs B6 isolates pooling. Gradient-norm clipping at 1.0 is applied to all Phase B models for stability. These choices are fixed before seeing any Phase B result.
+
+## V2-D8: Phase B runs on 6 CPU workers; the 650M residue cache is float16
+_2026-11-25_
+
+The 8 GB machine swapped heavily while the 650M embedding ran alongside training (swap 4.7 GB, 1.2 s per tiny step), so training was started only after the embedding finished. 650M residue vectors are stored as float16 (max abs difference from the v1 float32 pooled embedding 0.0018, relative 2e-4); the 8M residue cache is float32 and reproduces v1 pooled embeddings to 1e-6.
 
 
 Choices made autonomously during the overnight run, each with the reasoning.
@@ -246,12 +369,59 @@ The first S9 pass trained the 8M "best" model at the default tau=0.07 because th
 
 ## 9. NEXT ACTIONS
 
-Ranked, most important first:
+_To be written at the end of the run._
 
-1. **Decide the thesis framing before writing Chapter 5.** The data supports "leakage audit as headline, SupCon as a rigorous null/negative ablation" (playbook Risk 1). Read `INTERPRETATION.md`; if you agree, soften Chapter 1's "superior predictive stability" and the contribution wording, as the playbook suggests.
-2. **Find out why AAC+RF beats every ESM-2 model.** Regime B MCC 0.425/0.374 (AAC+RF) vs 0.330/0.265 (best ESM-2). Cheap, informative checks: RF on ESM embeddings + AAC, and whether benchmark negatives are fragments of positive-source proteins. This is the examiner's likeliest first question.
-3. **Fill Table 5.7** with published AIPpred/PreAIP/etc. numbers from the original papers (none were available to me and none were invented). Keep the Regime A caveat.
-4. **Sanity-read the headline tables and figures** in `results/tables/` and `figures/` (all 12 figure jobs succeeded; I looked at the t-SNE and leakage-gap figures only).
-5. **Optional extensions (all cheap on CPU):** extend lambda beyond 2.0 (best lambda sat on the grid edge at 8M and 150M); report the tuned-threshold results (`T5_2b`) next to the 0.5-threshold ones; consider a larger-n test by pooling Ind_425 and Ind_1049 Regime B (note the 77-sequence overlap between them).
-6. **Chapters 1-2 fixes and Chapters 3-6 drafting** (playbook Prompts 12-14) were out of scope for this run and remain to do.
-7. **Housekeeping.** The disk was close to full all night (free space swung from 0.1 to 8 GB); `.venv` is 1.3 GB and `embeddings/` holds the four cached checkpoints (gitignored). Kaggle was not needed: all four ESM-2 checkpoints ran on this Mac's CPU (650M took about 51 minutes), and the Kaggle CLI is logged in as the new account if you want to use it later.
+## Appendix: LEAKAGE_FINDING.md (verbatim)
+
+# LEAKAGE FINDING (Phase A)
+
+**Gate result: PASSED.** The overlap reproduces exactly under independent re-computation. This document states what was measured on specific files, what was not measured, and which alternative explanations were ruled out. It makes no statement about the conduct of any author.
+
+All numbers come from `python -m src.v2.phaseA` (outputs: `results/provenance.csv`, `results/overlap_sequences.csv`, `results/external_sources.csv`, `results/tables/T3.5_cross_benchmark_leakage.csv`, `results/tables/T3.5b_cdhit_style_clustering.csv`, `results/v2/phaseA_summary.json`). The original published dataset files were downloaded (URLs and SHA-256 in `external_sources.csv`) and compared with the local files.
+
+## 1. The measurement
+
+Using a new reader (not the S1 code), with whitespace/case normalisation and a check that every residue is one of the 20 standard amino acids (0 violations in all nine datasets):
+
+| Pair (distributed local files) | Exact overlap | Same label | Opposite label | Share of the test set |
+|---|---|---|---|---|
+| Benchmark and Ind_425 | 211 | 204 | 7 | 49.6% |
+| Benchmark and Ind_1049 | 298 | 286 | 12 | 28.4% |
+| Ind_425 and Ind_1049 | 77 | 76 | 1 | 7.3% of Ind_1049 |
+
+The numbers are identical on the raw Benchmark (3,790 rows, 3,753 unique) and on the cleaned Benchmark (3,716), because none of the 37 label-conflicted sequences is in either test set. Under a CD-HIT-style cross-set screen (our re-implementation, identity over the shorter sequence), the share of test sequences with identity >= 0.9 to some Benchmark sequence is 62.1% for Ind_425 (264 of 425) and 31.7% for Ind_1049 (333 of 1,049).
+
+## 2. Provenance, verified against the original files
+
+| Local file | Matches | Evidence |
+|---|---|---|
+| `Ind_1049.fasta` (420/629) | AIPpred independent set, which equals the PreAIP test set | identical sequences, labels and order |
+| `Ind_425.fasta` (173/252) | AntiInflam validation set | identical sequences, labels and order |
+| `Benchmark_Dataset.fasta` (1,451/2,339 rows) | a composite, not any single published set | see below |
+
+- **The "253 vs 252" discrepancy is not a missing sequence.** The AntiInflam paper's text says 173 + 253, but its own totals (1,261 negatives minus 1,009 training) give 252, and the distributed validation file contains 252 negatives. Local `Ind_425` equals that file exactly.
+- **The Benchmark is AIPpred's benchmark plus AntiInflam training sequences.** It contains 3,141 of AIPpred's 3,145 benchmark sequences (4 absent) and 612 sequences that AIPpred's benchmark does not contain; all 612 occur in the AntiInflam training set (690/1,009), none in AntiInflam's validation set.
+- **The 37 label conflicts are exactly the cross-source disagreements.** AIPpred's benchmark and AntiInflam's training set share 856 sequences; 819 carry the same label (present once locally, except 3 absent) and 37 carry opposite labels. Those 37 are exactly the 37 sequences that appear twice in the local Benchmark with opposite labels. Neither source file contains an internal conflict.
+- **Each source pair is clean on its own.** AIPpred benchmark vs AIPpred independent: 0 exact overlap (13 of its 1,049 independent sequences have >= 0.9 identity to a benchmark sequence, consistent with their stated 0.8 CD-HIT step plus alignment differences). AntiInflam training vs validation: 0 exact overlap.
+- **The cross-literature overlaps are what is inherited.** AIPpred benchmark and AntiInflam validation share 211 sequences (the whole Ind_425 overlap). AntiInflam training and AIPpred independent share 298 sequences (the whole Ind_1049 overlap, all among the 612 added sequences).
+
+So the contamination is a property of how the composite training file was assembled relative to two independent sets that came from a different curation lineage: each published split is internally disjoint, but IEDB-derived sequences recur across the two lineages.
+
+## 3. Alternative explanations tested
+
+1. **Parsing or normalisation artefact.** Ruled out: new reader, normalised strings, 0 non-standard residues, same counts raw and cleaned.
+2. **Coincidental identity.** Ruled out: 96.7% (Ind_425) and 96.0% (Ind_1049) of the overlapping sequences carry the same label in both files, and a chance match of two unrelated peptides of length >= 11 is below 5e-15. The 7 and 12 label disagreements are cross-source annotation disagreements, not noise.
+3. **Accidental pasting of a test file into the training file.** Ruled out: the overlapping rows are scattered (Benchmark rows 18-2,304 for Ind_425, 1,255-3,789 for Ind_1049) and trace exactly to two published source files.
+4. **Within-set redundancy filtering (CD-HIT at the stated thresholds) should have removed them.** Not the case: clustering each set separately (Benchmark at 0.9, Ind_1049 at 0.8, Ind_425 at 0.6; CD-HIT-style) leaves 297 of 298 and 189 of 211 overlapping sequences intact, because within-set clustering cannot see the other set. Only a cross-set screen (the CD-HIT-2D analogue) removes them.
+5. **A different file version.** A version with the overlap removed would have smaller test sets (751 and 214 sequences) or a smaller Benchmark. The distributed test sets are the original published sets (1,049 and 425), and the Benchmark carries all 211 and 298 sequences, so no such version is what is distributed here. Whether a published experiment used some other filtered version cannot be decided from these files.
+
+## 4. What was not measured
+
+- **What any paper actually did.** I could not read the AIPFusion-Net paper (publisher returned HTTP 503; web search found no trace of it). Every statement attributed to it in the plan (its training counts, its "no overlapping peptide sequences" sentence, its CD-HIT thresholds, an "Ind-426" set) is **unverified**. The measurement above concerns the files distributed locally and the original AIPpred, PreAIP and AntiInflam files, not that paper's experiments.
+- **Whether any published numbers used these exact files.** The counts 1,451/2,339 (Benchmark) and 1,049 / 425 (independent sets) match the local files, but a match of counts is not proof of identical files.
+- **AIPStack's independent sets 2 and 3.** Not obtainable (see `BLOCKERS_v2.md`).
+- **The CD-HIT binary.** Not installed; all clustering numbers use a re-implementation (`greedy_cluster`) and will differ slightly from CD-HIT. A reproduction check is only approximate: the AIPpred + AntiInflam union (3,988 unique) clusters to 3,784 representatives at 0.9, against 3,753 unique sequences in the local Benchmark; of the 231 AntiInflam-only sequences absent from the local Benchmark, 130 have identity >= 0.9 to a retained sequence, which is consistent with, but does not establish, a 0.9 redundancy filter.
+
+## 5. Safe wording for the thesis
+
+"On the distributed benchmark files, 211 of the 425 sequences in the AntiInflam validation set (49.6%) and 298 of the 1,049 sequences in the AIPpred independent set (28.4%) also occur in the combined training file. The training file is the union of the AIPpred benchmark and AntiInflam training sets; each source split is internally disjoint, but the two literatures share IEDB-derived peptides. Removing the overlap (Regime B) is therefore required for a leakage-free estimate; the effect on performance is measured in Chapter 5."

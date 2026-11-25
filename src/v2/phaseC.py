@@ -31,7 +31,7 @@ FEAT = V2 / "features"
 OUT = V2 / "repr_results_v2.csv"
 COLS = (["model", "phase", "features", "classifier", "eval_set", "regime", "seed", "fold", "epoch_stopped", "train_seconds",
          "analysis_tier"] + METRIC_NAMES + ["n_eval"])
-N_JOBS = 6
+N_JOBS = 2
 
 
 # ----------------------------------------------------------- feature sets
