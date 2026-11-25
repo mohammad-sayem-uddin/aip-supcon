@@ -1,1459 +1,3232 @@
 {
- "gupta2017": {
-  "title": "Prediction of anti-inflammatory proteins/peptides: an insilico approach",
-  "authors": [
-   [
-    "Gupta",
-    "Sudheer"
-   ],
-   [
-    "Sharma",
-    "Ashok K."
-   ],
-   [
-    "Shastri",
-    "Vibhuti"
-   ],
-   [
-    "Madhu",
-    "Midhun K."
-   ],
-   [
-    "Sharma",
-    "Vineet K."
-   ]
-  ],
-  "year": 2017,
-  "container": "Journal of Translational Medicine",
-  "volume": "15",
-  "issue": "1",
-  "pages": "",
-  "doi": "10.1186/s12967-016-1103-6",
-  "type": "journal-article",
-  "publisher": "Springer Science and Business Media LLC",
-  "record": "https://api.crossref.org/works/10.1186/s12967-016-1103-6",
-  "source": "CrossRef"
- },
- "manavalan2018": {
-  "title": "AIPpred: Sequence-Based Prediction of Anti-inflammatory Peptides Using Random Forest",
-  "authors": [
-   [
-    "Manavalan",
-    "Balachandran"
-   ],
-   [
-    "Shin",
-    "Tae H."
-   ],
-   [
-    "Kim",
-    "Myeong O."
-   ],
-   [
-    "Lee",
-    "Gwang"
-   ]
-  ],
-  "year": 2018,
-  "container": "Frontiers in Pharmacology",
-  "volume": "9",
-  "issue": "",
-  "pages": "",
-  "doi": "10.3389/fphar.2018.00276",
-  "type": "journal-article",
-  "publisher": "Frontiers Media SA",
-  "record": "https://api.crossref.org/works/10.3389/fphar.2018.00276",
-  "source": "CrossRef"
- },
- "khatun2019": {
-  "title": "PreAIP: Computational Prediction of Anti-inflammatory Peptides by Integrating Multiple Complementary Features",
-  "authors": [
-   [
-    "Khatun",
-    "Mst. Shamima"
-   ],
-   [
-    "Hasan",
-    "Md. Mehedi"
-   ],
-   [
-    "Kurata",
-    "Hiroyuki"
-   ]
-  ],
-  "year": 2019,
-  "container": "Frontiers in Genetics",
-  "volume": "10",
-  "issue": "",
-  "pages": "",
-  "doi": "10.3389/fgene.2019.00129",
-  "type": "journal-article",
-  "publisher": "Frontiers Media SA",
-  "record": "https://api.crossref.org/works/10.3389/fgene.2019.00129",
-  "source": "CrossRef"
- },
- "deng2022": {
-  "title": "Prediction of anti-inflammatory peptides by a sequence-based stacking ensemble model named AIPStack",
-  "authors": [
-   [
-    "Deng",
-    "Hua"
-   ],
-   [
-    "Lou",
-    "Chaofeng"
-   ],
-   [
-    "Wu",
-    "Zengrui"
-   ],
-   [
-    "Li",
-    "Weihua"
-   ],
-   [
-    "Liu",
-    "Guixia"
-   ],
-   [
-    "Tang",
-    "Yun"
-   ]
-  ],
-  "year": 2022,
-  "container": "iScience",
-  "volume": "25",
-  "issue": "9",
-  "pages": "104967",
-  "doi": "10.1016/j.isci.2022.104967",
-  "type": "journal-article",
-  "publisher": "Elsevier BV",
-  "record": "https://api.crossref.org/works/10.1016/j.isci.2022.104967",
-  "source": "CrossRef"
- },
- "vita2019": {
-  "title": "The Immune Epitope Database (IEDB): 2018 update",
-  "authors": [
-   [
-    "Vita",
-    "Randi"
-   ],
-   [
-    "Mahajan",
-    "Swapnil"
-   ],
-   [
-    "Overton",
-    "James A"
-   ],
-   [
-    "Dhanda",
-    "Sandeep Kumar"
-   ],
-   [
-    "Martini",
-    "Sheridan"
-   ],
-   [
-    "Cantrell",
-    "Jason R"
-   ],
-   [
-    "Wheeler",
-    "Daniel K"
-   ],
-   [
-    "Sette",
-    "Alessandro"
-   ],
-   [
-    "Peters",
-    "Bjoern"
-   ]
-  ],
-  "year": 2019,
-  "container": "Nucleic Acids Research",
-  "volume": "47",
-  "issue": "D1",
-  "pages": "D339-D343",
-  "doi": "10.1093/nar/gky1006",
-  "type": "journal-article",
-  "publisher": "Oxford University Press (OUP)",
-  "record": "https://api.crossref.org/works/10.1093/nar/gky1006",
-  "source": "CrossRef"
- },
- "lin2023": {
-  "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
-  "authors": [
-   [
-    "Lin",
-    "Zeming"
-   ],
-   [
-    "Akin",
-    "Halil"
-   ],
-   [
-    "Rao",
-    "Roshan"
-   ],
-   [
-    "Hie",
-    "Brian"
-   ],
-   [
-    "Zhu",
-    "Zhongkai"
-   ],
-   [
-    "Lu",
-    "Wenting"
-   ],
-   [
-    "Smetanin",
-    "Nikita"
-   ],
-   [
-    "Verkuil",
-    "Robert"
-   ],
-   [
-    "Kabeli",
-    "Ori"
-   ],
-   [
-    "Shmueli",
-    "Yaniv"
-   ],
-   [
-    "dos Santos Costa",
-    "Allan"
-   ],
-   [
-    "Fazel-Zarandi",
-    "Maryam"
-   ],
-   [
-    "Sercu",
-    "Tom"
-   ],
-   [
-    "Candido",
-    "Salvatore"
-   ],
-   [
-    "Rives",
-    "Alexander"
-   ]
-  ],
-  "year": 2023,
-  "container": "Science",
-  "volume": "379",
-  "issue": "6637",
-  "pages": "1123-1130",
-  "doi": "10.1126/science.ade2574",
-  "type": "journal-article",
-  "publisher": "American Association for the Advancement of Science (AAAS)",
-  "record": "https://api.crossref.org/works/10.1126/science.ade2574",
-  "source": "CrossRef"
- },
- "rives2021": {
-  "title": "Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences",
-  "authors": [
-   [
-    "Rives",
-    "Alexander"
-   ],
-   [
-    "Meier",
-    "Joshua"
-   ],
-   [
-    "Sercu",
-    "Tom"
-   ],
-   [
-    "Goyal",
-    "Siddharth"
-   ],
-   [
-    "Lin",
-    "Zeming"
-   ],
-   [
-    "Liu",
-    "Jason"
-   ],
-   [
-    "Guo",
-    "Demi"
-   ],
-   [
-    "Ott",
-    "Myle"
-   ],
-   [
-    "Zitnick",
-    "C. Lawrence"
-   ],
-   [
-    "Ma",
-    "Jerry"
-   ],
-   [
-    "Fergus",
-    "Rob"
-   ]
-  ],
-  "year": 2021,
-  "container": "Proceedings of the National Academy of Sciences",
-  "volume": "118",
-  "issue": "15",
-  "pages": "",
-  "doi": "10.1073/pnas.2016239118",
-  "type": "journal-article",
-  "publisher": "National Academy of Sciences",
-  "record": "https://api.crossref.org/works/10.1073/pnas.2016239118",
-  "source": "CrossRef"
- },
- "bhasin2004": {
-  "title": "Classification of Nuclear Receptors Based on Amino Acid Composition and Dipeptide Composition",
-  "authors": [
-   [
-    "Bhasin",
-    "Manoj"
-   ],
-   [
-    "Raghava",
-    "Gajendra P.S."
-   ]
-  ],
-  "year": 2004,
-  "container": "Journal of Biological Chemistry",
-  "volume": "279",
-  "issue": "22",
-  "pages": "23262-23266",
-  "doi": "10.1074/jbc.m401932200",
-  "type": "journal-article",
-  "publisher": "Elsevier BV",
-  "record": "https://api.crossref.org/works/10.1074/jbc.m401932200",
-  "source": "CrossRef"
- },
- "dubchak1995": {
-  "title": "Prediction of protein folding class using global description of amino acid sequence.",
-  "authors": [
-   [
-    "Dubchak",
-    "I"
-   ],
-   [
-    "Muchnik",
-    "I"
-   ],
-   [
-    "Holbrook",
-    "S R"
-   ],
-   [
-    "Kim",
-    "S H"
-   ]
-  ],
-  "year": 1995,
-  "container": "Proceedings of the National Academy of Sciences",
-  "volume": "92",
-  "issue": "19",
-  "pages": "8700-8704",
-  "doi": "10.1073/pnas.92.19.8700",
-  "type": "journal-article",
-  "publisher": "National Academy of Sciences",
-  "record": "https://api.crossref.org/works/10.1073/pnas.92.19.8700",
-  "source": "CrossRef"
- },
- "needleman1970": {
-  "title": "A general method applicable to the search for similarities in the amino acid sequence of two proteins",
-  "authors": [
-   [
-    "Needleman",
-    "Saul B."
-   ],
-   [
-    "Wunsch",
-    "Christian D."
-   ]
-  ],
-  "year": 1970,
-  "container": "Journal of Molecular Biology",
-  "volume": "48",
-  "issue": "3",
-  "pages": "443-453",
-  "doi": "10.1016/0022-2836(70)90057-4",
-  "type": "journal-article",
-  "publisher": "Elsevier BV",
-  "record": "https://api.crossref.org/works/10.1016/0022-2836(70)90057-4",
-  "source": "CrossRef"
- },
- "henikoff1992": {
-  "title": "Amino acid substitution matrices from protein blocks.",
-  "authors": [
-   [
-    "Henikoff",
-    "S"
-   ],
-   [
-    "Henikoff",
-    "J G"
-   ]
-  ],
-  "year": 1992,
-  "container": "Proceedings of the National Academy of Sciences",
-  "volume": "89",
-  "issue": "22",
-  "pages": "10915-10919",
-  "doi": "10.1073/pnas.89.22.10915",
-  "type": "journal-article",
-  "publisher": "National Academy of Sciences",
-  "record": "https://api.crossref.org/works/10.1073/pnas.89.22.10915",
-  "source": "CrossRef"
- },
- "li2006": {
-  "title": "Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences",
-  "authors": [
-   [
-    "Li",
-    "Weizhong"
-   ],
-   [
-    "Godzik",
-    "Adam"
-   ]
-  ],
-  "year": 2006,
-  "container": "Bioinformatics",
-  "volume": "22",
-  "issue": "13",
-  "pages": "1658-1659",
-  "doi": "10.1093/bioinformatics/btl158",
-  "type": "journal-article",
-  "publisher": "Oxford University Press (OUP)",
-  "record": "https://api.crossref.org/works/10.1093/bioinformatics/btl158",
-  "source": "CrossRef"
- },
- "hochreiter1997": {
-  "title": "Long Short-Term Memory",
-  "authors": [
-   [
-    "Hochreiter",
-    "Sepp"
-   ],
-   [
-    "Schmidhuber",
-    "J\u00fcrgen"
-   ]
-  ],
-  "year": 1997,
-  "container": "Neural Computation",
-  "volume": "9",
-  "issue": "8",
-  "pages": "1735-1780",
-  "doi": "10.1162/neco.1997.9.8.1735",
-  "type": "journal-article",
-  "publisher": "MIT Press",
-  "record": "https://api.crossref.org/works/10.1162/neco.1997.9.8.1735",
-  "source": "CrossRef"
- },
- "matthews1975": {
-  "title": "Comparison of the predicted and observed secondary structure of T4 phage lysozyme",
-  "authors": [
-   [
-    "Matthews",
-    "B.W."
-   ]
-  ],
-  "year": 1975,
-  "container": "Biochimica et Biophysica Acta (BBA) - Protein Structure",
-  "volume": "405",
-  "issue": "2",
-  "pages": "442-451",
-  "doi": "10.1016/0005-2795(75)90109-9",
-  "type": "journal-article",
-  "publisher": "Elsevier BV",
-  "record": "https://api.crossref.org/works/10.1016/0005-2795(75)90109-9",
-  "source": "CrossRef"
- },
- "delong1988": {
-  "title": "Comparing the Areas under Two or More Correlated Receiver Operating Characteristic Curves: A Nonparametric Approach",
-  "authors": [
-   [
-    "DeLong",
-    "Elizabeth R."
-   ],
-   [
-    "DeLong",
-    "David M."
-   ],
-   [
-    "Clarke-Pearson",
-    "Daniel L."
-   ]
-  ],
-  "year": 1988,
-  "container": "Biometrics",
-  "volume": "44",
-  "issue": "3",
-  "pages": "837",
-  "doi": "10.2307/2531595",
-  "type": "journal-article",
-  "publisher": "JSTOR",
-  "record": "https://api.crossref.org/works/10.2307/2531595",
-  "source": "CrossRef"
- },
- "mcnemar1947": {
-  "title": "Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages",
-  "authors": [
-   [
-    "McNemar",
-    "Quinn"
-   ]
-  ],
-  "year": 1947,
-  "container": "Psychometrika",
-  "volume": "12",
-  "issue": "2",
-  "pages": "153-157",
-  "doi": "10.1007/bf02295996",
-  "type": "journal-article",
-  "publisher": "Cambridge University Press (CUP)",
-  "record": "https://api.crossref.org/works/10.1007/bf02295996",
-  "source": "CrossRef"
- },
- "benjamini1995": {
-  "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
-  "authors": [
-   [
-    "Benjamini",
-    "Yoav"
-   ],
-   [
-    "Hochberg",
-    "Yosef"
-   ]
-  ],
-  "year": 1995,
-  "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
-  "volume": "57",
-  "issue": "1",
-  "pages": "289-300",
-  "doi": "10.1111/j.2517-6161.1995.tb02031.x",
-  "type": "journal-article",
-  "publisher": "Oxford University Press (OUP)",
-  "record": "https://api.crossref.org/works/10.1111/j.2517-6161.1995.tb02031.x",
-  "source": "CrossRef"
- },
- "efron1979": {
-  "title": "Bootstrap Methods: Another Look at the Jackknife",
-  "authors": [
-   [
-    "Efron",
-    "B."
-   ]
-  ],
-  "year": 1979,
-  "container": "The Annals of Statistics",
-  "volume": "7",
-  "issue": "1",
-  "pages": "1-26",
-  "doi": "10.1214/aos/1176344552",
-  "type": "journal-article",
-  "publisher": "Institute of Mathematical Statistics",
-  "record": "https://api.crossref.org/works/10.1214/aos/1176344552",
-  "source": "CrossRef"
- },
- "wolf2020": {
-  "title": "Transformers: State-of-the-Art Natural Language Processing",
-  "authors": [
-   [
-    "Wolf",
-    "Thomas"
-   ],
-   [
-    "Debut",
-    "Lysandre"
-   ],
-   [
-    "Sanh",
-    "Victor"
-   ],
-   [
-    "Chaumond",
-    "Julien"
-   ],
-   [
-    "Delangue",
-    "Clement"
-   ],
-   [
-    "Moi",
-    "Anthony"
-   ],
-   [
-    "Cistac",
-    "Pierric"
-   ],
-   [
-    "Rault",
-    "Tim"
-   ],
-   [
-    "Louf",
-    "Remi"
-   ],
-   [
-    "Funtowicz",
-    "Morgan"
-   ],
-   [
-    "Davison",
-    "Joe"
-   ],
-   [
-    "Shleifer",
-    "Sam"
-   ],
-   [
-    "von Platen",
-    "Patrick"
-   ],
-   [
-    "Ma",
-    "Clara"
-   ],
-   [
-    "Jernite",
-    "Yacine"
-   ],
-   [
-    "Plu",
-    "Julien"
-   ],
-   [
-    "Xu",
-    "Canwen"
-   ],
-   [
-    "Le Scao",
-    "Teven"
-   ],
-   [
-    "Gugger",
-    "Sylvain"
-   ],
-   [
-    "Drame",
-    "Mariama"
-   ],
-   [
-    "Lhoest",
-    "Quentin"
-   ],
-   [
-    "Rush",
-    "Alexander"
-   ]
-  ],
-  "year": 2020,
-  "container": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
-  "volume": "",
-  "issue": "",
-  "pages": "38-45",
-  "doi": "10.18653/v1/2020.emnlp-demos.6",
-  "type": "proceedings-article",
-  "publisher": "Association for Computational Linguistics",
-  "record": "https://api.crossref.org/works/10.18653/v1/2020.emnlp-demos.6",
-  "source": "CrossRef"
- },
- "cock2009": {
-  "title": "Biopython: freely available Python tools for computational molecular biology and bioinformatics",
-  "authors": [
-   [
-    "Cock",
-    "Peter J. A."
-   ],
-   [
-    "Antao",
-    "Tiago"
-   ],
-   [
-    "Chang",
-    "Jeffrey T."
-   ],
-   [
-    "Chapman",
-    "Brad A."
-   ],
-   [
-    "Cox",
-    "Cymon J."
-   ],
-   [
-    "Dalke",
-    "Andrew"
-   ],
-   [
-    "Friedberg",
-    "Iddo"
-   ],
-   [
-    "Hamelryck",
-    "Thomas"
-   ],
-   [
-    "Kauff",
-    "Frank"
-   ],
-   [
-    "Wilczynski",
-    "Bartek"
-   ],
-   [
-    "de Hoon",
-    "Michiel J. L."
-   ]
-  ],
-  "year": 2009,
-  "container": "Bioinformatics",
-  "volume": "25",
-  "issue": "11",
-  "pages": "1422-1423",
-  "doi": "10.1093/bioinformatics/btp163",
-  "type": "journal-article",
-  "publisher": "Oxford University Press (OUP)",
-  "record": "https://api.crossref.org/works/10.1093/bioinformatics/btp163",
-  "source": "CrossRef"
- },
- "khosla2020": {
-  "title": "Supervised Contrastive Learning",
-  "year": 2020,
-  "doi": "",
-  "issue": "",
-  "pages": "18661-18673",
-  "volume": "33",
-  "record": "https://proceedings.neurips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html",
-  "source": "publisher page",
-  "type": "inproceedings",
-  "authors": [
-   [
-    "Khosla",
-    "Prannay"
-   ],
-   [
-    "Teterwak",
-    "Piotr"
-   ],
-   [
-    "Wang",
-    "Chen"
-   ],
-   [
-    "Sarna",
-    "Aaron"
-   ],
-   [
-    "Tian",
-    "Yonglong"
-   ],
-   [
-    "Isola",
-    "Phillip"
-   ],
-   [
-    "Maschinot",
-    "Aaron"
-   ],
-   [
-    "Liu",
-    "Ce"
-   ],
-   [
-    "Krishnan",
-    "Dilip"
-   ]
-  ],
-  "container": "Advances in Neural Information Processing Systems",
-  "arxiv": "2004.11362"
- },
- "vaswani2017": {
-  "title": "Attention Is All You Need",
-  "year": 2017,
-  "doi": "",
-  "issue": "",
-  "pages": "5998-6008",
-  "volume": "30",
-  "record": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
-  "source": "publisher page",
-  "type": "inproceedings",
-  "authors": [
-   [
-    "Vaswani",
-    "Ashish"
-   ],
-   [
-    "Shazeer",
-    "Noam"
-   ],
-   [
-    "Parmar",
-    "Niki"
-   ],
-   [
-    "Uszkoreit",
-    "Jakob"
-   ],
-   [
-    "Jones",
-    "Llion"
-   ],
-   [
-    "Gomez",
-    "Aidan N"
-   ],
-   [
-    "Kaiser",
-    "\u0141ukasz"
-   ],
-   [
-    "Polosukhin",
-    "Illia"
-   ]
-  ],
-  "container": "Advances in Neural Information Processing Systems",
-  "arxiv": "1706.03762"
- },
- "ilse2018": {
-  "title": "Attention-based Deep Multiple Instance Learning",
-  "year": 2018,
-  "doi": "",
-  "issue": "",
-  "pages": "2127-2136",
-  "volume": "80",
-  "record": "https://proceedings.mlr.press/v80/ilse18a.html",
-  "source": "publisher page",
-  "type": "inproceedings",
-  "authors": [
-   [
-    "Ilse",
-    "Maximilian"
-   ],
-   [
-    "Tomczak",
-    "Jakub"
-   ],
-   [
-    "Welling",
-    "Max"
-   ]
-  ],
-  "container": "Proceedings of the 35th International Conference on Machine Learning",
-  "arxiv": "1802.04712"
- },
- "loshchilov2017": {
-  "title": "Decoupled Weight Decay Regularization",
-  "authors": [
-   [
-    "Loshchilov",
-    "Ilya"
-   ],
-   [
-    "Hutter",
-    "Frank"
-   ]
-  ],
-  "year": 2017,
-  "container": "",
-  "volume": "",
-  "issue": "",
-  "pages": "",
-  "doi": "",
-  "type": "arxiv",
-  "publisher": "",
-  "record": "https://arxiv.org/abs/1711.05101",
-  "source": "arXiv",
-  "arxiv": "1711.05101",
-  "journal_ref": ""
- },
- "paszke2019": {
-  "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
-  "year": 2019,
-  "doi": "",
-  "issue": "",
-  "pages": "8026-8037",
-  "volume": "32",
-  "record": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html",
-  "source": "publisher page",
-  "type": "inproceedings",
-  "authors": [
-   [
-    "Paszke",
-    "Adam"
-   ],
-   [
-    "Gross",
-    "Sam"
-   ],
-   [
-    "Massa",
-    "Francisco"
-   ],
-   [
-    "Lerer",
-    "Adam"
-   ],
-   [
-    "Bradbury",
-    "James"
-   ],
-   [
-    "Chanan",
-    "Gregory"
-   ],
-   [
-    "Killeen",
-    "Trevor"
-   ],
-   [
-    "Lin",
-    "Zeming"
-   ],
-   [
-    "Gimelshein",
-    "Natalia"
-   ],
-   [
-    "Antiga",
-    "Luca"
-   ],
-   [
-    "Desmaison",
-    "Alban"
-   ],
-   [
-    "Kopf",
-    "Andreas"
-   ],
-   [
-    "Yang",
-    "Edward"
-   ],
-   [
-    "DeVito",
-    "Zachary"
-   ],
-   [
-    "Raison",
-    "Martin"
-   ],
-   [
-    "Tejani",
-    "Alykhan"
-   ],
-   [
-    "Chilamkurthy",
-    "Sasank"
-   ],
-   [
-    "Steiner",
-    "Benoit"
-   ],
-   [
-    "Fang",
-    "Lu"
-   ],
-   [
-    "Bai",
-    "Junjie"
-   ],
-   [
-    "Chintala",
-    "Soumith"
-   ]
-  ],
-  "container": "Advances in Neural Information Processing Systems",
-  "arxiv": "1912.01703"
- },
- "pedregosa2012": {
-  "title": "Scikit-learn: Machine Learning in Python",
-  "year": 2011,
-  "doi": "",
-  "issue": "85",
-  "pages": "2825-2830",
-  "volume": "12",
-  "record": "https://jmlr.org/papers/v12/pedregosa11a.html",
-  "source": "publisher page",
-  "type": "article",
-  "authors": [
-   [
-    "Pedregosa",
-    "Fabian"
-   ],
-   [
-    "Varoquaux",
-    "Ga\u00ebl"
-   ],
-   [
-    "Gramfort",
-    "Alexandre"
-   ],
-   [
-    "Michel",
-    "Vincent"
-   ],
-   [
-    "Thirion",
-    "Bertrand"
-   ],
-   [
-    "Grisel",
-    "Olivier"
-   ],
-   [
-    "Blondel",
-    "Mathieu"
-   ],
-   [
-    "Prettenhofer",
-    "Peter"
-   ],
-   [
-    "Weiss",
-    "Ron"
-   ],
-   [
-    "Dubourg",
-    "Vincent"
-   ],
-   [
-    "Vanderplas",
-    "Jake"
-   ],
-   [
-    "Passos",
-    "Alexandre"
-   ],
-   [
-    "Cournapeau",
-    "David"
-   ],
-   [
-    "Brucher",
-    "Matthieu"
-   ],
-   [
-    "Perrot",
-    "Matthieu"
-   ],
-   [
-    "Duchesnay",
-    "\u00c9douard"
-   ]
-  ],
-  "container": "Journal of Machine Learning Research",
-  "arxiv": "1201.0490"
- },
- "ke2017": {
-  "title": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree",
-  "year": 2017,
-  "doi": "",
-  "issue": "",
-  "pages": "",
-  "volume": "30",
-  "record": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html",
-  "source": "publisher page",
-  "type": "inproceedings",
-  "authors": [
-   [
-    "Ke",
-    "Guolin"
-   ],
-   [
-    "Meng",
-    "Qi"
-   ],
-   [
-    "Finley",
-    "Thomas"
-   ],
-   [
-    "Wang",
-    "Taifeng"
-   ],
-   [
-    "Chen",
-    "Wei"
-   ],
-   [
-    "Ma",
-    "Weidong"
-   ],
-   [
-    "Ye",
-    "Qiwei"
-   ],
-   [
-    "Liu",
-    "Tie-Yan"
-   ]
-  ],
-  "container": "Advances in Neural Information Processing Systems"
- },
- "ioffe2015": {
-  "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
-  "year": 2015,
-  "doi": "",
-  "issue": "",
-  "pages": "448-456",
-  "volume": "37",
-  "record": "https://proceedings.mlr.press/v37/ioffe15.html",
-  "source": "publisher page",
-  "type": "inproceedings",
-  "authors": [
-   [
-    "Ioffe",
-    "Sergey"
-   ],
-   [
-    "Szegedy",
-    "Christian"
-   ]
-  ],
-  "container": "Proceedings of the 32nd International Conference on Machine Learning"
- },
- "srivastava2014": {
-  "title": "Dropout: A Simple Way to Prevent Neural Networks from Overfitting",
-  "year": 2014,
-  "doi": "",
-  "issue": "56",
-  "pages": "1929-1958",
-  "volume": "15",
-  "record": "https://jmlr.org/papers/v15/srivastava14a.html",
-  "source": "publisher page",
-  "type": "article",
-  "authors": [
-   [
-    "Srivastava",
-    "Nitish"
-   ],
-   [
-    "Hinton",
-    "Geoffrey"
-   ],
-   [
-    "Krizhevsky",
-    "Alex"
-   ],
-   [
-    "Sutskever",
-    "Ilya"
-   ],
-   [
-    "Salakhutdinov",
-    "Ruslan"
-   ]
-  ],
-  "container": "Journal of Machine Learning Research"
- },
- "vandermaaten2008": {
-  "title": "Visualizing Data using t-SNE",
-  "year": 2008,
-  "doi": "",
-  "issue": "86",
-  "pages": "2579-2605",
-  "volume": "9",
-  "record": "https://jmlr.org/papers/v9/vandermaaten08a.html",
-  "source": "publisher page",
-  "type": "article",
-  "authors": [
-   [
-    "van der Maaten",
-    "Laurens"
-   ],
-   [
-    "Hinton",
-    "Geoffrey"
-   ]
-  ],
-  "container": "Journal of Machine Learning Research"
- },
- "breiman2001": {
-  "title": "Random Forests",
-  "authors": [
-   [
-    "Breiman",
-    "Leo"
-   ]
-  ],
-  "year": 2001,
-  "container": "Machine Learning",
-  "volume": "45",
-  "issue": "1",
-  "pages": "5-32",
-  "doi": "10.1023/a:1010933404324",
-  "type": "journal-article",
-  "publisher": "Springer Science and Business Media LLC",
-  "record": "https://api.crossref.org/works/10.1023/a:1010933404324",
-  "source": "CrossRef"
- },
- "cortes1995": {
-  "title": "Support-Vector Networks",
-  "authors": [
-   [
-    "Cortes",
-    "Corinna"
-   ],
-   [
-    "Vapnik",
-    "Vladimir"
-   ]
-  ],
-  "year": 1995,
-  "container": "Machine Learning",
-  "volume": "20",
-  "issue": "3",
-  "pages": "273-297",
-  "doi": "10.1007/bf00994018",
-  "type": "journal-article",
-  "publisher": "Springer Science and Business Media LLC",
-  "record": "https://api.crossref.org/works/10.1007/bf00994018",
-  "source": "CrossRef"
- },
- "loshchilov2016": {
-  "title": "SGDR: Stochastic Gradient Descent with Warm Restarts",
-  "authors": [
-   [
-    "Loshchilov",
-    "Ilya"
-   ],
-   [
-    "Hutter",
-    "Frank"
-   ]
-  ],
-  "year": 2016,
-  "container": "",
-  "volume": "",
-  "issue": "",
-  "pages": "",
-  "doi": "",
-  "type": "arxiv",
-  "publisher": "",
-  "record": "https://arxiv.org/abs/1608.03983",
-  "source": "arXiv",
-  "arxiv": "1608.03983",
-  "journal_ref": ""
- },
- "zhao2021": {
-  "title": "iAIPs: Identifying Anti-Inflammatory Peptides Using Random Forest",
-  "authors": [
-   [
-    "Zhao",
-    "Dongxu"
-   ],
-   [
-    "Teng",
-    "Zhixia"
-   ],
-   [
-    "Li",
-    "Yanjuan"
-   ],
-   [
-    "Chen",
-    "Dong"
-   ]
-  ],
-  "year": 2021,
-  "container": "Frontiers in Genetics",
-  "volume": "12",
-  "issue": "",
-  "pages": "",
-  "doi": "10.3389/fgene.2021.773202",
-  "type": "journal-article",
-  "publisher": "Frontiers Media SA",
-  "record": "https://api.crossref.org/works/10.3389/fgene.2021.773202",
-  "source": "CrossRef"
- },
- "zhang2021": {
-  "title": "AIEpred: An Ensemble Predictive Model of Classifier Chain to Identify Anti-Inflammatory Peptides",
-  "authors": [
-   [
-    "Zhang",
-    "Jinhao"
-   ],
-   [
-    "Zhang",
-    "Zehua"
-   ],
-   [
-    "Pu",
-    "Lianrong"
-   ],
-   [
-    "Tang",
-    "Jijun"
-   ],
-   [
-    "Guo",
-    "Fei"
-   ]
-  ],
-  "year": 2021,
-  "container": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
-  "volume": "18",
-  "issue": "5",
-  "pages": "1831-1840",
-  "doi": "10.1109/tcbb.2020.2968419",
-  "type": "journal-article",
-  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
-  "record": "https://api.crossref.org/works/10.1109/tcbb.2020.2968419",
-  "source": "CrossRef"
- },
- "gaffar2024": {
-  "title": "IF-AIP: A machine learning method for the identification of anti-inflammatory peptides using multi-feature fusion strategy",
-  "authors": [
-   [
-    "Gaffar",
-    "Saima"
-   ],
-   [
-    "Hassan",
-    "Mir Tanveerul"
-   ],
-   [
-    "Tayara",
-    "Hilal"
-   ],
-   [
-    "Chong",
-    "Kil To"
-   ]
-  ],
-  "year": 2024,
-  "container": "Computers in Biology and Medicine",
-  "volume": "168",
-  "issue": "",
-  "pages": "107724",
-  "doi": "10.1016/j.compbiomed.2023.107724",
-  "type": "journal-article",
-  "publisher": "Elsevier BV",
-  "record": "https://api.crossref.org/works/10.1016/j.compbiomed.2023.107724",
-  "source": "CrossRef"
- },
- "wang2026": {
-  "title": "AIPFusion-Net: an interaction-fusion framework for anti-inflammatory peptide prediction using protein language model embeddings, local sequence patterns, and handcrafted descriptors",
-  "authors": [
-   [
-    "Wang",
-    "Wentao"
-   ],
-   [
-    "Yang",
-    "Weidong"
-   ],
-   [
-    "Li",
-    "Hongmei"
-   ],
-   [
-    "Cui",
-    "Zhenyu"
-   ],
-   [
-    "Shen",
-    "Dan"
-   ]
-  ],
-  "year": 2026,
-  "container": "Frontiers in Molecular Biosciences",
-  "volume": "13",
-  "issue": "",
-  "pages": "",
-  "doi": "10.3389/fmolb.2026.1952395",
-  "type": "journal-article",
-  "publisher": "Frontiers Media SA",
-  "record": "https://api.crossref.org/works/10.3389/fmolb.2026.1952395",
-  "source": "CrossRef"
- },
- "delgado2001": {
-  "title": "Vasoactive intestinal peptide prevents experimental arthritis by downregulating both autoimmune and inflammatory components of the disease",
-  "authors": [
-   [
-    "Delgado",
-    "Mario"
-   ],
-   [
-    "Abad",
-    "Catalina"
-   ],
-   [
-    "Martinez",
-    "Carmen"
-   ],
-   [
-    "Leceta",
-    "Javier"
-   ],
-   [
-    "Gomariz",
-    "Rosa P."
-   ]
-  ],
-  "year": 2001,
-  "container": "Nature Medicine",
-  "volume": "7",
-  "issue": "5",
-  "pages": "563-568",
-  "doi": "10.1038/87887",
-  "type": "journal-article",
-  "publisher": "Springer Science and Business Media LLC",
-  "record": "https://api.crossref.org/works/10.1038/87887",
-  "source": "CrossRef"
- },
- "gonzalez2005": {
-  "title": "Modulating Bladder Neuro-Inflammation: RDP58, a Novel Anti-Inflammatory Peptide, Decreases Inflammation and Nerve Growth Factor Production in Experimental Cystitis",
-  "authors": [
-   [
-    "Gonzalez",
-    "Ricardo R."
-   ],
-   [
-    "Fong",
-    "Timothy"
-   ],
-   [
-    "Belmar",
-    "Nicole"
-   ],
-   [
-    "Saban",
-    "Marcia"
-   ],
-   [
-    "Felsen",
-    "Diane"
-   ],
-   [
-    "Te",
-    "Alexis"
-   ]
-  ],
-  "year": 2005,
-  "container": "Journal of Urology",
-  "volume": "173",
-  "issue": "2",
-  "pages": "630-634",
-  "doi": "10.1097/01.ju.0000143192.68223.f7",
-  "type": "journal-article",
-  "publisher": "Ovid Technologies (Wolters Kluwer Health)",
-  "record": "https://api.crossref.org/works/10.1097/01.ju.0000143192.68223.f7",
-  "source": "CrossRef"
- }
+  "gupta2017": {
+    "title": "Prediction of anti-inflammatory proteins/peptides: an insilico approach",
+    "authors": [
+      [
+        "Gupta",
+        "Sudheer"
+      ],
+      [
+        "Sharma",
+        "Ashok K."
+      ],
+      [
+        "Shastri",
+        "Vibhuti"
+      ],
+      [
+        "Madhu",
+        "Midhun K."
+      ],
+      [
+        "Sharma",
+        "Vineet K."
+      ]
+    ],
+    "year": 2017,
+    "container": "Journal of Translational Medicine",
+    "volume": "15",
+    "issue": "1",
+    "pages": "",
+    "doi": "10.1186/s12967-016-1103-6",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1186/s12967-016-1103-6",
+    "source": "CrossRef"
+  },
+  "manavalan2018": {
+    "title": "AIPpred: Sequence-Based Prediction of Anti-inflammatory Peptides Using Random Forest",
+    "authors": [
+      [
+        "Manavalan",
+        "Balachandran"
+      ],
+      [
+        "Shin",
+        "Tae H."
+      ],
+      [
+        "Kim",
+        "Myeong O."
+      ],
+      [
+        "Lee",
+        "Gwang"
+      ]
+    ],
+    "year": 2018,
+    "container": "Frontiers in Pharmacology",
+    "volume": "9",
+    "issue": "",
+    "pages": "",
+    "doi": "10.3389/fphar.2018.00276",
+    "type": "journal-article",
+    "publisher": "Frontiers Media SA",
+    "record": "https://api.crossref.org/works/10.3389/fphar.2018.00276",
+    "source": "CrossRef"
+  },
+  "khatun2019": {
+    "title": "PreAIP: Computational Prediction of Anti-inflammatory Peptides by Integrating Multiple Complementary Features",
+    "authors": [
+      [
+        "Khatun",
+        "Mst. Shamima"
+      ],
+      [
+        "Hasan",
+        "Md. Mehedi"
+      ],
+      [
+        "Kurata",
+        "Hiroyuki"
+      ]
+    ],
+    "year": 2019,
+    "container": "Frontiers in Genetics",
+    "volume": "10",
+    "issue": "",
+    "pages": "",
+    "doi": "10.3389/fgene.2019.00129",
+    "type": "journal-article",
+    "publisher": "Frontiers Media SA",
+    "record": "https://api.crossref.org/works/10.3389/fgene.2019.00129",
+    "source": "CrossRef"
+  },
+  "deng2022": {
+    "title": "Prediction of anti-inflammatory peptides by a sequence-based stacking ensemble model named AIPStack",
+    "authors": [
+      [
+        "Deng",
+        "Hua"
+      ],
+      [
+        "Lou",
+        "Chaofeng"
+      ],
+      [
+        "Wu",
+        "Zengrui"
+      ],
+      [
+        "Li",
+        "Weihua"
+      ],
+      [
+        "Liu",
+        "Guixia"
+      ],
+      [
+        "Tang",
+        "Yun"
+      ]
+    ],
+    "year": 2022,
+    "container": "iScience",
+    "volume": "25",
+    "issue": "9",
+    "pages": "104967",
+    "doi": "10.1016/j.isci.2022.104967",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/j.isci.2022.104967",
+    "source": "CrossRef"
+  },
+  "vita2019": {
+    "title": "The Immune Epitope Database (IEDB): 2018 update",
+    "authors": [
+      [
+        "Vita",
+        "Randi"
+      ],
+      [
+        "Mahajan",
+        "Swapnil"
+      ],
+      [
+        "Overton",
+        "James A"
+      ],
+      [
+        "Dhanda",
+        "Sandeep Kumar"
+      ],
+      [
+        "Martini",
+        "Sheridan"
+      ],
+      [
+        "Cantrell",
+        "Jason R"
+      ],
+      [
+        "Wheeler",
+        "Daniel K"
+      ],
+      [
+        "Sette",
+        "Alessandro"
+      ],
+      [
+        "Peters",
+        "Bjoern"
+      ]
+    ],
+    "year": 2019,
+    "container": "Nucleic Acids Research",
+    "volume": "47",
+    "issue": "D1",
+    "pages": "D339-D343",
+    "doi": "10.1093/nar/gky1006",
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "record": "https://api.crossref.org/works/10.1093/nar/gky1006",
+    "source": "CrossRef"
+  },
+  "lin2023": {
+    "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+    "authors": [
+      [
+        "Lin",
+        "Zeming"
+      ],
+      [
+        "Akin",
+        "Halil"
+      ],
+      [
+        "Rao",
+        "Roshan"
+      ],
+      [
+        "Hie",
+        "Brian"
+      ],
+      [
+        "Zhu",
+        "Zhongkai"
+      ],
+      [
+        "Lu",
+        "Wenting"
+      ],
+      [
+        "Smetanin",
+        "Nikita"
+      ],
+      [
+        "Verkuil",
+        "Robert"
+      ],
+      [
+        "Kabeli",
+        "Ori"
+      ],
+      [
+        "Shmueli",
+        "Yaniv"
+      ],
+      [
+        "dos Santos Costa",
+        "Allan"
+      ],
+      [
+        "Fazel-Zarandi",
+        "Maryam"
+      ],
+      [
+        "Sercu",
+        "Tom"
+      ],
+      [
+        "Candido",
+        "Salvatore"
+      ],
+      [
+        "Rives",
+        "Alexander"
+      ]
+    ],
+    "year": 2023,
+    "container": "Science",
+    "volume": "379",
+    "issue": "6637",
+    "pages": "1123-1130",
+    "doi": "10.1126/science.ade2574",
+    "type": "journal-article",
+    "publisher": "American Association for the Advancement of Science (AAAS)",
+    "record": "https://api.crossref.org/works/10.1126/science.ade2574",
+    "source": "CrossRef"
+  },
+  "rives2021": {
+    "title": "Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences",
+    "authors": [
+      [
+        "Rives",
+        "Alexander"
+      ],
+      [
+        "Meier",
+        "Joshua"
+      ],
+      [
+        "Sercu",
+        "Tom"
+      ],
+      [
+        "Goyal",
+        "Siddharth"
+      ],
+      [
+        "Lin",
+        "Zeming"
+      ],
+      [
+        "Liu",
+        "Jason"
+      ],
+      [
+        "Guo",
+        "Demi"
+      ],
+      [
+        "Ott",
+        "Myle"
+      ],
+      [
+        "Zitnick",
+        "C. Lawrence"
+      ],
+      [
+        "Ma",
+        "Jerry"
+      ],
+      [
+        "Fergus",
+        "Rob"
+      ]
+    ],
+    "year": 2021,
+    "container": "Proceedings of the National Academy of Sciences",
+    "volume": "118",
+    "issue": "15",
+    "pages": "",
+    "doi": "10.1073/pnas.2016239118",
+    "type": "journal-article",
+    "publisher": "National Academy of Sciences",
+    "record": "https://api.crossref.org/works/10.1073/pnas.2016239118",
+    "source": "CrossRef"
+  },
+  "bhasin2004": {
+    "title": "Classification of Nuclear Receptors Based on Amino Acid Composition and Dipeptide Composition",
+    "authors": [
+      [
+        "Bhasin",
+        "Manoj"
+      ],
+      [
+        "Raghava",
+        "Gajendra P.S."
+      ]
+    ],
+    "year": 2004,
+    "container": "Journal of Biological Chemistry",
+    "volume": "279",
+    "issue": "22",
+    "pages": "23262-23266",
+    "doi": "10.1074/jbc.m401932200",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1074/jbc.m401932200",
+    "source": "CrossRef"
+  },
+  "dubchak1995": {
+    "title": "Prediction of protein folding class using global description of amino acid sequence.",
+    "authors": [
+      [
+        "Dubchak",
+        "I"
+      ],
+      [
+        "Muchnik",
+        "I"
+      ],
+      [
+        "Holbrook",
+        "S R"
+      ],
+      [
+        "Kim",
+        "S H"
+      ]
+    ],
+    "year": 1995,
+    "container": "Proceedings of the National Academy of Sciences",
+    "volume": "92",
+    "issue": "19",
+    "pages": "8700-8704",
+    "doi": "10.1073/pnas.92.19.8700",
+    "type": "journal-article",
+    "publisher": "National Academy of Sciences",
+    "record": "https://api.crossref.org/works/10.1073/pnas.92.19.8700",
+    "source": "CrossRef"
+  },
+  "needleman1970": {
+    "title": "A general method applicable to the search for similarities in the amino acid sequence of two proteins",
+    "authors": [
+      [
+        "Needleman",
+        "Saul B."
+      ],
+      [
+        "Wunsch",
+        "Christian D."
+      ]
+    ],
+    "year": 1970,
+    "container": "Journal of Molecular Biology",
+    "volume": "48",
+    "issue": "3",
+    "pages": "443-453",
+    "doi": "10.1016/0022-2836(70)90057-4",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/0022-2836(70)90057-4",
+    "source": "CrossRef"
+  },
+  "henikoff1992": {
+    "title": "Amino acid substitution matrices from protein blocks.",
+    "authors": [
+      [
+        "Henikoff",
+        "S"
+      ],
+      [
+        "Henikoff",
+        "J G"
+      ]
+    ],
+    "year": 1992,
+    "container": "Proceedings of the National Academy of Sciences",
+    "volume": "89",
+    "issue": "22",
+    "pages": "10915-10919",
+    "doi": "10.1073/pnas.89.22.10915",
+    "type": "journal-article",
+    "publisher": "National Academy of Sciences",
+    "record": "https://api.crossref.org/works/10.1073/pnas.89.22.10915",
+    "source": "CrossRef"
+  },
+  "li2006": {
+    "title": "Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences",
+    "authors": [
+      [
+        "Li",
+        "Weizhong"
+      ],
+      [
+        "Godzik",
+        "Adam"
+      ]
+    ],
+    "year": 2006,
+    "container": "Bioinformatics",
+    "volume": "22",
+    "issue": "13",
+    "pages": "1658-1659",
+    "doi": "10.1093/bioinformatics/btl158",
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "record": "https://api.crossref.org/works/10.1093/bioinformatics/btl158",
+    "source": "CrossRef"
+  },
+  "hochreiter1997": {
+    "title": "Long Short-Term Memory",
+    "authors": [
+      [
+        "Hochreiter",
+        "Sepp"
+      ],
+      [
+        "Schmidhuber",
+        "J\u00fcrgen"
+      ]
+    ],
+    "year": 1997,
+    "container": "Neural Computation",
+    "volume": "9",
+    "issue": "8",
+    "pages": "1735-1780",
+    "doi": "10.1162/neco.1997.9.8.1735",
+    "type": "journal-article",
+    "publisher": "MIT Press",
+    "record": "https://api.crossref.org/works/10.1162/neco.1997.9.8.1735",
+    "source": "CrossRef"
+  },
+  "matthews1975": {
+    "title": "Comparison of the predicted and observed secondary structure of T4 phage lysozyme",
+    "authors": [
+      [
+        "Matthews",
+        "B.W."
+      ]
+    ],
+    "year": 1975,
+    "container": "Biochimica et Biophysica Acta (BBA) - Protein Structure",
+    "volume": "405",
+    "issue": "2",
+    "pages": "442-451",
+    "doi": "10.1016/0005-2795(75)90109-9",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/0005-2795(75)90109-9",
+    "source": "CrossRef"
+  },
+  "delong1988": {
+    "title": "Comparing the Areas under Two or More Correlated Receiver Operating Characteristic Curves: A Nonparametric Approach",
+    "authors": [
+      [
+        "DeLong",
+        "Elizabeth R."
+      ],
+      [
+        "DeLong",
+        "David M."
+      ],
+      [
+        "Clarke-Pearson",
+        "Daniel L."
+      ]
+    ],
+    "year": 1988,
+    "container": "Biometrics",
+    "volume": "44",
+    "issue": "3",
+    "pages": "837",
+    "doi": "10.2307/2531595",
+    "type": "journal-article",
+    "publisher": "JSTOR",
+    "record": "https://api.crossref.org/works/10.2307/2531595",
+    "source": "CrossRef"
+  },
+  "mcnemar1947": {
+    "title": "Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages",
+    "authors": [
+      [
+        "McNemar",
+        "Quinn"
+      ]
+    ],
+    "year": 1947,
+    "container": "Psychometrika",
+    "volume": "12",
+    "issue": "2",
+    "pages": "153-157",
+    "doi": "10.1007/bf02295996",
+    "type": "journal-article",
+    "publisher": "Cambridge University Press (CUP)",
+    "record": "https://api.crossref.org/works/10.1007/bf02295996",
+    "source": "CrossRef"
+  },
+  "benjamini1995": {
+    "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+    "authors": [
+      [
+        "Benjamini",
+        "Yoav"
+      ],
+      [
+        "Hochberg",
+        "Yosef"
+      ]
+    ],
+    "year": 1995,
+    "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+    "volume": "57",
+    "issue": "1",
+    "pages": "289-300",
+    "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "record": "https://api.crossref.org/works/10.1111/j.2517-6161.1995.tb02031.x",
+    "source": "CrossRef"
+  },
+  "efron1979": {
+    "title": "Bootstrap Methods: Another Look at the Jackknife",
+    "authors": [
+      [
+        "Efron",
+        "B."
+      ]
+    ],
+    "year": 1979,
+    "container": "The Annals of Statistics",
+    "volume": "7",
+    "issue": "1",
+    "pages": "1-26",
+    "doi": "10.1214/aos/1176344552",
+    "type": "journal-article",
+    "publisher": "Institute of Mathematical Statistics",
+    "record": "https://api.crossref.org/works/10.1214/aos/1176344552",
+    "source": "CrossRef"
+  },
+  "wolf2020": {
+    "title": "Transformers: State-of-the-Art Natural Language Processing",
+    "authors": [
+      [
+        "Wolf",
+        "Thomas"
+      ],
+      [
+        "Debut",
+        "Lysandre"
+      ],
+      [
+        "Sanh",
+        "Victor"
+      ],
+      [
+        "Chaumond",
+        "Julien"
+      ],
+      [
+        "Delangue",
+        "Clement"
+      ],
+      [
+        "Moi",
+        "Anthony"
+      ],
+      [
+        "Cistac",
+        "Pierric"
+      ],
+      [
+        "Rault",
+        "Tim"
+      ],
+      [
+        "Louf",
+        "Remi"
+      ],
+      [
+        "Funtowicz",
+        "Morgan"
+      ],
+      [
+        "Davison",
+        "Joe"
+      ],
+      [
+        "Shleifer",
+        "Sam"
+      ],
+      [
+        "von Platen",
+        "Patrick"
+      ],
+      [
+        "Ma",
+        "Clara"
+      ],
+      [
+        "Jernite",
+        "Yacine"
+      ],
+      [
+        "Plu",
+        "Julien"
+      ],
+      [
+        "Xu",
+        "Canwen"
+      ],
+      [
+        "Le Scao",
+        "Teven"
+      ],
+      [
+        "Gugger",
+        "Sylvain"
+      ],
+      [
+        "Drame",
+        "Mariama"
+      ],
+      [
+        "Lhoest",
+        "Quentin"
+      ],
+      [
+        "Rush",
+        "Alexander"
+      ]
+    ],
+    "year": 2020,
+    "container": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+    "volume": "",
+    "issue": "",
+    "pages": "38-45",
+    "doi": "10.18653/v1/2020.emnlp-demos.6",
+    "type": "proceedings-article",
+    "publisher": "Association for Computational Linguistics",
+    "record": "https://api.crossref.org/works/10.18653/v1/2020.emnlp-demos.6",
+    "source": "CrossRef"
+  },
+  "cock2009": {
+    "title": "Biopython: freely available Python tools for computational molecular biology and bioinformatics",
+    "authors": [
+      [
+        "Cock",
+        "Peter J. A."
+      ],
+      [
+        "Antao",
+        "Tiago"
+      ],
+      [
+        "Chang",
+        "Jeffrey T."
+      ],
+      [
+        "Chapman",
+        "Brad A."
+      ],
+      [
+        "Cox",
+        "Cymon J."
+      ],
+      [
+        "Dalke",
+        "Andrew"
+      ],
+      [
+        "Friedberg",
+        "Iddo"
+      ],
+      [
+        "Hamelryck",
+        "Thomas"
+      ],
+      [
+        "Kauff",
+        "Frank"
+      ],
+      [
+        "Wilczynski",
+        "Bartek"
+      ],
+      [
+        "de Hoon",
+        "Michiel J. L."
+      ]
+    ],
+    "year": 2009,
+    "container": "Bioinformatics",
+    "volume": "25",
+    "issue": "11",
+    "pages": "1422-1423",
+    "doi": "10.1093/bioinformatics/btp163",
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "record": "https://api.crossref.org/works/10.1093/bioinformatics/btp163",
+    "source": "CrossRef"
+  },
+  "khosla2020": {
+    "title": "Supervised Contrastive Learning",
+    "year": 2020,
+    "doi": "",
+    "issue": "",
+    "pages": "18661-18673",
+    "volume": "33",
+    "record": "https://proceedings.neurips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html",
+    "source": "publisher page",
+    "type": "inproceedings",
+    "authors": [
+      [
+        "Khosla",
+        "Prannay"
+      ],
+      [
+        "Teterwak",
+        "Piotr"
+      ],
+      [
+        "Wang",
+        "Chen"
+      ],
+      [
+        "Sarna",
+        "Aaron"
+      ],
+      [
+        "Tian",
+        "Yonglong"
+      ],
+      [
+        "Isola",
+        "Phillip"
+      ],
+      [
+        "Maschinot",
+        "Aaron"
+      ],
+      [
+        "Liu",
+        "Ce"
+      ],
+      [
+        "Krishnan",
+        "Dilip"
+      ]
+    ],
+    "container": "Advances in Neural Information Processing Systems",
+    "arxiv": "2004.11362"
+  },
+  "vaswani2017": {
+    "title": "Attention Is All You Need",
+    "year": 2017,
+    "doi": "",
+    "issue": "",
+    "pages": "5998-6008",
+    "volume": "30",
+    "record": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+    "source": "publisher page",
+    "type": "inproceedings",
+    "authors": [
+      [
+        "Vaswani",
+        "Ashish"
+      ],
+      [
+        "Shazeer",
+        "Noam"
+      ],
+      [
+        "Parmar",
+        "Niki"
+      ],
+      [
+        "Uszkoreit",
+        "Jakob"
+      ],
+      [
+        "Jones",
+        "Llion"
+      ],
+      [
+        "Gomez",
+        "Aidan N"
+      ],
+      [
+        "Kaiser",
+        "\u0141ukasz"
+      ],
+      [
+        "Polosukhin",
+        "Illia"
+      ]
+    ],
+    "container": "Advances in Neural Information Processing Systems",
+    "arxiv": "1706.03762"
+  },
+  "ilse2018": {
+    "title": "Attention-based Deep Multiple Instance Learning",
+    "year": 2018,
+    "doi": "",
+    "issue": "",
+    "pages": "2127-2136",
+    "volume": "80",
+    "record": "https://proceedings.mlr.press/v80/ilse18a.html",
+    "source": "publisher page",
+    "type": "inproceedings",
+    "authors": [
+      [
+        "Ilse",
+        "Maximilian"
+      ],
+      [
+        "Tomczak",
+        "Jakub"
+      ],
+      [
+        "Welling",
+        "Max"
+      ]
+    ],
+    "container": "Proceedings of the 35th International Conference on Machine Learning",
+    "arxiv": "1802.04712"
+  },
+  "loshchilov2017": {
+    "title": "Decoupled Weight Decay Regularization",
+    "authors": [
+      [
+        "Loshchilov",
+        "Ilya"
+      ],
+      [
+        "Hutter",
+        "Frank"
+      ]
+    ],
+    "year": 2017,
+    "container": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "type": "arxiv",
+    "publisher": "",
+    "record": "https://arxiv.org/abs/1711.05101",
+    "source": "arXiv",
+    "arxiv": "1711.05101",
+    "journal_ref": ""
+  },
+  "paszke2019": {
+    "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
+    "year": 2019,
+    "doi": "",
+    "issue": "",
+    "pages": "8026-8037",
+    "volume": "32",
+    "record": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html",
+    "source": "publisher page",
+    "type": "inproceedings",
+    "authors": [
+      [
+        "Paszke",
+        "Adam"
+      ],
+      [
+        "Gross",
+        "Sam"
+      ],
+      [
+        "Massa",
+        "Francisco"
+      ],
+      [
+        "Lerer",
+        "Adam"
+      ],
+      [
+        "Bradbury",
+        "James"
+      ],
+      [
+        "Chanan",
+        "Gregory"
+      ],
+      [
+        "Killeen",
+        "Trevor"
+      ],
+      [
+        "Lin",
+        "Zeming"
+      ],
+      [
+        "Gimelshein",
+        "Natalia"
+      ],
+      [
+        "Antiga",
+        "Luca"
+      ],
+      [
+        "Desmaison",
+        "Alban"
+      ],
+      [
+        "Kopf",
+        "Andreas"
+      ],
+      [
+        "Yang",
+        "Edward"
+      ],
+      [
+        "DeVito",
+        "Zachary"
+      ],
+      [
+        "Raison",
+        "Martin"
+      ],
+      [
+        "Tejani",
+        "Alykhan"
+      ],
+      [
+        "Chilamkurthy",
+        "Sasank"
+      ],
+      [
+        "Steiner",
+        "Benoit"
+      ],
+      [
+        "Fang",
+        "Lu"
+      ],
+      [
+        "Bai",
+        "Junjie"
+      ],
+      [
+        "Chintala",
+        "Soumith"
+      ]
+    ],
+    "container": "Advances in Neural Information Processing Systems",
+    "arxiv": "1912.01703"
+  },
+  "pedregosa2012": {
+    "title": "Scikit-learn: Machine Learning in Python",
+    "year": 2011,
+    "doi": "",
+    "issue": "85",
+    "pages": "2825-2830",
+    "volume": "12",
+    "record": "https://jmlr.org/papers/v12/pedregosa11a.html",
+    "source": "publisher page",
+    "type": "article",
+    "authors": [
+      [
+        "Pedregosa",
+        "Fabian"
+      ],
+      [
+        "Varoquaux",
+        "Ga\u00ebl"
+      ],
+      [
+        "Gramfort",
+        "Alexandre"
+      ],
+      [
+        "Michel",
+        "Vincent"
+      ],
+      [
+        "Thirion",
+        "Bertrand"
+      ],
+      [
+        "Grisel",
+        "Olivier"
+      ],
+      [
+        "Blondel",
+        "Mathieu"
+      ],
+      [
+        "Prettenhofer",
+        "Peter"
+      ],
+      [
+        "Weiss",
+        "Ron"
+      ],
+      [
+        "Dubourg",
+        "Vincent"
+      ],
+      [
+        "Vanderplas",
+        "Jake"
+      ],
+      [
+        "Passos",
+        "Alexandre"
+      ],
+      [
+        "Cournapeau",
+        "David"
+      ],
+      [
+        "Brucher",
+        "Matthieu"
+      ],
+      [
+        "Perrot",
+        "Matthieu"
+      ],
+      [
+        "Duchesnay",
+        "\u00c9douard"
+      ]
+    ],
+    "container": "Journal of Machine Learning Research",
+    "arxiv": "1201.0490"
+  },
+  "ke2017": {
+    "title": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree",
+    "year": 2017,
+    "doi": "",
+    "issue": "",
+    "pages": "",
+    "volume": "30",
+    "record": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html",
+    "source": "publisher page",
+    "type": "inproceedings",
+    "authors": [
+      [
+        "Ke",
+        "Guolin"
+      ],
+      [
+        "Meng",
+        "Qi"
+      ],
+      [
+        "Finley",
+        "Thomas"
+      ],
+      [
+        "Wang",
+        "Taifeng"
+      ],
+      [
+        "Chen",
+        "Wei"
+      ],
+      [
+        "Ma",
+        "Weidong"
+      ],
+      [
+        "Ye",
+        "Qiwei"
+      ],
+      [
+        "Liu",
+        "Tie-Yan"
+      ]
+    ],
+    "container": "Advances in Neural Information Processing Systems"
+  },
+  "ioffe2015": {
+    "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+    "year": 2015,
+    "doi": "",
+    "issue": "",
+    "pages": "448-456",
+    "volume": "37",
+    "record": "https://proceedings.mlr.press/v37/ioffe15.html",
+    "source": "publisher page",
+    "type": "inproceedings",
+    "authors": [
+      [
+        "Ioffe",
+        "Sergey"
+      ],
+      [
+        "Szegedy",
+        "Christian"
+      ]
+    ],
+    "container": "Proceedings of the 32nd International Conference on Machine Learning"
+  },
+  "srivastava2014": {
+    "title": "Dropout: A Simple Way to Prevent Neural Networks from Overfitting",
+    "year": 2014,
+    "doi": "",
+    "issue": "56",
+    "pages": "1929-1958",
+    "volume": "15",
+    "record": "https://jmlr.org/papers/v15/srivastava14a.html",
+    "source": "publisher page",
+    "type": "article",
+    "authors": [
+      [
+        "Srivastava",
+        "Nitish"
+      ],
+      [
+        "Hinton",
+        "Geoffrey"
+      ],
+      [
+        "Krizhevsky",
+        "Alex"
+      ],
+      [
+        "Sutskever",
+        "Ilya"
+      ],
+      [
+        "Salakhutdinov",
+        "Ruslan"
+      ]
+    ],
+    "container": "Journal of Machine Learning Research"
+  },
+  "vandermaaten2008": {
+    "title": "Visualizing Data using t-SNE",
+    "year": 2008,
+    "doi": "",
+    "issue": "86",
+    "pages": "2579-2605",
+    "volume": "9",
+    "record": "https://jmlr.org/papers/v9/vandermaaten08a.html",
+    "source": "publisher page",
+    "type": "article",
+    "authors": [
+      [
+        "van der Maaten",
+        "Laurens"
+      ],
+      [
+        "Hinton",
+        "Geoffrey"
+      ]
+    ],
+    "container": "Journal of Machine Learning Research"
+  },
+  "breiman2001": {
+    "title": "Random Forests",
+    "authors": [
+      [
+        "Breiman",
+        "Leo"
+      ]
+    ],
+    "year": 2001,
+    "container": "Machine Learning",
+    "volume": "45",
+    "issue": "1",
+    "pages": "5-32",
+    "doi": "10.1023/a:1010933404324",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1023/a:1010933404324",
+    "source": "CrossRef"
+  },
+  "cortes1995": {
+    "title": "Support-Vector Networks",
+    "authors": [
+      [
+        "Cortes",
+        "Corinna"
+      ],
+      [
+        "Vapnik",
+        "Vladimir"
+      ]
+    ],
+    "year": 1995,
+    "container": "Machine Learning",
+    "volume": "20",
+    "issue": "3",
+    "pages": "273-297",
+    "doi": "10.1007/bf00994018",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1007/bf00994018",
+    "source": "CrossRef"
+  },
+  "loshchilov2016": {
+    "title": "SGDR: Stochastic Gradient Descent with Warm Restarts",
+    "authors": [
+      [
+        "Loshchilov",
+        "Ilya"
+      ],
+      [
+        "Hutter",
+        "Frank"
+      ]
+    ],
+    "year": 2016,
+    "container": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "type": "arxiv",
+    "publisher": "",
+    "record": "https://arxiv.org/abs/1608.03983",
+    "source": "arXiv",
+    "arxiv": "1608.03983",
+    "journal_ref": ""
+  },
+  "zhao2021": {
+    "title": "iAIPs: Identifying Anti-Inflammatory Peptides Using Random Forest",
+    "authors": [
+      [
+        "Zhao",
+        "Dongxu"
+      ],
+      [
+        "Teng",
+        "Zhixia"
+      ],
+      [
+        "Li",
+        "Yanjuan"
+      ],
+      [
+        "Chen",
+        "Dong"
+      ]
+    ],
+    "year": 2021,
+    "container": "Frontiers in Genetics",
+    "volume": "12",
+    "issue": "",
+    "pages": "",
+    "doi": "10.3389/fgene.2021.773202",
+    "type": "journal-article",
+    "publisher": "Frontiers Media SA",
+    "record": "https://api.crossref.org/works/10.3389/fgene.2021.773202",
+    "source": "CrossRef"
+  },
+  "zhang2021": {
+    "title": "AIEpred: An Ensemble Predictive Model of Classifier Chain to Identify Anti-Inflammatory Peptides",
+    "authors": [
+      [
+        "Zhang",
+        "Jinhao"
+      ],
+      [
+        "Zhang",
+        "Zehua"
+      ],
+      [
+        "Pu",
+        "Lianrong"
+      ],
+      [
+        "Tang",
+        "Jijun"
+      ],
+      [
+        "Guo",
+        "Fei"
+      ]
+    ],
+    "year": 2021,
+    "container": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
+    "volume": "18",
+    "issue": "5",
+    "pages": "1831-1840",
+    "doi": "10.1109/tcbb.2020.2968419",
+    "type": "journal-article",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "record": "https://api.crossref.org/works/10.1109/tcbb.2020.2968419",
+    "source": "CrossRef"
+  },
+  "gaffar2024": {
+    "title": "IF-AIP: A machine learning method for the identification of anti-inflammatory peptides using multi-feature fusion strategy",
+    "authors": [
+      [
+        "Gaffar",
+        "Saima"
+      ],
+      [
+        "Hassan",
+        "Mir Tanveerul"
+      ],
+      [
+        "Tayara",
+        "Hilal"
+      ],
+      [
+        "Chong",
+        "Kil To"
+      ]
+    ],
+    "year": 2024,
+    "container": "Computers in Biology and Medicine",
+    "volume": "168",
+    "issue": "",
+    "pages": "107724",
+    "doi": "10.1016/j.compbiomed.2023.107724",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/j.compbiomed.2023.107724",
+    "source": "CrossRef"
+  },
+  "wang2026": {
+    "title": "AIPFusion-Net: an interaction-fusion framework for anti-inflammatory peptide prediction using protein language model embeddings, local sequence patterns, and handcrafted descriptors",
+    "authors": [
+      [
+        "Wang",
+        "Wentao"
+      ],
+      [
+        "Yang",
+        "Weidong"
+      ],
+      [
+        "Li",
+        "Hongmei"
+      ],
+      [
+        "Cui",
+        "Zhenyu"
+      ],
+      [
+        "Shen",
+        "Dan"
+      ]
+    ],
+    "year": 2026,
+    "container": "Frontiers in Molecular Biosciences",
+    "volume": "13",
+    "issue": "",
+    "pages": "",
+    "doi": "10.3389/fmolb.2026.1952395",
+    "type": "journal-article",
+    "publisher": "Frontiers Media SA",
+    "record": "https://api.crossref.org/works/10.3389/fmolb.2026.1952395",
+    "source": "CrossRef"
+  },
+  "delgado2001": {
+    "title": "Vasoactive intestinal peptide prevents experimental arthritis by downregulating both autoimmune and inflammatory components of the disease",
+    "authors": [
+      [
+        "Delgado",
+        "Mario"
+      ],
+      [
+        "Abad",
+        "Catalina"
+      ],
+      [
+        "Martinez",
+        "Carmen"
+      ],
+      [
+        "Leceta",
+        "Javier"
+      ],
+      [
+        "Gomariz",
+        "Rosa P."
+      ]
+    ],
+    "year": 2001,
+    "container": "Nature Medicine",
+    "volume": "7",
+    "issue": "5",
+    "pages": "563-568",
+    "doi": "10.1038/87887",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1038/87887",
+    "source": "CrossRef"
+  },
+  "gonzalez2005": {
+    "title": "Modulating Bladder Neuro-Inflammation: RDP58, a Novel Anti-Inflammatory Peptide, Decreases Inflammation and Nerve Growth Factor Production in Experimental Cystitis",
+    "authors": [
+      [
+        "Gonzalez",
+        "Ricardo R."
+      ],
+      [
+        "Fong",
+        "Timothy"
+      ],
+      [
+        "Belmar",
+        "Nicole"
+      ],
+      [
+        "Saban",
+        "Marcia"
+      ],
+      [
+        "Felsen",
+        "Diane"
+      ],
+      [
+        "Te",
+        "Alexis"
+      ]
+    ],
+    "year": 2005,
+    "container": "Journal of Urology",
+    "volume": "173",
+    "issue": "2",
+    "pages": "630-634",
+    "doi": "10.1097/01.ju.0000143192.68223.f7",
+    "type": "journal-article",
+    "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+    "record": "https://api.crossref.org/works/10.1097/01.ju.0000143192.68223.f7",
+    "source": "CrossRef"
+  },
+  "lannelongue2024": {
+    "title": "Pitfalls of machine learning models for protein\u2013protein interaction networks",
+    "authors": [
+      [
+        "Lannelongue",
+        "Lo\u00efc"
+      ],
+      [
+        "Inouye",
+        "Michael"
+      ]
+    ],
+    "year": 2024,
+    "container": "Bioinformatics",
+    "volume": "40",
+    "issue": "2",
+    "pages": "",
+    "doi": "10.1093/bioinformatics/btae012",
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "record": "https://api.crossref.org/works/10.1093/bioinformatics/btae012",
+    "source": "CrossRef"
+  },
+  "joeres2025": {
+    "title": "Data splitting to avoid information leakage with DataSAIL",
+    "authors": [
+      [
+        "Joeres",
+        "Roman"
+      ],
+      [
+        "Blumenthal",
+        "David B."
+      ],
+      [
+        "Kalinina",
+        "Olga V."
+      ]
+    ],
+    "year": 2025,
+    "container": "Nature Communications",
+    "volume": "16",
+    "issue": "1",
+    "pages": "",
+    "doi": "10.1038/s41467-025-58606-8",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1038/s41467-025-58606-8",
+    "source": "CrossRef"
+  },
+  "malhis2024": {
+    "title": "Preprocessing homologous regions in annotated protein sequences concerning machine-learning applications",
+    "authors": [
+      [
+        "Malhis",
+        "Nawar"
+      ]
+    ],
+    "year": 2024,
+    "container": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "10.1101/2024.10.25.620288",
+    "type": "posted-content",
+    "publisher": "openRxiv",
+    "record": "https://api.crossref.org/works/10.1101/2024.10.25.620288",
+    "source": "CrossRef"
+  },
+  "miller2024": {
+    "title": "Evaluation of machine learning models that predict lncRNA subcellular localization",
+    "authors": [
+      [
+        "Miller",
+        "Jason\u00a0R"
+      ],
+      [
+        "Yi",
+        "Weijun"
+      ],
+      [
+        "Adjeroh",
+        "Donald\u00a0A"
+      ]
+    ],
+    "year": 2024,
+    "container": "NAR Genomics and Bioinformatics",
+    "volume": "6",
+    "issue": "3",
+    "pages": "",
+    "doi": "10.1093/nargab/lqae125",
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "record": "https://api.crossref.org/works/10.1093/nargab/lqae125",
+    "source": "CrossRef"
+  },
+  "raza2024": {
+    "title": "Comprehensive Analysis of Computational Methods for Predicting Anti-inflammatory Peptides",
+    "authors": [
+      [
+        "Raza",
+        "Ali"
+      ],
+      [
+        "Uddin",
+        "Jamal"
+      ],
+      [
+        "Akbar",
+        "Shahid"
+      ],
+      [
+        "Alarfaj",
+        "Fawaz Khaled"
+      ],
+      [
+        "Zou",
+        "Quan"
+      ],
+      [
+        "Ahmad",
+        "Ashfaq"
+      ]
+    ],
+    "year": 2024,
+    "container": "Archives of Computational Methods in Engineering",
+    "volume": "31",
+    "issue": "6",
+    "pages": "3211-3229",
+    "doi": "10.1007/s11831-024-10078-7",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1007/s11831-024-10078-7",
+    "source": "CrossRef"
+  },
+  "asim2025": {
+    "title": "Peptide classification landscape: An in-depth systematic literature review on peptide types, databases, datasets, predictors architectures and performance",
+    "authors": [
+      [
+        "Asim",
+        "Muhammad Nabeel"
+      ],
+      [
+        "Asif",
+        "Tayyaba"
+      ],
+      [
+        "Mehmood",
+        "Faiza"
+      ],
+      [
+        "Dengel",
+        "Andreas"
+      ]
+    ],
+    "year": 2025,
+    "container": "Computers in Biology and Medicine",
+    "volume": "188",
+    "issue": "",
+    "pages": "109821",
+    "doi": "10.1016/j.compbiomed.2025.109821",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/j.compbiomed.2025.109821",
+    "source": "CrossRef"
+  },
+  "zhangli2022": {
+    "title": "Pep-CNN: An improved convolutional neural network for predicting therapeutic peptides",
+    "authors": [
+      [
+        "Zhang",
+        "Shengli"
+      ],
+      [
+        "Li",
+        "Xinjie"
+      ]
+    ],
+    "year": 2022,
+    "container": "Chemometrics and Intelligent Laboratory Systems",
+    "volume": "221",
+    "issue": "",
+    "pages": "104490",
+    "doi": "10.1016/j.chemolab.2022.104490",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/j.chemolab.2022.104490",
+    "source": "CrossRef"
+  },
+  "zhu2024": {
+    "title": "DeepAIP: Deep learning for anti-inflammatory peptide prediction using pre-trained protein language model features based on contextual self-attention network",
+    "authors": [
+      [
+        "Zhu",
+        "Lun"
+      ],
+      [
+        "Yang",
+        "Qingguo"
+      ],
+      [
+        "Yang",
+        "Sen"
+      ]
+    ],
+    "year": 2024,
+    "container": "International Journal of Biological Macromolecules",
+    "volume": "280",
+    "issue": "",
+    "pages": "136172",
+    "doi": "10.1016/j.ijbiomac.2024.136172",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/j.ijbiomac.2024.136172",
+    "source": "CrossRef"
+  },
+  "li2026hdaip": {
+    "title": "HD-AIP: a heterogeneous dual-stream alignment-free framework for anti-inflammatory peptide prediction based on language models and CT-Net",
+    "authors": [
+      [
+        "Li",
+        "Jiangli"
+      ],
+      [
+        "Zou",
+        "Quan"
+      ],
+      [
+        "Wang",
+        "Yansu"
+      ],
+      [
+        "Bai",
+        "Yifeng"
+      ],
+      [
+        "Zhou",
+        "Hao"
+      ],
+      [
+        "Niu",
+        "Mengting"
+      ]
+    ],
+    "year": 2026,
+    "container": "Bioinformatics",
+    "volume": "42",
+    "issue": "10",
+    "pages": "",
+    "doi": "10.1093/bioinformatics/btag697",
+    "type": "journal-article",
+    "publisher": "Oxford University Press (OUP)",
+    "record": "https://api.crossref.org/works/10.1093/bioinformatics/btag697",
+    "source": "CrossRef"
+  },
+  "han2024": {
+    "title": "PepNet: an interpretable neural network for anti-inflammatory and antimicrobial peptides prediction using a pre-trained protein language model",
+    "authors": [
+      [
+        "Han",
+        "Jiyun"
+      ],
+      [
+        "Kong",
+        "Tongxin"
+      ],
+      [
+        "Liu",
+        "Juntao"
+      ]
+    ],
+    "year": 2024,
+    "container": "Communications Biology",
+    "volume": "7",
+    "issue": "1",
+    "pages": "",
+    "doi": "10.1038/s42003-024-06911-1",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1038/s42003-024-06911-1",
+    "source": "CrossRef"
+  },
+  "xie2025": {
+    "title": "NeXtMD: a new generation of machine learning and deep learning stacked hybrid framework for accurate identification of anti-inflammatory peptides",
+    "authors": [
+      [
+        "Xie",
+        "Chengzhi"
+      ],
+      [
+        "Wei",
+        "Yijie"
+      ],
+      [
+        "Luo",
+        "Xinwei"
+      ],
+      [
+        "Yang",
+        "Huan"
+      ],
+      [
+        "Lai",
+        "Hongyan"
+      ],
+      [
+        "Dao",
+        "Fuying"
+      ],
+      [
+        "Feng",
+        "Juan"
+      ],
+      [
+        "Lv",
+        "Hao"
+      ]
+    ],
+    "year": 2025,
+    "container": "BMC Biology",
+    "volume": "23",
+    "issue": "1",
+    "pages": "",
+    "doi": "10.1186/s12915-025-02314-8",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1186/s12915-025-02314-8",
+    "source": "CrossRef"
+  },
+  "xu2024": {
+    "title": "A deep learning model for anti-inflammatory peptides identification based on deep variational autoencoder and contrastive learning",
+    "authors": [
+      [
+        "Xu",
+        "Yujie"
+      ],
+      [
+        "Zhang",
+        "Shengli"
+      ],
+      [
+        "Zhu",
+        "Feng"
+      ],
+      [
+        "Liang",
+        "Yunyun"
+      ]
+    ],
+    "year": 2024,
+    "container": "Scientific Reports",
+    "volume": "14",
+    "issue": "1",
+    "pages": "",
+    "doi": "10.1038/s41598-024-69419-y",
+    "type": "journal-article",
+    "publisher": "Springer Science and Business Media LLC",
+    "record": "https://api.crossref.org/works/10.1038/s41598-024-69419-y",
+    "source": "CrossRef"
+  },
+  "soriano2020": {
+    "title": "Prevalence and attributable health burden of chronic respiratory diseases, 1990\u20132017: a systematic analysis for the Global Burden of Disease Study 2017",
+    "authors": [
+      [
+        "Soriano",
+        "Joan B"
+      ],
+      [
+        "Kendrick",
+        "Parkes J"
+      ],
+      [
+        "Paulson",
+        "Katherine R"
+      ],
+      [
+        "Gupta",
+        "Vinay"
+      ],
+      [
+        "Abrams",
+        "Elissa M"
+      ],
+      [
+        "Adedoyin",
+        "Rufus Adesoji"
+      ],
+      [
+        "Adhikari",
+        "Tara Ballav"
+      ],
+      [
+        "Advani",
+        "Shailesh M"
+      ],
+      [
+        "Agrawal",
+        "Anurag"
+      ],
+      [
+        "Ahmadian",
+        "Elham"
+      ],
+      [
+        "Alahdab",
+        "Fares"
+      ],
+      [
+        "Aljunid",
+        "Syed Mohamed"
+      ],
+      [
+        "Altirkawi",
+        "Khalid A"
+      ],
+      [
+        "Alvis-Guzman",
+        "Nelson"
+      ],
+      [
+        "Anber",
+        "Nahla Hamed"
+      ],
+      [
+        "Andrei",
+        "Catalina Liliana"
+      ],
+      [
+        "Anjomshoa",
+        "Mina"
+      ],
+      [
+        "Ansari",
+        "Fereshteh"
+      ],
+      [
+        "Ant\u00f3",
+        "Josep M"
+      ],
+      [
+        "Arabloo",
+        "Jalal"
+      ],
+      [
+        "Athari",
+        "Seyyede Masoume"
+      ],
+      [
+        "Athari",
+        "Seyyed Shamsadin"
+      ],
+      [
+        "Awoke",
+        "Nefsu"
+      ],
+      [
+        "Badawi",
+        "Alaa"
+      ],
+      [
+        "Banoub",
+        "Joseph Adel Mattar"
+      ],
+      [
+        "Bennett",
+        "Derrick A"
+      ],
+      [
+        "Bensenor",
+        "Isabela M"
+      ],
+      [
+        "Berfield",
+        "Kathleen S Sachiko"
+      ],
+      [
+        "Bernstein",
+        "Robert S"
+      ],
+      [
+        "Bhattacharyya",
+        "Krittika"
+      ],
+      [
+        "Bijani",
+        "Ali"
+      ],
+      [
+        "Brauer",
+        "Michael"
+      ],
+      [
+        "Bukhman",
+        "Gene"
+      ],
+      [
+        "Butt",
+        "Zahid A"
+      ],
+      [
+        "C\u00e1mera",
+        "Luis Alberto"
+      ],
+      [
+        "Car",
+        "Josip"
+      ],
+      [
+        "Carrero",
+        "Juan J"
+      ],
+      [
+        "Carvalho",
+        "Felix"
+      ],
+      [
+        "Casta\u00f1eda-Orjuela",
+        "Carlos A"
+      ],
+      [
+        "Choi",
+        "Jee-Young Jasmine"
+      ],
+      [
+        "Christopher",
+        "Devasahayam J"
+      ],
+      [
+        "Cohen",
+        "Aaron J"
+      ],
+      [
+        "Dandona",
+        "Lalit"
+      ],
+      [
+        "Dandona",
+        "Rakhi"
+      ],
+      [
+        "Dang",
+        "Anh Kim"
+      ],
+      [
+        "Daryani",
+        "Ahmad"
+      ],
+      [
+        "de Courten",
+        "Barbora"
+      ],
+      [
+        "Demeke",
+        "Feleke Mekonnen"
+      ],
+      [
+        "Demoz",
+        "Gebre Teklemariam"
+      ],
+      [
+        "De Neve",
+        "Jan-Walter"
+      ],
+      [
+        "Desai",
+        "Rupak"
+      ],
+      [
+        "Dharmaratne",
+        "Samath Dhamminda"
+      ],
+      [
+        "Diaz",
+        "Daniel"
+      ],
+      [
+        "Douiri",
+        "Abdel"
+      ],
+      [
+        "Driscoll",
+        "Tim Robert"
+      ],
+      [
+        "Duken",
+        "Eyasu Ejeta"
+      ],
+      [
+        "Eftekhari",
+        "Aziz"
+      ],
+      [
+        "Elkout",
+        "Hajer"
+      ],
+      [
+        "Endries",
+        "Aman Yesuf"
+      ],
+      [
+        "Fadhil",
+        "Ibtihal"
+      ],
+      [
+        "Faro",
+        "Andre"
+      ],
+      [
+        "Farzadfar",
+        "Farshad"
+      ],
+      [
+        "Fernandes",
+        "Eduarda"
+      ],
+      [
+        "Filip",
+        "Irina"
+      ],
+      [
+        "Fischer",
+        "Florian"
+      ],
+      [
+        "Foroutan",
+        "Masoud"
+      ],
+      [
+        "Garcia-Gordillo",
+        "M.A."
+      ],
+      [
+        "Gebre",
+        "Abadi Kahsu"
+      ],
+      [
+        "Gebremedhin",
+        "Ketema Bizuwork"
+      ],
+      [
+        "Gebremeskel",
+        "Gebreamlak Gebremedhn"
+      ],
+      [
+        "Gezae",
+        "Kebede Embaye"
+      ],
+      [
+        "Ghoshal",
+        "Aloke Gopal"
+      ],
+      [
+        "Gill",
+        "Paramjit Singh"
+      ],
+      [
+        "Gillum",
+        "Richard F"
+      ],
+      [
+        "Goudarzi",
+        "Houman"
+      ],
+      [
+        "Guo",
+        "Yuming"
+      ],
+      [
+        "Gupta",
+        "Rajeev"
+      ],
+      [
+        "Hailu",
+        "Gessessew Bugssa"
+      ],
+      [
+        "Hasanzadeh",
+        "Amir"
+      ],
+      [
+        "Hassen",
+        "Hamid Yimam"
+      ],
+      [
+        "Hay",
+        "Simon I"
+      ],
+      [
+        "Hoang",
+        "Chi Linh"
+      ],
+      [
+        "Hole",
+        "Michael K"
+      ],
+      [
+        "Horita",
+        "Nobuyuki"
+      ],
+      [
+        "Hosgood",
+        "H Dean"
+      ],
+      [
+        "Hostiuc",
+        "Mihaela"
+      ],
+      [
+        "Househ",
+        "Mowafa"
+      ],
+      [
+        "Ilesanmi",
+        "Olayinka Stephen"
+      ],
+      [
+        "Ilic",
+        "Milena D"
+      ],
+      [
+        "Irvani",
+        "Seyed Sina Naghibi"
+      ],
+      [
+        "Islam",
+        "Sheikh Mohammed Shariful"
+      ],
+      [
+        "Jakovljevic",
+        "Mihajlo"
+      ],
+      [
+        "Jamal",
+        "Amr A"
+      ],
+      [
+        "Jha",
+        "Ravi Prakash"
+      ],
+      [
+        "Jonas",
+        "Jost B"
+      ],
+      [
+        "Kabir",
+        "Zubair"
+      ],
+      [
+        "Kasaeian",
+        "Amir"
+      ],
+      [
+        "Kasahun",
+        "Gebremicheal Gebreslassie"
+      ],
+      [
+        "Kassa",
+        "Getachew Mullu"
+      ],
+      [
+        "Kefale",
+        "Adane Teshome"
+      ],
+      [
+        "Kengne",
+        "Andre Pascal"
+      ],
+      [
+        "Khader",
+        "Yousef Saleh"
+      ],
+      [
+        "Khafaie",
+        "Morteza Abdullatif"
+      ],
+      [
+        "Khan",
+        "Ejaz Ahmad"
+      ],
+      [
+        "Khan",
+        "Junaid"
+      ],
+      [
+        "Khubchandani",
+        "Jagdish"
+      ],
+      [
+        "Kim",
+        "Young-Eun"
+      ],
+      [
+        "Kim",
+        "Yun Jin"
+      ],
+      [
+        "Kisa",
+        "Sezer"
+      ],
+      [
+        "Kisa",
+        "Adnan"
+      ],
+      [
+        "Knibbs",
+        "Luke D"
+      ],
+      [
+        "Komaki",
+        "Hamidreza"
+      ],
+      [
+        "Koul",
+        "Parvaiz A"
+      ],
+      [
+        "Koyanagi",
+        "Ai"
+      ],
+      [
+        "Kumar",
+        "G Anil"
+      ],
+      [
+        "Lan",
+        "Qing"
+      ],
+      [
+        "Lasrado",
+        "Savita"
+      ],
+      [
+        "Lauriola",
+        "Paolo"
+      ],
+      [
+        "La Vecchia",
+        "Carlo"
+      ],
+      [
+        "Le",
+        "Tham Thi"
+      ],
+      [
+        "Leigh",
+        "James"
+      ],
+      [
+        "Levi",
+        "Miriam"
+      ],
+      [
+        "Li",
+        "Shanshan"
+      ],
+      [
+        "Lopez",
+        "Alan D"
+      ],
+      [
+        "Lotufo",
+        "Paulo A"
+      ],
+      [
+        "Madotto",
+        "Fabiana"
+      ],
+      [
+        "Mahotra",
+        "Narayan B"
+      ],
+      [
+        "Majdan",
+        "Marek"
+      ],
+      [
+        "Majeed",
+        "Azeem"
+      ],
+      [
+        "Malekzadeh",
+        "Reza"
+      ],
+      [
+        "Mamun",
+        "Abdullah A"
+      ],
+      [
+        "Manafi",
+        "Navid"
+      ],
+      [
+        "Manafi",
+        "Farzad"
+      ],
+      [
+        "Mantovani",
+        "Lorenzo Giovanni"
+      ],
+      [
+        "Meharie",
+        "Birhanu Geta"
+      ],
+      [
+        "Meles",
+        "Hagazi Gebre"
+      ],
+      [
+        "Meles",
+        "Gebrekiros Gebremichael"
+      ],
+      [
+        "Menezes",
+        "Ritesh G"
+      ],
+      [
+        "Mestrovic",
+        "Tomislav"
+      ],
+      [
+        "Miller",
+        "Ted R"
+      ],
+      [
+        "Mini",
+        "GK"
+      ],
+      [
+        "Mirrakhimov",
+        "Erkin M"
+      ],
+      [
+        "Moazen",
+        "Babak"
+      ],
+      [
+        "Mohammad",
+        "Karzan Abdulmuhsin"
+      ],
+      [
+        "Mohammed",
+        "Shafiu"
+      ],
+      [
+        "Mohebi",
+        "Farnam"
+      ],
+      [
+        "Mokdad",
+        "Ali H"
+      ],
+      [
+        "Molokhia",
+        "Mariam"
+      ],
+      [
+        "Monasta",
+        "Lorenzo"
+      ],
+      [
+        "Moradi",
+        "Masoud"
+      ],
+      [
+        "Moradi",
+        "Ghobad"
+      ],
+      [
+        "Morawska",
+        "Lidia"
+      ],
+      [
+        "Mousavi",
+        "Seyyed Meysam"
+      ],
+      [
+        "Musa",
+        "Kamarul Imran"
+      ],
+      [
+        "Mustafa",
+        "Ghulam"
+      ],
+      [
+        "Naderi",
+        "Mehdi"
+      ],
+      [
+        "Naghavi",
+        "Mohsen"
+      ],
+      [
+        "Naik",
+        "Gurudatta"
+      ],
+      [
+        "Nair",
+        "Sanjeev"
+      ],
+      [
+        "Nangia",
+        "Vinay"
+      ],
+      [
+        "Nansseu",
+        "Jobert Richie"
+      ],
+      [
+        "Nazari",
+        "Javad"
+      ],
+      [
+        "Ndwandwe",
+        "Duduzile Edith"
+      ],
+      [
+        "Negoi",
+        "Ruxandra Irina"
+      ],
+      [
+        "Nguyen",
+        "Trang Huyen"
+      ],
+      [
+        "Nguyen",
+        "Cuong Tat"
+      ],
+      [
+        "Nguyen",
+        "Huong Lan Thi"
+      ],
+      [
+        "Nixon",
+        "Molly R"
+      ],
+      [
+        "Ofori-Asenso",
+        "Richard"
+      ],
+      [
+        "Ogbo",
+        "Felix Akpojene"
+      ],
+      [
+        "Olagunju",
+        "Andrew T"
+      ],
+      [
+        "Olagunju",
+        "Tinuke O"
+      ],
+      [
+        "Oren",
+        "Eyal"
+      ],
+      [
+        "Ortiz",
+        "Justin R"
+      ],
+      [
+        "Owolabi",
+        "Mayowa O"
+      ],
+      [
+        "P A",
+        "Mahesh"
+      ],
+      [
+        "Pakhale",
+        "Smita"
+      ],
+      [
+        "Pana",
+        "Adrian"
+      ],
+      [
+        "Panda-Jonas",
+        "Songhomitra"
+      ],
+      [
+        "Park",
+        "Eun-Kee"
+      ],
+      [
+        "Pham",
+        "Hai Quang"
+      ],
+      [
+        "Postma",
+        "Maarten J"
+      ],
+      [
+        "Pourjafar",
+        "Hadi"
+      ],
+      [
+        "Poustchi",
+        "Hossein"
+      ],
+      [
+        "Radfar",
+        "Amir"
+      ],
+      [
+        "Rafiei",
+        "Alireza"
+      ],
+      [
+        "Rahim",
+        "Fakher"
+      ],
+      [
+        "Rahman",
+        "Mohammad Hifz Ur"
+      ],
+      [
+        "Rahman",
+        "Muhammad Aziz"
+      ],
+      [
+        "Rawaf",
+        "Salman"
+      ],
+      [
+        "Rawaf",
+        "David Laith"
+      ],
+      [
+        "Rawal",
+        "Lal"
+      ],
+      [
+        "Reiner Jr.",
+        "Robert C"
+      ],
+      [
+        "Reitsma",
+        "Marissa Bettay"
+      ],
+      [
+        "Roever",
+        "Leonardo"
+      ],
+      [
+        "Ronfani",
+        "Luca"
+      ],
+      [
+        "Roro",
+        "Elias Merdassa"
+      ],
+      [
+        "Roshandel",
+        "Gholamreza"
+      ],
+      [
+        "Rudd",
+        "Kristina E"
+      ],
+      [
+        "Sabde",
+        "Yogesh Damodar"
+      ],
+      [
+        "Sabour",
+        "Siamak"
+      ],
+      [
+        "Saddik",
+        "Basema"
+      ],
+      [
+        "Safari",
+        "Saeed"
+      ],
+      [
+        "Saleem",
+        "Komal"
+      ],
+      [
+        "Samy",
+        "Abdallah M"
+      ],
+      [
+        "Santric-Milicevic",
+        "Milena M"
+      ],
+      [
+        "Sao Jose",
+        "Bruno Piassi"
+      ],
+      [
+        "Sartorius",
+        "Benn"
+      ],
+      [
+        "Satpathy",
+        "Maheswar"
+      ],
+      [
+        "Savic",
+        "Miloje"
+      ],
+      [
+        "Sawhney",
+        "Monika"
+      ],
+      [
+        "Sepanlou",
+        "Sadaf G"
+      ],
+      [
+        "Shaikh",
+        "Masood Ali"
+      ],
+      [
+        "Sheikh",
+        "Aziz"
+      ],
+      [
+        "Shigematsu",
+        "Mika"
+      ],
+      [
+        "Shirkoohi",
+        "Reza"
+      ],
+      [
+        "Si",
+        "Si"
+      ],
+      [
+        "Siabani",
+        "Soraya"
+      ],
+      [
+        "Singh",
+        "Virendra"
+      ],
+      [
+        "Singh",
+        "Jasvinder A"
+      ],
+      [
+        "Soljak",
+        "Michael"
+      ],
+      [
+        "Somayaji",
+        "Ranjani"
+      ],
+      [
+        "Soofi",
+        "Moslem"
+      ],
+      [
+        "Soyiri",
+        "Ireneous N"
+      ],
+      [
+        "Tefera",
+        "Yonatal Mesfin"
+      ],
+      [
+        "Temsah",
+        "Mohamad-Hani"
+      ],
+      [
+        "Tesfay",
+        "Berhe Etsay"
+      ],
+      [
+        "Thakur",
+        "Jarnail Singh"
+      ],
+      [
+        "Toma",
+        "Alemayehu Toma"
+      ],
+      [
+        "Tortajada-Girb\u00e9s",
+        "Miguel"
+      ],
+      [
+        "Tran",
+        "Khanh Bao"
+      ],
+      [
+        "Tran",
+        "Bach Xuan"
+      ],
+      [
+        "Tudor Car",
+        "Lorainne"
+      ],
+      [
+        "Ullah",
+        "Irfan"
+      ],
+      [
+        "Vacante",
+        "Marco"
+      ],
+      [
+        "Valdez",
+        "Pascual R"
+      ],
+      [
+        "van Boven",
+        "Job F M"
+      ],
+      [
+        "Vasankari",
+        "Tommi Juhani"
+      ],
+      [
+        "Veisani",
+        "Yousef"
+      ],
+      [
+        "Violante",
+        "Francesco S"
+      ],
+      [
+        "Wagner",
+        "Gregory R"
+      ],
+      [
+        "Westerman",
+        "Ronny"
+      ],
+      [
+        "Wolfe",
+        "Charles D A"
+      ],
+      [
+        "Wondafrash",
+        "Dawit Zewdu"
+      ],
+      [
+        "Wondmieneh",
+        "Adam Belay"
+      ],
+      [
+        "Yonemoto",
+        "Naohiro"
+      ],
+      [
+        "Yoon",
+        "Seok-Jun"
+      ],
+      [
+        "Zaidi",
+        "Zoubida"
+      ],
+      [
+        "Zamani",
+        "Mohammad"
+      ],
+      [
+        "Zar",
+        "Heather J"
+      ],
+      [
+        "Zhang",
+        "Yunquan"
+      ],
+      [
+        "Vos",
+        "Theo"
+      ]
+    ],
+    "year": 2020,
+    "container": "The Lancet Respiratory Medicine",
+    "volume": "8",
+    "issue": "6",
+    "pages": "585-596",
+    "doi": "10.1016/s2213-2600(20)30105-3",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/s2213-2600(20)30105-3",
+    "source": "CrossRef"
+  },
+  "anand2022": {
+    "title": "Translational aspect in peptide drug discovery and development: An emerging therapeutic candidate",
+    "authors": [
+      [
+        "Anand",
+        "Uttpal"
+      ],
+      [
+        "Bandyopadhyay",
+        "Anustup"
+      ],
+      [
+        "Jha",
+        "Niraj Kumar"
+      ],
+      [
+        "P\u00e9rez de la Lastra",
+        "Jos\u00e9 M."
+      ],
+      [
+        "Dey",
+        "Abhijit"
+      ]
+    ],
+    "year": 2023,
+    "container": "BioFactors",
+    "volume": "49",
+    "issue": "2",
+    "pages": "251-269",
+    "doi": "10.1002/biof.1913",
+    "type": "journal-article",
+    "publisher": "Wiley",
+    "record": "https://api.crossref.org/works/10.1002/biof.1913",
+    "source": "CrossRef"
+  },
+  "eschbach2026": {
+    "title": "Predicting Peptide Aggregation with Protein Language Model Embeddings",
+    "authors": [
+      [
+        "Eschbach",
+        "Ethan"
+      ],
+      [
+        "Deibler",
+        "Kristine"
+      ],
+      [
+        "Korani",
+        "Deepa"
+      ],
+      [
+        "Swanson",
+        "Sebastian"
+      ]
+    ],
+    "year": 2026,
+    "container": "Journal of Chemical Information and Modeling",
+    "volume": "66",
+    "issue": "9",
+    "pages": "5206-5216",
+    "doi": "10.1021/acs.jcim.6c00577",
+    "type": "journal-article",
+    "publisher": "American Chemical Society (ACS)",
+    "record": "https://api.crossref.org/works/10.1021/acs.jcim.6c00577",
+    "source": "CrossRef"
+  },
+  "chen2020simclr": {
+    "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+    "authors": [
+      [
+        "Chen",
+        "Ting"
+      ],
+      [
+        "Kornblith",
+        "Simon"
+      ],
+      [
+        "Norouzi",
+        "Mohammad"
+      ],
+      [
+        "Hinton",
+        "Geoffrey"
+      ]
+    ],
+    "year": 2020,
+    "container": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "doi": "",
+    "type": "arxiv",
+    "publisher": "",
+    "record": "https://arxiv.org/abs/2002.05709",
+    "source": "arXiv",
+    "arxiv": "2002.05709",
+    "journal_ref": ""
+  },
+  "du2026pepbert": {
+    "title": "PepBERT: Lightweight language models for bioactive peptide representation",
+    "authors": [
+      [
+        "Du",
+        "Zhenjiao"
+      ],
+      [
+        "Caragea",
+        "Doina"
+      ],
+      [
+        "Guo",
+        "Xiaolong"
+      ],
+      [
+        "Li",
+        "Yonghui"
+      ]
+    ],
+    "year": 2026,
+    "container": "Future Foods",
+    "volume": "13",
+    "issue": "",
+    "pages": "100999",
+    "doi": "10.1016/j.fufo.2026.100999",
+    "type": "journal-article",
+    "publisher": "Elsevier BV",
+    "record": "https://api.crossref.org/works/10.1016/j.fufo.2026.100999",
+    "source": "CrossRef"
+  },
+  "akbar2024deepaipspred": {
+    "title": "DeepAIPs-Pred: Predicting Anti-Inflammatory Peptides Using Local Evolutionary Transformation Images and Structural Embedding-Based Optimal Descriptors with Self-Normalized BiTCNs",
+    "authors": [
+      [
+        "Akbar",
+        "Shahid"
+      ],
+      [
+        "Ullah",
+        "Matee"
+      ],
+      [
+        "Raza",
+        "Ali"
+      ],
+      [
+        "Zou",
+        "Quan"
+      ],
+      [
+        "Alghamdi",
+        "Wajdi"
+      ]
+    ],
+    "year": 2024,
+    "container": "Journal of Chemical Information and Modeling",
+    "volume": "64",
+    "issue": "24",
+    "pages": "9609-9625",
+    "doi": "10.1021/acs.jcim.4c01758",
+    "type": "journal-article",
+    "publisher": "American Chemical Society (ACS)",
+    "record": "https://api.crossref.org/works/10.1021/acs.jcim.4c01758",
+    "source": "CrossRef"
+  },
+  "akbar2025deepaipssfla": {
+    "title": "DeepAIPs-SFLA: Deep Convolutional Model for Prediction of Anti-Inflammatory Peptides Using Binary Pattern Decomposition of Novel Multiview Descriptors with an SFLA Approach",
+    "authors": [
+      [
+        "Akbar",
+        "Shahid"
+      ],
+      [
+        "Raza",
+        "Ali"
+      ],
+      [
+        "Alghamdi",
+        "Wajdi"
+      ],
+      [
+        "Saeed",
+        "Aamir"
+      ],
+      [
+        "Ali",
+        "Hashim"
+      ],
+      [
+        "Zou",
+        "Quan"
+      ]
+    ],
+    "year": 2025,
+    "container": "ACS Omega",
+    "volume": "10",
+    "issue": "32",
+    "pages": "35747-35762",
+    "doi": "10.1021/acsomega.5c02422",
+    "type": "journal-article",
+    "publisher": "American Chemical Society (ACS)",
+    "record": "https://api.crossref.org/works/10.1021/acsomega.5c02422",
+    "source": "CrossRef"
+  },
+  "piovani2019": {
+    "type": "article",
+    "authors": [
+      [
+        "Piovani",
+        "Daniele"
+      ],
+      [
+        "Danese",
+        "Silvio"
+      ],
+      [
+        "Peyrin-Biroulet",
+        "Laurent"
+      ],
+      [
+        "Bonovas",
+        "Stefanos"
+      ]
+    ],
+    "title": "Inflammatory bowel disease: estimates from the global burden of disease 2017 study",
+    "year": 2019,
+    "container": "Alimentary Pharmacology & Therapeutics",
+    "volume": "51",
+    "issue": "2",
+    "pages": "261-270",
+    "doi": "10.1111/apt.15542",
+    "record": "https://doi.org/10.1111/apt.15542",
+    "source": "publisher page"
+  },
+  "heinzinger2022": {
+    "type": "article",
+    "authors": [
+      [
+        "Heinzinger",
+        "Michael"
+      ],
+      [
+        "Littmann",
+        "Maria"
+      ],
+      [
+        "Sillitoe",
+        "Ian"
+      ],
+      [
+        "Bordin",
+        "Nicola"
+      ],
+      [
+        "Orengo",
+        "Christine"
+      ],
+      [
+        "Rost",
+        "Burkhard"
+      ]
+    ],
+    "title": "Contrastive learning on protein embeddings enlightens midnight zone",
+    "year": 2022,
+    "container": "NAR Genomics and Bioinformatics",
+    "volume": "4",
+    "issue": "2",
+    "pages": "lqac043",
+    "doi": "10.1093/nargab/lqac043",
+    "record": "https://doi.org/10.1093/nargab/lqac043",
+    "source": "publisher page"
+  },
+  "lee2018": {
+    "type": "article",
+    "authors": [
+      [
+        "Lee",
+        "Ernest Y."
+      ],
+      [
+        "Wong",
+        "Gerard C. L."
+      ],
+      [
+        "Ferguson",
+        "Andrew L."
+      ]
+    ],
+    "title": "Machine learning-enabled discovery and design of membrane-active peptides",
+    "year": 2018,
+    "container": "Bioorganic & Medicinal Chemistry",
+    "volume": "26",
+    "issue": "10",
+    "pages": "2708-2718",
+    "doi": "10.1016/j.bmc.2017.07.012",
+    "record": "https://doi.org/10.1016/j.bmc.2017.07.012",
+    "source": "publisher page"
+  },
+  "elnaggar2022": {
+    "type": "article",
+    "authors": [
+      [
+        "Elnaggar",
+        "Ahmed"
+      ],
+      [
+        "Heinzinger",
+        "Michael"
+      ],
+      [
+        "Dallago",
+        "Christian"
+      ],
+      [
+        "Rehawi",
+        "Ghalia"
+      ],
+      [
+        "Wang",
+        "Yu"
+      ],
+      [
+        "Jones",
+        "Llion"
+      ],
+      [
+        "Gibbs",
+        "Tom"
+      ],
+      [
+        "Feher",
+        "Tamas"
+      ],
+      [
+        "Angerer",
+        "Christoph"
+      ],
+      [
+        "Steinegger",
+        "Martin"
+      ],
+      [
+        "Bhowmik",
+        "Debsindhu"
+      ],
+      [
+        "Rost",
+        "Burkhard"
+      ]
+    ],
+    "title": "ProtTrans: Toward Understanding the Language of Life Through Self-Supervised Learning",
+    "year": 2022,
+    "container": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "volume": "44",
+    "issue": "10",
+    "pages": "7112-7127",
+    "doi": "10.1109/tpami.2021.3095381",
+    "record": "https://doi.org/10.1109/tpami.2021.3095381",
+    "source": "publisher page"
+  },
+  "hashemi2024": {
+    "type": "article",
+    "authors": [
+      [
+        "Hashemi",
+        "Samaneh"
+      ],
+      [
+        "Vosough",
+        "Parisa"
+      ],
+      [
+        "Taghizadeh",
+        "Saeed"
+      ],
+      [
+        "Savardashtaki",
+        "Amir"
+      ]
+    ],
+    "title": "Therapeutic peptide development revolutionized: Harnessing the power of artificial intelligence for drug discovery",
+    "year": 2024,
+    "container": "Heliyon",
+    "volume": "10",
+    "issue": "22",
+    "pages": "e40265",
+    "doi": "10.1016/j.heliyon.2024.e40265",
+    "record": "https://doi.org/10.1016/j.heliyon.2024.e40265",
+    "source": "publisher page"
+  }
 }
