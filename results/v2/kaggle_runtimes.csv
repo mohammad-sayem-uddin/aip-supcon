@@ -1,0 +1,6 @@
+kernel,elapsed_seconds,event,detail
+aip-c3-finetune-gpu,0,RUN,/usr/bin/python3 -m src.v2.finetune --cv-seeds 0 1 2 --final-seeds 0 1 2 3 4
+aip-c3-finetune-gpu,528,DONE,"['predictions', 'finetune_results_v2.csv']"
+aip-phase-b-gpu,0,RUN,/usr/bin/python3 -m src.v2.phaseB cv --archs B2_cnn B5_transformer B6_attnpool --jobs 4
+aip-phase-b-gpu,1498,RUN,/usr/bin/python3 -m src.v2.phaseB final --archs B2_cnn B5_transformer B6_attnpool --jobs 4
+aip-phase-b-gpu,1628,DONE,"['predictions', 'cv_results_v2.csv', 'phase_b_progress.log', 'selected_v2.json', 'final_results_v2.csv']"

@@ -1,0 +1,24 @@
+label,number
+tab:cv,Table 5.1
+tab:ind425,Table 5.2
+tab:ind1049,Table 5.3
+tab:gaps,Table 5.4
+fig:gap,Figure 5.1
+tab:xb,Table 5.5
+fig:xb,Figure 5.2
+tab:lambda,Table 5.6
+fig:lambda,Figure 5.3
+tab:checkpoints,Table 5.7
+tab:tau,Table 5.8
+tab:arch,Table 5.9
+fig:arch,Figure 5.4
+tab:survivors,Table 5.10
+tab:families,Table 5.11
+fig:tsne,Figure 5.5
+tab:pool5,Table 5.12
+fig:pooling,Figure 5.6
+tab:fusion,Table 5.13
+tab:ft5,Table 5.14
+tab:reptests,Table 5.15
+tab:published,Table 5.16
+tab:mde5,Table 5.17

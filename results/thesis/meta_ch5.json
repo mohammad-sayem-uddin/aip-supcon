@@ -1,0 +1,17 @@
+{
+ "file": "CHAPTER 5 thesis.docx",
+ "cited": [
+  "benjamini1995",
+  "gupta2017",
+  "manavalan2018",
+  "khatun2019",
+  "deng2022"
+ ],
+ "todos": [
+  "fill the TODO cells of Table 5.16 from the full texts of the four papers (AUROC and MCC on the independent set, with the training collection each paper used), and state for each whether its training collection includes sequences of the independent set"
+ ],
+ "citation_needed": [],
+ "unresolved_refs": [],
+ "tables": 17,
+ "figures": 6
+}

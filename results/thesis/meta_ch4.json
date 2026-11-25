@@ -1,0 +1,16 @@
+{
+ "file": "CHAPTER 4 thesis.docx",
+ "cited": [
+  "paszke2019",
+  "pedregosa2012",
+  "cock2009",
+  "wolf2020"
+ ],
+ "todos": [
+  "add the public address or archive identifier of the repository and confirm that its visibility permits the citation"
+ ],
+ "citation_needed": [],
+ "unresolved_refs": [],
+ "tables": 4,
+ "figures": 0
+}
