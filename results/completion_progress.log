@@ -12,3 +12,5 @@
 2026-11-25T20:35:43Z 2.3 DONE: Table 5.16 rebuilt from open-access full-text tables (T5_7_published_reported.csv, 18 rows; IF-AIP, AIEpred own figures, AIPStack SN/SP remain TODO); 4 new verified references (iAIPs, AIEpred, IF-AIP, AIPFusion-Net)
 2026-11-25T20:35:43Z 2.4 DONE: AIPFusion-Net readable (resolves blocker); AIPStack independent sets still not obtainable (GitHub 404; Wayback has only the repo front page, sub-pages 404)
 2026-11-25T20:37:12Z 2.2 650M smoke: sha256 matched official; frozen fold 198 s; fine-tune OOM at foreach AdamW -> patched foreach=False; pushed s650a (CV seeds 0,1); s650b (CV seed 2 + finals) queued
+2026-11-25T20:39:48Z 3.1 C4 embedding kernels pushed (CPU, sha256-gated): aip-c4bert-cpu, aip-c4t5-cpu
+2026-11-25T20:42:38Z BLOCKERS_v2.md updated; finish_completion.py written (fetch/analyse); D3 not attempted

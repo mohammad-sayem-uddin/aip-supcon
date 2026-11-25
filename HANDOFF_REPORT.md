@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T15:02:48 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-25T15:43:11 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -209,6 +209,7 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 | results/tables/TF3_error_analysis.csv | 3 |
 | results/tables/TF3b_errors_by_number_of_models_wrong.csv | 19 |
 | results/tables/TF5_length_stratified.csv | 77 |
+| results/v2/aipfusion_repo_check.csv | 3 |
 | results/v2/architecture_layers.csv | 41 |
 | results/v2/comparisons_raw.csv | 126 |
 | results/v2/cross_benchmark_results_v2.csv | 630 |
@@ -217,6 +218,7 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 | results/v2/feature_dimensions.csv | 6 |
 | results/v2/final_results_v2.csv | 300 |
 | results/v2/finetune_results_v2.csv | 90 |
+| results/v2/gap_family_assignment.csv | 36 |
 | results/v2/half_precision_check.csv | 2 |
 | results/v2/hardest_sequences.csv | 61 |
 | results/v2/kaggle_runtimes.csv | 5 |
@@ -248,14 +250,14 @@ v1 files:
 | results/stats_tests.csv | 54 | DeLong, McNemar and paired-bootstrap CIs, lambda>0 vs lambda=0 |
 | results/stats_per_seed.csv | 270 | Per-seed paired differences and DeLong p-values |
 | results/bootstrap_cis.csv | 78 | 95% bootstrap CIs for AUROC and MCC of every final model |
-| results/tables/ | 44 | Thesis tables as CSV + LaTeX |
+| results/tables/ | 50 | Thesis tables as CSV + LaTeX |
 | results/predictions/ | 114 | Per-sample predictions |
 | results/latents/ | 26 | Latent vectors for t-SNE |
 | results/models/ | 66 | Final model weights + scalers |
 
 ## 6. FIGURES
 
-fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png, figF5_length_stratified.png
+fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.png, fig5_11_finetune_scale.png, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png, figF5_length_stratified.png
 
 v1 figure status:
 
@@ -274,7 +276,7 @@ v1 figure status:
 | F5.6 confusion matrices | ok: figures/fig5_6_confusion_matrices.pdf, figures/fig5_6_confusion_matrices.png |
 | FA training curves | ok: figures/figA_training_curves.pdf, figures/figA_training_curves.png |
 
-Files in figures/: fig3_1_dataset_lineage.pdf, fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.pdf, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.pdf, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.pdf, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.pdf, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.pdf, fig5_9b_fusion_finetune.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png, figF5_length_stratified.pdf, figF5_length_stratified.png
+Files in figures/: fig3_1_dataset_lineage.pdf, fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.pdf, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.pdf, fig5_10_cross_benchmark_heatmap.png, fig5_11_finetune_scale.pdf, fig5_11_finetune_scale.png, fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.pdf, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.pdf, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.pdf, fig5_9b_fusion_finetune.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png, figF5_length_stratified.pdf, figF5_length_stratified.png
 
 ## 7. BLOCKERS
 
@@ -305,6 +307,26 @@ D3 is optional. It needs antimicrobial or anticancer peptide datasets; no verifi
 _2026-11-25_
 
 Only ESM-2 8M was fine-tuned (CV seeds 0-2 x 5 folds, final seeds 0-4). Fine-tuning 150M or 650M was not run. B2, B5 and the fine-tuning ran on Kaggle T4 GPUs, whose floating-point reductions are not bit-identical to the CPU runs used for B3, B4, B6 and v1; each architecture's lambda grid is entirely on one device (results/v2/device_map.json).
+
+## RESOLVED in the completion run: AIPFusion-Net could not be read
+_2026-11-26_
+
+The paper is on Europe PMC (PMC13677489) and was read in full; its data repository (github.com/ChenYH7693/AIPFusion-Net) was fetched and its three data files are byte-identical (SHA-256) to the local Benchmark_Dataset, Ind_1049 and Ind_425 (`results/v2/aipfusion_repo_check.csv`). The statements in the earlier entry that were "taken from the plan text" are now checked against the paper: training set 1,451 / 2,339, independent sets Ind-1049 and Ind-426, CD-HIT 0.9 on the training set, "no overlapping sequences retained".
+
+## AIPStack independent sets 2 and 3: still not obtainable (second attempt)
+_2026-11-26_
+
+The full text and supplementary tables came from Europe PMC. The repository github.com/Nicole-DH/AIPStack still returns 404; the Wayback Machine holds one snapshot of the repository front page (2024-04-16) but not the `datasets` directory (404 for both requests tried). The supplementary files mmc2/mmc3 contain only performance tables. To close: obtain the datasets from the authors (the paper names a lead contact).
+
+## C4 (ProtBERT / ProtT5) and fine-tuning of 150M / 650M: running on Kaggle at the time of writing
+_2026-11-26_
+
+Kernels `aip-ft-s150-gpu`, `aip-ft-s650a-gpu`, `aip-c4bert-cpu`, `aip-c4t5-cpu` were pushed; `aip-ft-s650b-gpu` is pushed by `fetch` when a GPU slot is free. Each kernel checks the sha256 of the weights against the official Hugging Face record and stops on a mismatch (this stopped the first ProtBERT mirror, which was a different checkpoint). Finish with `PYTHONPATH=. .venv/bin/python -m src.v2.finish_completion fetch` and then `analyse` (see the docstring of that script). The first 650M smoke run ran out of GPU memory in AdamW; fixed with `foreach=False`.
+
+## D3 (AMP / ACP transfer): not attempted
+_2026-11-26_
+
+Needs a benchmark with a verifiable origin and a documented train/test split, plus the same overlap audit as Phase A before any model is trained. No dataset was fetched because none had been checked against its paper in this run. To do it: pick the benchmark (for example the anticancer-peptide sets of AntiCP 2.0 or the antimicrobial sets of a published AMP predictor), fetch the files and the paper from an open-access record, repeat Phase A (exact and 0.9-identity overlap) and then the pipeline of Chapters 3 and 4 with the lambda grid and the six architectures.
 
 
 Everything that failed or could not run, with diagnosis.
@@ -513,9 +535,9 @@ Ranked, most important first:
 | Abstract | complete | 1 | 0 | 0 | 0 | 0 | 0 |
 | Chapter 1 Introduction | complete | 4 | 0 | 0 | 7 | 0 | 0 |
 | Chapter 2 Literature Review | complete | 4 | 0 | 0 | 10 | 0 | 0 |
-| Chapter 3 Materials and Methods | complete | 20 | 18 | 2 | 20 | 0 | 0 |
-| Chapter 4 Implementation and Experimental Setup | complete (with TODO) | 6 | 4 | 0 | 4 | 1 | 0 |
-| Chapter 5 Results and Discussion | complete (with TODO) | 26 | 17 | 6 | 5 | 1 | 0 |
+| Chapter 3 Materials and Methods | complete | 20 | 18 | 2 | 26 | 0 | 0 |
+| Chapter 4 Implementation and Experimental Setup | complete (with TODO) | 6 | 4 | 0 | 5 | 1 | 0 |
+| Chapter 5 Results and Discussion | complete (with TODO) | 26 | 17 | 6 | 10 | 1 | 0 |
 | Chapter 6 Conclusions and Future Work | complete | 4 | 0 | 0 | 0 | 0 | 0 |
 
 
@@ -523,7 +545,7 @@ Ranked, most important first:
 
 **Remaining TODOs and what closes them**
 
-- Chapter 4 Implementation and Experimental Setup: add the public address or archive identifier of the repository and confirm that its visibility permits the citation
+- Chapter 4 Implementation and Experimental Setup: a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account
 - Chapter 5 Results and Discussion: fill the TODO cells of Table 5.16 from the full texts of the four papers (AUROC and MCC on the independent set, with the training collection each paper used), and state for each whether its training collection includes sequences of the independent set
 - Table 5.16 is intentionally TODO beyond the abstract-level figures: needs the full texts of AntiInflam, AIPpred, PreAIP and AIPStack (the PreAIP and AIPStack pages could not be read automatically).
 - Figures 5.9b, F1 and F5 are not in the thesis (raw model keys as labels / overlapping legend): regenerate with readable labels if wanted.
@@ -541,6 +563,41 @@ Ranked, most important first:
 
 
 **Inconsistencies found and fixed** (worst first): see [THESIS_CONSISTENCY_LOG.md](THESIS_CONSISTENCY_LOG.md).
+
+## 11. COMPLETION RUN
+
+**Completion checklist** (details: `results/completion_progress.log`, `NUMBERS_CHANGED.md`)
+
+| Tier | Item | Status | Evidence |
+|---|---|---|---|
+| 1 | 1.1 Figures 5.9b, F1, F5 readable | DONE (F1 redesigned) | `src/thesis/figures_fix.py`, `figures/` |
+| 1 | 1.2 Repository address in Chapter 4 | DONE (archive DOI is the author's) | `ch4.js` |
+| 1 | 1.3 Bibliography complete | DONE (two ICLR items stay arXiv preprints) | `src/thesis/build_bib2.py`, `CITATIONS_TO_VERIFY.md` |
+| 1 | 1.4 Word-compatible check | DONE as schema validation; Word itself not available | all 8 .docx pass `validate.py` |
+| 2 | 2.1 Differential leakage gaps tested | DONE: claim SUPPORTED | `T5.12*`, `src/v2/gap_tests.py` |
+| 2 | 2.2 Fine-tune 150M and 650M (Kaggle) | NOT DONE (kernels may still be running; see BLOCKERS_v2.md) | `src/v2/finish_completion.py`, `T5.13*` |
+| 2 | 2.3 Table 5.16 filled | DONE except IF-AIP, AIEpred own figures and AIPStack SN/SP (TODO, no source) | `T5_7_published_reported.csv` |
+| 2 | 2.4 AIPStack and AIPFusion-Net retry | AIPFusion-Net DONE (files byte-identical to ours); AIPStack independent sets NOT obtainable | `aipfusion_repo_check.csv`, `BLOCKERS_v2.md` |
+| 3 | 3.1 C4 ProtBERT and ProtT5 | NOT DONE (kernels may still be running) | `src/v2/phaseC4.py`, `T5.14*` |
+| 3 | 3.2 D3 AMP / ACP | NOT DONE (needs a verified benchmark and the Phase A audit first) | `BLOCKERS_v2.md` |
+
+**Task 2.1 outcome: the differential-gap claim is SUPPORTED, not weakened.** Mean leakage gap (MCC, Regime A minus B) of the 32 flexible non-linear models minus the 3 linear models: +0.135 (95% interval +0.100 to +0.170; BH-adjusted p 0.0009; model-level Mann-Whitney p 0.023). Within the frozen-MLP checkpoints the gap does not rise with size (slope -0.008 MCC per decade of parameters, interval -0.029 to +0.012). One clause was not supported and was corrected: gradient-boosted trees are not among the smallest gaps (LightGBM +0.051 above linear, 0.136 below random forest).
+
+**Final submission checklist**
+
+*Needs the author personally*
+
+- Rewrite the stale passages listed in `NUMBERS_CHANGED.md` (sections 1 to 3), then rebuild every chapter twice in order and re-check the page count in Word.
+- Create a permanent archive of the repository (for example a Zenodo DOI) and put it in Section 4.6.
+- Decide whether to insert Figures 5.9b, F1, F5 (and 5.11 when the scale run is in).
+- Obtain, if wanted, IF-AIP and AIEpred full texts (not open access) and the AIPStack datasets (lead contact) to close the TODO cells of Table 5.16.
+- Run `python -m src.v2.finish_completion fetch` and `analyse` until the Kaggle kernels are integrated, then update Sections 5.6 and 5.9.3 and the Chapter 6 answer to Objective 4 with the scale results.
+- Read the three weakest points above with your supervisor; confirm the pre-registration wording.
+- Open the .docx files in Word and check equations, tables and figure placement; the build was checked only through LibreOffice and the Office schema validator.
+
+*Complete*
+
+- Chapters 1 to 6, abstract (250 words) and reference list built from reproducible scripts; all citations verified against CrossRef, arXiv or the publisher page; Table 5.16 transcribed from full-text tables with source and table number per value; differential leakage gap tested; AIPFusion-Net data identity measured; bibliography closed except two preprints.
 
 ## Appendix: LEAKAGE_FINDING.md (verbatim)
 

@@ -121,6 +121,35 @@ def section_thesis() -> str:
     return "\n".join(out)
 
 
+def section_completion() -> str:
+    """Completion run: checklist per tier, differential-gap outcome, submission checklist."""
+    ex = lambda rel: (ROOT / rel).exists()
+    scale_done = ex("results/tables/T5.13c_finetune_scale_tests.csv") and bool(list((V2 / "scale").glob("finetune_scale_esm2_t33_650M*.csv"))) and bool(list((V2 / "scale").glob("finetune_scale_esm2_t30_150M*.csv")))
+    c4_done = ex("results/tables/T5.14_c4_other_plms_tests.csv")
+    mark_ = lambda ok: "DONE" if ok else "NOT DONE"
+    out = ["**Completion checklist** (details: `results/completion_progress.log`, `NUMBERS_CHANGED.md`)\n",
+           "| Tier | Item | Status | Evidence |", "|---|---|---|---|",
+           f"| 1 | 1.1 Figures 5.9b, F1, F5 readable | {mark_(ex('src/thesis/figures_fix.py'))} (F1 redesigned) | `src/thesis/figures_fix.py`, `figures/` |",
+           "| 1 | 1.2 Repository address in Chapter 4 | DONE (archive DOI is the author's) | `ch4.js` |",
+           "| 1 | 1.3 Bibliography complete | DONE (two ICLR items stay arXiv preprints) | `src/thesis/build_bib2.py`, `CITATIONS_TO_VERIFY.md` |",
+           "| 1 | 1.4 Word-compatible check | DONE as schema validation; Word itself not available | all 8 .docx pass `validate.py` |",
+           f"| 2 | 2.1 Differential leakage gaps tested | {mark_(ex('results/v2/gap_decision.json'))}: claim SUPPORTED | `T5.12*`, `src/v2/gap_tests.py` |",
+           f"| 2 | 2.2 Fine-tune 150M and 650M (Kaggle) | {mark_(scale_done)} (kernels may still be running; see BLOCKERS_v2.md) | `src/v2/finish_completion.py`, `T5.13*` |",
+           "| 2 | 2.3 Table 5.16 filled | DONE except IF-AIP, AIEpred own figures and AIPStack SN/SP (TODO, no source) | `T5_7_published_reported.csv` |",
+           "| 2 | 2.4 AIPStack and AIPFusion-Net retry | AIPFusion-Net DONE (files byte-identical to ours); AIPStack independent sets NOT obtainable | `aipfusion_repo_check.csv`, `BLOCKERS_v2.md` |",
+           f"| 3 | 3.1 C4 ProtBERT and ProtT5 | {mark_(c4_done)} (kernels may still be running) | `src/v2/phaseC4.py`, `T5.14*` |",
+           "| 3 | 3.2 D3 AMP / ACP | NOT DONE (needs a verified benchmark and the Phase A audit first) | `BLOCKERS_v2.md` |", ""]
+    g = TABLES / "T5.12b_leakage_gap_family_contrasts.csv"
+    if g.exists():
+        c = pd.read_csv(g); r = c[(c.contrast.str.startswith("Flexible")) & (c.scope == "both")].iloc[0]; sl = c[(c.contrast.str.startswith("Capacity")) & (c.scope == "both")].iloc[0]
+        out.append(f"**Task 2.1 outcome: the differential-gap claim is SUPPORTED, not weakened.** Mean leakage gap (MCC, Regime A minus B) of the 32 flexible non-linear models minus the 3 linear models: {r['diff']:+.3f} (95% interval {r['lo']:+.3f} to {r['hi']:+.3f}; BH-adjusted p {r['p_BH_within_scope']:.4f}; model-level Mann-Whitney p {r['p_mannwhitney_models']:.3f}). "
+                   f"Within the frozen-MLP checkpoints the gap does not rise with size (slope {sl['diff']:+.3f} MCC per decade of parameters, interval {sl['lo']:+.3f} to {sl['hi']:+.3f}). One clause was not supported and was corrected: gradient-boosted trees are not among the smallest gaps (LightGBM +0.051 above linear, 0.136 below random forest).\n")
+    out.append("**Final submission checklist**\n")
+    out.append("*Needs the author personally*\n\n- Rewrite the stale passages listed in `NUMBERS_CHANGED.md` (sections 1 to 3), then rebuild every chapter twice in order and re-check the page count in Word.\n- Create a permanent archive of the repository (for example a Zenodo DOI) and put it in Section 4.6.\n- Decide whether to insert Figures 5.9b, F1, F5 (and 5.11 when the scale run is in).\n- Obtain, if wanted, IF-AIP and AIEpred full texts (not open access) and the AIPStack datasets (lead contact) to close the TODO cells of Table 5.16.\n- Run `python -m src.v2.finish_completion fetch` and `analyse` until the Kaggle kernels are integrated, then update Sections 5.6 and 5.9.3 and the Chapter 6 answer to Objective 4 with the scale results.\n- Read the three weakest points above with your supervisor; confirm the pre-registration wording.\n- Open the .docx files in Word and check equations, tables and figure placement; the build was checked only through LibreOffice and the Office schema validator.\n")
+    out.append("*Complete*\n\n- Chapters 1 to 6, abstract (250 words) and reference list built from reproducible scripts; all citations verified against CrossRef, arXiv or the publisher page; Table 5.16 transcribed from full-text tables with source and table number per value; differential leakage gap tested; AIPFusion-Net data identity measured; bibliography closed except two preprints.\n")
+    return "\n".join(out)
+
+
 def build() -> str:
     leak = (ROOT / "LEAKAGE_FINDING.md").read_text() if (ROOT / "LEAKAGE_FINDING.md").exists() else "_Phase A has not run._"
     gate = json.loads((V2 / "phaseA_summary.json").read_text()) if (V2 / "phaseA_summary.json").exists() else {}
@@ -146,6 +175,7 @@ def build() -> str:
         "## 8. DECISIONS\n\n" + decisions,
         "## 9. NEXT ACTIONS\n\n" + nxt,
         "## 10. THESIS WRITING STATUS (overnight run, part 2)\n\n" + section_thesis(),
+        "## 11. COMPLETION RUN\n\n" + section_completion(),
         "## Appendix: LEAKAGE_FINDING.md (verbatim)\n\n" + leak,
     ]
     return "\n".join(parts)

@@ -2,6 +2,12 @@
 
 Rule used for the thesis bibliography: an entry is in `results/thesis/references.json` / `references.bib` only if its authors, title, venue, year and DOI were matched against a CrossRef record (title similarity >= 0.90, first author and year agree) or, for conference papers, an arXiv record fetched by identifier. The builder is `src/thesis/build_bib.py`; 26 entries pass, 0 failed. Everything below is **not** in the bibliography, or is in it with a stated limit. No DOI, volume or page number was guessed.
 
+
+## STATUS AFTER THE COMPLETION RUN (2026-11-26) — read this first
+
+**Closed:** A1 (LightGBM: Ke et al., NeurIPS 30, publisher page), A2 (Breiman 2001, CrossRef), A3 (Cortes and Vapnik 1995, CrossRef), A4 (SGDR kept as arXiv:1608.03983), A5 (Ioffe and Szegedy, PMLR 37; Srivastava et al., JMLR 15). Section C: Khosla (NeurIPS 33), Vaswani (NeurIPS 30), Paszke (NeurIPS 32), Ilse (PMLR 80), Pedregosa (JMLR 12, 2011; the year in the text is now 2011) now cite the publisher record. Each of these was fetched from the publisher's own page (proceedings.neurips.cc, proceedings.mlr.press or jmlr.org) and the authors, volume and pages were parsed from that page (`src/thesis/build_bib2.py`). New CrossRef-matched entries for Table 5.16: Zhao et al. 2021 (iAIPs), Zhang et al. 2021 (AIEpred), Gaffar et al. 2024 (IF-AIP), Wang et al. 2026 (AIPFusion-Net).
+**Still open:** Loshchilov and Hutter, AdamW (arXiv:1711.05101): the ICLR 2019 version could not be verified (OpenReview blocks automated access); it stays an arXiv preprint. Loshchilov and Hutter, SGDR: arXiv preprint only. A6 (RDP58 / VIP examples are second-hand). A8: Table 5.16 now holds figures read from full-text tables (`results/tables/T5_7_published_reported.csv`); TODO remain for IF-AIP and AIEpred (not open access) and AIPStack SN/SP (figure only). Generic names without a reference in the text: none known.
+
 ## A. Claims that carry no citation, and what is needed
 
 | # | Where | Exact statement | What could not be confirmed | Needed to close |
