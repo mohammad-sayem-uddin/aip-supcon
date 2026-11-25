@@ -1,0 +1,26 @@
+[
+ {
+  "label": "tab:software",
+  "kind": "Table",
+  "number": "4.1",
+  "text": "Main software packages and versions on the local machine (from requirements.txt). The Kaggle kernels used their pre-installed PyTorch and scikit-learn."
+ },
+ {
+  "label": "tab:stages",
+  "kind": "Table",
+  "number": "4.2",
+  "text": "Compute time recorded for each stage of the experiments (results/.stages and results/v2/kaggle_runtimes.csv). Times are the wall-clock time that the stage runner recorded for its last execution; a stage that was resumed or re-run shows that execution only, and the time spent writing code is not included."
+ },
+ {
+  "label": "tab:devices",
+  "kind": "Table",
+  "number": "4.3",
+  "text": "Device on which each architecture and the fine-tuning experiment were trained (results/v2/device_map.json)."
+ },
+ {
+  "label": "tab:hyper",
+  "kind": "Table",
+  "number": "4.4",
+  "text": "Training hyperparameters and search ranges. Source: results/v2/methods_parameters.csv."
+ }
+]

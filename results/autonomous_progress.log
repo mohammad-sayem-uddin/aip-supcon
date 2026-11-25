@@ -1,2 +1,3 @@
 2026-11-25T22:45:28Z AUTONOMOUS RUN started: Priority 1 (citations) complete
 2026-11-25T23:19:43Z AUTONOMOUS RUN: Priority 2 complete — Ch1 5->7 pages (2243->3794 words, 34 citations), Ch2 6->8 pages (3297->4177 words, 34 citations + evidence table); 13 new verified sources added (58->63 total), 0 retractions; orphan check clean both directions; all 8 docx re-validated; GAPS_TO_FILL.md written; see DECISIONS_v2.md V2-D21
+2026-11-25T23:24:33Z AUTONOMOUS RUN: Priority 3 complete — TABLE_OF_CONTENTS.md, LIST_OF_TABLES.md (42), LIST_OF_FIGURES.md (11), LIST_OF_ABBREVIATIONS.md (28), FRONT_MATTER_PLACEHOLDERS.md written as content-only files; university-specific wording left as explicit placeholders (template PDFs not opened); see DECISIONS_v2.md V2-D22

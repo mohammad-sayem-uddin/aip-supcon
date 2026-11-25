@@ -103,6 +103,7 @@ function chapter(no, title, outFile) {
     },
     caption(label, text) {
       tabNo += 1; ctx.labels.push([label, `Table ${no}.${tabNo}`]);
+      ctx.captions = ctx.captions || []; ctx.captions.push({ label, kind: 'Table', number: `${no}.${tabNo}`, text });
       return new Paragraph({ keepNext: true, spacing: { before: 200, after: 80 }, children: [new TextRun({ text: `Table ${no}.${tabNo}: `, bold: true, size: 20 }), ...rich(text, { size: 20 }, ctx)] });
     },
     afterTable: () => new Paragraph({ spacing: { after: 120 }, children: [] }),
@@ -110,6 +111,7 @@ function chapter(no, title, outFile) {
       const b = fs.readFileSync(`${ROOT}/figures/${file}`);
       const w = b.readUInt32BE(16), h = b.readUInt32BE(20);
       figNo += 1; ctx.labels.push([label, `Figure ${no}.${figNo}`]);
+      ctx.captions = ctx.captions || []; ctx.captions.push({ label, kind: 'Figure', number: `${no}.${figNo}`, text });
       return [
         new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 160, after: 60 }, keepNext: true,
           children: [new ImageRun({ type: 'png', data: b, transformation: { width: widthPx, height: Math.round(widthPx * h / w) }, altText: { title: `Figure ${no}.${figNo}`, description: text, name: file } })] }),
@@ -129,6 +131,7 @@ function chapter(no, title, outFile) {
       fs.writeFileSync(`${ROOT}/${outFile}`, await Packer.toBuffer(doc));
       fs.writeFileSync(`${THESIS}/labels_ch${no}.csv`, 'label,number\n' + ctx.labels.map((l) => l.join(',')).join('\n') + '\n');
       fs.writeFileSync(`${THESIS}/meta_ch${no}.json`, JSON.stringify({ file: outFile, cited: [...ctx.used], todos: ctx.todos, citation_needed: ctx.needed, unresolved_refs: [...new Set(ctx.unresolved)], tables: tabNo, figures: figNo }, null, 1));
+      fs.writeFileSync(`${THESIS}/captions_ch${no}.json`, JSON.stringify(ctx.captions || [], null, 1));
       console.log(`ch${no}: ${outFile} tables ${tabNo} figures ${figNo} cited ${ctx.used.size} todos ${ctx.todos.length} needed ${ctx.needed.length} unresolved ${[...new Set(ctx.unresolved)].length}`);
     },
   };
