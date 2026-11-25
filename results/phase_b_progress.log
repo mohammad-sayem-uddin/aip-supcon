@@ -45,3 +45,93 @@
 2026-11-25T11:59:12, B4_cnn_bilstm, lambda=0.5, seed=3, fold=1, MCC=0.2524, elapsed=126s
 2026-11-25T11:59:15, B4_cnn_bilstm, lambda=0.5, seed=1, fold=4, MCC=0.2436, elapsed=243s
 # slice end: 58 tasks still to start
+# 2026-11-25T11:59:31 slice start: 58 tasks left for ['B4_cnn_bilstm']; 242 rows already saved
+2026-11-25T12:00:46, B4_cnn_bilstm, lambda=0.5, seed=4, fold=1, MCC=0.2312, elapsed=71s
+2026-11-25T12:01:04, B4_cnn_bilstm, lambda=0.5, seed=3, fold=4, MCC=0.2398, elapsed=88s
+2026-11-25T12:01:11, B4_cnn_bilstm, lambda=0.5, seed=4, fold=2, MCC=0.2128, elapsed=95s
+2026-11-25T12:02:07, B4_cnn_bilstm, lambda=0.5, seed=3, fold=2, MCC=0.2508, elapsed=152s
+2026-11-25T12:02:14, B4_cnn_bilstm, lambda=0.5, seed=4, fold=4, MCC=0.2337, elapsed=70s
+2026-11-25T12:02:27, B4_cnn_bilstm, lambda=1, seed=0, fold=0, MCC=0.2135, elapsed=76s
+2026-11-25T12:02:57, B4_cnn_bilstm, lambda=0.5, seed=4, fold=0, MCC=0.3005, elapsed=202s
+2026-11-25T12:03:07, B4_cnn_bilstm, lambda=0.5, seed=4, fold=3, MCC=0.2102, elapsed=139s
+2026-11-25T12:03:24, B4_cnn_bilstm, lambda=0.5, seed=3, fold=3, MCC=0.2088, elapsed=229s
+2026-11-25T12:03:33, B4_cnn_bilstm, lambda=1, seed=0, fold=2, MCC=0.2350, elapsed=78s
+2026-11-25T12:05:09, B4_cnn_bilstm, lambda=1, seed=1, fold=0, MCC=0.2162, elapsed=121s
+2026-11-25T12:05:17, B4_cnn_bilstm, lambda=1, seed=1, fold=1, MCC=0.2047, elapsed=112s
+2026-11-25T12:05:21, B4_cnn_bilstm, lambda=1, seed=0, fold=4, MCC=0.2513, elapsed=143s
+2026-11-25T12:05:38, B4_cnn_bilstm, lambda=1, seed=0, fold=1, MCC=0.2424, elapsed=210s
+2026-11-25T12:05:47, B4_cnn_bilstm, lambda=1, seed=1, fold=2, MCC=0.2547, elapsed=133s
+2026-11-25T12:05:57, B4_cnn_bilstm, lambda=1, seed=0, fold=3, MCC=0.2686, elapsed=209s
+# slice end: 42 tasks still to start
+# 2026-11-25T12:06:13 slice start: 42 tasks left for ['B4_cnn_bilstm']; 258 rows already saved
+2026-11-25T12:07:41, B4_cnn_bilstm, lambda=1, seed=1, fold=3, MCC=0.2536, elapsed=82s
+2026-11-25T12:07:58, B4_cnn_bilstm, lambda=1, seed=2, fold=3, MCC=0.1765, elapsed=98s
+2026-11-25T12:08:10, B4_cnn_bilstm, lambda=1, seed=2, fold=2, MCC=0.2069, elapsed=110s
+2026-11-25T12:08:18, B4_cnn_bilstm, lambda=1, seed=2, fold=1, MCC=0.2433, elapsed=119s
+2026-11-25T12:08:24, B4_cnn_bilstm, lambda=1, seed=2, fold=0, MCC=0.2155, elapsed=125s
+2026-11-25T12:08:48, B4_cnn_bilstm, lambda=1, seed=1, fold=4, MCC=0.2586, elapsed=149s
+2026-11-25T12:09:45, B4_cnn_bilstm, lambda=1, seed=3, fold=3, MCC=0.1820, elapsed=80s
+2026-11-25T12:09:48, B4_cnn_bilstm, lambda=1, seed=3, fold=0, MCC=0.1993, elapsed=108s
+2026-11-25T12:09:49, B4_cnn_bilstm, lambda=1, seed=2, fold=4, MCC=0.2723, elapsed=127s
+2026-11-25T12:10:09, B4_cnn_bilstm, lambda=1, seed=3, fold=1, MCC=0.2641, elapsed=118s
+2026-11-25T12:10:16, B4_cnn_bilstm, lambda=1, seed=3, fold=4, MCC=0.2722, elapsed=86s
+2026-11-25T12:11:07, B4_cnn_bilstm, lambda=1, seed=4, fold=1, MCC=0.2364, elapsed=78s
+2026-11-25T12:11:10, B4_cnn_bilstm, lambda=1, seed=4, fold=2, MCC=0.2000, elapsed=79s
+2026-11-25T12:11:14, B4_cnn_bilstm, lambda=1, seed=3, fold=2, MCC=0.2676, elapsed=173s
+2026-11-25T12:11:51, B4_cnn_bilstm, lambda=1, seed=4, fold=4, MCC=0.2218, elapsed=94s
+2026-11-25T12:11:51, B4_cnn_bilstm, lambda=1, seed=4, fold=0, MCC=0.2575, elapsed=125s
+2026-11-25T12:13:00, B4_cnn_bilstm, lambda=2, seed=0, fold=2, MCC=0.2635, elapsed=105s
+2026-11-25T12:13:18, B4_cnn_bilstm, lambda=1, seed=4, fold=3, MCC=0.2310, elapsed=188s
+2026-11-25T12:13:44, B4_cnn_bilstm, lambda=2, seed=0, fold=1, MCC=0.2549, elapsed=153s
+2026-11-25T12:13:49, B4_cnn_bilstm, lambda=2, seed=0, fold=3, MCC=0.2247, elapsed=118s
+2026-11-25T12:13:55, B4_cnn_bilstm, lambda=2, seed=0, fold=4, MCC=0.2927, elapsed=123s
+2026-11-25T12:13:56, B4_cnn_bilstm, lambda=2, seed=0, fold=0, MCC=0.2464, elapsed=169s
+# slice end: 20 tasks still to start
+# 2026-11-25T12:14:12 slice start: 20 tasks left for ['B4_cnn_bilstm']; 280 rows already saved
+2026-11-25T12:16:04, B4_cnn_bilstm, lambda=2, seed=2, fold=0, MCC=0.2349, elapsed=105s
+2026-11-25T12:16:05, B4_cnn_bilstm, lambda=2, seed=1, fold=1, MCC=0.2388, elapsed=106s
+2026-11-25T12:16:26, B4_cnn_bilstm, lambda=2, seed=1, fold=3, MCC=0.2814, elapsed=127s
+2026-11-25T12:16:35, B4_cnn_bilstm, lambda=2, seed=1, fold=2, MCC=0.2237, elapsed=136s
+2026-11-25T12:16:38, B4_cnn_bilstm, lambda=2, seed=1, fold=4, MCC=0.2071, elapsed=139s
+2026-11-25T12:16:42, B4_cnn_bilstm, lambda=2, seed=1, fold=0, MCC=0.2504, elapsed=143s
+2026-11-25T12:17:52, B4_cnn_bilstm, lambda=2, seed=2, fold=2, MCC=0.1971, elapsed=106s
+2026-11-25T12:18:11, B4_cnn_bilstm, lambda=2, seed=2, fold=4, MCC=0.2805, elapsed=94s
+2026-11-25T12:18:26, B4_cnn_bilstm, lambda=2, seed=3, fold=0, MCC=0.2180, elapsed=107s
+2026-11-25T12:19:45, B4_cnn_bilstm, lambda=2, seed=3, fold=1, MCC=0.2448, elapsed=182s
+2026-11-25T12:19:46, B4_cnn_bilstm, lambda=2, seed=3, fold=2, MCC=0.2779, elapsed=113s
+2026-11-25T12:19:47, B4_cnn_bilstm, lambda=2, seed=3, fold=4, MCC=0.2585, elapsed=80s
+2026-11-25T12:19:50, B4_cnn_bilstm, lambda=2, seed=2, fold=1, MCC=0.2659, elapsed=224s
+2026-11-25T12:20:26, B4_cnn_bilstm, lambda=2, seed=3, fold=3, MCC=0.2300, elapsed=135s
+2026-11-25T12:20:32, B4_cnn_bilstm, lambda=2, seed=2, fold=3, MCC=0.1877, elapsed=245s
+2026-11-25T12:20:54, B4_cnn_bilstm, lambda=2, seed=4, fold=1, MCC=0.2255, elapsed=68s
+2026-11-25T12:21:03, B4_cnn_bilstm, lambda=2, seed=4, fold=0, MCC=0.2403, elapsed=77s
+2026-11-25T12:21:37, B4_cnn_bilstm, lambda=2, seed=4, fold=2, MCC=0.2495, elapsed=110s
+2026-11-25T12:21:44, B4_cnn_bilstm, lambda=2, seed=4, fold=3, MCC=0.2609, elapsed=113s
+# slice end: 1 tasks still to start
+# 2026-11-25T12:21:57 slice start: 1 tasks left for ['B4_cnn_bilstm']; 299 rows already saved
+2026-11-25T12:22:56, B4_cnn_bilstm, lambda=2, seed=4, fold=4, MCC=0.2092, elapsed=57s
+# slice end: 0 tasks still to start
+# final-model slice start: 20 jobs left for ['B3_bilstm', 'B4_cnn_bilstm']
+2026-11-25T12:24:18, FINAL B3_bilstm_esm2_t6_8M_lam0_tau0.07, seed=2 cached
+2026-11-25T12:24:27, FINAL B3_bilstm_esm2_t6_8M_lam0_tau0.07, seed=4 cached
+2026-11-25T12:24:37, FINAL B3_bilstm_esm2_t6_8M_lam2_tau0.07, seed=0 cached
+2026-11-25T12:24:39, FINAL B3_bilstm_esm2_t6_8M_lam0_tau0.07, seed=0 cached
+2026-11-25T12:25:01, FINAL B3_bilstm_esm2_t6_8M_lam0_tau0.07, seed=3 cached
+2026-11-25T12:25:16, FINAL B3_bilstm_esm2_t6_8M_lam0_tau0.07, seed=1 cached
+2026-11-25T12:26:11, FINAL B3_bilstm_esm2_t6_8M_lam2_tau0.07, seed=4 cached
+2026-11-25T12:26:19, FINAL B3_bilstm_esm2_t6_8M_lam2_tau0.07, seed=3 cached
+2026-11-25T12:26:39, FINAL B4_cnn_bilstm_esm2_t6_8M_lam0_tau0.07, seed=0 cached
+2026-11-25T12:26:41, FINAL B3_bilstm_esm2_t6_8M_lam2_tau0.07, seed=1 cached
+2026-11-25T12:26:49, FINAL B3_bilstm_esm2_t6_8M_lam2_tau0.07, seed=2 cached
+2026-11-25T12:27:37, FINAL B4_cnn_bilstm_esm2_t6_8M_lam0_tau0.07, seed=3 cached
+2026-11-25T12:28:07, FINAL B4_cnn_bilstm_esm2_t6_8M_lam2_tau0.07, seed=0 cached
+2026-11-25T12:28:27, FINAL B4_cnn_bilstm_esm2_t6_8M_lam2_tau0.07, seed=1 cached
+2026-11-25T12:28:40, FINAL B4_cnn_bilstm_esm2_t6_8M_lam2_tau0.07, seed=2 cached
+2026-11-25T12:28:47, FINAL B4_cnn_bilstm_esm2_t6_8M_lam0_tau0.07, seed=1 cached
+2026-11-25T12:28:48, FINAL B4_cnn_bilstm_esm2_t6_8M_lam0_tau0.07, seed=2 cached
+2026-11-25T12:28:53, FINAL B4_cnn_bilstm_esm2_t6_8M_lam0_tau0.07, seed=4 cached
+# final slice end: 2 jobs still to start
+# final-model slice start: 2 jobs left for ['B3_bilstm', 'B4_cnn_bilstm']
+2026-11-25T12:30:01, FINAL B4_cnn_bilstm_esm2_t6_8M_lam2_tau0.07, seed=3 cached
+2026-11-25T12:31:17, FINAL B4_cnn_bilstm_esm2_t6_8M_lam2_tau0.07, seed=4 cached
+# final slice end: 0 jobs still to start
