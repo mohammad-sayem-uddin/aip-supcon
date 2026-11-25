@@ -226,3 +226,81 @@
 2026-11-25T13:21:26, B6_attnpool, lambda=0.5, seed=2, fold=0, MCC=0.2398, elapsed=18s
 # slice end: 64 tasks still to start
 # 2026-11-25T13:22:03 C3 fine-tune results merged from Kaggle GPU kernel (30 CV runs, 10 final models)
+# 2026-11-25T13:22:09 slice start: 64 tasks left for ['B6_attnpool']; 386 rows already saved
+2026-11-25T13:22:35, B6_attnpool, lambda=0.5, seed=2, fold=2, MCC=0.2199, elapsed=20s
+2026-11-25T13:22:40, B6_attnpool, lambda=0.5, seed=3, fold=1, MCC=0.2332, elapsed=25s
+2026-11-25T13:22:43, B6_attnpool, lambda=0.5, seed=2, fold=4, MCC=0.2652, elapsed=28s
+2026-11-25T13:22:45, B6_attnpool, lambda=0.5, seed=2, fold=3, MCC=0.2036, elapsed=30s
+2026-11-25T13:22:49, B6_attnpool, lambda=0.5, seed=3, fold=0, MCC=0.2711, elapsed=34s
+2026-11-25T13:23:03, B6_attnpool, lambda=0.5, seed=3, fold=2, MCC=0.2582, elapsed=27s
+2026-11-25T13:23:04, B6_attnpool, lambda=0.5, seed=3, fold=4, MCC=0.2549, elapsed=21s
+2026-11-25T13:23:08, B6_attnpool, lambda=0.5, seed=2, fold=1, MCC=0.2620, elapsed=53s
+2026-11-25T13:23:12, B6_attnpool, lambda=0.5, seed=4, fold=0, MCC=0.3374, elapsed=27s
+2026-11-25T13:23:18, B6_attnpool, lambda=0.5, seed=3, fold=3, MCC=0.2861, elapsed=38s
+2026-11-25T13:23:21, B6_attnpool, lambda=0.5, seed=4, fold=2, MCC=0.2172, elapsed=17s
+2026-11-25T13:23:31, B6_attnpool, lambda=1, seed=0, fold=0, MCC=0.2382, elapsed=19s
+2026-11-25T13:23:33, B6_attnpool, lambda=0.5, seed=4, fold=3, MCC=0.1703, elapsed=28s
+2026-11-25T13:23:36, B6_attnpool, lambda=0.5, seed=4, fold=1, MCC=0.2652, elapsed=47s
+2026-11-25T13:23:40, B6_attnpool, lambda=0.5, seed=4, fold=4, MCC=0.2803, elapsed=31s
+2026-11-25T13:23:46, B6_attnpool, lambda=1, seed=0, fold=2, MCC=0.2756, elapsed=25s
+2026-11-25T13:23:49, B6_attnpool, lambda=1, seed=0, fold=1, MCC=0.2606, elapsed=29s
+2026-11-25T13:23:54, B6_attnpool, lambda=1, seed=1, fold=0, MCC=0.2748, elapsed=16s
+2026-11-25T13:23:57, B6_attnpool, lambda=1, seed=0, fold=3, MCC=0.2633, elapsed=25s
+2026-11-25T13:23:59, B6_attnpool, lambda=1, seed=0, fold=4, MCC=0.2573, elapsed=25s
+2026-11-25T13:24:06, B6_attnpool, lambda=1, seed=1, fold=2, MCC=0.2370, elapsed=19s
+2026-11-25T13:24:13, B6_attnpool, lambda=1, seed=1, fold=4, MCC=0.2242, elapsed=18s
+2026-11-25T13:24:14, B6_attnpool, lambda=1, seed=1, fold=3, MCC=0.2797, elapsed=25s
+2026-11-25T13:24:18, B6_attnpool, lambda=1, seed=2, fold=0, MCC=0.2510, elapsed=20s
+2026-11-25T13:24:24, B6_attnpool, lambda=1, seed=2, fold=2, MCC=0.2289, elapsed=18s
+2026-11-25T13:24:26, B6_attnpool, lambda=1, seed=2, fold=1, MCC=0.2575, elapsed=27s
+2026-11-25T13:24:32, B6_attnpool, lambda=1, seed=1, fold=1, MCC=0.2371, elapsed=52s
+2026-11-25T13:24:36, B6_attnpool, lambda=1, seed=2, fold=3, MCC=0.2309, elapsed=22s
+2026-11-25T13:24:37, B6_attnpool, lambda=1, seed=2, fold=4, MCC=0.2718, elapsed=23s
+2026-11-25T13:24:38, B6_attnpool, lambda=1, seed=3, fold=0, MCC=0.2599, elapsed=20s
+2026-11-25T13:24:47, B6_attnpool, lambda=1, seed=3, fold=3, MCC=0.2442, elapsed=14s
+2026-11-25T13:24:48, B6_attnpool, lambda=1, seed=3, fold=1, MCC=0.2612, elapsed=23s
+2026-11-25T13:24:50, B6_attnpool, lambda=1, seed=3, fold=2, MCC=0.2607, elapsed=23s
+2026-11-25T13:24:53, B6_attnpool, lambda=1, seed=3, fold=4, MCC=0.2684, elapsed=17s
+2026-11-25T13:25:02, B6_attnpool, lambda=1, seed=4, fold=0, MCC=0.3085, elapsed=24s
+2026-11-25T13:25:05, B6_attnpool, lambda=1, seed=4, fold=2, MCC=0.2514, elapsed=17s
+2026-11-25T13:25:06, B6_attnpool, lambda=1, seed=4, fold=3, MCC=0.2199, elapsed=18s
+2026-11-25T13:25:09, B6_attnpool, lambda=1, seed=4, fold=4, MCC=0.2948, elapsed=19s
+2026-11-25T13:25:10, B6_attnpool, lambda=1, seed=4, fold=1, MCC=0.2503, elapsed=31s
+2026-11-25T13:25:11, B6_attnpool, lambda=2, seed=0, fold=0, MCC=0.2655, elapsed=18s
+2026-11-25T13:25:24, B6_attnpool, lambda=2, seed=0, fold=1, MCC=0.2845, elapsed=22s
+2026-11-25T13:25:24, B6_attnpool, lambda=2, seed=0, fold=2, MCC=0.2435, elapsed=18s
+2026-11-25T13:25:25, B6_attnpool, lambda=2, seed=0, fold=3, MCC=0.2565, elapsed=18s
+2026-11-25T13:25:26, B6_attnpool, lambda=2, seed=0, fold=4, MCC=0.2654, elapsed=16s
+2026-11-25T13:25:27, B6_attnpool, lambda=2, seed=1, fold=0, MCC=0.3087, elapsed=17s
+2026-11-25T13:25:37, B6_attnpool, lambda=2, seed=1, fold=2, MCC=0.2795, elapsed=13s
+2026-11-25T13:25:40, B6_attnpool, lambda=2, seed=1, fold=3, MCC=0.2813, elapsed=16s
+2026-11-25T13:25:41, B6_attnpool, lambda=2, seed=1, fold=4, MCC=0.2174, elapsed=16s
+2026-11-25T13:25:42, B6_attnpool, lambda=2, seed=2, fold=0, MCC=0.2602, elapsed=15s
+2026-11-25T13:25:43, B6_attnpool, lambda=2, seed=1, fold=1, MCC=0.2291, elapsed=31s
+2026-11-25T13:25:44, B6_attnpool, lambda=2, seed=2, fold=1, MCC=0.2366, elapsed=16s
+2026-11-25T13:25:58, B6_attnpool, lambda=2, seed=2, fold=3, MCC=0.2348, elapsed=17s
+2026-11-25T13:26:00, B6_attnpool, lambda=2, seed=2, fold=2, MCC=0.2127, elapsed=22s
+2026-11-25T13:26:06, B6_attnpool, lambda=2, seed=3, fold=1, MCC=0.2703, elapsed=22s
+2026-11-25T13:26:07, B6_attnpool, lambda=2, seed=3, fold=2, MCC=0.2629, elapsed=23s
+2026-11-25T13:26:13, B6_attnpool, lambda=2, seed=2, fold=4, MCC=0.2855, elapsed=31s
+2026-11-25T13:26:13, B6_attnpool, lambda=2, seed=3, fold=0, MCC=0.2714, elapsed=31s
+2026-11-25T13:26:17, B6_attnpool, lambda=2, seed=3, fold=3, MCC=0.3076, elapsed=19s
+2026-11-25T13:26:17, B6_attnpool, lambda=2, seed=3, fold=4, MCC=0.2804, elapsed=17s
+2026-11-25T13:26:25, B6_attnpool, lambda=2, seed=4, fold=0, MCC=0.2942, elapsed=19s
+2026-11-25T13:26:27, B6_attnpool, lambda=2, seed=4, fold=3, MCC=0.2166, elapsed=13s
+2026-11-25T13:26:28, B6_attnpool, lambda=2, seed=4, fold=2, MCC=0.2634, elapsed=15s
+2026-11-25T13:26:29, B6_attnpool, lambda=2, seed=4, fold=4, MCC=0.3043, elapsed=12s
+2026-11-25T13:26:30, B6_attnpool, lambda=2, seed=4, fold=1, MCC=0.2588, elapsed=22s
+# slice end: 0 tasks still to start
+# final-model slice start: 10 jobs left for ['B6_attnpool']
+2026-11-25T13:27:14, FINAL B6_attnpool_esm2_t6_8M_lam0_tau0.07, seed=0 cached
+2026-11-25T13:27:15, FINAL B6_attnpool_esm2_t6_8M_lam0_tau0.07, seed=2 cached
+2026-11-25T13:27:22, FINAL B6_attnpool_esm2_t6_8M_lam0_tau0.07, seed=4 cached
+2026-11-25T13:27:24, FINAL B6_attnpool_esm2_t6_8M_lam2_tau0.07, seed=0 cached
+2026-11-25T13:27:29, FINAL B6_attnpool_esm2_t6_8M_lam0_tau0.07, seed=1 cached
+2026-11-25T13:27:33, FINAL B6_attnpool_esm2_t6_8M_lam0_tau0.07, seed=3 cached
+2026-11-25T13:27:34, FINAL B6_attnpool_esm2_t6_8M_lam2_tau0.07, seed=1 cached
+2026-11-25T13:27:34, FINAL B6_attnpool_esm2_t6_8M_lam2_tau0.07, seed=2 cached
+2026-11-25T13:27:36, FINAL B6_attnpool_esm2_t6_8M_lam2_tau0.07, seed=3 cached
+2026-11-25T13:27:38, FINAL B6_attnpool_esm2_t6_8M_lam2_tau0.07, seed=4 cached
+# final slice end: 0 jobs still to start
