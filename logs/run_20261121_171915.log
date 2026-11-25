@@ -322,3 +322,5 @@ temperature
 2026-11-25 08:50:57,509 [visualize] INFO figure F5.5 leakage gap done
 2026-11-25 08:50:57,885 [visualize] INFO figure F5.6 confusion matrices done
 2026-11-25 08:51:09,262 [visualize] INFO figure FA training curves done
+2026-11-25 08:52:53,825 [data] INFO identity prefilter: 4 of 12 pairs need alignment
+2026-11-25 08:52:53,828 [data] INFO identity prefilter: 1 of 2 pairs need alignment

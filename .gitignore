@@ -10,3 +10,14 @@ __pycache__/
 .pytest_cache/
 results/models/*.pt
 results/latents/
+# added for GitHub
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.npz
+.env
+.ipynb_checkpoints/
+logs/*.out
+logs/.run_id
+.claude/
