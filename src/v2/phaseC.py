@@ -203,10 +203,54 @@ def run_models(models: list[tuple[str, str, str]], tag: str) -> None:
 POOLINGS = ["mean", "max", "meanmax", "cls", "firstlast"]
 
 
+def c1_attention() -> None:
+    """Sixth pooling variant: learned attention pooling over 650M residue vectors + the 512-256 MLP (lambda = 0)."""
+    from dataclasses import asdict
+    from src.v2.train import V2Cfg, cv_unit, final_unit
+    t = Timer()
+    cfg = V2Cfg(arch="B6_attnpool", checkpoint="esm2_t33_650M", lambda_supcon=0.0)
+    name = "esm650_attention|attn_mlp"
+    done = set()
+    if OUT.exists():
+        d = pd.read_csv(OUT, usecols=["model", "eval_set", "seed", "fold"])
+        done = set(map(tuple, d.to_numpy()))
+    cv_tasks = [(asdict(cfg), s, k) for s in SEEDS for k in range(5) if (name, "cv", s, k) not in done]
+    fin = [(asdict(cfg), s, TESTS) for s in SEEDS if (name, "ind_425", s, -1) not in done]
+    rows, finals = [], []
+    with ProcessPoolExecutor(max_workers=3, mp_context=mp.get_context("spawn")) as ex:
+        futs = [ex.submit(cv_unit, tk) for tk in cv_tasks] + [ex.submit(final_unit, tk) for tk in fin]
+        for fu in as_completed(futs):
+            r = fu.result()
+            if "preds" in r:
+                finals.append(r)
+            else:
+                rows.append({**{k: r[k] for k in ("eval_set", "regime", "seed", "fold", "epoch_stopped", "train_seconds", *METRIC_NAMES, "n_eval")},
+                             "model": name, "phase": "C1", "features": "esm650_attention", "classifier": "attn_mlp", "analysis_tier": "exploratory"})
+    finals.sort(key=lambda r: r["seed"])
+    labels = {(ts, rg): pd.read_csv(PROC / f"{ts}_regime_{rg.lower()}.csv") for ts, rg in TESTS}
+    for ts, rg in TESTS:
+        df = labels[(ts, rg)]
+        y = df["label"].to_numpy()
+        plist = [r["preds"][(ts, rg)] for r in finals]
+        for r, p in zip(finals, plist):
+            rows.append(_row(name, "C1", "esm650_attention", "attn_mlp", ts, rg, r["seed"], -1, r["epoch"], r["secs"], y, p))
+        if plist:
+            pm = np.mean(plist, axis=0)
+            d = {"sequence": df["sequence"], "y_true": y, "y_prob": pm, "y_pred": (pm >= 0.5).astype(int)}
+            for r, p in zip(finals, plist):
+                d[f"prob_seed{r['seed']}"] = p
+            (V2 / "predictions").mkdir(exist_ok=True)
+            pd.DataFrame(d).to_csv(V2 / "predictions" / f"esm650_attention__attn_mlp_{ts}_{rg}.csv", index=False)
+    if rows:
+        pd.DataFrame(rows)[COLS].to_csv(OUT, mode="a", header=not OUT.exists(), index=False)
+    mark("C1_attention", "complete", t.elapsed(), "attention pooling over 650M residues")
+
+
 def c1() -> None:
     for p in POOLINGS:
         materialise(f"esm650_{p}", esm_builder("esm2_t33_650M", p))
     run_models([(f"esm650_{p}", "mlp", "C1") for p in POOLINGS], "C1_pooling")
+    c1_attention()
 
 
 def c2() -> None:
