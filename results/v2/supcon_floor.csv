@@ -1,0 +1,3 @@
+anchor,class_fraction_benchmark_clean,batch_size,expected_positives_per_anchor,floor_log_P
+positive anchor,0.3805,128,48.33,3.878
+negative anchor,0.6195,128,78.67,4.365

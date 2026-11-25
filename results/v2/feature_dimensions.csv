@@ -1,0 +1,7 @@
+feature,dimension
+AAC,20
+DPC,400
+CTD,147
+length,1
+AAC+DPC+CTD+length (hand-crafted set),568
+AAC+length (AAC baselines),21

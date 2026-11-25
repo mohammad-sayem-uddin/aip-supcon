@@ -1,0 +1,25 @@
+item,value
+local machine,Apple M1
+local logical cores,8
+local memory (bytes),8589934592
+local OS,macOS-26.6.2-arm64-arm-64bit
+Kaggle kernel python and torch,3.13.16 2.11.0+cu130
+Kaggle GPU model,Tesla T4
+Kaggle second GPU present,yes
+package biopython,1.88
+package lightgbm,4.7.0
+package matplotlib,3.11.2
+package numpy,2.4.6
+package pandas,3.1.1
+package pytest,9.2.0
+package PyYAML,6.0.4
+package RapidFuzz,3.14.6
+package safetensors,0.8.0
+package scikit-learn,1.9.1
+package scipy,1.17.1
+package seaborn,0.13.2
+package tokenizers,0.23.3
+package torch,2.15.0
+package tqdm,4.70.1
+package transformers,5.24.0
+package huggingface_hub,2.4.0

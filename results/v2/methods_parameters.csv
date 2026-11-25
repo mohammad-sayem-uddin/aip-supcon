@@ -1,0 +1,54 @@
+group,parameter,value,source
+v1 AIPNet / training loop,hidden_dims,"(512, 256)",src/train.py Config defaults
+v1 AIPNet / training loop,dropout,0.3,src/train.py Config defaults
+v1 AIPNet / training loop,proj_dim,128,src/train.py Config defaults
+v1 AIPNet / training loop,lr,0.001,src/train.py Config defaults
+v1 AIPNet / training loop,weight_decay,0.0001,src/train.py Config defaults
+v1 AIPNet / training loop,batch_size,128,src/train.py Config defaults
+v1 AIPNet / training loop,max_epochs,200,src/train.py Config defaults
+v1 AIPNet / training loop,patience,20,src/train.py Config defaults
+v1 AIPNet / training loop,optimizer,AdamW,src/train.py
+v1 AIPNet / training loop,lr_schedule,CosineAnnealingLR(T_max=max_epochs),src/train.py
+v1 AIPNet / training loop,temperature_default,0.07,src/train.py Config defaults
+v1 AIPNet / training loop,lambda_grid,"[0.0, 0.1, 0.25, 0.5, 1.0, 2.0]",src/pipeline.py
+v1 AIPNet / training loop,temperature_grid,"[0.05, 0.07, 0.1, 0.5]",src/pipeline.py
+v1 AIPNet / training loop,seeds,"[0, 1, 2, 3, 4]",src/pipeline.py
+Phase B residue-level models,lr,0.001,src/v2/train.py V2Cfg defaults
+Phase B residue-level models,weight_decay,0.0001,src/v2/train.py V2Cfg defaults
+Phase B residue-level models,batch_size,128,src/v2/train.py V2Cfg defaults
+Phase B residue-level models,max_epochs,200,src/v2/train.py V2Cfg defaults
+Phase B residue-level models,patience,20,src/v2/train.py V2Cfg defaults
+Phase B residue-level models,clip,1.0,src/v2/train.py V2Cfg defaults
+Phase B residue-level models,temperature,0.07,src/v2/train.py V2Cfg defaults
+Phase B residue-level models,per-residue adapter width,64,src/v2/models.py
+Phase B residue-level models,maximum peptide length (padding),30,src/v2/models.py
+Phase B residue-level models,lambda_grid,"[0.0, 0.1, 0.25, 0.5, 1.0, 2.0]",src/v2/phaseB.py
+Phase B residue-level models,seeds,"[0, 1, 2, 3, 4]",src/v2/phaseB.py
+C3 fine-tuning,max_epochs,8,src/v2/finetune.py fit() defaults
+C3 fine-tuning,patience,3,src/v2/finetune.py fit() defaults
+C3 fine-tuning,bs,32,src/v2/finetune.py fit() defaults
+C3 fine-tuning,lr_bb,5e-05,src/v2/finetune.py fit() defaults
+C3 fine-tuning,lr_head,0.001,src/v2/finetune.py fit() defaults
+C3 fine-tuning,weight_decay,0.0001,src/v2/finetune.py (AdamW call)
+C3 fine-tuning,gradient clipping (max norm),1.0,src/v2/finetune.py
+C3 fine-tuning,CV seeds,"[0, 1, 2]",kernel aip-c3-finetune-gpu command line
+C3 fine-tuning,final-model seeds,"[0, 1, 2, 3, 4]",kernel aip-c3-finetune-gpu command line
+identity screen,alignment mode,global,src/data.py
+identity screen,substitution matrix,BLOSUM62,src/data.py
+identity screen,gap open score,-10.0,src/data.py
+identity screen,gap extend score,-0.5,src/data.py
+identity screen,LCS prefilter floor,0.8,src/data.py
+statistics,bootstrap resamples,2000,src/v2/stats.py
+statistics,two-sided alpha,0.05,src/v2/stats.py (Z_ALPHA = 1.959964)
+statistics,power for minimum detectable effect,0.8,src/v2/stats.py (Z_POWER = 0.841621)
+statistics,BH false-discovery rate q,0.05,src/v2/phaseE.py
+statistics,McNemar exact-test cut-off (discordant pairs),25,src/evaluate.py
+ESM-2,esm2_t6_8M,facebook/esm2_t6_8M_UR50D; embedding dimension 320,src/embed.py CHECKPOINTS
+ESM-2,esm2_t12_35M,facebook/esm2_t12_35M_UR50D; embedding dimension 480,src/embed.py CHECKPOINTS
+ESM-2,esm2_t30_150M,facebook/esm2_t30_150M_UR50D; embedding dimension 640,src/embed.py CHECKPOINTS
+ESM-2,esm2_t33_650M,facebook/esm2_t33_650M_UR50D; embedding dimension 1280,src/embed.py CHECKPOINTS
+baselines,RandomForest n_estimators,500,src/baselines.py
+baselines,RandomForest class_weight,balanced,src/baselines.py
+baselines,SVM grid C,"[1, 10, 100]",src/baselines.py
+baselines,SVM grid gamma,"[0.003, 0.01, 0.03, 0.1]",src/baselines.py
+baselines,LightGBM,"n_estimators=2000, learning_rate=0.05, num_leaves=15, early stopping 50 rounds on an inner 10% hold-out",src/baselines.py

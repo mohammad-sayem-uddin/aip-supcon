@@ -1,0 +1,11 @@
+quantity,value
+sequences shared by the AIPpred benchmark and the AntiInflam training set,856
+of which carry the same label in both,819
+of which carry opposite labels,37
+local Benchmark sequences carrying both labels,37
+opposite-label shared sequences that equal the local Benchmark's label-conflicted sequences,37
+AntiInflam training sequences not in the AIPpred benchmark,843
+"of those, present in the local Benchmark",612
+"of those, absent from the local Benchmark",231
+sequences within the AIPpred benchmark carrying both labels,0
+sequences within the AntiInflam training set carrying both labels,0

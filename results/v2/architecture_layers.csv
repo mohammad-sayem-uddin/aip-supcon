@@ -1,0 +1,42 @@
+architecture,order,component,description,parameters,architecture_total_parameters
+B1_mlp,1,Input,"mean-pooled ESM-2 vector, 320-d, standardised on the training fold",0,330369
+B1_mlp,2,Encoder block 1,Linear 320 to 512; BatchNorm1d; ReLU; Dropout 0.3,165376,330369
+B1_mlp,3,Encoder block 2,Linear 512 to 256; BatchNorm1d; ReLU; Dropout 0.3,131840,330369
+B1_mlp,4,Projection head,Linear 256 to 128; L2 normalisation (feeds SupCon),32896,330369
+B1_mlp,5,Classifier head,Linear 256 to 1; raw logit (feeds BCE),257,330369
+B2_cnn,1,Input,"padded residue embeddings (L x 320), standardised per feature on the training fold",0,165249
+B2_cnn,2,Per-residue adapter,Linear 320 to 64; ReLU; Dropout 0.2,20544,165249
+B2_cnn,3,Convolution branch k=3,"Conv1d 64 to 64, kernel 3, padding 1; ReLU; masked global max pool",12352,165249
+B2_cnn,4,Convolution branch k=5,"Conv1d 64 to 64, kernel 5, padding 2; ReLU; masked global max pool",20544,165249
+B2_cnn,5,Convolution branch k=7,"Conv1d 64 to 64, kernel 7, padding 3; ReLU; masked global max pool",28736,165249
+B2_cnn,6,Encoder block,Linear 192 to 256; BatchNorm1d; ReLU; Dropout 0.3,49920,165249
+B2_cnn,7,Projection head,Linear 256 to 128; L2 normalisation (feeds SupCon),32896,165249
+B2_cnn,8,Classifier head,Linear 256 to 1; raw logit (feeds BCE),257,165249
+B3_bilstm,1,Input,"padded residue embeddings (L x 320), standardised per feature on the training fold",0,253121
+B3_bilstm,2,Per-residue adapter,Linear 320 to 64; ReLU; Dropout 0.2,20544,253121
+B3_bilstm,3,Bidirectional LSTM,"2 layers, 64 hidden units per direction, inter-layer dropout 0.3, packed sequences; final forward and backward states of the top layer concatenated (128-d)",165888,253121
+B3_bilstm,4,Encoder block,Linear 128 to 256; BatchNorm1d; ReLU; Dropout 0.3,33536,253121
+B3_bilstm,5,Projection head,Linear 256 to 128; L2 normalisation (feeds SupCon),32896,253121
+B3_bilstm,6,Classifier head,Linear 256 to 1; raw logit (feeds BCE),257,253121
+B4_cnn_bilstm,1,Input,"padded residue embeddings (L x 320), standardised per feature on the training fold",0,174337
+B4_cnn_bilstm,2,Per-residue adapter,Linear 320 to 64; ReLU; Dropout 0.2,20544,174337
+B4_cnn_bilstm,3,Convolution,"Conv1d 64 to 64, kernel 5, padding 2; ReLU; Dropout 0.3",20544,174337
+B4_cnn_bilstm,4,Bidirectional LSTM,"1 layer, 64 hidden units per direction, packed sequences; outputs masked max-pooled over residues (128-d)",66560,174337
+B4_cnn_bilstm,5,Encoder block,Linear 128 to 256; BatchNorm1d; ReLU; Dropout 0.3,33536,174337
+B4_cnn_bilstm,6,Projection head,Linear 256 to 128; L2 normalisation (feeds SupCon),32896,174337
+B4_cnn_bilstm,7,Classifier head,Linear 256 to 1; raw logit (feeds BCE),257,174337
+B5_transformer,1,Input,"padded residue embeddings (L x 320), standardised per feature on the training fold",0,364353
+B5_transformer,2,Per-residue adapter,Linear 320 to 64; ReLU; Dropout 0.2; then Linear 64 to 128,28864,364353
+B5_transformer,3,Learned positional embedding,"30 x 128, added to the residue vectors",3840,364353
+B5_transformer,4,Transformer encoder,"2 layers, 4 attention heads, feed-forward width 256, dropout 0.1, key-padding mask; masked mean pool (128-d)",264960,364353
+B5_transformer,5,Encoder block,Linear 128 to 256; BatchNorm1d; ReLU; Dropout 0.3,33536,364353
+B5_transformer,6,Projection head,Linear 256 to 128; L2 normalisation (feeds SupCon),32896,364353
+B5_transformer,7,Classifier head,Linear 256 to 1; raw logit (feeds BCE),257,364353
+B6_attnpool,1,Input,"padded residue embeddings (L x 320), standardised per feature on the training fold",0,371586
+B6_attnpool,2,Attention pooling,Linear 320 to 128; tanh; Linear 128 to 1; masked softmax over residues; weighted sum of the residue vectors (320-d),41217,371586
+B6_attnpool,3,Encoder block 1,Linear 320 to 512; BatchNorm1d; ReLU; Dropout 0.3 (as B1),165376,371586
+B6_attnpool,4,Encoder block 2,Linear 512 to 256; BatchNorm1d; ReLU; Dropout 0.3 (as B1),131840,371586
+B6_attnpool,5,Projection head,Linear 256 to 128; L2 normalisation (feeds SupCon),32896,371586
+B6_attnpool,6,Classifier head,Linear 256 to 1; raw logit (feeds BCE),257,371586
+C3_finetune,1,ESM-2 8M backbone,"6 Transformer layers, hidden size 320, 20 attention heads; masked mean pool over residues",7409081,7492026
+C3_finetune,2,Head,Linear 320 to 256; BatchNorm1d; ReLU; Dropout 0.3; Linear 256 to 1,82945,7492026

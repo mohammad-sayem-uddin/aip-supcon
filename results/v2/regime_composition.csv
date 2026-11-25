@@ -1,0 +1,8 @@
+file,n,positive,negative,positive_rate
+benchmark_clean,3716,1414,2302,0.3805
+ind_425_regime_a,425,173,252,0.4071
+ind_425_regime_b,214,81,133,0.3785
+ind_425_regime_c,162,56,106,0.3457
+ind_1049_regime_a,1049,420,629,0.4004
+ind_1049_regime_b,751,275,476,0.3662
+ind_1049_regime_c,716,249,467,0.3478

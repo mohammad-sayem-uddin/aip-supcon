@@ -1,0 +1,1379 @@
+{
+ "F": {
+  "bench": {
+   "n": 3790,
+   "pos": 1451,
+   "neg": 2339,
+   "pos_rate": 0.3828496042216359,
+   "unique": 3753,
+   "len_min": 11,
+   "len_max": 30,
+   "len_mean": 16.361213720316623,
+   "dup_rows": 37,
+   "dup_seqs": 37,
+   "conflicts": 37
+  },
+  "i425": {
+   "n": 425,
+   "pos": 173,
+   "neg": 252,
+   "pos_rate": 0.40705882352941175,
+   "unique": 425,
+   "len_min": 7,
+   "len_max": 30,
+   "len_mean": 16.176470588235293,
+   "dup_rows": 0,
+   "dup_seqs": 0,
+   "conflicts": 0
+  },
+  "i1049": {
+   "n": 1049,
+   "pos": 420,
+   "neg": 629,
+   "pos_rate": 0.4003813155386082,
+   "unique": 1049,
+   "len_min": 11,
+   "len_max": 25,
+   "len_mean": 16.36510962821735,
+   "dup_rows": 0,
+   "dup_seqs": 0,
+   "conflicts": 0
+  },
+  "clean": {
+   "n": 3716,
+   "pos": 1414,
+   "neg": 2302,
+   "pos_rate": 0.3805166846071044,
+   "unique": 3716,
+   "len_min": 11,
+   "len_max": 30,
+   "len_mean": 16.333961248654468,
+   "dup_rows": 0,
+   "dup_seqs": 0,
+   "conflicts": 0
+  },
+  "removed_rows": 74,
+  "removed_pct": 0.019525065963060684,
+  "pos_weight_clean": 1.628005657708628,
+  "majority_accuracy_clean": 0.6194833153928956,
+  "train_fold_n": 2973,
+  "val_fold_n": 743,
+  "pairs": {
+   "ap_ap": {
+    "n_train": 3145,
+    "n_test": 1049,
+    "exact": 0,
+    "same": 0,
+    "opp": 0,
+    "share": 0.0,
+    "id09": 13,
+    "id09_share": 0.0124,
+    "id08": 19
+   },
+   "ap_ai": {
+    "n_train": 3145,
+    "n_test": 425,
+    "exact": 211,
+    "same": 204,
+    "opp": 7,
+    "share": 0.4965,
+    "id09": 247,
+    "id09_share": 0.5812,
+    "id08": 288
+   },
+   "ai_ap": {
+    "n_train": 1699,
+    "n_test": 1049,
+    "exact": 298,
+    "same": 286,
+    "opp": 12,
+    "share": 0.2841,
+    "id09": 330,
+    "id09_share": 0.3146,
+    "id08": 342
+   },
+   "ai_ai": {
+    "n_train": 1699,
+    "n_test": 425,
+    "exact": 0,
+    "same": 0,
+    "opp": 0,
+    "share": 0.0,
+    "id09": 51,
+    "id09_share": 0.12,
+    "id08": 108
+   }
+  },
+  "ind_ind": {
+   "exact": 77,
+   "same": 76,
+   "opp": 1
+  },
+  "ap_bench_pos": 1258,
+  "ap_bench_neg": 1887,
+  "ai_train_pos": 690,
+  "ai_train_neg": 1009,
+  "ap_ind_pos": 420,
+  "ap_ind_neg": 629,
+  "ai_val_pos": 173,
+  "ai_val_neg": 252,
+  "prov": {
+   "aippred_bench_x_aippred_ind": 0,
+   "antiinflam_train_x_antiinflam_val": 0,
+   "aippred_bench_x_antiinflam_val": 211,
+   "antiinflam_train_x_aippred_ind": 298,
+   "local_benchmark_unique": 3753,
+   "aippred_bench_unique": 3145,
+   "n_extras_not_in_aippred_bench": 612,
+   "extras_in_antiinflam_train": 612,
+   "extras_in_aippred_ind": 298,
+   "extras_in_antiinflam_val": 0,
+   "aippred_bench_seqs_absent_locally": 4,
+   "label_conflicts_in_local_benchmark": 37,
+   "label_conflicts_already_in_AIPpred_benchmark_files": 0,
+   "conflicts_in_AIPpred_bench_that_equal_local_conflicts": 0,
+   "preaip_training_equals_aippred_benchmark": true,
+   "preaip_test_equals_aippred_independent": true
+  },
+  "lin": {
+   "shared": 856,
+   "same": 819,
+   "opp": 37,
+   "local_conf": 37,
+   "opp_equal_local_conf": 37,
+   "ai_only": 843,
+   "ai_only_present": 612,
+   "ai_only_absent": 231,
+   "ap_internal_conf": 0,
+   "ai_internal_conf": 0
+  },
+  "nonstandard_total": 0,
+  "n_datasets_checked": 9,
+  "within_set_cluster_survivors": {
+   "i1049": 297,
+   "i425": 189
+  },
+  "regime": {
+   "benchmark_clean": {
+    "n": 3716,
+    "pos": 1414,
+    "neg": 2302,
+    "rate": 0.3805
+   },
+   "ind_425_regime_a": {
+    "n": 425,
+    "pos": 173,
+    "neg": 252,
+    "rate": 0.4071
+   },
+   "ind_425_regime_b": {
+    "n": 214,
+    "pos": 81,
+    "neg": 133,
+    "rate": 0.3785
+   },
+   "ind_425_regime_c": {
+    "n": 162,
+    "pos": 56,
+    "neg": 106,
+    "rate": 0.3457
+   },
+   "ind_1049_regime_a": {
+    "n": 1049,
+    "pos": 420,
+    "neg": 629,
+    "rate": 0.4004
+   },
+   "ind_1049_regime_b": {
+    "n": 751,
+    "pos": 275,
+    "neg": 476,
+    "rate": 0.3662
+   },
+   "ind_1049_regime_c": {
+    "n": 716,
+    "pos": 249,
+    "neg": 467,
+    "rate": 0.3478
+   }
+  },
+  "identity": {
+   "Ind_1049": {
+    "exact": {
+     "removed": 298,
+     "remaining": 751,
+     "share": 0.2840800762631077
+    },
+    "0.8": {
+     "removed": 348,
+     "remaining": 701,
+     "share": 0.3317445185891325
+    },
+    "0.9": {
+     "removed": 333,
+     "remaining": 716,
+     "share": 0.3174451858913251
+    },
+    "0.95": {
+     "removed": 315,
+     "remaining": 734,
+     "share": 0.30028598665395617
+    },
+    "1.0": {
+     "removed": 315,
+     "remaining": 734,
+     "share": 0.30028598665395617
+    }
+   },
+   "Ind_425": {
+    "exact": {
+     "removed": 211,
+     "remaining": 214,
+     "share": 0.4964705882352941
+    },
+    "0.8": {
+     "removed": 307,
+     "remaining": 118,
+     "share": 0.7223529411764706
+    },
+    "0.9": {
+     "removed": 263,
+     "remaining": 162,
+     "share": 0.6188235294117647
+    },
+    "0.95": {
+     "removed": 240,
+     "remaining": 185,
+     "share": 0.5647058823529412
+    },
+    "1.0": {
+     "removed": 236,
+     "remaining": 189,
+     "share": 0.5552941176470588
+    }
+   }
+  },
+  "null": {
+   "Ind_1049": {
+    "0.8": {
+     "observed": 348,
+     "observed_share": 0.3317445185891325,
+     "null_mean": 0.15,
+     "null_max": 1,
+     "replicates": 20,
+     "n": 1049
+    },
+    "0.9": {
+     "observed": 333,
+     "observed_share": 0.3174451858913251,
+     "null_mean": 0.0,
+     "null_max": 0,
+     "replicates": 20,
+     "n": 1049
+    },
+    "1.0": {
+     "observed": 315,
+     "observed_share": 0.30028598665395617,
+     "null_mean": 0.0,
+     "null_max": 0,
+     "replicates": 20,
+     "n": 1049
+    }
+   },
+   "Ind_425": {
+    "0.8": {
+     "observed": 307,
+     "observed_share": 0.7223529411764706,
+     "null_mean": 1.2,
+     "null_max": 4,
+     "replicates": 20,
+     "n": 425
+    },
+    "0.9": {
+     "observed": 263,
+     "observed_share": 0.6188235294117647,
+     "null_mean": 0.0,
+     "null_max": 0,
+     "replicates": 20,
+     "n": 425
+    },
+    "1.0": {
+     "observed": 236,
+     "observed_share": 0.5552941176470588,
+     "null_mean": 0.0,
+     "null_max": 0,
+     "replicates": 20,
+     "n": 425
+    }
+   }
+  },
+  "dim": {
+   "aac": 20,
+   "dpc": 400,
+   "ctd": 147,
+   "len": 1,
+   "hand": 568,
+   "aac_len": 21
+  },
+  "pool_dim": {
+   "mean": 1280,
+   "max": 1280,
+   "meanmax": 2560,
+   "cls": 1280,
+   "firstlast": 7680
+  },
+  "fusion_dim": {
+   "esm650": 1848,
+   "esm8": 888
+  },
+  "residue_vectors": 75589,
+  "n_unique_embedded": 4641,
+  "par": {
+   "v1 AIPNet / training loop|hidden_dims": "(512, 256)",
+   "v1 AIPNet / training loop|dropout": "0.3",
+   "v1 AIPNet / training loop|proj_dim": "128",
+   "v1 AIPNet / training loop|lr": "0.001",
+   "v1 AIPNet / training loop|weight_decay": "0.0001",
+   "v1 AIPNet / training loop|batch_size": "128",
+   "v1 AIPNet / training loop|max_epochs": "200",
+   "v1 AIPNet / training loop|patience": "20",
+   "v1 AIPNet / training loop|optimizer": "AdamW",
+   "v1 AIPNet / training loop|lr_schedule": "CosineAnnealingLR(T_max=max_epochs)",
+   "v1 AIPNet / training loop|temperature_default": "0.07",
+   "v1 AIPNet / training loop|lambda_grid": "[0.0, 0.1, 0.25, 0.5, 1.0, 2.0]",
+   "v1 AIPNet / training loop|temperature_grid": "[0.05, 0.07, 0.1, 0.5]",
+   "v1 AIPNet / training loop|seeds": "[0, 1, 2, 3, 4]",
+   "Phase B residue-level models|lr": "0.001",
+   "Phase B residue-level models|weight_decay": "0.0001",
+   "Phase B residue-level models|batch_size": "128",
+   "Phase B residue-level models|max_epochs": "200",
+   "Phase B residue-level models|patience": "20",
+   "Phase B residue-level models|clip": "1.0",
+   "Phase B residue-level models|temperature": "0.07",
+   "Phase B residue-level models|per-residue adapter width": "64",
+   "Phase B residue-level models|maximum peptide length (padding)": "30",
+   "Phase B residue-level models|lambda_grid": "[0.0, 0.1, 0.25, 0.5, 1.0, 2.0]",
+   "Phase B residue-level models|seeds": "[0, 1, 2, 3, 4]",
+   "C3 fine-tuning|max_epochs": "8",
+   "C3 fine-tuning|patience": "3",
+   "C3 fine-tuning|bs": "32",
+   "C3 fine-tuning|lr_bb": "5e-05",
+   "C3 fine-tuning|lr_head": "0.001",
+   "C3 fine-tuning|weight_decay": "0.0001",
+   "C3 fine-tuning|gradient clipping (max norm)": "1.0",
+   "C3 fine-tuning|CV seeds": "[0, 1, 2]",
+   "C3 fine-tuning|final-model seeds": "[0, 1, 2, 3, 4]",
+   "identity screen|alignment mode": "global",
+   "identity screen|substitution matrix": "BLOSUM62",
+   "identity screen|gap open score": "-10.0",
+   "identity screen|gap extend score": "-0.5",
+   "identity screen|LCS prefilter floor": "0.8",
+   "statistics|bootstrap resamples": "2000",
+   "statistics|two-sided alpha": "0.05",
+   "statistics|power for minimum detectable effect": "0.8",
+   "statistics|BH false-discovery rate q": "0.05",
+   "statistics|McNemar exact-test cut-off (discordant pairs)": "25",
+   "ESM-2|esm2_t6_8M": "facebook/esm2_t6_8M_UR50D; embedding dimension 320",
+   "ESM-2|esm2_t12_35M": "facebook/esm2_t12_35M_UR50D; embedding dimension 480",
+   "ESM-2|esm2_t30_150M": "facebook/esm2_t30_150M_UR50D; embedding dimension 640",
+   "ESM-2|esm2_t33_650M": "facebook/esm2_t33_650M_UR50D; embedding dimension 1280",
+   "baselines|RandomForest n_estimators": "500",
+   "baselines|RandomForest class_weight": "balanced",
+   "baselines|SVM grid C": "[1, 10, 100]",
+   "baselines|SVM grid gamma": "[0.003, 0.01, 0.03, 0.1]",
+   "baselines|LightGBM": "n_estimators=2000, learning_rate=0.05, num_leaves=15, early stopping 50 rounds on an inner 10% hold-out"
+  },
+  "arch_total": {
+   "B1_mlp": 330369,
+   "B2_cnn": 165249,
+   "B3_bilstm": 253121,
+   "B4_cnn_bilstm": 174337,
+   "B5_transformer": 364353,
+   "B6_attnpool": 371586,
+   "C3_finetune": 7492026
+  },
+  "floor": {
+   "positive anchor": {
+    "npos": 48.33,
+    "floor": 3.878,
+    "frac": 0.3805
+   },
+   "negative anchor": {
+    "npos": 78.67,
+    "floor": 4.365,
+    "frac": 0.6195
+   }
+  },
+  "mde_rows": [
+   {
+    "test_set": "ind_1049",
+    "regime": "A",
+    "n": 1049,
+    "comparisons": 6,
+    "mde_mcc_median": 0.0589,
+    "mde_mcc_min": 0.045,
+    "mde_mcc_max": 0.0756,
+    "mde_auroc_median": 0.0201
+   },
+   {
+    "test_set": "ind_1049",
+    "regime": "B",
+    "n": 751,
+    "comparisons": 7,
+    "mde_mcc_median": 0.0796,
+    "mde_mcc_min": 0.056,
+    "mde_mcc_max": 0.1004,
+    "mde_auroc_median": 0.0288
+   },
+   {
+    "test_set": "ind_1049",
+    "regime": "C",
+    "n": 716,
+    "comparisons": 6,
+    "mde_mcc_median": 0.086,
+    "mde_mcc_min": 0.0584,
+    "mde_mcc_max": 0.1014,
+    "mde_auroc_median": 0.0333
+   },
+   {
+    "test_set": "ind_425",
+    "regime": "A",
+    "n": 425,
+    "comparisons": 6,
+    "mde_mcc_median": 0.0826,
+    "mde_mcc_min": 0.0508,
+    "mde_mcc_max": 0.0998,
+    "mde_auroc_median": 0.0224
+   },
+   {
+    "test_set": "ind_425",
+    "regime": "B",
+    "n": 214,
+    "comparisons": 7,
+    "mde_mcc_median": 0.1378,
+    "mde_mcc_min": 0.0898,
+    "mde_mcc_max": 0.1651,
+    "mde_auroc_median": 0.0465
+   },
+   {
+    "test_set": "ind_425",
+    "regime": "C",
+    "n": 162,
+    "comparisons": 6,
+    "mde_mcc_median": 0.1736,
+    "mde_mcc_min": 0.1044,
+    "mde_mcc_max": 0.2011,
+    "mde_auroc_median": 0.0548
+   }
+  ],
+  "prereg_commit": "c239f43dcb3719c7c40d6c2afd5217d6723a11f3",
+  "n_comparisons": 124,
+  "env": {
+   "local machine": "Apple M1",
+   "local logical cores": "8",
+   "local memory (bytes)": "8589934592",
+   "local OS": "macOS-26.6.2-arm64-arm-64bit",
+   "Kaggle kernel python and torch": "3.13.16 2.11.0+cu130",
+   "Kaggle GPU model": "Tesla T4",
+   "Kaggle second GPU present": "yes",
+   "package biopython": "1.88",
+   "package lightgbm": "4.7.0",
+   "package matplotlib": "3.11.2",
+   "package numpy": "2.4.6",
+   "package pandas": "3.1.1",
+   "package pytest": "9.2.0",
+   "package PyYAML": "6.0.4",
+   "package RapidFuzz": "3.14.6",
+   "package safetensors": "0.8.0",
+   "package scikit-learn": "1.9.1",
+   "package scipy": "1.17.1",
+   "package seaborn": "0.13.2",
+   "package tokenizers": "0.23.3",
+   "package torch": "2.15.0",
+   "package tqdm": "4.70.1",
+   "package transformers": "5.24.0",
+   "package huggingface_hub": "2.4.0"
+  },
+  "et": [
+   {
+    "checkpoint": "esm2_t6_8M",
+    "hf_id": "facebook/esm2_t6_8M_UR50D",
+    "device": "cpu",
+    "gpu": null,
+    "dim": 320,
+    "n_sequences": 4641,
+    "batch_size": 32,
+    "embed_seconds": 26.31,
+    "download_seconds": 15.41,
+    "peak_rss_mb": 341.7,
+    "timestamp": "2026-11-21T17:20:50"
+   },
+   {
+    "checkpoint": "esm2_t12_35M",
+    "hf_id": "facebook/esm2_t12_35M_UR50D",
+    "device": "cpu",
+    "gpu": null,
+    "dim": 480,
+    "n_sequences": 4641,
+    "batch_size": 32,
+    "embed_seconds": 57.0,
+    "download_seconds": 18.82,
+    "peak_rss_mb": 379.8,
+    "timestamp": "2026-11-21T17:24:44"
+   },
+   {
+    "checkpoint": "esm2_t30_150M",
+    "hf_id": "facebook/esm2_t30_150M_UR50D",
+    "device": "cpu",
+    "gpu": null,
+    "dim": 640,
+    "n_sequences": 4641,
+    "batch_size": 32,
+    "embed_seconds": 65.96,
+    "download_seconds": 33.0,
+    "peak_rss_mb": 910.2,
+    "timestamp": "2026-11-25T07:23:17"
+   },
+   {
+    "checkpoint": "esm2_t33_650M",
+    "hf_id": "facebook/esm2_t33_650M_UR50D",
+    "device": "cpu",
+    "gpu": null,
+    "dim": 1280,
+    "n_sequences": 4641,
+    "batch_size": 32,
+    "embed_seconds": 3033.47,
+    "download_seconds": 123.26,
+    "peak_rss_mb": 1578.2,
+    "timestamp": "2026-11-25T08:15:57"
+   }
+  ]
+ },
+ "T": {
+  "dataset_composition": [
+   [
+    "Dataset",
+    "Sequences",
+    "AIP",
+    "Non-AIP",
+    "AIP rate",
+    "Unique",
+    "Length range",
+    "Mean length"
+   ],
+   [
+    "Benchmark_Dataset",
+    "3,790",
+    "1,451",
+    "2,339",
+    "38.3%",
+    "3,753",
+    "11-30",
+    "16.36"
+   ],
+   [
+    "Ind_425",
+    "425",
+    "173",
+    "252",
+    "40.7%",
+    "425",
+    "7-30",
+    "16.18"
+   ],
+   [
+    "Ind_1049",
+    "1,049",
+    "420",
+    "629",
+    "40.0%",
+    "1,049",
+    "11-25",
+    "16.37"
+   ],
+   [
+    "Benchmark_clean",
+    "3,716",
+    "1,414",
+    "2,302",
+    "38.1%",
+    "3,716",
+    "11-30",
+    "16.33"
+   ]
+  ],
+  "provenance": [
+   [
+    "Local file",
+    "Published origin",
+    "Published counts (AIP/non-AIP)",
+    "Match with the downloaded original"
+   ],
+   [
+    "Ind_1049",
+    "AIPpred independent set (Manavalan et al., 2018); identical to the PreAIP test set (Khatun et al., 2019)",
+    "420/629",
+    "Identical"
+   ],
+   [
+    "Ind_425",
+    "AntiInflam validation set (Gupta et al., 2017)",
+    "173/252 (distributed file); the paper text states 173/253",
+    "Identical"
+   ],
+   [
+    "Benchmark_Dataset",
+    "A composite: AIPpred benchmark plus AntiInflam training sequences",
+    "AIPpred benchmark 1,258/1,887; AntiInflam training 690/1,009",
+    "Composite (see text)"
+   ]
+  ],
+  "conflicts": [
+   [
+    "Quantity",
+    "Count"
+   ],
+   [
+    "Rows in Benchmark_Dataset",
+    "3,790"
+   ],
+   [
+    "Unique sequences",
+    "3,753"
+   ],
+   [
+    "Sequences occurring twice (duplicated rows)",
+    "37"
+   ],
+   [
+    "Sequences carrying both labels (label conflicts)",
+    "37"
+   ],
+   [
+    "Sequences shared by the AIPpred benchmark and the AntiInflam training set",
+    "856"
+   ],
+   [
+    "   of which carry the same label in both",
+    "819"
+   ],
+   [
+    "   of which carry opposite labels",
+    "37"
+   ],
+   [
+    "Label conflicts inside the AIPpred benchmark file",
+    "0"
+   ],
+   [
+    "Label conflicts inside the AntiInflam training file",
+    "0"
+   ]
+  ],
+  "overlap": [
+   [
+    "Training set and independent set",
+    "Training",
+    "Test",
+    "Shared",
+    "Same label",
+    "Opposite",
+    "Share of test set",
+    "Identity >= 0.9"
+   ],
+   [
+    "AIPpred benchmark and AIPpred independent set",
+    "3,145",
+    "1,049",
+    "0",
+    "0",
+    "0",
+    "0.0%",
+    "13 (1.2%)"
+   ],
+   [
+    "AntiInflam training and AntiInflam validation set",
+    "1,699",
+    "425",
+    "0",
+    "0",
+    "0",
+    "0.0%",
+    "51 (12.0%)"
+   ],
+   [
+    "AIPpred benchmark and AntiInflam validation set (Finding 1)",
+    "3,145",
+    "425",
+    "211",
+    "204",
+    "7",
+    "49.6%",
+    "247 (58.1%)"
+   ],
+   [
+    "AntiInflam training and AIPpred independent set (Finding 2)",
+    "1,699",
+    "1,049",
+    "298",
+    "286",
+    "12",
+    "28.4%",
+    "330 (31.5%)"
+   ]
+  ],
+  "cleaning": [
+   [
+    "Step",
+    "Operation",
+    "Rows after the step",
+    "AIP",
+    "Non-AIP"
+   ],
+   [
+    "0",
+    "Parsed and normalised Benchmark_Dataset",
+    "3,790",
+    "1,451",
+    "2,339"
+   ],
+   [
+    "1",
+    "Removed every row of the 37 label-conflicted sequences (74 rows)",
+    "3,716",
+    "1,414",
+    "2,302"
+   ],
+   [
+    "2",
+    "Removed same-label duplicate rows (none remained)",
+    "3,716",
+    "1,414",
+    "2,302"
+   ]
+  ],
+  "regimes": [
+   [
+    "Test set and regime",
+    "Sequences",
+    "AIP",
+    "Non-AIP",
+    "AIP rate"
+   ],
+   [
+    "Ind_425, Regime A (as distributed)",
+    "425",
+    "173",
+    "252",
+    "40.7%"
+   ],
+   [
+    "Ind_425, Regime B (exact matches removed)",
+    "214",
+    "81",
+    "133",
+    "37.9%"
+   ],
+   [
+    "Ind_425, Regime C (identity < 0.9)",
+    "162",
+    "56",
+    "106",
+    "34.6%"
+   ],
+   [
+    "Ind_1049, Regime A (as distributed)",
+    "1,049",
+    "420",
+    "629",
+    "40.0%"
+   ],
+   [
+    "Ind_1049, Regime B (exact matches removed)",
+    "751",
+    "275",
+    "476",
+    "36.6%"
+   ],
+   [
+    "Ind_1049, Regime C (identity < 0.9)",
+    "716",
+    "249",
+    "467",
+    "34.8%"
+   ]
+  ],
+  "identity": [
+   [
+    "Test set",
+    "Threshold",
+    "Observed: sequences at or above",
+    "Shuffled-composition null: mean (maximum) over 20 replicates"
+   ],
+   [
+    "Ind_425",
+    "0.8",
+    "307 of 425 (72.2%)",
+    "1.20 (4)"
+   ],
+   [
+    "Ind_425",
+    "0.9",
+    "263 of 425 (61.9%)",
+    "0.00 (0)"
+   ],
+   [
+    "Ind_425",
+    "1.0",
+    "236 of 425 (55.5%)",
+    "0.00 (0)"
+   ],
+   [
+    "Ind_1049",
+    "0.8",
+    "348 of 1049 (33.2%)",
+    "0.15 (1)"
+   ],
+   [
+    "Ind_1049",
+    "0.9",
+    "333 of 1049 (31.7%)",
+    "0.00 (0)"
+   ],
+   [
+    "Ind_1049",
+    "1.0",
+    "315 of 1049 (30.0%)",
+    "0.00 (0)"
+   ]
+  ],
+  "esm": [
+   [
+    "Checkpoint",
+    "Layers",
+    "Parameters",
+    "Embedding dimension",
+    "Embedding time, 4,641 sequences (CPU)",
+    "Peak memory"
+   ],
+   [
+    "esm2_t6_8M_UR50D",
+    "6",
+    "8M",
+    "320",
+    "26.3 s",
+    "342 MB"
+   ],
+   [
+    "esm2_t12_35M_UR50D",
+    "12",
+    "35M",
+    "480",
+    "57.0 s",
+    "380 MB"
+   ],
+   [
+    "esm2_t30_150M_UR50D",
+    "30",
+    "150M",
+    "640",
+    "66.0 s",
+    "910 MB"
+   ],
+   [
+    "esm2_t33_650M_UR50D",
+    "33",
+    "650M",
+    "1280",
+    "3033.5 s",
+    "1578 MB"
+   ]
+  ],
+  "pooling": [
+   [
+    "Variant",
+    "Construction (frozen ESM-2 650M, residue positions only)",
+    "Dimension"
+   ],
+   [
+    "Mean",
+    "Arithmetic mean of the residue vectors",
+    "1280"
+   ],
+   [
+    "Max",
+    "Element-wise maximum over residues",
+    "1280"
+   ],
+   [
+    "Mean and max",
+    "Concatenation of the mean and the maximum",
+    "2560"
+   ],
+   [
+    "CLS",
+    "The <cls> token vector",
+    "1280"
+   ],
+   [
+    "First and last three",
+    "Residue vectors 1-3 and the last three, concatenated",
+    "7680"
+   ],
+   [
+    "Attention",
+    "Learned softmax weights over residues (model B6 at 650M), weighted sum of residue vectors",
+    "1280"
+   ]
+  ],
+  "finetune": [
+   [
+    "Setting",
+    "Value"
+   ],
+   [
+    "Backbone",
+    "ESM-2 8M (facebook/esm2_t6_8M_UR50D), all layers trainable"
+   ],
+   [
+    "Pooling and head",
+    "Mean pool over residues; Linear 320 to 256, BatchNorm, ReLU, Dropout 0.3; Linear 256 to 1"
+   ],
+   [
+    "Optimiser",
+    "AdamW, weight decay 0.0001"
+   ],
+   [
+    "Learning rates",
+    "backbone 5e-05, head 0.001"
+   ],
+   [
+    "Batch size",
+    "32"
+   ],
+   [
+    "Maximum epochs and patience",
+    "8 and 3 (validation MCC)"
+   ],
+   [
+    "Gradient clipping",
+    "max norm 1.0"
+   ],
+   [
+    "Cross-validation",
+    "5 folds (make_folds), seeds 0, 1, 2"
+   ],
+   [
+    "Final models",
+    "seeds 0, 1, 2, 3, 4, 10% stratified hold-out for early stopping"
+   ],
+   [
+    "Control",
+    "Same code with the backbone frozen (identical head, loop and folds)"
+   ]
+  ],
+  "layers": {
+   "B1_mlp": [
+    [
+     "Component",
+     "Description",
+     "Parameters"
+    ],
+    [
+     "Input",
+     "mean-pooled ESM-2 vector, 320-d, standardised on the training fold",
+     "-"
+    ],
+    [
+     "Encoder block 1",
+     "Linear 320 to 512; BatchNorm1d; ReLU; Dropout 0.3",
+     "165,376"
+    ],
+    [
+     "Encoder block 2",
+     "Linear 512 to 256; BatchNorm1d; ReLU; Dropout 0.3",
+     "131,840"
+    ],
+    [
+     "Projection head",
+     "Linear 256 to 128; L2 normalisation (feeds SupCon)",
+     "32,896"
+    ],
+    [
+     "Classifier head",
+     "Linear 256 to 1; raw logit (feeds BCE)",
+     "257"
+    ],
+    [
+     "Total",
+     "",
+     "330,369"
+    ]
+   ],
+   "B2_cnn": [
+    [
+     "Component",
+     "Description",
+     "Parameters"
+    ],
+    [
+     "Input",
+     "padded residue embeddings (L x 320), standardised per feature on the training fold",
+     "-"
+    ],
+    [
+     "Per-residue adapter",
+     "Linear 320 to 64; ReLU; Dropout 0.2",
+     "20,544"
+    ],
+    [
+     "Convolution branch k=3",
+     "Conv1d 64 to 64, kernel 3, padding 1; ReLU; masked global max pool",
+     "12,352"
+    ],
+    [
+     "Convolution branch k=5",
+     "Conv1d 64 to 64, kernel 5, padding 2; ReLU; masked global max pool",
+     "20,544"
+    ],
+    [
+     "Convolution branch k=7",
+     "Conv1d 64 to 64, kernel 7, padding 3; ReLU; masked global max pool",
+     "28,736"
+    ],
+    [
+     "Encoder block",
+     "Linear 192 to 256; BatchNorm1d; ReLU; Dropout 0.3",
+     "49,920"
+    ],
+    [
+     "Projection head",
+     "Linear 256 to 128; L2 normalisation (feeds SupCon)",
+     "32,896"
+    ],
+    [
+     "Classifier head",
+     "Linear 256 to 1; raw logit (feeds BCE)",
+     "257"
+    ],
+    [
+     "Total",
+     "",
+     "165,249"
+    ]
+   ],
+   "B3_bilstm": [
+    [
+     "Component",
+     "Description",
+     "Parameters"
+    ],
+    [
+     "Input",
+     "padded residue embeddings (L x 320), standardised per feature on the training fold",
+     "-"
+    ],
+    [
+     "Per-residue adapter",
+     "Linear 320 to 64; ReLU; Dropout 0.2",
+     "20,544"
+    ],
+    [
+     "Bidirectional LSTM",
+     "2 layers, 64 hidden units per direction, inter-layer dropout 0.3, packed sequences; final forward and backward states of the top layer concatenated (128-d)",
+     "165,888"
+    ],
+    [
+     "Encoder block",
+     "Linear 128 to 256; BatchNorm1d; ReLU; Dropout 0.3",
+     "33,536"
+    ],
+    [
+     "Projection head",
+     "Linear 256 to 128; L2 normalisation (feeds SupCon)",
+     "32,896"
+    ],
+    [
+     "Classifier head",
+     "Linear 256 to 1; raw logit (feeds BCE)",
+     "257"
+    ],
+    [
+     "Total",
+     "",
+     "253,121"
+    ]
+   ],
+   "B4_cnn_bilstm": [
+    [
+     "Component",
+     "Description",
+     "Parameters"
+    ],
+    [
+     "Input",
+     "padded residue embeddings (L x 320), standardised per feature on the training fold",
+     "-"
+    ],
+    [
+     "Per-residue adapter",
+     "Linear 320 to 64; ReLU; Dropout 0.2",
+     "20,544"
+    ],
+    [
+     "Convolution",
+     "Conv1d 64 to 64, kernel 5, padding 2; ReLU; Dropout 0.3",
+     "20,544"
+    ],
+    [
+     "Bidirectional LSTM",
+     "1 layer, 64 hidden units per direction, packed sequences; outputs masked max-pooled over residues (128-d)",
+     "66,560"
+    ],
+    [
+     "Encoder block",
+     "Linear 128 to 256; BatchNorm1d; ReLU; Dropout 0.3",
+     "33,536"
+    ],
+    [
+     "Projection head",
+     "Linear 256 to 128; L2 normalisation (feeds SupCon)",
+     "32,896"
+    ],
+    [
+     "Classifier head",
+     "Linear 256 to 1; raw logit (feeds BCE)",
+     "257"
+    ],
+    [
+     "Total",
+     "",
+     "174,337"
+    ]
+   ],
+   "B5_transformer": [
+    [
+     "Component",
+     "Description",
+     "Parameters"
+    ],
+    [
+     "Input",
+     "padded residue embeddings (L x 320), standardised per feature on the training fold",
+     "-"
+    ],
+    [
+     "Per-residue adapter",
+     "Linear 320 to 64; ReLU; Dropout 0.2; then Linear 64 to 128",
+     "28,864"
+    ],
+    [
+     "Learned positional embedding",
+     "30 x 128, added to the residue vectors",
+     "3,840"
+    ],
+    [
+     "Transformer encoder",
+     "2 layers, 4 attention heads, feed-forward width 256, dropout 0.1, key-padding mask; masked mean pool (128-d)",
+     "264,960"
+    ],
+    [
+     "Encoder block",
+     "Linear 128 to 256; BatchNorm1d; ReLU; Dropout 0.3",
+     "33,536"
+    ],
+    [
+     "Projection head",
+     "Linear 256 to 128; L2 normalisation (feeds SupCon)",
+     "32,896"
+    ],
+    [
+     "Classifier head",
+     "Linear 256 to 1; raw logit (feeds BCE)",
+     "257"
+    ],
+    [
+     "Total",
+     "",
+     "364,353"
+    ]
+   ],
+   "B6_attnpool": [
+    [
+     "Component",
+     "Description",
+     "Parameters"
+    ],
+    [
+     "Input",
+     "padded residue embeddings (L x 320), standardised per feature on the training fold",
+     "-"
+    ],
+    [
+     "Attention pooling",
+     "Linear 320 to 128; tanh; Linear 128 to 1; masked softmax over residues; weighted sum of the residue vectors (320-d)",
+     "41,217"
+    ],
+    [
+     "Encoder block 1",
+     "Linear 320 to 512; BatchNorm1d; ReLU; Dropout 0.3 (as B1)",
+     "165,376"
+    ],
+    [
+     "Encoder block 2",
+     "Linear 512 to 256; BatchNorm1d; ReLU; Dropout 0.3 (as B1)",
+     "131,840"
+    ],
+    [
+     "Projection head",
+     "Linear 256 to 128; L2 normalisation (feeds SupCon)",
+     "32,896"
+    ],
+    [
+     "Classifier head",
+     "Linear 256 to 1; raw logit (feeds BCE)",
+     "257"
+    ],
+    [
+     "Total",
+     "",
+     "371,586"
+    ]
+   ],
+   "C3_finetune": [
+    [
+     "Component",
+     "Description",
+     "Parameters"
+    ],
+    [
+     "ESM-2 8M backbone",
+     "6 Transformer layers, hidden size 320, 20 attention heads; masked mean pool over residues",
+     "7,409,081"
+    ],
+    [
+     "Head",
+     "Linear 320 to 256; BatchNorm1d; ReLU; Dropout 0.3; Linear 256 to 1",
+     "82,945"
+    ],
+    [
+     "Total",
+     "",
+     "7,492,026"
+    ]
+   ]
+  },
+  "training": [
+   [
+    "Setting",
+    "Value"
+   ],
+   [
+    "Optimiser",
+    "AdamW"
+   ],
+   [
+    "Learning rate and weight decay",
+    "0.001 and 0.0001"
+   ],
+   [
+    "Schedule",
+    "Cosine annealing over 200 epochs"
+   ],
+   [
+    "Batch size",
+    "128"
+   ],
+   [
+    "Maximum epochs and patience",
+    "200 and 20 (validation MCC)"
+   ],
+   [
+    "Dropout",
+    "0.3"
+   ],
+   [
+    "Projection dimension",
+    "128"
+   ],
+   [
+    "Lambda grid",
+    "0.0, 0.1, 0.25, 0.5, 1.0, 2.0"
+   ],
+   [
+    "Temperature grid",
+    "0.05, 0.07, 0.1, 0.5"
+   ],
+   [
+    "Seeds",
+    "0, 1, 2, 3, 4"
+   ],
+   [
+    "Gradient clipping (Phase B models)",
+    "max norm 1.0"
+   ],
+   [
+    "Per-residue adapter width (Phase B)",
+    "64"
+   ]
+  ],
+  "mde": [
+   [
+    "Test set",
+    "Regime",
+    "Sequences",
+    "Comparisons",
+    "MDE of MCC: median [min, max]",
+    "MDE of AUROC: median"
+   ],
+   [
+    "Ind_1049",
+    "A",
+    "1,049",
+    "6",
+    "0.059 [0.045, 0.076]",
+    "0.020"
+   ],
+   [
+    "Ind_1049",
+    "B",
+    "751",
+    "7",
+    "0.080 [0.056, 0.100]",
+    "0.029"
+   ],
+   [
+    "Ind_1049",
+    "C",
+    "716",
+    "6",
+    "0.086 [0.058, 0.101]",
+    "0.033"
+   ],
+   [
+    "Ind_425",
+    "A",
+    "425",
+    "6",
+    "0.083 [0.051, 0.100]",
+    "0.022"
+   ],
+   [
+    "Ind_425",
+    "B",
+    "214",
+    "7",
+    "0.138 [0.090, 0.165]",
+    "0.046"
+   ],
+   [
+    "Ind_425",
+    "C",
+    "162",
+    "6",
+    "0.174 [0.104, 0.201]",
+    "0.055"
+   ]
+  ]
+ }
+}

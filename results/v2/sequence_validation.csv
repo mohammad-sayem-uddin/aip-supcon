@@ -1,0 +1,10 @@
+dataset,rows,unique_sequences,rows_with_non_standard_residues,length_min,length_max
+AIPpred_benchmark,3145,3145,0,11,25
+AIPpred_independent,1049,1049,0,11,25
+PreAIP_training,3145,3145,0,11,25
+PreAIP_test,1049,1049,0,11,25
+AntiInflam_training,1699,1699,0,7,30
+AntiInflam_validation,425,425,0,7,30
+local_Benchmark,3790,3753,0,11,30
+local_Ind_425,425,425,0,7,30
+local_Ind_1049,1049,1049,0,11,25
