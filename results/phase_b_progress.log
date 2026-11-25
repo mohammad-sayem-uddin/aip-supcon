@@ -1,0 +1,47 @@
+# 2026-11-25T11:43:45 Kaggle GPU kernel yeasinarafatshihab/aip-phase-b-gpu launched for B2_cnn, B5_transformer, B6_attnpool (CV + final); B3 done locally, B4 finishing locally
+# 2026-11-25T11:44:39 slice start: 150 tasks left for ['B4_cnn_bilstm']; 223 rows already saved
+2026-11-25T11:45:39, B4_cnn_bilstm, lambda=0, seed=1, fold=0, MCC=0.2315, elapsed=55s
+2026-11-25T11:45:46, B4_cnn_bilstm, lambda=0, seed=0, fold=4, MCC=0.2615, elapsed=62s
+2026-11-25T11:45:49, B4_cnn_bilstm, lambda=0, seed=0, fold=2, MCC=0.2315, elapsed=65s
+2026-11-25T11:46:11, B4_cnn_bilstm, lambda=0, seed=0, fold=0, MCC=0.2106, elapsed=87s
+2026-11-25T11:46:33, B4_cnn_bilstm, lambda=0, seed=0, fold=1, MCC=0.2356, elapsed=110s
+2026-11-25T11:46:40, B4_cnn_bilstm, lambda=0, seed=1, fold=1, MCC=0.2386, elapsed=60s
+2026-11-25T11:47:15, B4_cnn_bilstm, lambda=0, seed=0, fold=3, MCC=0.2364, elapsed=151s
+2026-11-25T11:47:22, B4_cnn_bilstm, lambda=0, seed=1, fold=3, MCC=0.3387, elapsed=92s
+2026-11-25T11:47:41, B4_cnn_bilstm, lambda=0, seed=1, fold=4, MCC=0.1843, elapsed=90s
+2026-11-25T11:48:16, B4_cnn_bilstm, lambda=0, seed=2, fold=1, MCC=0.2551, elapsed=95s
+2026-11-25T11:48:21, B4_cnn_bilstm, lambda=0, seed=2, fold=0, MCC=0.2470, elapsed=107s
+2026-11-25T11:48:46, B4_cnn_bilstm, lambda=0, seed=2, fold=2, MCC=0.2092, elapsed=90s
+2026-11-25T11:49:05, B4_cnn_bilstm, lambda=0, seed=2, fold=3, MCC=0.2117, elapsed=102s
+2026-11-25T11:49:15, B4_cnn_bilstm, lambda=0, seed=1, fold=2, MCC=0.2371, elapsed=208s
+2026-11-25T11:49:50, B4_cnn_bilstm, lambda=0, seed=3, fold=0, MCC=0.2141, elapsed=94s
+2026-11-25T11:49:56, B4_cnn_bilstm, lambda=0, seed=3, fold=1, MCC=0.1988, elapsed=94s
+2026-11-25T11:50:21, B4_cnn_bilstm, lambda=0, seed=3, fold=4, MCC=0.2214, elapsed=65s
+2026-11-25T11:50:53, B4_cnn_bilstm, lambda=0, seed=3, fold=2, MCC=0.2865, elapsed=126s
+2026-11-25T11:51:03, B4_cnn_bilstm, lambda=0, seed=4, fold=0, MCC=0.2401, elapsed=73s
+2026-11-25T11:51:10, B4_cnn_bilstm, lambda=0, seed=4, fold=1, MCC=0.2275, elapsed=74s
+2026-11-25T11:51:30, B4_cnn_bilstm, lambda=0, seed=3, fold=3, MCC=0.2701, elapsed=145s
+2026-11-25T11:51:41, B4_cnn_bilstm, lambda=0, seed=2, fold=4, MCC=0.2911, elapsed=239s
+# slice end: 128 tasks still to start
+# 2026-11-25T11:52:16 BUGFIX: resume lookup used wrong column order (usecols returns file order); the 11:44 slice re-ran 22 already-saved B4 runs. Duplicates removed, originals kept; resume now verified.
+# 2026-11-25T11:52:18 slice start: 77 tasks left for ['B4_cnn_bilstm']; 223 rows already saved
+2026-11-25T11:53:39, B4_cnn_bilstm, lambda=0.5, seed=0, fold=1, MCC=0.1843, elapsed=76s
+2026-11-25T11:53:48, B4_cnn_bilstm, lambda=0.5, seed=0, fold=3, MCC=0.2226, elapsed=85s
+2026-11-25T11:53:56, B4_cnn_bilstm, lambda=0.5, seed=0, fold=2, MCC=0.2744, elapsed=93s
+2026-11-25T11:54:06, B4_cnn_bilstm, lambda=0.5, seed=0, fold=0, MCC=0.2107, elapsed=103s
+2026-11-25T11:55:10, B4_cnn_bilstm, lambda=0.5, seed=1, fold=0, MCC=0.2346, elapsed=81s
+2026-11-25T11:55:11, B4_cnn_bilstm, lambda=0.25, seed=4, fold=1, MCC=0.2514, elapsed=168s
+2026-11-25T11:55:14, B4_cnn_bilstm, lambda=0.5, seed=1, fold=1, MCC=0.2399, elapsed=77s
+2026-11-25T11:55:15, B4_cnn_bilstm, lambda=0.25, seed=4, fold=2, MCC=0.2392, elapsed=172s
+2026-11-25T11:56:17, B4_cnn_bilstm, lambda=0.5, seed=0, fold=4, MCC=0.2553, elapsed=157s
+2026-11-25T11:56:22, B4_cnn_bilstm, lambda=0.5, seed=1, fold=3, MCC=0.2924, elapsed=72s
+2026-11-25T11:56:50, B4_cnn_bilstm, lambda=0.5, seed=2, fold=1, MCC=0.2248, elapsed=93s
+2026-11-25T11:56:59, B4_cnn_bilstm, lambda=0.5, seed=1, fold=2, MCC=0.2476, elapsed=172s
+2026-11-25T11:57:06, B4_cnn_bilstm, lambda=0.5, seed=2, fold=0, MCC=0.2585, elapsed=112s
+2026-11-25T11:57:56, B4_cnn_bilstm, lambda=0.5, seed=2, fold=2, MCC=0.2075, elapsed=98s
+2026-11-25T11:58:16, B4_cnn_bilstm, lambda=0.5, seed=2, fold=4, MCC=0.2523, elapsed=85s
+2026-11-25T11:58:29, B4_cnn_bilstm, lambda=0.5, seed=2, fold=3, MCC=0.2135, elapsed=126s
+2026-11-25T11:58:42, B4_cnn_bilstm, lambda=0.5, seed=3, fold=0, MCC=0.1942, elapsed=102s
+2026-11-25T11:59:12, B4_cnn_bilstm, lambda=0.5, seed=3, fold=1, MCC=0.2524, elapsed=126s
+2026-11-25T11:59:15, B4_cnn_bilstm, lambda=0.5, seed=1, fold=4, MCC=0.2436, elapsed=243s
+# slice end: 58 tasks still to start

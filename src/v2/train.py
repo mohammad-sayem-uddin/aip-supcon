@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import os
 import time
 from dataclasses import asdict, dataclass
 from functools import lru_cache
@@ -24,6 +25,13 @@ from src.v2.embed_res import load_residue_cache
 from src.v2.models import MAXLEN, build
 
 log = setup_logging("v2train")
+
+
+def worker_device() -> torch.device:
+    """CPU unless CUDA is available and AIP_DEVICE != 'cpu'; with several GPUs, workers spread by pid."""
+    if torch.cuda.is_available() and os.environ.get("AIP_DEVICE", "auto") != "cpu":
+        return torch.device(f"cuda:{os.getpid() % torch.cuda.device_count()}")
+    return torch.device("cpu")
 V2_COLUMNS = (["model", "arch", "checkpoint", "lambda_supcon", "temperature", "eval_set", "regime", "seed", "fold", "epoch_stopped",
                "n_epochs_run", "train_seconds", "threshold", "analysis_tier"] + METRIC_NAMES + ["n_eval", "config_key"])
 
@@ -96,30 +104,33 @@ def _prep(X, M, mean, std):
 @torch.no_grad()
 def predict(model, X: torch.Tensor, M: torch.Tensor, bs: int = 256) -> np.ndarray:
     model.eval()
+    dev = next(model.parameters()).device
     out = []
     for i in range(0, len(X), bs):
         Lb = int(M[i : i + bs].sum(1).max())
-        out.append(torch.sigmoid(model(X[i : i + bs, :Lb], M[i : i + bs, :Lb])["logit"]))
+        out.append(torch.sigmoid(model(X[i : i + bs, :Lb].to(dev), M[i : i + bs, :Lb].to(dev))["logit"]).cpu())
     return torch.cat(out).numpy()
 
 
 def fit(Xtr, Mtr, ytr, Xva, Mva, yva, cfg: V2Cfg, seed: int):
     """Xtr etc. are already-normalised tensors. Returns (model, history, best_epoch)."""
     set_seed(seed)
-    model = build(cfg.arch, Xtr.shape[2])
+    dev = worker_device()
+    model = build(cfg.arch, Xtr.shape[2]).to(dev)
+    Xtr, Mtr = Xtr.to(dev), Mtr.to(dev)
     opt = torch.optim.AdamW(model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
     sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=cfg.max_epochs)
-    pw = torch.tensor(float((ytr == 0).sum()) / float((ytr == 1).sum()))
+    pw = torch.tensor(float((ytr == 0).sum()) / float((ytr == 1).sum()), device=dev)
     bce = nn.BCEWithLogitsLoss(pos_weight=pw)
     sc = SupConLoss(cfg.temperature)
-    yt = torch.as_tensor(ytr, dtype=torch.float32)
-    ytl = torch.as_tensor(ytr, dtype=torch.long)
+    yt = torch.as_tensor(ytr, dtype=torch.float32, device=dev)
+    ytl = torch.as_tensor(ytr, dtype=torch.long, device=dev)
     gen = torch.Generator().manual_seed(seed)
     best, best_state, best_ep, bad, hist = -2.0, None, 0, 0, []
     n = len(Xtr)
     for ep in range(1, cfg.max_epochs + 1):
         model.train()
-        perm = torch.randperm(n, generator=gen)
+        perm = torch.randperm(n, generator=gen).to(dev)
         s = np.zeros(3)
         nb = 0
         for i in range(0, n, cfg.batch_size):

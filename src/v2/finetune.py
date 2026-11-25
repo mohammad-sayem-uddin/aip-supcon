@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import os
 import time
 
 import numpy as np
@@ -23,7 +24,8 @@ from src.utils import Timer, set_seed, setup_logging
 from src.v2.common import V2, mark
 
 log = setup_logging("finetune")
-HF = "facebook/esm2_t6_8M_UR50D"
+HF = os.environ.get("AIP_ESM8M_PATH", "facebook/esm2_t6_8M_UR50D")
+DEV = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 TESTS = [(ts, rg) for ts in ("ind_425", "ind_1049") for rg in ("A", "B", "C")]
 OUT = V2 / "finetune_results_v2.csv"
 COLS = ["model", "mode", "eval_set", "regime", "seed", "fold", "epoch_stopped", "train_seconds", "analysis_tier"] + METRIC_NAMES + ["n_eval"]
@@ -67,26 +69,27 @@ def predict(model, ids, att, bs=128):
     for i in range(0, len(ids), bs):
         a = att[i : i + bs]
         L = int(a.sum(1).max())
-        out.append(torch.sigmoid(model(ids[i : i + bs, :L], a[:, :L])))
+        out.append(torch.sigmoid(model(ids[i : i + bs, :L].to(DEV), a[:, :L].to(DEV))).cpu())
     return torch.cat(out).numpy()
 
 
 def fit(model, tr, va, y_tr, y_va, seed, max_epochs=8, patience=3, bs=32, lr_bb=5e-5, lr_head=1e-3):
     set_seed(seed)
+    tr = (tr[0].to(DEV), tr[1].to(DEV))
     groups = [{"params": list(model.head.parameters()) + list(model.clf.parameters()), "lr": lr_head}]
     if not model.freeze:
         groups.append({"params": list(model.bb.parameters()), "lr": lr_bb})
     opt = torch.optim.AdamW(groups, weight_decay=1e-4)
-    pw = torch.tensor(float((y_tr == 0).sum()) / float((y_tr == 1).sum()))
+    pw = torch.tensor(float((y_tr == 0).sum()) / float((y_tr == 1).sum()), device=DEV)
     bce = nn.BCEWithLogitsLoss(pos_weight=pw)
-    yt = torch.as_tensor(y_tr, dtype=torch.float32)
+    yt = torch.as_tensor(y_tr, dtype=torch.float32, device=DEV)
     gen = torch.Generator().manual_seed(seed)
     best, state, best_ep, bad = -2.0, None, 0, 0
     for ep in range(1, max_epochs + 1):
         model.train()
         if model.freeze:
             model.bb.eval()
-        perm = torch.randperm(len(yt), generator=gen)
+        perm = torch.randperm(len(yt), generator=gen).to(DEV)
         for i in range(0, len(perm), bs):
             b = perm[i : i + bs]
             if len(b) < 2:
@@ -119,7 +122,7 @@ def row(mode, ts, rg, seed, fold, ep, secs, y, p):
     return r
 
 
-def run(smoke: bool = False) -> None:
+def run(smoke: bool = False, cv_seeds=(0,), final_seeds=(0, 1, 2)) -> None:
     t = Timer()
     tz = EsmTokenizer.from_pretrained(HF)
     b = pd.read_csv(PROC / "benchmark_clean.csv")
@@ -130,14 +133,14 @@ def run(smoke: bool = False) -> None:
     if OUT.exists():
         d = pd.read_csv(OUT, usecols=["mode", "eval_set", "seed", "fold"])
         done = set(map(tuple, d.to_numpy()))
-    cv_seeds, folds, final_seeds = ((0,), (0,), (0,)) if smoke else ((0,), range(5), (0, 1, 2))
+    cv_seeds, folds, final_seeds = ((0,), (0,), (0,)) if smoke else (tuple(cv_seeds), range(5), tuple(final_seeds))
     for mode in ("frozen", "finetune"):
         for seed in cv_seeds:
             for f in folds:
                 if (mode, "cv", seed, f) in done:
                     continue
                 tr, va = make_folds(y, seed)[f]
-                model = FTNet(mode == "frozen")
+                model = FTNet(mode == "frozen").to(DEV)
                 t0 = time.time()
                 model, ep = fit(model, (ids[tr], att[tr]), (ids[va], att[va]), y[tr], y[va], 1000 * seed + f)
                 r = row(mode, "cv", "cv", seed, f, ep, time.time() - t0, y[va], predict(model, ids[va], att[va]))
@@ -158,7 +161,7 @@ def run(smoke: bool = False) -> None:
             if (mode, "ind_425", seed, -1) in done:
                 continue
             tr, ho = train_test_split(np.arange(len(y)), test_size=0.1, stratify=y, random_state=seed)
-            model = FTNet(mode == "frozen")
+            model = FTNet(mode == "frozen").to(DEV)
             t0 = time.time()
             model, ep = fit(model, (ids[tr], att[tr]), (ids[ho], att[ho]), y[tr], y[ho], seed)
             secs = time.time() - t0
@@ -183,4 +186,7 @@ def run(smoke: bool = False) -> None:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--smoke", action="store_true")
-    run(ap.parse_args().smoke)
+    ap.add_argument("--cv-seeds", type=int, nargs="+", default=[0])
+    ap.add_argument("--final-seeds", type=int, nargs="+", default=[0, 1, 2])
+    a = ap.parse_args()
+    run(a.smoke, a.cv_seeds, a.final_seeds)
