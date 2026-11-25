@@ -33,20 +33,26 @@ def pp(stem: str, ts: str, rg: str) -> Path | None:
 
 
 def pair(family: str, label: str, a: str, b: str, tier: str, regimes=("B",), note: str = "") -> list[dict]:
-    rows = []
+    """Returns comparison specs (executed later in parallel by execute())."""
+    specs = []
     for ts in TESTS:
         for rg in regimes:
             pa, pb = pp(a, ts, rg), pp(b, ts, rg)
             if pa is None or pb is None:
                 continue
-            r = compare_files(pa, pb)
-            r.update({"family": family, "comparison": label, "model_a": a, "model_b": b, "test_set": ts, "regime": rg,
-                      "analysis_tier": tier, "note": note})
-            rows.append(r)
-    return rows
+            specs.append({"pa": str(pa), "pb": str(pb), "family": family, "comparison": label, "model_a": a, "model_b": b,
+                          "test_set": ts, "regime": rg, "analysis_tier": tier, "note": note})
+    return specs
+
+
+def execute(spec: dict) -> dict:
+    r = compare_files(spec["pa"], spec["pb"])
+    r.update({k: v for k, v in spec.items() if k not in ("pa", "pb")})
+    return r
 
 
 def collect() -> pd.DataFrame:
+    from src.v2.phaseB import rolling
     rows: list[dict] = []
     # --- H1 (v1 headline, 8M MLP, tau 0.1) -- the preregistered primary test
     rows += pair("H1 primary (v1)", "8M MLP: lambda=2,tau=0.1 vs lambda=0", "esm2_t6_8M_lam2_tau0.1", "esm2_t6_8M_lam0_tau0.07", "primary",
@@ -81,7 +87,9 @@ def collect() -> pd.DataFrame:
     rows += pair("representation: fine-tuning (C3)", "ESM-2 8M fine-tuned vs frozen (same head)", "esm2_t6_8M_finetune", "esm2_t6_8M_frozen", "exploratory")
     rows += pair("representation: ESM vs composition", "650M MLP lambda=0 vs AAC+RF", "esm2_t33_650M_lam0_tau0.07", "AAC_RF", "exploratory")
     rows += pair("representation: ESM vs composition", "8M MLP lambda=0 vs AAC+RF", "esm2_t6_8M_lam0_tau0.07", "AAC_RF", "exploratory")
-    return pd.DataFrame(rows)
+    out: list[dict] = []
+    rolling(rows, execute, out.append, 6, None)
+    return pd.DataFrame(out)
 
 
 def correct(df: pd.DataFrame) -> pd.DataFrame:

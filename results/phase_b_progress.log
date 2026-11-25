@@ -135,3 +135,94 @@
 2026-11-25T12:30:01, FINAL B4_cnn_bilstm_esm2_t6_8M_lam2_tau0.07, seed=3 cached
 2026-11-25T12:31:17, FINAL B4_cnn_bilstm_esm2_t6_8M_lam2_tau0.07, seed=4 cached
 # final slice end: 0 jobs still to start
+# 2026-11-25T13:09:22 Kaggle GPU kernel aip-c3-finetune-gpu launched (C3: fine-tune vs frozen, CV seeds 0-2, final seeds 0-4)
+# 2026-11-25T13:16:05 B6_attnpool run locally (CPU, foreground); Kaggle kernel results for B6, if any, will be ignored
+# 2026-11-25T13:16:07 slice start: 150 tasks left for ['B6_attnpool']; 300 rows already saved
+2026-11-25T13:16:26, B6_attnpool, lambda=0, seed=0, fold=4, MCC=0.2697, elapsed=14s
+2026-11-25T13:16:26, B6_attnpool, lambda=0, seed=1, fold=0, MCC=0.2700, elapsed=14s
+2026-11-25T13:16:27, B6_attnpool, lambda=0, seed=0, fold=2, MCC=0.2451, elapsed=15s
+2026-11-25T13:16:29, B6_attnpool, lambda=0, seed=0, fold=1, MCC=0.2210, elapsed=17s
+2026-11-25T13:16:31, B6_attnpool, lambda=0, seed=0, fold=3, MCC=0.2602, elapsed=19s
+2026-11-25T13:16:34, B6_attnpool, lambda=0, seed=0, fold=0, MCC=0.2988, elapsed=22s
+2026-11-25T13:16:39, B6_attnpool, lambda=0, seed=1, fold=2, MCC=0.2815, elapsed=13s
+2026-11-25T13:16:40, B6_attnpool, lambda=0, seed=1, fold=3, MCC=0.2809, elapsed=13s
+2026-11-25T13:16:44, B6_attnpool, lambda=0, seed=2, fold=0, MCC=0.2282, elapsed=13s
+2026-11-25T13:16:44, B6_attnpool, lambda=0, seed=1, fold=4, MCC=0.2321, elapsed=15s
+2026-11-25T13:16:48, B6_attnpool, lambda=0, seed=1, fold=1, MCC=0.2335, elapsed=22s
+2026-11-25T13:16:52, B6_attnpool, lambda=0, seed=2, fold=1, MCC=0.2081, elapsed=18s
+2026-11-25T13:16:56, B6_attnpool, lambda=0, seed=2, fold=4, MCC=0.2841, elapsed=12s
+2026-11-25T13:16:57, B6_attnpool, lambda=0, seed=2, fold=2, MCC=0.2413, elapsed=17s
+2026-11-25T13:16:58, B6_attnpool, lambda=0, seed=2, fold=3, MCC=0.2301, elapsed=18s
+2026-11-25T13:17:03, B6_attnpool, lambda=0, seed=3, fold=0, MCC=0.2622, elapsed=18s
+2026-11-25T13:17:08, B6_attnpool, lambda=0, seed=3, fold=4, MCC=0.2622, elapsed=11s
+2026-11-25T13:17:13, B6_attnpool, lambda=0, seed=4, fold=1, MCC=0.2284, elapsed=10s
+2026-11-25T13:17:13, B6_attnpool, lambda=0, seed=3, fold=3, MCC=0.2574, elapsed=17s
+2026-11-25T13:17:13, B6_attnpool, lambda=0, seed=3, fold=2, MCC=0.2741, elapsed=21s
+2026-11-25T13:17:15, B6_attnpool, lambda=0, seed=3, fold=1, MCC=0.2086, elapsed=27s
+2026-11-25T13:17:16, B6_attnpool, lambda=0, seed=4, fold=0, MCC=0.2801, elapsed=17s
+2026-11-25T13:17:22, B6_attnpool, lambda=0, seed=4, fold=2, MCC=0.2451, elapsed=13s
+2026-11-25T13:17:27, B6_attnpool, lambda=0, seed=4, fold=4, MCC=0.2861, elapsed=13s
+2026-11-25T13:17:29, B6_attnpool, lambda=0, seed=4, fold=3, MCC=0.2015, elapsed=16s
+2026-11-25T13:17:30, B6_attnpool, lambda=0.1, seed=0, fold=0, MCC=0.2452, elapsed=15s
+2026-11-25T13:17:32, B6_attnpool, lambda=0.1, seed=0, fold=2, MCC=0.2601, elapsed=16s
+2026-11-25T13:17:36, B6_attnpool, lambda=0.1, seed=0, fold=1, MCC=0.2394, elapsed=21s
+2026-11-25T13:17:41, B6_attnpool, lambda=0.1, seed=0, fold=4, MCC=0.2671, elapsed=13s
+2026-11-25T13:17:43, B6_attnpool, lambda=0.1, seed=1, fold=0, MCC=0.2608, elapsed=13s
+2026-11-25T13:17:45, B6_attnpool, lambda=0.1, seed=0, fold=3, MCC=0.2564, elapsed=23s
+2026-11-25T13:17:46, B6_attnpool, lambda=0.1, seed=1, fold=2, MCC=0.2562, elapsed=13s
+2026-11-25T13:17:50, B6_attnpool, lambda=0.1, seed=1, fold=1, MCC=0.2392, elapsed=20s
+2026-11-25T13:17:56, B6_attnpool, lambda=0.1, seed=1, fold=4, MCC=0.2364, elapsed=15s
+2026-11-25T13:17:58, B6_attnpool, lambda=0.1, seed=1, fold=3, MCC=0.2520, elapsed=21s
+2026-11-25T13:17:59, B6_attnpool, lambda=0.1, seed=2, fold=0, MCC=0.2377, elapsed=16s
+2026-11-25T13:18:01, B6_attnpool, lambda=0.1, seed=2, fold=1, MCC=0.2357, elapsed=15s
+2026-11-25T13:18:02, B6_attnpool, lambda=0.1, seed=2, fold=2, MCC=0.2233, elapsed=15s
+2026-11-25T13:18:08, B6_attnpool, lambda=0.1, seed=2, fold=4, MCC=0.2787, elapsed=12s
+2026-11-25T13:18:08, B6_attnpool, lambda=0.1, seed=2, fold=3, MCC=0.2357, elapsed=18s
+2026-11-25T13:18:15, B6_attnpool, lambda=0.1, seed=3, fold=0, MCC=0.2579, elapsed=17s
+2026-11-25T13:18:17, B6_attnpool, lambda=0.1, seed=3, fold=3, MCC=0.2742, elapsed=15s
+2026-11-25T13:18:21, B6_attnpool, lambda=0.1, seed=3, fold=1, MCC=0.2127, elapsed=22s
+2026-11-25T13:18:22, B6_attnpool, lambda=0.1, seed=4, fold=0, MCC=0.2771, elapsed=13s
+2026-11-25T13:18:23, B6_attnpool, lambda=0.1, seed=3, fold=2, MCC=0.2575, elapsed=22s
+2026-11-25T13:18:23, B6_attnpool, lambda=0.1, seed=3, fold=4, MCC=0.2540, elapsed=15s
+2026-11-25T13:18:27, B6_attnpool, lambda=0.1, seed=4, fold=1, MCC=0.2276, elapsed=12s
+2026-11-25T13:18:40, B6_attnpool, lambda=0.1, seed=4, fold=2, MCC=0.2244, elapsed=23s
+2026-11-25T13:18:46, B6_attnpool, lambda=0.1, seed=4, fold=3, MCC=0.2093, elapsed=25s
+2026-11-25T13:18:47, B6_attnpool, lambda=0.1, seed=4, fold=4, MCC=0.2510, elapsed=25s
+2026-11-25T13:18:53, B6_attnpool, lambda=0.25, seed=0, fold=1, MCC=0.2099, elapsed=28s
+2026-11-25T13:19:12, B6_attnpool, lambda=0.25, seed=0, fold=2, MCC=0.2783, elapsed=43s
+2026-11-25T13:19:22, B6_attnpool, lambda=0.25, seed=0, fold=4, MCC=0.2547, elapsed=35s
+2026-11-25T13:19:25, B6_attnpool, lambda=0.25, seed=0, fold=3, MCC=0.2997, elapsed=44s
+2026-11-25T13:19:25, B6_attnpool, lambda=0.25, seed=1, fold=1, MCC=0.2088, elapsed=32s
+2026-11-25T13:19:28, B6_attnpool, lambda=0.25, seed=0, fold=0, MCC=0.2735, elapsed=64s
+2026-11-25T13:19:31, B6_attnpool, lambda=0.25, seed=1, fold=0, MCC=0.2834, elapsed=41s
+2026-11-25T13:19:34, B6_attnpool, lambda=0.25, seed=1, fold=2, MCC=0.2489, elapsed=19s
+2026-11-25T13:19:47, B6_attnpool, lambda=0.25, seed=1, fold=4, MCC=0.2150, elapsed=21s
+2026-11-25T13:19:48, B6_attnpool, lambda=0.25, seed=1, fold=3, MCC=0.2634, elapsed=25s
+2026-11-25T13:19:50, B6_attnpool, lambda=0.25, seed=2, fold=1, MCC=0.2291, elapsed=21s
+2026-11-25T13:19:57, B6_attnpool, lambda=0.25, seed=2, fold=0, MCC=0.2560, elapsed=31s
+2026-11-25T13:20:01, B6_attnpool, lambda=0.25, seed=2, fold=3, MCC=0.2420, elapsed=27s
+2026-11-25T13:20:03, B6_attnpool, lambda=0.25, seed=2, fold=2, MCC=0.2417, elapsed=30s
+2026-11-25T13:20:11, B6_attnpool, lambda=0.25, seed=3, fold=1, MCC=0.2105, elapsed=21s
+2026-11-25T13:20:16, B6_attnpool, lambda=0.25, seed=3, fold=0, MCC=0.2586, elapsed=28s
+2026-11-25T13:20:20, B6_attnpool, lambda=0.25, seed=2, fold=4, MCC=0.2723, elapsed=32s
+2026-11-25T13:20:21, B6_attnpool, lambda=0.25, seed=3, fold=2, MCC=0.2563, elapsed=23s
+2026-11-25T13:20:22, B6_attnpool, lambda=0.25, seed=3, fold=4, MCC=0.2518, elapsed=19s
+2026-11-25T13:20:33, B6_attnpool, lambda=0.25, seed=4, fold=1, MCC=0.2295, elapsed=16s
+2026-11-25T13:20:34, B6_attnpool, lambda=0.25, seed=4, fold=0, MCC=0.3111, elapsed=22s
+2026-11-25T13:20:36, B6_attnpool, lambda=0.25, seed=4, fold=2, MCC=0.2086, elapsed=16s
+2026-11-25T13:20:36, B6_attnpool, lambda=0.25, seed=3, fold=3, MCC=0.2812, elapsed=34s
+2026-11-25T13:20:40, B6_attnpool, lambda=0.25, seed=4, fold=4, MCC=0.2544, elapsed=17s
+2026-11-25T13:20:43, B6_attnpool, lambda=0.25, seed=4, fold=3, MCC=0.2058, elapsed=22s
+2026-11-25T13:20:52, B6_attnpool, lambda=0.5, seed=0, fold=1, MCC=0.2257, elapsed=18s
+2026-11-25T13:20:58, B6_attnpool, lambda=0.5, seed=0, fold=4, MCC=0.2420, elapsed=17s
+2026-11-25T13:20:58, B6_attnpool, lambda=0.5, seed=1, fold=0, MCC=0.2810, elapsed=14s
+2026-11-25T13:21:02, B6_attnpool, lambda=0.5, seed=0, fold=0, MCC=0.2645, elapsed=29s
+2026-11-25T13:21:07, B6_attnpool, lambda=0.5, seed=0, fold=3, MCC=0.2504, elapsed=30s
+2026-11-25T13:21:08, B6_attnpool, lambda=0.5, seed=0, fold=2, MCC=0.2655, elapsed=31s
+2026-11-25T13:21:09, B6_attnpool, lambda=0.5, seed=1, fold=1, MCC=0.2279, elapsed=16s
+2026-11-25T13:21:14, B6_attnpool, lambda=0.5, seed=1, fold=2, MCC=0.2601, elapsed=15s
+2026-11-25T13:21:15, B6_attnpool, lambda=0.5, seed=1, fold=3, MCC=0.2565, elapsed=17s
+2026-11-25T13:21:17, B6_attnpool, lambda=0.5, seed=1, fold=4, MCC=0.2417, elapsed=14s
+2026-11-25T13:21:26, B6_attnpool, lambda=0.5, seed=2, fold=0, MCC=0.2398, elapsed=18s
+# slice end: 64 tasks still to start
+# 2026-11-25T13:22:03 C3 fine-tune results merged from Kaggle GPU kernel (30 CV runs, 10 final models)

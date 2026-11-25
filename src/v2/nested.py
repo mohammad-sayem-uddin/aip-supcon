@@ -58,25 +58,49 @@ def outer_unit(task):
             "outer_auroc_lambda0": m0["auroc"], "outer_auroc_selected": mb["auroc"]}
 
 
-def run(n_jobs: int = 6) -> pd.DataFrame:
+def run(n_jobs: int = 6, budget: float | None = None) -> pd.DataFrame | None:
+    """Resumable and foreground-sliced: each finished outer fold is appended to nested_cv_8M_partial.csv."""
+    import os
+    from datetime import datetime
+    from src.v2.phaseB import rolling
     t = Timer()
-    out = V2 / "nested_cv_8M.csv"
+    out, part = V2 / "nested_cv_8M.csv", V2 / "nested_cv_8M_partial.csv"
     if out.exists():
         return pd.read_csv(out)
-    tasks = [(s, f) for s in SEEDS for f in range(5)]
-    rows = []
-    with ProcessPoolExecutor(max_workers=n_jobs, mp_context=mp.get_context("spawn")) as ex:
-        for fu in as_completed([ex.submit(outer_unit, tk) for tk in tasks]):
-            rows.append(fu.result())
-            log.info("nested outer %d/%d", len(rows), len(tasks))
-    df = pd.DataFrame(rows).sort_values(["seed", "fold"])
+    done = set()
+    if part.exists():
+        d = pd.read_csv(part)
+        done = {(int(s), int(f)) for s, f in zip(d["seed"], d["fold"])}
+    tasks = [(s, f) for s in SEEDS for f in range(5) if (s, f) not in done]
+    log_path = V2.parent / "phase_e_progress.log"
+
+    def on_result(r):
+        pd.DataFrame([r]).to_csv(part, mode="a", header=not part.exists(), index=False)
+        with open(log_path, "a") as fh:
+            fh.write(f"{datetime.now().isoformat(timespec='seconds')}, nested seed={r['seed']} fold={r['fold']} lambda*={r['selected_lambda']:g} "
+                     f"outer MCC lam0={r['outer_mcc_lambda0']:.4f} selected={r['outer_mcc_selected']:.4f}\n")
+            fh.flush()
+            os.fsync(fh.fileno())
+
+    left = rolling(tasks, outer_unit, on_result, n_jobs, budget)
+    if left:
+        return None
+    df = pd.read_csv(part).sort_values(["seed", "fold"])
     df.to_csv(out, index=False)
     mark("E5_nested", "complete", t.elapsed(), f"{len(df)} outer folds")
     return df
 
 
 if __name__ == "__main__":
-    d = run()
-    diff = d["outer_mcc_selected"] - d["outer_mcc_lambda0"]
-    print(d[["outer_mcc_lambda0", "outer_mcc_selected"]].mean().round(4).to_dict(), "diff", round(diff.mean(), 4), "sd", round(diff.std(), 4))
-    print(d["selected_lambda"].value_counts().to_dict())
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--budget", type=float, default=None)
+    ap.add_argument("--jobs", type=int, default=6)
+    a = ap.parse_args()
+    d = run(a.jobs, a.budget)
+    if d is None:
+        print("slice ended; rerun to continue")
+    else:
+        diff = d["outer_mcc_selected"] - d["outer_mcc_lambda0"]
+        print(d[["outer_mcc_lambda0", "outer_mcc_selected"]].mean().round(4).to_dict(), "diff", round(diff.mean(), 4), "sd", round(diff.std(), 4))
+        print(d["selected_lambda"].value_counts().to_dict())

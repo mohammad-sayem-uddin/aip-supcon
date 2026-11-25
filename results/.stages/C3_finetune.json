@@ -1,0 +1,7 @@
+{
+  "stage": "C3_finetune",
+  "status": "complete",
+  "wall_seconds": 0.0,
+  "notes": "Kaggle 2xT4 GPU kernel aip-c3-finetune-gpu: ESM-2 8M fine-tune vs frozen control; CV seeds 0-2 x 5 folds, final seeds 0-4",
+  "finished_at": "2026-11-25T13:22:03"
+}
