@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T17:24:56 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-25T17:46:33 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -441,6 +441,11 @@ _2026-11-26_
 
 Table labels are shared across chapters through `results/thesis/labels_chN.csv`; two chapter-5 labels (`tab:pooling`, `tab:mde`) collided with chapter-3 labels and were renamed (`tab:pool5`, `tab:mde5`, `tab:ft5`). Each chapter must be built twice, in order 1 to 6, so that every cross-reference resolves.
 
+## V2-D20: Autonomous run, Priority 1 — full citation audit (retraction check, field verification, claim verification)
+_2026-11-26_
+
+Ran Scite `verify_papers` (retraction/predatory-journal check) over all 39 bibliography entries: 0 retracted, 0 predatory-journal flags. Ran OpenAlex `resolve_references`/`get_work` for field-by-field verification of all 25 DOI-bearing entries: all "exact" matches. Corrected `cortes1995`'s DOI from the legacy Kluwer registration (10.1023/a:1022627411411, still resolvable) to the canonical Springer one OpenAlex prefers (10.1007/bf00994018) — both point to the same paper, this is a normalization, not an error fix. Added missing NeurIPS page ranges for `khosla2020`, `vaswani2017`, `paszke2019` from OpenAlex. Ran Scite `check_claim` on every citation-bearing factual claim in Chapters 1-2 (26 claims): all confirmed against their cited source, several verbatim; zero misattributions found. Replaced the two second-hand Chapter 2 examples (RDP58/cystitis, VIP/rheumatoid arthritis) with primary sources located via `search_literature` and read via `read_fulltext`/abstract: Delgado et al. 2001 (Nature Medicine, DOI 10.1038/87887) confirms the VIP/RA claim in full; Gonzalez et al. 2005 (J. Urology, DOI 10.1097/01.ju.0000143192.68223.f7) confirms the direction of the RDP58/cystitis claim but not the specific cytokine panel, which stays attributed to Manavalan 2018's own synthesis (stated explicitly in the chapter text). Confirmed via `resolve_references` on OpenAlex and `verify_papers` on Scite that the AdamW and SGDR papers (Loshchilov and Hutter) have no indexed ICLR venue in either database, only the arXiv preprint record — this independently confirms the earlier decision (blocked by OpenReview) to cite both as arXiv preprints. Orphan check: every one of 39 bibliography entries is cited in some chapter; every in-text citation resolves to an entry (both directions, zero issues). Logged the full decision set (36 cited, 7 excluded with reasons) via Scite `report_citations`/`citation_report`. Full detail: `CITATION_AUDIT.md`.
+
 
 Choices made autonomously during the overnight run, each with the reasoning.
 
@@ -534,7 +539,7 @@ Ranked, most important first:
 |---|---|---|---|---|---|---|---|
 | Abstract | complete | 1 | 0 | 0 | 0 | 0 | 0 |
 | Chapter 1 Introduction | complete | 4 | 0 | 0 | 7 | 0 | 0 |
-| Chapter 2 Literature Review | complete | 4 | 0 | 0 | 10 | 0 | 0 |
+| Chapter 2 Literature Review | complete | 4 | 0 | 0 | 12 | 0 | 0 |
 | Chapter 3 Materials and Methods | complete | 21 | 19 | 2 | 27 | 0 | 0 |
 | Chapter 4 Implementation and Experimental Setup | complete (with TODO) | 6 | 4 | 0 | 5 | 1 | 0 |
 | Chapter 5 Results and Discussion | complete (with TODO) | 31 | 18 | 9 | 10 | 3 | 0 |

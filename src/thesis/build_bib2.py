@@ -46,7 +46,9 @@ CROSSREF = [("breiman2001", "Random Forests", "Breiman", 2001), ("cortes1995", "
             ("zhao2021", "iAIPs: Identifying Anti-Inflammatory Peptides Using Random Forest", "Zhao", 2021),
             ("zhang2021", "AIEpred: An Ensemble Predictive Model of Classifier Chain to Identify Anti-Inflammatory Peptides", "Zhang", 2021),
             ("gaffar2024", "IF-AIP: A machine learning method for the identification of anti-inflammatory peptides using multi-feature fusion strategy", "Gaffar", 2024),
-            ("wang2026", "AIPFusion-Net: an interaction-fusion framework for anti-inflammatory peptide prediction using protein language model embeddings, local sequence patterns, and handcrafted descriptors", "Wang", 2026)]
+            ("wang2026", "AIPFusion-Net: an interaction-fusion framework for anti-inflammatory peptide prediction using protein language model embeddings, local sequence patterns, and handcrafted descriptors", "Wang", 2026),
+            ("delgado2001", "Vasoactive intestinal peptide prevents experimental arthritis by downregulating both autoimmune and inflammatory components of the disease", "Delgado", 2001),
+            ("gonzalez2005", "Modulating bladder neuro-inflammation: RDP58, a novel anti-inflammatory peptide, decreases inflammation and nerve growth factor production in experimental cystitis", "Gonzalez", 2005)]
 
 def parse(url, title, fam, year):
     t = text(url).replace("\xa0", " ")
