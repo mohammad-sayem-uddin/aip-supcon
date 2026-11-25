@@ -145,9 +145,14 @@ def section_completion() -> str:
         out.append(f"**Task 2.1 outcome: the differential-gap claim is SUPPORTED, not weakened.** Mean leakage gap (MCC, Regime A minus B) of the 32 flexible non-linear models minus the 3 linear models: {r['diff']:+.3f} (95% interval {r['lo']:+.3f} to {r['hi']:+.3f}; BH-adjusted p {r['p_BH_within_scope']:.4f}; model-level Mann-Whitney p {r['p_mannwhitney_models']:.3f}). "
                    f"Within the frozen-MLP checkpoints the gap does not rise with size (slope {sl['diff']:+.3f} MCC per decade of parameters, interval {sl['lo']:+.3f} to {sl['hi']:+.3f}). One clause was not supported and was corrected: gradient-boosted trees are not among the smallest gaps (LightGBM +0.051 above linear, 0.136 below random forest).\n")
     out.append("**Final submission checklist**\n")
-    out.append("*Needs the author personally*\n\n- Rewrite the stale passages listed in `NUMBERS_CHANGED.md` (sections 1 to 3), then rebuild every chapter twice in order and re-check the page count in Word.\n- Create a permanent archive of the repository (for example a Zenodo DOI) and put it in Section 4.6.\n- Decide whether to insert Figures 5.9b, F1, F5 (and 5.11 when the scale run is in).\n- Obtain, if wanted, IF-AIP and AIEpred full texts (not open access) and the AIPStack datasets (lead contact) to close the TODO cells of Table 5.16.\n- Run `python -m src.v2.finish_completion fetch` and `analyse` until the Kaggle kernels are integrated, then update Sections 5.6 and 5.9.3 and the Chapter 6 answer to Objective 4 with the scale results.\n- Read the three weakest points above with your supervisor; confirm the pre-registration wording.\n- Open the .docx files in Word and check equations, tables and figure placement; the build was checked only through LibreOffice and the Office schema validator.\n")
+    out.append("*Needs the author personally*\n\n- Re-check the page count in Word after the final rebuild. (The stale passages of `NUMBERS_CHANGED.md` sections 1 to 3 were rewritten on 2026-11-26.)\n- Create a permanent archive of the repository (for example a Zenodo DOI) and put it in Section 4.6.\n- Figures 5.9b, F1 and F5 are inserted (Sections 5.6.3 and 5.9.3); Figure 5.11 appears by itself when the scale run is integrated.\n- Obtain, if wanted, IF-AIP and AIEpred full texts (not open access) and the AIPStack datasets (lead contact) to close the TODO cells of Table 5.16.\n- Run `python -m src.v2.finish_completion fetch` and `analyse` until the Kaggle kernels are integrated, then rewrite the sentences listed in section 12 below.\n- Read the three weakest points above with your supervisor; confirm the pre-registration wording.\n- Open the .docx files in Word and check equations, tables and figure placement; the build was checked only through LibreOffice and the Office schema validator.\n")
     out.append("*Complete*\n\n- Chapters 1 to 6, abstract (250 words) and reference list built from reproducible scripts; all citations verified against CrossRef, arXiv or the publisher page; Table 5.16 transcribed from full-text tables with source and table number per value; differential leakage gap tested; AIPFusion-Net data identity measured; bibliography closed except two preprints.\n")
     return "\n".join(out)
+
+
+def section_pending() -> str:
+    nf = ROOT / "src" / "thesis" / "pending_kaggle_notes.md"
+    return nf.read_text() if nf.exists() else "_missing_"
 
 
 def build() -> str:
@@ -176,6 +181,7 @@ def build() -> str:
         "## 9. NEXT ACTIONS\n\n" + nxt,
         "## 10. THESIS WRITING STATUS (overnight run, part 2)\n\n" + section_thesis(),
         "## 11. COMPLETION RUN\n\n" + section_completion(),
+        "## 12. WHEN THE KAGGLE RESULTS EXIST: WHAT TO RUN AND WHAT TO REWRITE\n\n" + section_pending(),
         "## Appendix: LEAKAGE_FINDING.md (verbatim)\n\n" + leak,
     ]
     return "\n".join(parts)

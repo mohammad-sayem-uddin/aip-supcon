@@ -1,0 +1,22 @@
+**What `PYTHONPATH=. .venv/bin/python -m src.v2.finish_completion fetch` and then `analyse` do with no further work:** download the finished kernels, push `aip-ft-s650b-gpu` when a GPU slot is free, merge the fine-tuning outputs into `results/tables/T5.13a/b/c` and `T5.11d`, draw `figures/fig5_11_finetune_scale.png`, run the ProtBERT/ProtT5 models (`T5.14a`, `T5.14`). The table stubs are header-only files until then. After `analyse`, rebuild the chapters twice (`node ch5.js` etc., in order): Section 5.6.4 of `ch5.js` then fills itself with five tables and Figure 5.11 and its TODO markers disappear. No prose is generated.
+
+**Chapter sentences that must be rewritten once the numbers exist** (each is true for the 8M model only, or says the experiment was not done):
+
+| Where (script, section) | Sentence or claim | What changes |
+|---|---|---|
+| `ch5.js` 5.6, "Principal result" paragraph | fine-tuned 8M is above the frozen 650M model "which has 80 times more parameters" | add whether fine-tuned 150M and 650M are higher still: this settles adaptation versus scale |
+| `ch5.js` 5.6.3, second paragraph | "fine-tuning was done for the 8M model only ... one hyperparameter setting and three repetition seeds"; "adaptation matters, not ESM-2 outperforms composition" | the 8M-only qualification goes if 150M and 650M finish; the conclusion may strengthen or change |
+| `ch5.js` 5.9.3 and 5.9.4 | "fine-tuning closed most of it on one test set"; "the only one that moved the leakage-free score materially" | restate with the scale axis |
+| `ch5.js` 5.10 limitation 4 | "Fine-tuning is limited to the 8M model" | remove or narrow |
+| `ch5.js` 5.4.3 and `src/v2/gap_tests.py` | the fine-tuned family has one model | add the 150M and 650M fine-tuned models to `FAMILY` in `gap_tests.py`, rerun, and update Table 5.x of the gap contrasts and the text that quotes them |
+| `ch5.js` intro, "126 comparisons were corrected globally" | count | `T5.11d_global_BH_with_scale.csv` gives the adjusted p-values with the new tests added; decide whether to report the 126 or the enlarged count, and fix every quoted adjusted p-value in the chapters |
+| `ch6.js` 6.1 Objective 4 | "Fine-tuning the 8M model raised ... above the frozen 650M model, which has about 80 times more parameters" | add the 150M and 650M results |
+| `ch6.js` 6.2 contribution 3 | "end-to-end fine-tuning of a small model recovers part of it and exceeds a frozen model 80 times larger" | same |
+| `ch6.js` 6.3 third limitation; 6.4 future-work items "Fine-tuning at larger scale" and "Other protein language models and peptide families" | "one small model with one hyperparameter setting"; the two items as future work | drop the parts that were done (C4 ProtBERT/ProtT5; 150M and 650M); D3 (AMP/ACP) remains future work |
+| `ch1.js` contribution paragraph on representation; Objective 4 | "end-to-end fine-tuning of the language model" and the 8M-based finding | add scale and, if C4 finishes, the other language models |
+| `abstract.js`, last sentences | "fine-tuning the small 8M model recovered part of the gap" | the abstract is exactly 250 words: keep the count |
+| `ch4.js` 4.2 (Tables 4.2 and 4.3), 4.4 fine-tuning paragraph, 4.7 deviations, 4.1 hardware | no rows for the scale kernels and the CPU embedding kernels; "three planned elements were not completed: ... comparison with other protein language models ..."; fine-tuning protocol stated for 8M | add the kernel runtimes (`results/v2/kaggle_runtimes.csv` is rebuilt by `ch5_data.py`), the device rows, and remove the C4 item from the "not completed" list |
+| `ch3.js` 3.5.2, 3.5.3 | embedding table and fine-tuning protocol cover ESM-2 only and the 8M model | add ProtBERT and ProtT5 rows and the 150M and 650M fine-tuning settings (same protocol; AdamW with `foreach=False`, weights matched to the official sha256 before use) |
+| bibliography | ProtBERT and ProtT5 are cited nowhere yet | add Elnaggar et al. (ProtTrans, IEEE TPAMI 2022) to `CROSSREF` in `build_bib2.py` (match on CrossRef) and cite it in 5.6.4 and Chapter 3 |
+| `INTERPRETATION_v2.md` section 3 (C3) and weakest point 2; `BLOCKERS_v2.md` | "only 8M was fine-tuned"; C4 not attempted | update |
+| table and figure numbers | Section 5.6.4 adds up to five tables and one figure, so later numbers in Chapter 5 shift | references use labels and follow automatically; text that quotes "Table 5.16" by number (`CITATIONS_TO_VERIFY.md`, `NUMBERS_CHANGED.md`) does not |

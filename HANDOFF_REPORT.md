@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T15:44:22 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-25T17:24:56 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -250,14 +250,14 @@ v1 files:
 | results/stats_tests.csv | 54 | DeLong, McNemar and paired-bootstrap CIs, lambda>0 vs lambda=0 |
 | results/stats_per_seed.csv | 270 | Per-seed paired differences and DeLong p-values |
 | results/bootstrap_cis.csv | 78 | 95% bootstrap CIs for AUROC and MCC of every final model |
-| results/tables/ | 50 | Thesis tables as CSV + LaTeX |
+| results/tables/ | 53 | Thesis tables as CSV + LaTeX |
 | results/predictions/ | 114 | Per-sample predictions |
 | results/latents/ | 26 | Latent vectors for t-SNE |
 | results/models/ | 66 | Final model weights + scalers |
 
 ## 6. FIGURES
 
-fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.png, fig5_11_finetune_scale.png, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png, figF5_length_stratified.png
+fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png, figF5_length_stratified.png
 
 v1 figure status:
 
@@ -276,7 +276,7 @@ v1 figure status:
 | F5.6 confusion matrices | ok: figures/fig5_6_confusion_matrices.pdf, figures/fig5_6_confusion_matrices.png |
 | FA training curves | ok: figures/figA_training_curves.pdf, figures/figA_training_curves.png |
 
-Files in figures/: fig3_1_dataset_lineage.pdf, fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.pdf, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.pdf, fig5_10_cross_benchmark_heatmap.png, fig5_11_finetune_scale.pdf, fig5_11_finetune_scale.png, fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.pdf, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.pdf, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.pdf, fig5_9b_fusion_finetune.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png, figF5_length_stratified.pdf, figF5_length_stratified.png
+Files in figures/: fig3_1_dataset_lineage.pdf, fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.pdf, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.pdf, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.pdf, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.pdf, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.pdf, fig5_9b_fusion_finetune.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png, figF5_length_stratified.pdf, figF5_length_stratified.png
 
 ## 7. BLOCKERS
 
@@ -535,18 +535,20 @@ Ranked, most important first:
 | Abstract | complete | 1 | 0 | 0 | 0 | 0 | 0 |
 | Chapter 1 Introduction | complete | 4 | 0 | 0 | 7 | 0 | 0 |
 | Chapter 2 Literature Review | complete | 4 | 0 | 0 | 10 | 0 | 0 |
-| Chapter 3 Materials and Methods | complete | 20 | 18 | 2 | 26 | 0 | 0 |
+| Chapter 3 Materials and Methods | complete | 21 | 19 | 2 | 27 | 0 | 0 |
 | Chapter 4 Implementation and Experimental Setup | complete (with TODO) | 6 | 4 | 0 | 5 | 1 | 0 |
-| Chapter 5 Results and Discussion | complete (with TODO) | 27 | 17 | 6 | 10 | 1 | 0 |
+| Chapter 5 Results and Discussion | complete (with TODO) | 31 | 18 | 9 | 10 | 3 | 0 |
 | Chapter 6 Conclusions and Future Work | complete | 4 | 0 | 0 | 0 | 0 | 0 |
 
 
-**Total rendered length: 70 pages** including the references (4 pages), US Letter, 11 pt, as rendered by LibreOffice; check the page count in Word.
+**Total rendered length: 75 pages** including the references (4 pages), US Letter, 11 pt, as rendered by LibreOffice; check the page count in Word.
 
 **Remaining TODOs and what closes them**
 
 - Chapter 4 Implementation and Experimental Setup: a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account
-- Chapter 5 Results and Discussion: fill the TODO cells of Table 5.16 from the full texts of the four papers (AUROC and MCC on the independent set, with the training collection each paper used), and state for each whether its training collection includes sequences of the independent set
+- Chapter 5 Results and Discussion: results of fine-tuning the 150M and 650M checkpoints are not yet in results/tables/T5.13*; run python -m src.v2.finish_completion fetch and analyse, then rebuild this chapter
+- Chapter 5 Results and Discussion: results for ProtBERT and ProtT5 are not yet in results/tables/T5.14*; run python -m src.v2.finish_completion fetch and analyse, then rebuild this chapter
+- Chapter 5 Results and Discussion: the own figures of IF-AIP and AIEpred and the SN and SP of AIPStack: need full texts that are not open access, or the data behind a figure
 - Table 5.16 is intentionally TODO beyond the abstract-level figures: needs the full texts of AntiInflam, AIPpred, PreAIP and AIPStack (the PreAIP and AIPStack pages could not be read automatically).
 - Figures 5.9b, F1 and F5 are not in the thesis (raw model keys as labels / overlapping legend): regenerate with readable labels if wanted.
 - Chapters 1 and 2 are short (4 pages each) because only verified sources are used: add literature only from papers you can verify, then add them to `CANDIDATES` in `src/thesis/build_bib.py`.
@@ -578,7 +580,7 @@ Ranked, most important first:
 | 2 | 2.2 Fine-tune 150M and 650M (Kaggle) | NOT DONE (kernels may still be running; see BLOCKERS_v2.md) | `src/v2/finish_completion.py`, `T5.13*` |
 | 2 | 2.3 Table 5.16 filled | DONE except IF-AIP, AIEpred own figures and AIPStack SN/SP (TODO, no source) | `T5_7_published_reported.csv` |
 | 2 | 2.4 AIPStack and AIPFusion-Net retry | AIPFusion-Net DONE (files byte-identical to ours); AIPStack independent sets NOT obtainable | `aipfusion_repo_check.csv`, `BLOCKERS_v2.md` |
-| 3 | 3.1 C4 ProtBERT and ProtT5 | NOT DONE (kernels may still be running) | `src/v2/phaseC4.py`, `T5.14*` |
+| 3 | 3.1 C4 ProtBERT and ProtT5 | DONE (kernels may still be running) | `src/v2/phaseC4.py`, `T5.14*` |
 | 3 | 3.2 D3 AMP / ACP | NOT DONE (needs a verified benchmark and the Phase A audit first) | `BLOCKERS_v2.md` |
 
 **Task 2.1 outcome: the differential-gap claim is SUPPORTED, not weakened.** Mean leakage gap (MCC, Regime A minus B) of the 32 flexible non-linear models minus the 3 linear models: +0.135 (95% interval +0.100 to +0.170; BH-adjusted p 0.0009; model-level Mann-Whitney p 0.023). Within the frozen-MLP checkpoints the gap does not rise with size (slope -0.008 MCC per decade of parameters, interval -0.029 to +0.012). One clause was not supported and was corrected: gradient-boosted trees are not among the smallest gaps (LightGBM +0.051 above linear, 0.136 below random forest).
@@ -587,17 +589,42 @@ Ranked, most important first:
 
 *Needs the author personally*
 
-- Rewrite the stale passages listed in `NUMBERS_CHANGED.md` (sections 1 to 3), then rebuild every chapter twice in order and re-check the page count in Word.
+- Re-check the page count in Word after the final rebuild. (The stale passages of `NUMBERS_CHANGED.md` sections 1 to 3 were rewritten on 2026-11-26.)
 - Create a permanent archive of the repository (for example a Zenodo DOI) and put it in Section 4.6.
-- Decide whether to insert Figures 5.9b, F1, F5 (and 5.11 when the scale run is in).
+- Figures 5.9b, F1 and F5 are inserted (Sections 5.6.3 and 5.9.3); Figure 5.11 appears by itself when the scale run is integrated.
 - Obtain, if wanted, IF-AIP and AIEpred full texts (not open access) and the AIPStack datasets (lead contact) to close the TODO cells of Table 5.16.
-- Run `python -m src.v2.finish_completion fetch` and `analyse` until the Kaggle kernels are integrated, then update Sections 5.6 and 5.9.3 and the Chapter 6 answer to Objective 4 with the scale results.
+- Run `python -m src.v2.finish_completion fetch` and `analyse` until the Kaggle kernels are integrated, then rewrite the sentences listed in section 12 below.
 - Read the three weakest points above with your supervisor; confirm the pre-registration wording.
 - Open the .docx files in Word and check equations, tables and figure placement; the build was checked only through LibreOffice and the Office schema validator.
 
 *Complete*
 
 - Chapters 1 to 6, abstract (250 words) and reference list built from reproducible scripts; all citations verified against CrossRef, arXiv or the publisher page; Table 5.16 transcribed from full-text tables with source and table number per value; differential leakage gap tested; AIPFusion-Net data identity measured; bibliography closed except two preprints.
+
+## 12. WHEN THE KAGGLE RESULTS EXIST: WHAT TO RUN AND WHAT TO REWRITE
+
+**What `PYTHONPATH=. .venv/bin/python -m src.v2.finish_completion fetch` and then `analyse` do with no further work:** download the finished kernels, push `aip-ft-s650b-gpu` when a GPU slot is free, merge the fine-tuning outputs into `results/tables/T5.13a/b/c` and `T5.11d`, draw `figures/fig5_11_finetune_scale.png`, run the ProtBERT/ProtT5 models (`T5.14a`, `T5.14`). The table stubs are header-only files until then. After `analyse`, rebuild the chapters twice (`node ch5.js` etc., in order): Section 5.6.4 of `ch5.js` then fills itself with five tables and Figure 5.11 and its TODO markers disappear. No prose is generated.
+
+**Chapter sentences that must be rewritten once the numbers exist** (each is true for the 8M model only, or says the experiment was not done):
+
+| Where (script, section) | Sentence or claim | What changes |
+|---|---|---|
+| `ch5.js` 5.6, "Principal result" paragraph | fine-tuned 8M is above the frozen 650M model "which has 80 times more parameters" | add whether fine-tuned 150M and 650M are higher still: this settles adaptation versus scale |
+| `ch5.js` 5.6.3, second paragraph | "fine-tuning was done for the 8M model only ... one hyperparameter setting and three repetition seeds"; "adaptation matters, not ESM-2 outperforms composition" | the 8M-only qualification goes if 150M and 650M finish; the conclusion may strengthen or change |
+| `ch5.js` 5.9.3 and 5.9.4 | "fine-tuning closed most of it on one test set"; "the only one that moved the leakage-free score materially" | restate with the scale axis |
+| `ch5.js` 5.10 limitation 4 | "Fine-tuning is limited to the 8M model" | remove or narrow |
+| `ch5.js` 5.4.3 and `src/v2/gap_tests.py` | the fine-tuned family has one model | add the 150M and 650M fine-tuned models to `FAMILY` in `gap_tests.py`, rerun, and update Table 5.x of the gap contrasts and the text that quotes them |
+| `ch5.js` intro, "126 comparisons were corrected globally" | count | `T5.11d_global_BH_with_scale.csv` gives the adjusted p-values with the new tests added; decide whether to report the 126 or the enlarged count, and fix every quoted adjusted p-value in the chapters |
+| `ch6.js` 6.1 Objective 4 | "Fine-tuning the 8M model raised ... above the frozen 650M model, which has about 80 times more parameters" | add the 150M and 650M results |
+| `ch6.js` 6.2 contribution 3 | "end-to-end fine-tuning of a small model recovers part of it and exceeds a frozen model 80 times larger" | same |
+| `ch6.js` 6.3 third limitation; 6.4 future-work items "Fine-tuning at larger scale" and "Other protein language models and peptide families" | "one small model with one hyperparameter setting"; the two items as future work | drop the parts that were done (C4 ProtBERT/ProtT5; 150M and 650M); D3 (AMP/ACP) remains future work |
+| `ch1.js` contribution paragraph on representation; Objective 4 | "end-to-end fine-tuning of the language model" and the 8M-based finding | add scale and, if C4 finishes, the other language models |
+| `abstract.js`, last sentences | "fine-tuning the small 8M model recovered part of the gap" | the abstract is exactly 250 words: keep the count |
+| `ch4.js` 4.2 (Tables 4.2 and 4.3), 4.4 fine-tuning paragraph, 4.7 deviations, 4.1 hardware | no rows for the scale kernels and the CPU embedding kernels; "three planned elements were not completed: ... comparison with other protein language models ..."; fine-tuning protocol stated for 8M | add the kernel runtimes (`results/v2/kaggle_runtimes.csv` is rebuilt by `ch5_data.py`), the device rows, and remove the C4 item from the "not completed" list |
+| `ch3.js` 3.5.2, 3.5.3 | embedding table and fine-tuning protocol cover ESM-2 only and the 8M model | add ProtBERT and ProtT5 rows and the 150M and 650M fine-tuning settings (same protocol; AdamW with `foreach=False`, weights matched to the official sha256 before use) |
+| bibliography | ProtBERT and ProtT5 are cited nowhere yet | add Elnaggar et al. (ProtTrans, IEEE TPAMI 2022) to `CROSSREF` in `build_bib2.py` (match on CrossRef) and cite it in 5.6.4 and Chapter 3 |
+| `INTERPRETATION_v2.md` section 3 (C3) and weakest point 2; `BLOCKERS_v2.md` | "only 8M was fine-tuned"; C4 not attempted | update |
+| table and figure numbers | Section 5.6.4 adds up to five tables and one figure, so later numbers in Chapter 5 shift | references use labels and follow automatically; text that quotes "Table 5.16" by number (`CITATIONS_TO_VERIFY.md`, `NUMBERS_CHANGED.md`) does not |
 
 ## Appendix: LEAKAGE_FINDING.md (verbatim)
 

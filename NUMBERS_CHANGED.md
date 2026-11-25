@@ -1,5 +1,7 @@
 # NUMBERS_CHANGED (completion run)
 
+**Update 2026-11-26 (second pass):** the stale passages of sections 1 to 3 below were rewritten: Section 5.4.3 now reports the gap test (with a contrast table), Section 5.7 prose and the Chapter 1 sentence on published figures are rewritten, Chapter 6 limitation 5 and future-work item 1 were adjusted to match, Figures 5.9b, F1 and F5 are inserted with captions, and Chapter 3 Section 3.2.2 carries the AIPFusion-Net SHA-256 result. What is still open is section 5 (the Kaggle runs); the sentences to rewrite when those numbers exist are listed in HANDOFF_REPORT.md section 12.
+
 Everything in the chapters that this run invalidated or made stale. Nothing here was silently rewritten, except where the run's rules asked for it (the repository address in Chapter 4, and the two wording corrections in section 1). Chapter scripts are in `src/thesis/`; after you edit them, build each chapter twice in the order 1 to 6 (`NODE_PATH=/private/tmp/ch3build/node_modules node chN.js`).
 
 ## 1. Differential leakage gaps (task 2.1) — new test, two wording corrections already applied
