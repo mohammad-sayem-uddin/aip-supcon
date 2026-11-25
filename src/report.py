@@ -37,6 +37,13 @@ def md(df: pd.DataFrame) -> str:
 
 
 def _stage_info(name: str) -> tuple[str, float, str]:
+    if name == "S11":
+        parts = sorted((R / ".stages").glob("S11_*.json"))
+        if not parts:
+            return "skipped", 0.0, "not reached"
+        infos = [json.loads(p.read_text()) for p in parts]
+        status = "complete" if len(infos) == 2 and all(i["status"] == "complete" for i in infos) else "partial"
+        return status, sum(i["wall_seconds"] for i in infos), "; ".join(f"{i['stage'][4:]}: {i['status']}" for i in infos)
     if name == "S3":
         parts = sorted((R / ".stages").glob("S3_*.json"))
         if not parts:

@@ -206,3 +206,14 @@ def compare_models(model_a: str, model_b: str, test_set: str, regime: str = "B",
         "mcnemar_stat": stat, "mcnemar_p": p_mcn,
         "acc_a": float((ya == y).mean()), "acc_b": float((yb == y).mean()),
     }
+
+
+if __name__ == "__main__":
+    import argparse
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--build-tables", action="store_true")
+    a = ap.parse_args()
+    if a.build_tables:
+        from src.tables import build_all
+        raise SystemExit(build_all())

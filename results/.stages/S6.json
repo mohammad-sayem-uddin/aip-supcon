@@ -1,0 +1,7 @@
+{
+  "stage": "S6",
+  "status": "complete",
+  "wall_seconds": 267.567440032959,
+  "notes": "models: AAC_SVM, AAC_RF, AAC_DPC_CTD_LGBM, esm2_t6_8M_LR, esm2_t12_35M_LR, esm2_t30_150M_LR",
+  "finished_at": "2026-11-25T07:29:10"
+}
