@@ -22,7 +22,7 @@ Every number is copied from `results/*.csv` and `results/tables/` (T5.8-T5.11, T
 - **Nested CV (outer 5 x 5, inner 3-fold lambda selection):** outer MCC 0.2210 at lambda 0 versus 0.2097 with the selected lambda, difference -0.0113 (95% CI -0.0233 to +0.0008, n = 25); the selected lambda varied across folds (0.5 in 7, 2.0 in 6, 0.25 in 5, 1.0 in 4, 0.1 in 3).
 - **What does exist.** In-distribution 5 x 5 CV shows a small positive gain at lambda 2 in 5 of 6 architectures (+0.003 to +0.014 MCC; largest B5 Transformer +0.0136, d_z 0.55, and B6 +0.0120). These intervals treat 25 overlapping folds as independent, so they are optimistic, and the gain does not appear on the independent sets.
 - **Power.** The minimum detectable effect (80% power, paired) is about 0.14 MCC / 0.046 AUROC on Ind_425 Regime B (n = 214) and about 0.08 MCC / 0.029 AUROC on Ind_1049 (n = 751) (`POWER_ANALYSIS.md`). The cross-validation gains (0.005 to 0.014) are far below that, so the independent sets can neither confirm nor exclude them. The correct statement is "no effect larger than about 0.08-0.14 MCC was detectable", not "no effect".
-- **Seed variance exceeds the effects.** The SD of the per-seed MCC difference is 0.02-0.17 across comparisons (T5.11b), larger than any mean difference.
+- **Seed variance exceeds the effects.** The SD of the per-seed MCC difference is 0.015-0.247 across all comparisons of T5.11b, larger than any mean difference.
 
 ## 3. Why does AAC beat ESM-2? Which of C1-C3 settled it?
 

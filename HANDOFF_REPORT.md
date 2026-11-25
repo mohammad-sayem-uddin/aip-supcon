@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T13:58:52 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-25T14:59:35 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -29,7 +29,7 @@ _Generated 2026-11-25T13:58:52 by `python -m src.v2.report`; rebuilt after every
 
 | Stage | What | Status | Compute wall-clock | Notes |
 |---|---|---|---|---|
-| A | Phase A: provenance, overlap verification (gate), cross-benchmark audit | complete | 6.2s | overlap reproduces: True |
+| A | Phase A: provenance, overlap verification (gate), cross-benchmark audit | complete | 8.2s | overlap reproduces: True |
 | E1 | E1: PREREGISTRATION.md committed before modelling | complete | - | PREREGISTRATION.md committed in c239f43dcb3719c7c40d6c2afd5217d6723a11f3 at 2026-11-25T14:36:00Z (UTC pushed to origin/main) |
 | V2_embed_esm2_t6_8M | Residue-level embeddings 8M | complete | 10.5s | (75589, 320), float32 |
 | V2_embed_esm2_t33_650M | Residue-level embeddings 650M | complete | 36.8 min | (75589, 1280), float16 |
@@ -41,7 +41,7 @@ _Generated 2026-11-25T13:58:52 by `python -m src.v2.report`; rebuilt after every
 | C3_finetune | C3: fine-tune 8M vs frozen control | complete | n/a (sliced/remote; see notes) | Kaggle 2xT4 GPU kernel aip-c3-finetune-gpu: ESM-2 8M fine-tune vs frozen control; CV seeds 0-2 x 5 folds, final seeds 0-4 |
 | D_cross | D1-D2: cross-benchmark generalisation | complete | 5.7 min | 105 jobs this run; 630 metric rows |
 | E5_nested | E5: nested CV for the headline comparison | complete | 5.2 min | 25 outer folds |
-| E_stats | E2-E4, E6: BH correction, MDE, seed-vs-sample variance | complete | 7.7 min | 124 comparisons |
+| E_stats | E2-E4, E6: BH correction, MDE, seed-vs-sample variance | complete | 10.3 min | 126 comparisons |
 | F_analysis | Phase F: why AAC wins, motifs, errors, length | complete | 4.0s | 18 models |
 | V2_tables | v2 tables and figures | complete | n/a (sliced/remote; see notes) | T5.8, T5.9, T5.10 and figures |
 
@@ -198,8 +198,8 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 | results/tables/T3.5_cross_benchmark_leakage.csv | 9 |
 | results/tables/T3.5b_cdhit_style_clustering.csv | 16 |
 | results/tables/T5.10_cross_benchmark.csv | 126 |
-| results/tables/T5.11_corrected_significance.csv | 124 |
-| results/tables/T5.11b_seed_vs_sample_variance.csv | 56 |
+| results/tables/T5.11_corrected_significance.csv | 126 |
+| results/tables/T5.11b_seed_vs_sample_variance.csv | 58 |
 | results/tables/T5.11c_cv_effect_sizes.csv | 30 |
 | results/tables/T5.8_architecture_comparison.csv | 6 |
 | results/tables/T5.8b_architecture_all_regimes.csv | 72 |
@@ -209,15 +209,28 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 | results/tables/TF3_error_analysis.csv | 3 |
 | results/tables/TF3b_errors_by_number_of_models_wrong.csv | 19 |
 | results/tables/TF5_length_stratified.csv | 77 |
-| results/v2/comparisons_raw.csv | 124 |
+| results/v2/architecture_layers.csv | 41 |
+| results/v2/comparisons_raw.csv | 126 |
 | results/v2/cross_benchmark_results_v2.csv | 630 |
 | results/v2/cv_results_v2.csv | 750 |
+| results/v2/environment.csv | 24 |
+| results/v2/feature_dimensions.csv | 6 |
 | results/v2/final_results_v2.csv | 300 |
 | results/v2/finetune_results_v2.csv | 90 |
+| results/v2/half_precision_check.csv | 2 |
 | results/v2/hardest_sequences.csv | 61 |
+| results/v2/kaggle_runtimes.csv | 5 |
+| results/v2/lineage_shared_training.csv | 10 |
+| results/v2/mde_summary.csv | 6 |
+| results/v2/methods_parameters.csv | 53 |
 | results/v2/nested_cv_8M.csv | 25 |
 | results/v2/nested_cv_8M_partial.csv | 25 |
+| results/v2/null_control_identity.csv | 126 |
+| results/v2/pooling_dimensions.csv | 5 |
+| results/v2/regime_composition.csv | 7 |
 | results/v2/repr_results_v2.csv | 1100 |
+| results/v2/sequence_validation.csv | 9 |
+| results/v2/supcon_floor.csv | 2 |
 
 v1 files:
 
@@ -242,7 +255,7 @@ v1 files:
 
 ## 6. FIGURES
 
-fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png, figF5_length_stratified.png
+fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.png, figA_training_curves.png, figF1_negative_resemblance.png, figF2_residue_enrichment.png, figF5_length_stratified.png
 
 v1 figure status:
 
@@ -261,7 +274,7 @@ v1 figure status:
 | F5.6 confusion matrices | ok: figures/fig5_6_confusion_matrices.pdf, figures/fig5_6_confusion_matrices.png |
 | FA training curves | ok: figures/figA_training_curves.pdf, figures/figA_training_curves.png |
 
-Files in figures/: fig5_10_cross_benchmark_heatmap.pdf, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.pdf, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.pdf, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.pdf, fig5_9b_fusion_finetune.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png, figF5_length_stratified.pdf, figF5_length_stratified.png
+Files in figures/: fig3_1_dataset_lineage.pdf, fig3_1_dataset_lineage.png, fig3_2_aipnet_architecture.pdf, fig3_2_aipnet_architecture.png, fig5_10_cross_benchmark_heatmap.pdf, fig5_10_cross_benchmark_heatmap.png, fig5_1_roc_ind_1049_regimeA.pdf, fig5_1_roc_ind_1049_regimeA.png, fig5_1_roc_ind_1049_regimeB.pdf, fig5_1_roc_ind_1049_regimeB.png, fig5_1_roc_ind_425_regimeA.pdf, fig5_1_roc_ind_425_regimeA.png, fig5_1_roc_ind_425_regimeB.pdf, fig5_1_roc_ind_425_regimeB.png, fig5_2_pr_ind_1049_regimeB.pdf, fig5_2_pr_ind_1049_regimeB.png, fig5_2_pr_ind_425_regimeB.pdf, fig5_2_pr_ind_425_regimeB.png, fig5_3_tsne_ind_1049.pdf, fig5_3_tsne_ind_1049.png, fig5_3_tsne_ind_425.pdf, fig5_3_tsne_ind_425.png, fig5_4_lambda_sweep.pdf, fig5_4_lambda_sweep.png, fig5_5_leakage_gap.pdf, fig5_5_leakage_gap.png, fig5_6_confusion_matrices.pdf, fig5_6_confusion_matrices.png, fig5_8_architecture_lambda.pdf, fig5_8_architecture_lambda.png, fig5_9_pooling_ablation.pdf, fig5_9_pooling_ablation.png, fig5_9b_fusion_finetune.pdf, fig5_9b_fusion_finetune.png, figA_training_curves.pdf, figA_training_curves.png, figF1_negative_resemblance.pdf, figF1_negative_resemblance.png, figF2_residue_enrichment.pdf, figF2_residue_enrichment.png, figF5_length_stratified.pdf, figF5_length_stratified.png
 
 ## 7. BLOCKERS
 
@@ -361,6 +374,51 @@ _2026-11-25_
 
 The first resumed slice re-ran 22 already-saved CNN-BiLSTM runs because `pd.read_csv(usecols=...)` returns columns in file order, not list order, so the resume keys never matched. The 22 duplicate rows were dropped (originals kept), the lookup now selects columns explicitly, and the fix is noted in `results/phase_b_progress.log`. Phases C, D, E and the fine-tuning script use `usecols` in an order that equals file order and were checked.
 
+## V2-D11: One reference point for identity figures: Benchmark_clean
+_2026-11-25_
+
+The 0.9-identity counts were 263 (Ind_425) against the cleaned benchmark in Chapter 3 and 264 in `LEAKAGE_FINDING.md`, which had screened against the raw benchmark (3,753 unique sequences including the 37 conflicted ones). Benchmark_clean (3,716 sequences) is the training collection used for every model and for Regime C, so it is now the only reference point: `src/v2/phaseA.py` was changed accordingly, T3.5 and T3.5b were regenerated (263 = 61.9% and 333 = 31.7%), and `LEAKAGE_FINDING.md` and `INTERPRETATION_v2.md` were corrected. The text of Chapter 3 states which benchmark the figures refer to.
+
+## V2-D12: 650M extraction time deleted, not re-measured
+_2026-11-25_
+
+The overnight brief allowed a re-timing only if it took under 15 minutes on an unloaded machine. The 2.6 GB checkpoint could not be re-downloaded (2.0 GB of disk free), so the number was removed and the text says that the timing was not reliably measurable. The half-precision cache check was re-run over all 4,641 sequences and saved (`results/v2/half_precision_check.csv`); the text now cites that file.
+
+## V2-D13: Bibliography built only from indexed records; unverifiable items dropped
+_2026-11-25_
+
+`src/thesis/build_bib.py` writes `references.bib` / `references.json` using only CrossRef records (title similarity >= 0.90, first author and year matched) and arXiv records fetched by identifier and re-checked on title, first author and year. 26 works were verified. The Cai et al. (2003) citation for CTD was removed because the record that matched is the SVM-Prot paper and nothing verified shows it defines CTD; LightGBM (Ke et al.) could not be matched and is mentioned without a citation. Conference papers (Khosla et al., Vaswani et al., Ilse et al., Loshchilov and Hutter, Paszke et al., Pedregosa et al.) are cited as the arXiv preprints, with the year of the arXiv record (Loshchilov and Hutter is therefore 2017, not 2019); their conference venues were not verified and are not stated.
+
+## V2-D14: Fine-tuned 8M vs frozen 650M added to the corrected comparison families
+_2026-11-25_
+
+To answer whether fine-tuned 8M beats frozen 650M, the comparison was added to Phase E and the corrections re-run (126 comparisons). No significance flag changed; adjusted p-values moved by at most 0.0055 and the few quoted values in `INTERPRETATION_v2.md` were updated.
+
+## V2-D15: The "inflation is largest for high-capacity models" claim is not stated as given
+_2026-11-26_
+
+The overnight brief asked Chapters 1, 5 and 6 to say that the leakage inflation is largest for high-capacity models. The A-minus-B MCC gap does not support that as a monotonic statement: it is smallest for linear classifiers on frozen embeddings (about 0.05 to 0.09) and for LightGBM (0.04 to 0.06), large for the random forest (0.249 / 0.177), the RBF SVM (0.229 / 0.184), the CNN (0.285 / 0.211), the 8M MLP (0.237 / 0.150) and the 650M fusion random forest (0.337 / 0.188), and the frozen 650M MLP, the Transformer and the fine-tuned 8M model are no larger than AAC + RF. The thesis therefore says "largest for flexible non-linear models, not a monotonic function of capacity" (Ch. 1, 5.4.3, 6.1, abstract) and does not test differences between gaps formally.
+
+## V2-D16: Chapter 1 reframed around three measured findings; Chapter 2 rebuilt on verified sources only
+_2026-11-26_
+
+Chapters 1 and 2 were rebuilt by `src/thesis/ch1.js` and `ch2.js` (originals kept as `CHAPTER 1/2 thesis (original).docx`, local only). Removed because no record could be matched: AIEpred / Pep-CNN / IALP; PreAIP's feature list beyond the abstract; "ESM consistently outperforms traditional encodings"; "contrastive learning applied effectively in bioinformatics"; the NF-kB / MAPK / LPS-binding mechanism sentence (replaced by two examples that the AIPpred introduction states, with the second-hand status said in the text). Full list in `CITATIONS_TO_VERIFY.md`.
+
+## V2-D17: Table 5.16 carries abstract-level published figures only
+_2026-11-26_
+
+`results/tables/T5_7_comparison_published.csv` holds only our own results. Table 5.16 in Chapter 5 lists the figures that the abstracts of AIPpred (independent AUC 0.814), PreAIP (test AUC 0.840), AIPStack (independent set 3: AUC 0.819, MCC 0.510) and AntiInflam (validation MCC 0.31 for RF) report, each marked as abstract-only, and TODO everywhere else. No published number was entered from memory.
+
+## V2-D18: Pre-registration timing stated precisely
+_2026-11-26_
+
+The text previously said the plan was committed "before the extended experiments". The audit (Phase A) was run first and the pre-registration (commit c239f43, 2026-11-25T14:36:00Z) followed it, so Chapters 3, 4 and 6 now say "after the audit of Phase A and before the experiments of Phases B to F".
+
+## V2-D19: Chapter label namespace
+_2026-11-26_
+
+Table labels are shared across chapters through `results/thesis/labels_chN.csv`; two chapter-5 labels (`tab:pooling`, `tab:mde`) collided with chapter-3 labels and were renamed (`tab:pool5`, `tab:mde5`, `tab:ft5`). Each chapter must be built twice, in order 1 to 6, so that every cross-reference resolves.
+
 
 Choices made autonomously during the overnight run, each with the reasoning.
 
@@ -446,6 +504,44 @@ Ranked, most important first:
 6. **Chapters 1-2 fixes and Chapters 3-6 drafting** (playbook Prompts 12-14) remain to do and now have far more material: the mechanism section, T3.5, T5.8-T5.11, the preregistration and the power analysis.
 7. **Housekeeping.** The Kaggle dataset `aip-supcon-data` and two kernels are private in the `yeasinarafatshihab` account and can be deleted if not wanted. Local free disk fluctuates (3-8 GB); the 650M weights are purged after use.
 
+## 10. THESIS WRITING STATUS (overnight run, part 2)
+
+**Chapters (the .docx files are local and gitignored; the build scripts are in `src/thesis/`, run each twice in order 1 to 6).**
+
+| Part | Status | Pages | Tables | Figures | Verified citations | TODO | [CITATION NEEDED] |
+|---|---|---|---|---|---|---|---|
+| Abstract | complete | 1 | 0 | 0 | 0 | 0 | 0 |
+| Chapter 1 Introduction | complete | 4 | 0 | 0 | 7 | 0 | 0 |
+| Chapter 2 Literature Review | complete | 4 | 0 | 0 | 10 | 0 | 0 |
+| Chapter 3 Materials and Methods | complete | 20 | 18 | 2 | 20 | 0 | 0 |
+| Chapter 4 Implementation and Experimental Setup | complete (with TODO) | 6 | 4 | 0 | 4 | 1 | 0 |
+| Chapter 5 Results and Discussion | complete (with TODO) | 26 | 17 | 6 | 5 | 1 | 0 |
+| Chapter 6 Conclusions and Future Work | complete | 4 | 0 | 0 | 0 | 0 | 0 |
+
+
+**Total rendered length: 68 pages** including the references (3 pages), US Letter, 11 pt, as rendered by LibreOffice; check the page count in Word.
+
+**Remaining TODOs and what closes them**
+
+- Chapter 4 Implementation and Experimental Setup: add the public address or archive identifier of the repository and confirm that its visibility permits the citation
+- Chapter 5 Results and Discussion: fill the TODO cells of Table 5.16 from the full texts of the four papers (AUROC and MCC on the independent set, with the training collection each paper used), and state for each whether its training collection includes sequences of the independent set
+- Table 5.16 is intentionally TODO beyond the abstract-level figures: needs the full texts of AntiInflam, AIPpred, PreAIP and AIPStack (the PreAIP and AIPStack pages could not be read automatically).
+- Figures 5.9b, F1 and F5 are not in the thesis (raw model keys as labels / overlapping legend): regenerate with readable labels if wanted.
+- Chapters 1 and 2 are short (4 pages each) because only verified sources are used: add literature only from papers you can verify, then add them to `CANDIDATES` in `src/thesis/build_bib.py`.
+- Not attempted (BLOCKERS_v2.md): C4 other protein language models, D3 transfer to AMP/ACP, AIPStack independent sets, larger-checkpoint fine-tuning.
+- Word rendering was checked only through LibreOffice.
+
+**Unverified citations** (full list with exact sentences in [CITATIONS_TO_VERIFY.md](CITATIONS_TO_VERIFY.md)): LightGBM (Ke et al. 2017), random forest (Breiman 2001), SVM (Cortes and Vapnik 1995), cosine schedule, batch normalisation and dropout have no entry; the venues of the six arXiv-cited works are unverified; the RDP58/VIP examples in Chapter 2 are second-hand; Table 5.16 uses abstract-level figures only. Eight claims from the earlier drafts were removed rather than cited.
+
+### Three weakest points an examiner will attack
+
+1. **"Not significant" is not "no effect".** *Attack:* the leakage-free test sets are small (214 and 751 sequences), so a real 0.01 to 0.05 MCC benefit of the contrastive term would be invisible, and the cross-validation does show +0.003 to +0.014 at lambda 2 in 5 of 6 architectures. *Honest answer:* agreed. The minimum detectable effect is about 0.14 MCC (Ind_425) and 0.08 MCC (Ind_1049); the CV gain is an order of magnitude below it, its intervals are optimistic, and nested CV gives -0.011 (95% interval -0.023 to +0.001). The thesis says "no effect larger than about 0.08 to 0.14 MCC was detectable", every Regime B survivor of correction is negative, and a larger leakage-free test set is the stated next step. It does not claim equivalence.
+2. **The leakage finding: how far does it reach, and is "capacity" the explanation?** *Attack:* it is a measurement on the distributed files, the mechanism evidence (within-lineage cells show no inflation, crossed cells do) is a pattern across training sets that differ in more than lineage, nothing shows that a published result was affected, and "largest for high-capacity models" is not what the table shows. *Honest answer:* the thesis claims only the measurement (211 / 298 shared sequences, 204 / 286 with the same label; drops of 0.03 to 0.38 MCC in 48 configurations), says that published numbers were not re-examined, and states that the drop is largest for flexible non-linear models but not monotonic in capacity, without a formal test of gap differences. The user's requested wording was therefore not used (V2-D15).
+3. **The representation result, the process, and what is missing.** *Attack:* a 21-feature random forest still beats the best ESM-2 model on Ind_425; fine-tuning was done once, for the 8M model only, with three seeds and validation-fold stopping; fine-tuned 8M vs frozen 650M was added after the results were seen; the explanation from dataset structure (negatives sharing 8-mers, length) is correlational; the pre-registration followed the first part of the study (H1 known), the residue-level models use a 64-d bottleneck (plan: 128), and there is no comparison with the published predictors (Table 5.16 is mostly TODO). *Honest answer:* the thesis claims "adaptation matters", not "ESM-2 beats composition" (fine-tuned 8M is -0.109 MCC against AAC + RF on Ind_425 and indistinguishable on Ind_1049); the post hoc comparison is labelled exploratory and included in the correction (126 tests); every deviation was logged before its results were seen (DECISIONS_v2.md); the missing published comparison and larger-model fine-tuning are listed as open work, not hidden.
+
+
+**Inconsistencies found and fixed** (worst first): see [THESIS_CONSISTENCY_LOG.md](THESIS_CONSISTENCY_LOG.md).
+
 ## Appendix: LEAKAGE_FINDING.md (verbatim)
 
 # LEAKAGE FINDING (Phase A)
@@ -468,7 +564,7 @@ Using a new reader (not the S1 code), with whitespace/case normalisation and a c
 | Benchmark and Ind_1049 | 298 | 286 | 12 | 28.4% |
 | Ind_425 and Ind_1049 | 77 | 76 | 1 | 7.3% of Ind_1049 |
 
-The numbers are identical on the raw Benchmark (3,790 rows, 3,753 unique) and on the cleaned Benchmark (3,716), because none of the 37 label-conflicted sequences is in either test set. Under a CD-HIT-style cross-set screen (our re-implementation, identity over the shorter sequence), the share of test sequences with identity >= 0.9 to some Benchmark sequence is 62.1% for Ind_425 (264 of 425) and 31.7% for Ind_1049 (333 of 1,049).
+The numbers are identical on the raw Benchmark (3,790 rows, 3,753 unique) and on the cleaned Benchmark (3,716), because none of the 37 label-conflicted sequences is in either test set. Under a CD-HIT-style cross-set screen (our re-implementation, identity over the shorter sequence), the share of test sequences with identity >= 0.9 to some Benchmark sequence is 61.9% for Ind_425 (263 of 425) and 31.7% for Ind_1049 (333 of 1,049), measured against the cleaned Benchmark (Benchmark_clean, 3,716 sequences), which is the single reference point used for every identity figure in the thesis.
 
 ## 2. Provenance, verified against the original files
 

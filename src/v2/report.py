@@ -85,6 +85,42 @@ def section_headline_v2() -> str:
     return "\n".join(out)
 
 
+def section_thesis() -> str:
+    """Thesis-writing status: chapters, pages, TODOs, unverified citations, weakest points (written for the morning after the overnight run)."""
+    T_ = R / "thesis"
+    pc = json.loads((T_ / "page_counts.json").read_text()) if (T_ / "page_counts.json").exists() else {}
+    names = {0: "Abstract", 1: "Chapter 1 Introduction", 2: "Chapter 2 Literature Review", 3: "Chapter 3 Materials and Methods", 4: "Chapter 4 Implementation and Experimental Setup",
+             5: "Chapter 5 Results and Discussion", 6: "Chapter 6 Conclusions and Future Work"}
+    rows, todos = [], []
+    for i, nme in names.items():
+        mf = T_ / f"meta_ch{i}.json"
+        if not mf.exists():
+            rows.append({"Part": nme, "Status": "NOT BUILT", "Pages": "-", "Tables": "-", "Figures": "-", "Verified citations": "-", "TODO": "-", "[CITATION NEEDED]": "-"}); continue
+        m = json.loads(mf.read_text()); key = {0: "ABSTRACT thesis"}.get(i, f"CHAPTER {i} thesis")
+        rows.append({"Part": nme, "Status": "complete" + (" (with TODO)" if m["todos"] else ""), "Pages": pc.get(key, "-"), "Tables": m["tables"], "Figures": m["figures"],
+                     "Verified citations": len(m["cited"]), "TODO": len(m["todos"]), "[CITATION NEEDED]": len(m["citation_needed"])})
+        todos += [f"{nme}: {t}" for t in m["todos"]]
+    out = ["**Chapters (the .docx files are local and gitignored; the build scripts are in `src/thesis/`, run each twice in order 1 to 6).**\n", md(pd.DataFrame(rows)),
+           f"\n**Total rendered length: {pc.get('TOTAL', '?')} pages** including the references ({pc.get('REFERENCES thesis', '?')} pages), US Letter, 11 pt, as rendered by LibreOffice; check the page count in Word.\n"]
+    out.append("**Remaining TODOs and what closes them**\n")
+    out += [f"- {t}" for t in todos]
+    out += ["- Table 5.16 is intentionally TODO beyond the abstract-level figures: needs the full texts of AntiInflam, AIPpred, PreAIP and AIPStack (the PreAIP and AIPStack pages could not be read automatically).",
+            "- Figures 5.9b, F1 and F5 are not in the thesis (raw model keys as labels / overlapping legend): regenerate with readable labels if wanted.",
+            "- Chapters 1 and 2 are short (4 pages each) because only verified sources are used: add literature only from papers you can verify, then add them to `CANDIDATES` in `src/thesis/build_bib.py`.",
+            "- Not attempted (BLOCKERS_v2.md): C4 other protein language models, D3 transfer to AMP/ACP, AIPStack independent sets, larger-checkpoint fine-tuning.",
+            "- Word rendering was checked only through LibreOffice.\n"]
+    cv = ROOT / "CITATIONS_TO_VERIFY.md"
+    out.append("**Unverified citations** (full list with exact sentences in [CITATIONS_TO_VERIFY.md](CITATIONS_TO_VERIFY.md)): LightGBM (Ke et al. 2017), random forest (Breiman 2001), SVM (Cortes and Vapnik 1995), cosine schedule, batch normalisation and dropout have no entry; the venues of the six arXiv-cited works are unverified; the RDP58/VIP examples in Chapter 2 are second-hand; Table 5.16 uses abstract-level figures only. "
+               "Eight claims from the earlier drafts were removed rather than cited.\n")
+    nf = ROOT / "src" / "thesis" / "status_notes.md"
+    if nf.exists():
+        out.append(nf.read_text())
+    cl = ROOT / "THESIS_CONSISTENCY_LOG.md"
+    if cl.exists():
+        out.append("\n**Inconsistencies found and fixed** (worst first): see [THESIS_CONSISTENCY_LOG.md](THESIS_CONSISTENCY_LOG.md).\n")
+    return "\n".join(out)
+
+
 def build() -> str:
     leak = (ROOT / "LEAKAGE_FINDING.md").read_text() if (ROOT / "LEAKAGE_FINDING.md").exists() else "_Phase A has not run._"
     gate = json.loads((V2 / "phaseA_summary.json").read_text()) if (V2 / "phaseA_summary.json").exists() else {}
@@ -109,6 +145,7 @@ def build() -> str:
         "## 7. BLOCKERS\n\n" + blockers,
         "## 8. DECISIONS\n\n" + decisions,
         "## 9. NEXT ACTIONS\n\n" + nxt,
+        "## 10. THESIS WRITING STATUS (overnight run, part 2)\n\n" + section_thesis(),
         "## Appendix: LEAKAGE_FINDING.md (verbatim)\n\n" + leak,
     ]
     return "\n".join(parts)
