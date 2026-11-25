@@ -1,0 +1,10 @@
+training_set,independent_set,n_train,n_test,exact_overlap,exact_overlap_share_of_test,exact_same_label,exact_conflicting_label,identity_ge_0.9,identity_ge_0.9_share,identity_ge_0.8
+AIPpred_benchmark (= PreAIP_training),AIPpred_independent (= local Ind_1049 = PreAIP_test),3145.0,1049.0,0.0,0.0,0.0,0.0,13.0,0.0124,19.0
+AIPpred_benchmark (= PreAIP_training),AntiInflam_validation (= local Ind_425),3145.0,425.0,211.0,0.4965,204.0,7.0,247.0,0.5812,288.0
+AntiInflam_training,AIPpred_independent (= local Ind_1049 = PreAIP_test),1699.0,1049.0,298.0,0.2841,286.0,12.0,330.0,0.3146,342.0
+AntiInflam_training,AntiInflam_validation (= local Ind_425),1699.0,425.0,0.0,0.0,0.0,0.0,51.0,0.12,108.0
+local_Benchmark,AIPpred_independent (= local Ind_1049 = PreAIP_test),3753.0,1049.0,298.0,0.2841,286.0,12.0,333.0,0.3174,348.0
+local_Benchmark,AntiInflam_validation (= local Ind_425),3753.0,425.0,211.0,0.4965,204.0,7.0,264.0,0.6212,309.0
+(independent vs independent),AIPpred_independent x AntiInflam_validation,1049.0,425.0,77.0,0.1812,76.0,1.0,,,
+AIPStack independent sets 2 and 3,not obtainable (see BLOCKERS_v2.md),,,,,,,,,
+AIPFusion-Net splits,paper unreadable (see BLOCKERS_v2.md),,,,,,,,,

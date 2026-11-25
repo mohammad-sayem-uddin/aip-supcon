@@ -21,3 +21,4 @@ results/latents/
 logs/*.out
 logs/.run_id
 .claude/
+data/external/

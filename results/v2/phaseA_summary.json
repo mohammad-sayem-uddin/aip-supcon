@@ -1,0 +1,71 @@
+{
+  "overlap_reproduces_211_298": true,
+  "gate": {
+    "Benchmark_x_Ind_425": {
+      "n": 211,
+      "same": 204,
+      "conflict": 7,
+      "ambiguous": 0
+    },
+    "Benchmark_x_Ind_1049": {
+      "n": 298,
+      "same": 286,
+      "conflict": 12,
+      "ambiguous": 0
+    },
+    "Ind_425_x_Ind_1049": {
+      "n": 77,
+      "same": 76,
+      "conflict": 1,
+      "ambiguous": 0
+    },
+    "Benchmark_clean_x_Ind_425": {
+      "n": 211,
+      "same": 204,
+      "conflict": 7,
+      "ambiguous": 0
+    },
+    "Benchmark_clean_x_Ind_1049": {
+      "n": 298,
+      "same": 286,
+      "conflict": 12,
+      "ambiguous": 0
+    }
+  },
+  "provenance_facts": {
+    "aippred_bench_x_aippred_ind": 0,
+    "antiinflam_train_x_antiinflam_val": 0,
+    "aippred_bench_x_antiinflam_val": 211,
+    "antiinflam_train_x_aippred_ind": 298,
+    "local_benchmark_unique": 3753,
+    "aippred_bench_unique": 3145,
+    "n_extras_not_in_aippred_bench": 612,
+    "extras_in_antiinflam_train": 612,
+    "extras_in_aippred_ind": 298,
+    "extras_in_antiinflam_val": 0,
+    "aippred_bench_seqs_absent_locally": 4,
+    "label_conflicts_in_local_benchmark": 37,
+    "label_conflicts_already_in_AIPpred_benchmark_files": 0,
+    "conflicts_in_AIPpred_bench_that_equal_local_conflicts": 0,
+    "preaip_training_equals_aippred_benchmark": true,
+    "preaip_test_equals_aippred_independent": true
+  },
+  "structure": {
+    "agree_425": 0.966824644549763,
+    "agree_1049": 0.959731543624161,
+    "benchmark_rows_of_overlap_425_min_max": [
+      18,
+      2304
+    ],
+    "benchmark_rows_of_overlap_1049_min_max": [
+      1255,
+      3789
+    ],
+    "overlap_425_all_from_AIPpred_benchmark": true,
+    "overlap_1049_all_from_AntiInflam_training": true,
+    "overlap_1049_any_in_AIPpred_benchmark": false,
+    "chance_bound_for_any_random_11mer_pair": 4.8828125e-15
+  },
+  "ind1049_identical_to_aippred_independent": true,
+  "ind425_identical_to_antiinflam_validation": true
+}
