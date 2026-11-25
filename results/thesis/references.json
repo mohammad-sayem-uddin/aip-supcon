@@ -1,0 +1,1084 @@
+{
+ "gupta2017": {
+  "title": "Prediction of anti-inflammatory proteins/peptides: an insilico approach",
+  "authors": [
+   [
+    "Gupta",
+    "Sudheer"
+   ],
+   [
+    "Sharma",
+    "Ashok K."
+   ],
+   [
+    "Shastri",
+    "Vibhuti"
+   ],
+   [
+    "Madhu",
+    "Midhun K."
+   ],
+   [
+    "Sharma",
+    "Vineet K."
+   ]
+  ],
+  "year": 2017,
+  "container": "Journal of Translational Medicine",
+  "volume": "15",
+  "issue": "1",
+  "pages": "",
+  "doi": "10.1186/s12967-016-1103-6",
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "record": "https://api.crossref.org/works/10.1186/s12967-016-1103-6",
+  "source": "CrossRef"
+ },
+ "manavalan2018": {
+  "title": "AIPpred: Sequence-Based Prediction of Anti-inflammatory Peptides Using Random Forest",
+  "authors": [
+   [
+    "Manavalan",
+    "Balachandran"
+   ],
+   [
+    "Shin",
+    "Tae H."
+   ],
+   [
+    "Kim",
+    "Myeong O."
+   ],
+   [
+    "Lee",
+    "Gwang"
+   ]
+  ],
+  "year": 2018,
+  "container": "Frontiers in Pharmacology",
+  "volume": "9",
+  "issue": "",
+  "pages": "",
+  "doi": "10.3389/fphar.2018.00276",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA",
+  "record": "https://api.crossref.org/works/10.3389/fphar.2018.00276",
+  "source": "CrossRef"
+ },
+ "khatun2019": {
+  "title": "PreAIP: Computational Prediction of Anti-inflammatory Peptides by Integrating Multiple Complementary Features",
+  "authors": [
+   [
+    "Khatun",
+    "Mst. Shamima"
+   ],
+   [
+    "Hasan",
+    "Md. Mehedi"
+   ],
+   [
+    "Kurata",
+    "Hiroyuki"
+   ]
+  ],
+  "year": 2019,
+  "container": "Frontiers in Genetics",
+  "volume": "10",
+  "issue": "",
+  "pages": "",
+  "doi": "10.3389/fgene.2019.00129",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA",
+  "record": "https://api.crossref.org/works/10.3389/fgene.2019.00129",
+  "source": "CrossRef"
+ },
+ "deng2022": {
+  "title": "Prediction of anti-inflammatory peptides by a sequence-based stacking ensemble model named AIPStack",
+  "authors": [
+   [
+    "Deng",
+    "Hua"
+   ],
+   [
+    "Lou",
+    "Chaofeng"
+   ],
+   [
+    "Wu",
+    "Zengrui"
+   ],
+   [
+    "Li",
+    "Weihua"
+   ],
+   [
+    "Liu",
+    "Guixia"
+   ],
+   [
+    "Tang",
+    "Yun"
+   ]
+  ],
+  "year": 2022,
+  "container": "iScience",
+  "volume": "25",
+  "issue": "9",
+  "pages": "104967",
+  "doi": "10.1016/j.isci.2022.104967",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "record": "https://api.crossref.org/works/10.1016/j.isci.2022.104967",
+  "source": "CrossRef"
+ },
+ "vita2019": {
+  "title": "The Immune Epitope Database (IEDB): 2018 update",
+  "authors": [
+   [
+    "Vita",
+    "Randi"
+   ],
+   [
+    "Mahajan",
+    "Swapnil"
+   ],
+   [
+    "Overton",
+    "James A"
+   ],
+   [
+    "Dhanda",
+    "Sandeep Kumar"
+   ],
+   [
+    "Martini",
+    "Sheridan"
+   ],
+   [
+    "Cantrell",
+    "Jason R"
+   ],
+   [
+    "Wheeler",
+    "Daniel K"
+   ],
+   [
+    "Sette",
+    "Alessandro"
+   ],
+   [
+    "Peters",
+    "Bjoern"
+   ]
+  ],
+  "year": 2019,
+  "container": "Nucleic Acids Research",
+  "volume": "47",
+  "issue": "D1",
+  "pages": "D339-D343",
+  "doi": "10.1093/nar/gky1006",
+  "type": "journal-article",
+  "publisher": "Oxford University Press (OUP)",
+  "record": "https://api.crossref.org/works/10.1093/nar/gky1006",
+  "source": "CrossRef"
+ },
+ "lin2023": {
+  "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+  "authors": [
+   [
+    "Lin",
+    "Zeming"
+   ],
+   [
+    "Akin",
+    "Halil"
+   ],
+   [
+    "Rao",
+    "Roshan"
+   ],
+   [
+    "Hie",
+    "Brian"
+   ],
+   [
+    "Zhu",
+    "Zhongkai"
+   ],
+   [
+    "Lu",
+    "Wenting"
+   ],
+   [
+    "Smetanin",
+    "Nikita"
+   ],
+   [
+    "Verkuil",
+    "Robert"
+   ],
+   [
+    "Kabeli",
+    "Ori"
+   ],
+   [
+    "Shmueli",
+    "Yaniv"
+   ],
+   [
+    "dos Santos Costa",
+    "Allan"
+   ],
+   [
+    "Fazel-Zarandi",
+    "Maryam"
+   ],
+   [
+    "Sercu",
+    "Tom"
+   ],
+   [
+    "Candido",
+    "Salvatore"
+   ],
+   [
+    "Rives",
+    "Alexander"
+   ]
+  ],
+  "year": 2023,
+  "container": "Science",
+  "volume": "379",
+  "issue": "6637",
+  "pages": "1123-1130",
+  "doi": "10.1126/science.ade2574",
+  "type": "journal-article",
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "record": "https://api.crossref.org/works/10.1126/science.ade2574",
+  "source": "CrossRef"
+ },
+ "rives2021": {
+  "title": "Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences",
+  "authors": [
+   [
+    "Rives",
+    "Alexander"
+   ],
+   [
+    "Meier",
+    "Joshua"
+   ],
+   [
+    "Sercu",
+    "Tom"
+   ],
+   [
+    "Goyal",
+    "Siddharth"
+   ],
+   [
+    "Lin",
+    "Zeming"
+   ],
+   [
+    "Liu",
+    "Jason"
+   ],
+   [
+    "Guo",
+    "Demi"
+   ],
+   [
+    "Ott",
+    "Myle"
+   ],
+   [
+    "Zitnick",
+    "C. Lawrence"
+   ],
+   [
+    "Ma",
+    "Jerry"
+   ],
+   [
+    "Fergus",
+    "Rob"
+   ]
+  ],
+  "year": 2021,
+  "container": "Proceedings of the National Academy of Sciences",
+  "volume": "118",
+  "issue": "15",
+  "pages": "",
+  "doi": "10.1073/pnas.2016239118",
+  "type": "journal-article",
+  "publisher": "National Academy of Sciences",
+  "record": "https://api.crossref.org/works/10.1073/pnas.2016239118",
+  "source": "CrossRef"
+ },
+ "bhasin2004": {
+  "title": "Classification of Nuclear Receptors Based on Amino Acid Composition and Dipeptide Composition",
+  "authors": [
+   [
+    "Bhasin",
+    "Manoj"
+   ],
+   [
+    "Raghava",
+    "Gajendra P.S."
+   ]
+  ],
+  "year": 2004,
+  "container": "Journal of Biological Chemistry",
+  "volume": "279",
+  "issue": "22",
+  "pages": "23262-23266",
+  "doi": "10.1074/jbc.m401932200",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "record": "https://api.crossref.org/works/10.1074/jbc.m401932200",
+  "source": "CrossRef"
+ },
+ "dubchak1995": {
+  "title": "Prediction of protein folding class using global description of amino acid sequence.",
+  "authors": [
+   [
+    "Dubchak",
+    "I"
+   ],
+   [
+    "Muchnik",
+    "I"
+   ],
+   [
+    "Holbrook",
+    "S R"
+   ],
+   [
+    "Kim",
+    "S H"
+   ]
+  ],
+  "year": 1995,
+  "container": "Proceedings of the National Academy of Sciences",
+  "volume": "92",
+  "issue": "19",
+  "pages": "8700-8704",
+  "doi": "10.1073/pnas.92.19.8700",
+  "type": "journal-article",
+  "publisher": "National Academy of Sciences",
+  "record": "https://api.crossref.org/works/10.1073/pnas.92.19.8700",
+  "source": "CrossRef"
+ },
+ "needleman1970": {
+  "title": "A general method applicable to the search for similarities in the amino acid sequence of two proteins",
+  "authors": [
+   [
+    "Needleman",
+    "Saul B."
+   ],
+   [
+    "Wunsch",
+    "Christian D."
+   ]
+  ],
+  "year": 1970,
+  "container": "Journal of Molecular Biology",
+  "volume": "48",
+  "issue": "3",
+  "pages": "443-453",
+  "doi": "10.1016/0022-2836(70)90057-4",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "record": "https://api.crossref.org/works/10.1016/0022-2836(70)90057-4",
+  "source": "CrossRef"
+ },
+ "henikoff1992": {
+  "title": "Amino acid substitution matrices from protein blocks.",
+  "authors": [
+   [
+    "Henikoff",
+    "S"
+   ],
+   [
+    "Henikoff",
+    "J G"
+   ]
+  ],
+  "year": 1992,
+  "container": "Proceedings of the National Academy of Sciences",
+  "volume": "89",
+  "issue": "22",
+  "pages": "10915-10919",
+  "doi": "10.1073/pnas.89.22.10915",
+  "type": "journal-article",
+  "publisher": "National Academy of Sciences",
+  "record": "https://api.crossref.org/works/10.1073/pnas.89.22.10915",
+  "source": "CrossRef"
+ },
+ "li2006": {
+  "title": "Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences",
+  "authors": [
+   [
+    "Li",
+    "Weizhong"
+   ],
+   [
+    "Godzik",
+    "Adam"
+   ]
+  ],
+  "year": 2006,
+  "container": "Bioinformatics",
+  "volume": "22",
+  "issue": "13",
+  "pages": "1658-1659",
+  "doi": "10.1093/bioinformatics/btl158",
+  "type": "journal-article",
+  "publisher": "Oxford University Press (OUP)",
+  "record": "https://api.crossref.org/works/10.1093/bioinformatics/btl158",
+  "source": "CrossRef"
+ },
+ "hochreiter1997": {
+  "title": "Long Short-Term Memory",
+  "authors": [
+   [
+    "Hochreiter",
+    "Sepp"
+   ],
+   [
+    "Schmidhuber",
+    "J\u00fcrgen"
+   ]
+  ],
+  "year": 1997,
+  "container": "Neural Computation",
+  "volume": "9",
+  "issue": "8",
+  "pages": "1735-1780",
+  "doi": "10.1162/neco.1997.9.8.1735",
+  "type": "journal-article",
+  "publisher": "MIT Press",
+  "record": "https://api.crossref.org/works/10.1162/neco.1997.9.8.1735",
+  "source": "CrossRef"
+ },
+ "matthews1975": {
+  "title": "Comparison of the predicted and observed secondary structure of T4 phage lysozyme",
+  "authors": [
+   [
+    "Matthews",
+    "B.W."
+   ]
+  ],
+  "year": 1975,
+  "container": "Biochimica et Biophysica Acta (BBA) - Protein Structure",
+  "volume": "405",
+  "issue": "2",
+  "pages": "442-451",
+  "doi": "10.1016/0005-2795(75)90109-9",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "record": "https://api.crossref.org/works/10.1016/0005-2795(75)90109-9",
+  "source": "CrossRef"
+ },
+ "delong1988": {
+  "title": "Comparing the Areas under Two or More Correlated Receiver Operating Characteristic Curves: A Nonparametric Approach",
+  "authors": [
+   [
+    "DeLong",
+    "Elizabeth R."
+   ],
+   [
+    "DeLong",
+    "David M."
+   ],
+   [
+    "Clarke-Pearson",
+    "Daniel L."
+   ]
+  ],
+  "year": 1988,
+  "container": "Biometrics",
+  "volume": "44",
+  "issue": "3",
+  "pages": "837",
+  "doi": "10.2307/2531595",
+  "type": "journal-article",
+  "publisher": "JSTOR",
+  "record": "https://api.crossref.org/works/10.2307/2531595",
+  "source": "CrossRef"
+ },
+ "mcnemar1947": {
+  "title": "Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages",
+  "authors": [
+   [
+    "McNemar",
+    "Quinn"
+   ]
+  ],
+  "year": 1947,
+  "container": "Psychometrika",
+  "volume": "12",
+  "issue": "2",
+  "pages": "153-157",
+  "doi": "10.1007/bf02295996",
+  "type": "journal-article",
+  "publisher": "Cambridge University Press (CUP)",
+  "record": "https://api.crossref.org/works/10.1007/bf02295996",
+  "source": "CrossRef"
+ },
+ "benjamini1995": {
+  "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+  "authors": [
+   [
+    "Benjamini",
+    "Yoav"
+   ],
+   [
+    "Hochberg",
+    "Yosef"
+   ]
+  ],
+  "year": 1995,
+  "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+  "volume": "57",
+  "issue": "1",
+  "pages": "289-300",
+  "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+  "type": "journal-article",
+  "publisher": "Oxford University Press (OUP)",
+  "record": "https://api.crossref.org/works/10.1111/j.2517-6161.1995.tb02031.x",
+  "source": "CrossRef"
+ },
+ "efron1979": {
+  "title": "Bootstrap Methods: Another Look at the Jackknife",
+  "authors": [
+   [
+    "Efron",
+    "B."
+   ]
+  ],
+  "year": 1979,
+  "container": "The Annals of Statistics",
+  "volume": "7",
+  "issue": "1",
+  "pages": "1-26",
+  "doi": "10.1214/aos/1176344552",
+  "type": "journal-article",
+  "publisher": "Institute of Mathematical Statistics",
+  "record": "https://api.crossref.org/works/10.1214/aos/1176344552",
+  "source": "CrossRef"
+ },
+ "wolf2020": {
+  "title": "Transformers: State-of-the-Art Natural Language Processing",
+  "authors": [
+   [
+    "Wolf",
+    "Thomas"
+   ],
+   [
+    "Debut",
+    "Lysandre"
+   ],
+   [
+    "Sanh",
+    "Victor"
+   ],
+   [
+    "Chaumond",
+    "Julien"
+   ],
+   [
+    "Delangue",
+    "Clement"
+   ],
+   [
+    "Moi",
+    "Anthony"
+   ],
+   [
+    "Cistac",
+    "Pierric"
+   ],
+   [
+    "Rault",
+    "Tim"
+   ],
+   [
+    "Louf",
+    "Remi"
+   ],
+   [
+    "Funtowicz",
+    "Morgan"
+   ],
+   [
+    "Davison",
+    "Joe"
+   ],
+   [
+    "Shleifer",
+    "Sam"
+   ],
+   [
+    "von Platen",
+    "Patrick"
+   ],
+   [
+    "Ma",
+    "Clara"
+   ],
+   [
+    "Jernite",
+    "Yacine"
+   ],
+   [
+    "Plu",
+    "Julien"
+   ],
+   [
+    "Xu",
+    "Canwen"
+   ],
+   [
+    "Le Scao",
+    "Teven"
+   ],
+   [
+    "Gugger",
+    "Sylvain"
+   ],
+   [
+    "Drame",
+    "Mariama"
+   ],
+   [
+    "Lhoest",
+    "Quentin"
+   ],
+   [
+    "Rush",
+    "Alexander"
+   ]
+  ],
+  "year": 2020,
+  "container": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+  "volume": "",
+  "issue": "",
+  "pages": "38-45",
+  "doi": "10.18653/v1/2020.emnlp-demos.6",
+  "type": "proceedings-article",
+  "publisher": "Association for Computational Linguistics",
+  "record": "https://api.crossref.org/works/10.18653/v1/2020.emnlp-demos.6",
+  "source": "CrossRef"
+ },
+ "cock2009": {
+  "title": "Biopython: freely available Python tools for computational molecular biology and bioinformatics",
+  "authors": [
+   [
+    "Cock",
+    "Peter J. A."
+   ],
+   [
+    "Antao",
+    "Tiago"
+   ],
+   [
+    "Chang",
+    "Jeffrey T."
+   ],
+   [
+    "Chapman",
+    "Brad A."
+   ],
+   [
+    "Cox",
+    "Cymon J."
+   ],
+   [
+    "Dalke",
+    "Andrew"
+   ],
+   [
+    "Friedberg",
+    "Iddo"
+   ],
+   [
+    "Hamelryck",
+    "Thomas"
+   ],
+   [
+    "Kauff",
+    "Frank"
+   ],
+   [
+    "Wilczynski",
+    "Bartek"
+   ],
+   [
+    "de Hoon",
+    "Michiel J. L."
+   ]
+  ],
+  "year": 2009,
+  "container": "Bioinformatics",
+  "volume": "25",
+  "issue": "11",
+  "pages": "1422-1423",
+  "doi": "10.1093/bioinformatics/btp163",
+  "type": "journal-article",
+  "publisher": "Oxford University Press (OUP)",
+  "record": "https://api.crossref.org/works/10.1093/bioinformatics/btp163",
+  "source": "CrossRef"
+ },
+ "khosla2020": {
+  "title": "Supervised Contrastive Learning",
+  "authors": [
+   [
+    "Khosla",
+    "Prannay"
+   ],
+   [
+    "Teterwak",
+    "Piotr"
+   ],
+   [
+    "Wang",
+    "Chen"
+   ],
+   [
+    "Sarna",
+    "Aaron"
+   ],
+   [
+    "Tian",
+    "Yonglong"
+   ],
+   [
+    "Isola",
+    "Phillip"
+   ],
+   [
+    "Maschinot",
+    "Aaron"
+   ],
+   [
+    "Liu",
+    "Ce"
+   ],
+   [
+    "Krishnan",
+    "Dilip"
+   ]
+  ],
+  "year": 2020,
+  "container": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "type": "arxiv",
+  "publisher": "",
+  "record": "https://arxiv.org/abs/2004.11362",
+  "source": "arXiv",
+  "arxiv": "2004.11362",
+  "journal_ref": ""
+ },
+ "vaswani2017": {
+  "title": "Attention Is All You Need",
+  "authors": [
+   [
+    "Vaswani",
+    "Ashish"
+   ],
+   [
+    "Shazeer",
+    "Noam"
+   ],
+   [
+    "Parmar",
+    "Niki"
+   ],
+   [
+    "Uszkoreit",
+    "Jakob"
+   ],
+   [
+    "Jones",
+    "Llion"
+   ],
+   [
+    "Gomez",
+    "Aidan N."
+   ],
+   [
+    "Kaiser",
+    "Lukasz"
+   ],
+   [
+    "Polosukhin",
+    "Illia"
+   ]
+  ],
+  "year": 2017,
+  "container": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "type": "arxiv",
+  "publisher": "",
+  "record": "https://arxiv.org/abs/1706.03762",
+  "source": "arXiv",
+  "arxiv": "1706.03762",
+  "journal_ref": ""
+ },
+ "ilse2018": {
+  "title": "Attention-based Deep Multiple Instance Learning",
+  "authors": [
+   [
+    "Ilse",
+    "Maximilian"
+   ],
+   [
+    "Tomczak",
+    "Jakub M."
+   ],
+   [
+    "Welling",
+    "Max"
+   ]
+  ],
+  "year": 2018,
+  "container": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "type": "arxiv",
+  "publisher": "",
+  "record": "https://arxiv.org/abs/1802.04712",
+  "source": "arXiv",
+  "arxiv": "1802.04712",
+  "journal_ref": ""
+ },
+ "loshchilov2017": {
+  "title": "Decoupled Weight Decay Regularization",
+  "authors": [
+   [
+    "Loshchilov",
+    "Ilya"
+   ],
+   [
+    "Hutter",
+    "Frank"
+   ]
+  ],
+  "year": 2017,
+  "container": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "type": "arxiv",
+  "publisher": "",
+  "record": "https://arxiv.org/abs/1711.05101",
+  "source": "arXiv",
+  "arxiv": "1711.05101",
+  "journal_ref": ""
+ },
+ "paszke2019": {
+  "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
+  "authors": [
+   [
+    "Paszke",
+    "Adam"
+   ],
+   [
+    "Gross",
+    "Sam"
+   ],
+   [
+    "Massa",
+    "Francisco"
+   ],
+   [
+    "Lerer",
+    "Adam"
+   ],
+   [
+    "Bradbury",
+    "James"
+   ],
+   [
+    "Chanan",
+    "Gregory"
+   ],
+   [
+    "Killeen",
+    "Trevor"
+   ],
+   [
+    "Lin",
+    "Zeming"
+   ],
+   [
+    "Gimelshein",
+    "Natalia"
+   ],
+   [
+    "Antiga",
+    "Luca"
+   ],
+   [
+    "Desmaison",
+    "Alban"
+   ],
+   [
+    "K\u00f6pf",
+    "Andreas"
+   ],
+   [
+    "Yang",
+    "Edward"
+   ],
+   [
+    "DeVito",
+    "Zach"
+   ],
+   [
+    "Raison",
+    "Martin"
+   ],
+   [
+    "Tejani",
+    "Alykhan"
+   ],
+   [
+    "Chilamkurthy",
+    "Sasank"
+   ],
+   [
+    "Steiner",
+    "Benoit"
+   ],
+   [
+    "Fang",
+    "Lu"
+   ],
+   [
+    "Bai",
+    "Junjie"
+   ],
+   [
+    "Chintala",
+    "Soumith"
+   ]
+  ],
+  "year": 2019,
+  "container": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "type": "arxiv",
+  "publisher": "",
+  "record": "https://arxiv.org/abs/1912.01703",
+  "source": "arXiv",
+  "arxiv": "1912.01703",
+  "journal_ref": ""
+ },
+ "pedregosa2012": {
+  "title": "Scikit-learn: Machine Learning in Python",
+  "authors": [
+   [
+    "Pedregosa",
+    "Fabian"
+   ],
+   [
+    "Varoquaux",
+    "Ga\u00ebl"
+   ],
+   [
+    "Gramfort",
+    "Alexandre"
+   ],
+   [
+    "Michel",
+    "Vincent"
+   ],
+   [
+    "Thirion",
+    "Bertrand"
+   ],
+   [
+    "Grisel",
+    "Olivier"
+   ],
+   [
+    "Blondel",
+    "Mathieu"
+   ],
+   [
+    "M\u00fcller",
+    "Andreas"
+   ],
+   [
+    "Nothman",
+    "Joel"
+   ],
+   [
+    "Louppe",
+    "Gilles"
+   ],
+   [
+    "Prettenhofer",
+    "Peter"
+   ],
+   [
+    "Weiss",
+    "Ron"
+   ],
+   [
+    "Dubourg",
+    "Vincent"
+   ],
+   [
+    "Vanderplas",
+    "Jake"
+   ],
+   [
+    "Passos",
+    "Alexandre"
+   ],
+   [
+    "Cournapeau",
+    "David"
+   ],
+   [
+    "Brucher",
+    "Matthieu"
+   ],
+   [
+    "Perrot",
+    "Matthieu"
+   ],
+   [
+    "Duchesnay",
+    "\u00c9douard"
+   ]
+  ],
+  "year": 2012,
+  "container": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "type": "arxiv",
+  "publisher": "",
+  "record": "https://arxiv.org/abs/1201.0490",
+  "source": "arXiv",
+  "arxiv": "1201.0490",
+  "journal_ref": "Journal of Machine Learning Research (2011)"
+ }
+}

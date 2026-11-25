@@ -18,7 +18,7 @@ Using a new reader (not the S1 code), with whitespace/case normalisation and a c
 | Benchmark and Ind_1049 | 298 | 286 | 12 | 28.4% |
 | Ind_425 and Ind_1049 | 77 | 76 | 1 | 7.3% of Ind_1049 |
 
-The numbers are identical on the raw Benchmark (3,790 rows, 3,753 unique) and on the cleaned Benchmark (3,716), because none of the 37 label-conflicted sequences is in either test set. Under a CD-HIT-style cross-set screen (our re-implementation, identity over the shorter sequence), the share of test sequences with identity >= 0.9 to some Benchmark sequence is 62.1% for Ind_425 (264 of 425) and 31.7% for Ind_1049 (333 of 1,049).
+The numbers are identical on the raw Benchmark (3,790 rows, 3,753 unique) and on the cleaned Benchmark (3,716), because none of the 37 label-conflicted sequences is in either test set. Under a CD-HIT-style cross-set screen (our re-implementation, identity over the shorter sequence), the share of test sequences with identity >= 0.9 to some Benchmark sequence is 61.9% for Ind_425 (263 of 425) and 31.7% for Ind_1049 (333 of 1,049), measured against the cleaned Benchmark (Benchmark_clean, 3,716 sequences), which is the single reference point used for every identity figure in the thesis.
 
 ## 2. Provenance, verified against the original files
 

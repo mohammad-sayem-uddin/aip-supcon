@@ -232,7 +232,7 @@ def run() -> int:
 
     # ---- A3 cross-benchmark matrix (exact + 90% identity)
     from src.data import max_identity_to_train
-    trains = {"AIPpred_benchmark (= PreAIP_training)": APb, "AntiInflam_training": AIt, "local_Benchmark": B}
+    trains = {"AIPpred_benchmark (= PreAIP_training)": APb, "AntiInflam_training": AIt, "local_Benchmark_clean": Bclean}
     tests = {"AIPpred_independent (= local Ind_1049 = PreAIP_test)": APi, "AntiInflam_validation (= local Ind_425)": AIv}
     rows = []
     for tn, tr in trains.items():
@@ -276,12 +276,12 @@ def run() -> int:
     cl.append({"set": "overlap surviving within-set clustering: Benchmark@0.9 reps x Ind_425@0.6 reps", "threshold": "0.9/0.6",
                "n_unique_in": None, "n_representatives": len(r_b09 & r_i4), "removed": None})
     # cross-set (CD-HIT-2D style): test sequences with identity >= thr to training
-    trs = list(b_all)
+    trs = list(set_(Bclean))  # the cleaned benchmark (3,716 sequences) is the single reference point for every identity figure
     for en, te in (("local_Ind_1049", I1), ("local_Ind_425", I4)):
         mx = max_identity_to_train(list(set_(te)), trs, floor=0.6)
         for thr in (0.6, 0.8, 0.9, 1.0):
             n = int((mx >= thr - 1e-12).sum())
-            cl.append({"set": f"CROSS-SET (CD-HIT-2D style): {en} sequences with identity>={thr} to local_Benchmark", "threshold": thr,
+            cl.append({"set": f"CROSS-SET (CD-HIT-2D style): {en} sequences with identity>={thr} to local_Benchmark_clean", "threshold": thr,
                        "n_unique_in": len(set_(te)), "n_representatives": len(set_(te)) - n, "removed": n})
     cl_df = pd.DataFrame(cl)
     cl_df.to_csv(TABLES / "T3.5b_cdhit_style_clustering.csv", index=False)

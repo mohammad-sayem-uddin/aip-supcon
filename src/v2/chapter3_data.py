@@ -91,6 +91,8 @@ def main() -> None:
     mde = pd.read_csv(V2 / "mde_summary.csv")
     F["mde_rows"] = mde.to_dict("records")
     F["prereg_commit"] = (ROOT / "PREREG_COMMIT.txt").read_text().split(" committed in ")[1].split(" at ")[0]
+    hp = pd.read_csv(V2 / "half_precision_check.csv").set_index("checkpoint")
+    F["half"] = {k: {"max_abs": float(r.max_abs_diff), "rel": float(r.max_abs_diff_relative_to_max_value), "dtype": r.residue_cache_dtype} for k, r in hp.iterrows()}
     F["n_comparisons"] = int(len(pd.read_csv(TABLES / "T5.11_corrected_significance.csv")))
     F["env"] = dict(zip(*[pd.read_csv(V2 / "environment.csv")[c] for c in ("item", "value")]))
     F["et"] = et.astype(object).where(et.notna(), None).to_dict("records")
@@ -149,7 +151,8 @@ def main() -> None:
         short = r["checkpoint"]
         layers = re.search(r"t(\d+)", short).group(1)
         params = re.search(r"_(\d+M)$", short).group(1)
-        T["esm"].append([r["hf_id"].replace("facebook/", ""), layers, params, str(int(r["dim"])), f"{r['embed_seconds']:.1f} s", f"{r['peak_rss_mb']:.0f} MB"])
+        tcell = "not reliably measured" if short == "esm2_t33_650M" else f"{r['embed_seconds']:.1f} s"
+        T["esm"].append([r["hf_id"].replace("facebook/", ""), layers, params, str(int(r["dim"])), tcell, f"{r['peak_rss_mb']:.0f} MB"])
     pdim = F["pool_dim"]
     T["pooling"] = [["Variant", "Construction (frozen ESM-2 650M, residue positions only)", "Dimension"],
                     ["Mean", "Arithmetic mean of the residue vectors", str(pdim["mean"])], ["Max", "Element-wise maximum over residues", str(pdim["max"])],

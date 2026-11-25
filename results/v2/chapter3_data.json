@@ -467,7 +467,19 @@
    }
   ],
   "prereg_commit": "c239f43dcb3719c7c40d6c2afd5217d6723a11f3",
-  "n_comparisons": 124,
+  "half": {
+   "esm2_t6_8M": {
+    "max_abs": 9.5367431640625e-07,
+    "rel": 1.7674388175237254e-07,
+    "dtype": "float32"
+   },
+   "esm2_t33_650M": {
+    "max_abs": 0.0021076202392578125,
+    "rel": 0.0002387599233770743,
+    "dtype": "float16"
+   }
+  },
+  "n_comparisons": 126,
   "env": {
    "local machine": "Apple M1",
    "local logical cores": "8",
@@ -885,7 +897,7 @@
     "33",
     "650M",
     "1280",
-    "3033.5 s",
+    "not reliably measured",
     "1578 MB"
    ]
   ],

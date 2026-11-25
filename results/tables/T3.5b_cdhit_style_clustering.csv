@@ -7,11 +7,11 @@ local_Ind_425,0.9,425.0,415,10.0
 local_Ind_1049,0.9,1049.0,1047,2.0
 overlap surviving within-set clustering: Benchmark@0.9 reps x Ind_1049@0.8 reps,0.9/0.8,,297,
 overlap surviving within-set clustering: Benchmark@0.9 reps x Ind_425@0.6 reps,0.9/0.6,,189,
-CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=0.6 to local_Benchmark,0.6,1049.0,288,761.0
-CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=0.8 to local_Benchmark,0.8,1049.0,701,348.0
-CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=0.9 to local_Benchmark,0.9,1049.0,716,333.0
-CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=1.0 to local_Benchmark,1.0,1049.0,734,315.0
-CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=0.6 to local_Benchmark,0.6,425.0,36,389.0
-CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=0.8 to local_Benchmark,0.8,425.0,116,309.0
-CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=0.9 to local_Benchmark,0.9,425.0,161,264.0
-CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=1.0 to local_Benchmark,1.0,425.0,188,237.0
+CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=0.6 to local_Benchmark_clean,0.6,1049.0,288,761.0
+CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=0.8 to local_Benchmark_clean,0.8,1049.0,701,348.0
+CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=0.9 to local_Benchmark_clean,0.9,1049.0,716,333.0
+CROSS-SET (CD-HIT-2D style): local_Ind_1049 sequences with identity>=1.0 to local_Benchmark_clean,1.0,1049.0,734,315.0
+CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=0.6 to local_Benchmark_clean,0.6,425.0,36,389.0
+CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=0.8 to local_Benchmark_clean,0.8,425.0,118,307.0
+CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=0.9 to local_Benchmark_clean,0.9,425.0,162,263.0
+CROSS-SET (CD-HIT-2D style): local_Ind_425 sequences with identity>=1.0 to local_Benchmark_clean,1.0,425.0,189,236.0

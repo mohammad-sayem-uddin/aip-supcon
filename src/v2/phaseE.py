@@ -86,6 +86,8 @@ def collect() -> pd.DataFrame:
             rows += pair("representation: fusion (C2)", f"{short} fusion ({clf}) vs AAC+RF (v1 baseline)", f, "AAC_RF", "exploratory")
     rows += pair("representation: fine-tuning (C3)", "ESM-2 8M fine-tuned vs frozen (same head)", "esm2_t6_8M_finetune", "esm2_t6_8M_frozen", "exploratory")
     rows += pair("representation: ESM vs composition", "650M MLP lambda=0 vs AAC+RF", "esm2_t33_650M_lam0_tau0.07", "AAC_RF", "exploratory")
+    rows += pair("representation: fine-tuning (C3)", "ESM-2 8M fine-tuned vs frozen 650M MLP (lambda=0)", "esm2_t6_8M_finetune", "esm2_t33_650M_lam0_tau0.07", "exploratory",
+                 note="added when the thesis chapters were written, to answer whether fine-tuned 8M beats frozen 650M; included in the corrected families")
     rows += pair("representation: ESM vs composition", "8M MLP lambda=0 vs AAC+RF", "esm2_t6_8M_lam0_tau0.07", "AAC_RF", "exploratory")
     rows += pair("representation: ESM vs composition", "8M fine-tuned vs AAC+RF", "esm2_t6_8M_finetune", "AAC_RF", "exploratory")
     rows += pair("representation: ESM vs composition", "B5 Transformer (frozen 8M residues, lambda=0) vs AAC+RF", "B5_transformer_esm2_t6_8M_lam0_tau0.07", "AAC_RF", "exploratory")

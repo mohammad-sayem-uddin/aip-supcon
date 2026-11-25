@@ -1,0 +1,30 @@
+{
+ "file": "CHAPTER 3 thesis.docx",
+ "cited": [
+  "manavalan2018",
+  "gupta2017",
+  "khatun2019",
+  "vita2019",
+  "li2006",
+  "needleman1970",
+  "henikoff1992",
+  "bhasin2004",
+  "dubchak1995",
+  "lin2023",
+  "hochreiter1997",
+  "vaswani2017",
+  "ilse2018",
+  "khosla2020",
+  "loshchilov2017",
+  "matthews1975",
+  "delong1988",
+  "mcnemar1947",
+  "efron1979",
+  "benjamini1995"
+ ],
+ "todos": [],
+ "citation_needed": [],
+ "unresolved_refs": [],
+ "tables": 18,
+ "figures": 2
+}
