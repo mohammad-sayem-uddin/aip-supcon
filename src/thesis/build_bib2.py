@@ -42,7 +42,11 @@ PUBLISHED = [
     ("srivastava2014", "Dropout: A Simple Way to Prevent Neural Networks from Overfitting", "Srivastava", 2014, "https://jmlr.org/papers/v15/srivastava14a.html"),
     ("vandermaaten2008", "Visualizing Data using t-SNE", "van der Maaten", 2008, "https://jmlr.org/papers/v9/vandermaaten08a.html"),
 ]
-CROSSREF = [("breiman2001", "Random Forests", "Breiman", 2001), ("cortes1995", "Support-vector networks", "Cortes", 1995)]
+CROSSREF = [("breiman2001", "Random Forests", "Breiman", 2001), ("cortes1995", "Support-vector networks", "Cortes", 1995),
+            ("zhao2021", "iAIPs: Identifying Anti-Inflammatory Peptides Using Random Forest", "Zhao", 2021),
+            ("zhang2021", "AIEpred: An Ensemble Predictive Model of Classifier Chain to Identify Anti-Inflammatory Peptides", "Zhang", 2021),
+            ("gaffar2024", "IF-AIP: A machine learning method for the identification of anti-inflammatory peptides using multi-feature fusion strategy", "Gaffar", 2024),
+            ("wang2026", "AIPFusion-Net: an interaction-fusion framework for anti-inflammatory peptide prediction using protein language model embeddings, local sequence patterns, and handcrafted descriptors", "Wang", 2026)]
 
 def parse(url, title, fam, year):
     t = text(url).replace("\xa0", " ")

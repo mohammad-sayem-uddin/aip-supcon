@@ -1,0 +1,51 @@
+1. Comput Biol Med. 2024 Jan;168:107724. doi: 10.1016/j.compbiomed.2023.107724. 
+Epub 2023 Nov 19.
+
+IF-AIP: A machine learning method for the identification of anti-inflammatory 
+peptides using multi-feature fusion strategy.
+
+Gaffar S(1), Hassan MT(1), Tayara H(2), Chong KT(3).
+
+Author information:
+(1)Department of Electronics and Information Engineering, Jeonbuk National 
+University, Jeonju, 54896, South Korea.
+(2)School of International Engineering and Science, Jeonbuk National University, 
+Jeonju, 54896, South Korea. Electronic address: hilaltayara@jbnu.ac.kr.
+(3)Department of Electronics and Information Engineering, Jeonbuk National 
+University, Jeonju, 54896, South Korea; Advances Electronics and Information 
+Research Centre, Jeonbuk National University, Jeonju, 54896, South Korea. 
+Electronic address: kitchong@jbnu.ac.kr.
+
+BACKGROUND: The most commonly used therapy currently for inflammatory and 
+autoimmune diseases is nonspecific anti-inflammatory drugs, which have various 
+hazardous side effects. Recently, some anti-inflammatory peptides (AIPs) have 
+been found to be a substitute therapy for inflammatory diseases like rheumatoid 
+arthritis and Alzheimer's. Therefore, the identification of these AIPs is an 
+emerging topic that is equally important.
+METHODS: In this work, we have proposed an identification model for AIPs using a 
+voting classifier. We used eight different feature descriptors and five 
+conventional machine-learning classifiers. The eight feature encodings were 
+concatenated to get a hybrid feature set. The five baseline models trained on 
+the hybrid feature set were integrated via a voting classifier. Finally, a 
+feature selection algorithm was used to select the optimal feature set for the 
+construction of our final model, named IF-AIP.
+RESULTS: We tested the proposed model on two independent datasets. On 
+independent data 1, the IF-AIP model shows an improvement of 3%-5.6% in terms of 
+accuracies and 6.7%-10.8% in terms of MCC compared to the existing methods. On 
+the independent dataset 2, our model IF-AIP shows an overall improvement of 
+2.9%-5.7% in terms of accuracy and 8.3%-8.6% in terms of MCC score compared to 
+the existing methods. A comparative performance analysis was conducted between 
+the proposed model and existing methods using a set of 24 novel peptide 
+sequences. Notably, the IF-AIP method exhibited exceptional accuracy, correctly 
+identifying all 24 peptides as AIPs. The source code, pre-trained models, and 
+all datasets are made available at https://github.com/Mir-Saima/IF-AIP.
+
+Copyright © 2023. Published by Elsevier Ltd.
+
+DOI: 10.1016/j.compbiomed.2023.107724
+PMID: 37989075 [Indexed for MEDLINE]
+
+Conflict of interest statement: Declaration of competing interest The authors 
+declare that they have no known competing financial interests or personal 
+relationships that could have appeared to influence the work reported in this 
+paper.

@@ -1,0 +1,37 @@
+model,stem,family
+ESM-2 8M + logistic regression,esm2_t6_8M_LR,Linear
+ESM-2 35M + logistic regression,esm2_t12_35M_LR,Linear
+ESM-2 150M + logistic regression,esm2_t30_150M_LR,Linear
+AAC + SVM (RBF),AAC_SVM,Kernel SVM
+AAC + random forest,AAC_RF,Trees
+AAC+DPC+CTD + LightGBM,AAC_DPC_CTD_LGBM,Trees
+Hand-crafted + RF,hand__rf,Trees
+Hand-crafted + LightGBM,hand__lgbm,Trees
+8M mean + RF,esm8_mean__rf,Trees
+8M mean + LightGBM,esm8_mean__lgbm,Trees
+650M mean + RF,esm650_mean__rf,Trees
+650M mean + LightGBM,esm650_mean__lgbm,Trees
+8M fusion + RF,esm8_fusion__rf,Trees
+8M fusion + LightGBM,esm8_fusion__lgbm,Trees
+650M fusion + RF,esm650_fusion__rf,Trees
+650M fusion + LightGBM,esm650_fusion__lgbm,Trees
+8M MLP,esm2_t6_8M_lam0_tau0.07,MLP
+35M MLP,esm2_t12_35M_lam0_tau0.07,MLP
+150M MLP,esm2_t30_150M_lam0_tau0.07,MLP
+650M MLP,esm2_t33_650M_lam0_tau0.07,MLP
+Hand-crafted + MLP,hand__mlp,MLP
+8M mean + MLP,esm8_mean__mlp,MLP
+8M fusion + MLP,esm8_fusion__mlp,MLP
+650M fusion + MLP,esm650_fusion__mlp,MLP
+8M frozen control (fine-tuning head),esm2_t6_8M_frozen,MLP
+650M max-pool MLP,esm650_max__mlp,MLP
+650M mean||max MLP,esm650_meanmax__mlp,MLP
+650M CLS MLP,esm650_cls__mlp,MLP
+650M first/last MLP,esm650_firstlast__mlp,MLP
+B2 CNN,B2_cnn_esm2_t6_8M_lam0_tau0.07,Residue-level network
+B3 BiLSTM,B3_bilstm_esm2_t6_8M_lam0_tau0.07,Residue-level network
+B4 CNN-BiLSTM,B4_cnn_bilstm_esm2_t6_8M_lam0_tau0.07,Residue-level network
+B5 Transformer,B5_transformer_esm2_t6_8M_lam0_tau0.07,Residue-level network
+B6 attention pooling,B6_attnpool_esm2_t6_8M_lam0_tau0.07,Residue-level network
+650M attention-pool MLP,esm650_attention__attn_mlp,Residue-level network
+8M fine-tuned,esm2_t6_8M_finetune,Fine-tuned

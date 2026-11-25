@@ -1,0 +1,19 @@
+predictor,evaluation,role,ACC,SN,SP,MCC,AUC,source,table,row,note
+"AntiInflam (Gupta et al., 2017)",validation set (our Ind_425 file; 173 AIPs / 252 non-AIPs),own paper,0.72,0.7861,0.6746,0.45,,antiinflam PMC5216551,Table 3,TPC_HYB,"SVM on tripeptide composition + motif hybrid, the model that the paper's abstract names as best; no AUC in this table"
+"AntiInflam (Gupta et al., 2017)","10-fold cross-validation, training set",own paper,0.7809999999999999,0.8783,0.7145999999999999,0.58,,antiinflam PMC5216551,Table 2,TPC_HYB,same model
+"AIPpred (Manavalan et al., 2018)","5-fold CV, benchmark (1,258 / 1,887)",own paper,0.734,0.758,0.711,0.46,0.801,aippred PMC5881105,Table 1,AIPpred,
+"AIPpred (Manavalan et al., 2018)",independent set (our Ind_1049 file; 420 / 629),own paper,0.744,0.741,0.746,0.479,0.814,aippred PMC5881105,Table 2,AIPpred,
+AntiInflam (MA) as evaluated by the AIPpred authors,independent set (Ind_1049),other authors' evaluation,0.601,0.786,0.417,0.21,0.706,aippred PMC5881105,Table 2,AntiInflam (MA),
+AntiInflam (LA) as evaluated by the AIPpred authors,independent set (Ind_1049),other authors' evaluation,0.575,0.258,0.892,0.197,0.647,aippred PMC5881105,Table 2,AntiInflam (LA),
+"PreAIP (Khatun et al., 2019)","10-fold CV, training set",own paper,0.767,0.709,0.806,0.508,0.833,preaip PMC6411759,Table 1,PreAIP*,
+"PreAIP (Khatun et al., 2019), threshold High",test set (our Ind_1049 file),own paper,0.77,0.618,0.871,0.512,0.84,preaip PMC6411759,Table 2,row 4: PreAIP | High | 0.871 | 0.618 | 0.770 | 0.512 | 0.840 | ,threshold level as printed in the paper
+"PreAIP (Khatun et al., 2019), threshold Moderate",test set (our Ind_1049 file),own paper,0.762,0.784,0.747,0.522,0.84,preaip PMC6411759,Table 2,row 5:  | Moderate | 0.747 | 0.784 | 0.762 | 0.522 | 0.840 | ,threshold level as printed in the paper
+"PreAIP (Khatun et al., 2019), threshold Low",test set (our Ind_1049 file),own paper,0.727,0.863,0.636,0.492,0.84,preaip PMC6411759,Table 2,row 6:  | Low | 0.636 | 0.863 | 0.727 | 0.492 | 0.840 | ,threshold level as printed in the paper
+AIPpred as evaluated by the PreAIP authors,test set (Ind_1049),other authors' evaluation,0.744,0.741,0.746,0.479,0.813,preaip PMC6411759,Table 2,AIPpred,
+"iAIPs (Zhao et al., 2021)",independent set (Ind_1049),own paper,0.751,0.567,0.874,0.471,0.822,iaips PMC8669811,Table 6,iAIPs (our work),
+"AIEpred (Zhang et al., 2021) as reported in the iAIPs paper",independent set (Ind_1049),other authors' evaluation,0.762,0.555,0.899,0.495,0.767,iaips PMC8669811,Table 6,AIEpred,AIEpred's own paper is not open access and its abstract gives no figures
+"AIPFusion-Net (Wang et al., 2026)",Ind-1049 (byte-identical to our Ind_1049),own paper,0.846,0.7170000000000001,0.893,0.654,0.884,aipfusion PMC13677489,Table 2,AIPFusion-Net,training file in its repository is byte-identical to our Benchmark_Dataset (SHA-256)
+"AIPFusion-Net (Wang et al., 2026)",Ind-426 (its name for our Ind_425 file),own paper,0.823,0.8440000000000001,0.769,0.673,0.882,aipfusion PMC13677489,Table 3,AIPFusion-Net,
+"AIPStack (Deng et al., 2022)",independent set 3 of its own dataset (71 AIPs / 72 non-AIPs; not obtainable),own paper,0.755,,,0.51,0.819,aipstack PMC9449674,abstract and Results text (precision 0.757),AIPStack on independent set 3,SN and SP appear only in Figure 5E/F (image); left empty
+"IF-AIP (Gaffar et al., 2024)",independent data 1 and 2 of its own study,own paper,,,,,,PMID 37989075 (abstract only),-,-,abstract gives relative improvements only; paper is not open access: TODO
+"AIEpred (Zhang et al., 2021)",leave-one-out CV and independent test of its own study,own paper,,,,,,PMID 31985437 (abstract only),-,-,abstract gives no figures; paper is not open access: TODO

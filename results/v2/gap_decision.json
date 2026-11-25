@@ -1,0 +1,18 @@
+{
+ "rule_met": true,
+ "flex_minus_linear_both": {
+  "contrast": "Flexible non-linear (all) - Linear",
+  "scope": "both",
+  "n_models_a": 32,
+  "n_models_b": 3,
+  "mean_gap_a": 0.20696192410338646,
+  "mean_gap_b": 0.0721305323288996,
+  "diff": 0.13483139177448686,
+  "lo": 0.10027556825256337,
+  "hi": 0.16997710889920475,
+  "p_boot": 0.0004997501249375312,
+  "p_mannwhitney_models": 0.023280908288077412,
+  "p_BH_within_scope": 0.0008745627186406797,
+  "p_BH_all": 0.0008745627186406797
+ }
+}

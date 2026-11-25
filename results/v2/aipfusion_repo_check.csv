@@ -1,0 +1,4 @@
+file,local_sha256,aipfusion_repo_sha256,byte_identical,source
+Benchmark_Dataset,c9d1dae56b612edfba56df152318f375a16b5ab6c5855844c3f9b8ea600a1649,c9d1dae56b612edfba56df152318f375a16b5ab6c5855844c3f9b8ea600a1649,True,https://raw.githubusercontent.com/ChenYH7693/AIPFusion-Net/main/AIPData/Benchmark_Dataset.txt (repository named in the Data availability statement of PMC13677489)
+Ind_1049,e67ac83d31a8906681db660daee6bc0e924a86829caa2e4fd09b3eae3ae0676e,e67ac83d31a8906681db660daee6bc0e924a86829caa2e4fd09b3eae3ae0676e,True,https://raw.githubusercontent.com/ChenYH7693/AIPFusion-Net/main/AIPData/Ind_1049.txt (repository named in the Data availability statement of PMC13677489)
+Ind_425,a70cb4135bff7dcc33fa00533e8465608576fb2330c66d48b63575d3367c4035,a70cb4135bff7dcc33fa00533e8465608576fb2330c66d48b63575d3367c4035,True,https://raw.githubusercontent.com/ChenYH7693/AIPFusion-Net/main/AIPData/Ind_425.txt (repository named in the Data availability statement of PMC13677489)

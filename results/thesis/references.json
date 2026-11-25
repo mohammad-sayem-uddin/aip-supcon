@@ -1203,7 +1203,7 @@
   "source": "CrossRef"
  },
  "cortes1995": {
-  "title": "Support-vector networks",
+  "title": "Support-Vector Networks",
   "authors": [
    [
     "Cortes",
@@ -1219,10 +1219,10 @@
   "volume": "20",
   "issue": "3",
   "pages": "273-297",
-  "doi": "10.1007/bf00994018",
+  "doi": "10.1023/a:1022627411411",
   "type": "journal-article",
   "publisher": "Springer Science and Business Media LLC",
-  "record": "https://api.crossref.org/works/10.1007/bf00994018",
+  "record": "https://api.crossref.org/works/10.1023/a:1022627411411",
   "source": "CrossRef"
  },
  "loshchilov2016": {
@@ -1249,5 +1249,137 @@
   "source": "arXiv",
   "arxiv": "1608.03983",
   "journal_ref": ""
+ },
+ "zhao2021": {
+  "title": "iAIPs: Identifying Anti-Inflammatory Peptides Using Random Forest",
+  "authors": [
+   [
+    "Zhao",
+    "Dongxu"
+   ],
+   [
+    "Teng",
+    "Zhixia"
+   ],
+   [
+    "Li",
+    "Yanjuan"
+   ],
+   [
+    "Chen",
+    "Dong"
+   ]
+  ],
+  "year": 2021,
+  "container": "Frontiers in Genetics",
+  "volume": "12",
+  "issue": "",
+  "pages": "",
+  "doi": "10.3389/fgene.2021.773202",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA",
+  "record": "https://api.crossref.org/works/10.3389/fgene.2021.773202",
+  "source": "CrossRef"
+ },
+ "zhang2021": {
+  "title": "AIEpred: An Ensemble Predictive Model of Classifier Chain to Identify Anti-Inflammatory Peptides",
+  "authors": [
+   [
+    "Zhang",
+    "Jinhao"
+   ],
+   [
+    "Zhang",
+    "Zehua"
+   ],
+   [
+    "Pu",
+    "Lianrong"
+   ],
+   [
+    "Tang",
+    "Jijun"
+   ],
+   [
+    "Guo",
+    "Fei"
+   ]
+  ],
+  "year": 2021,
+  "container": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
+  "volume": "18",
+  "issue": "5",
+  "pages": "1831-1840",
+  "doi": "10.1109/tcbb.2020.2968419",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "record": "https://api.crossref.org/works/10.1109/tcbb.2020.2968419",
+  "source": "CrossRef"
+ },
+ "gaffar2024": {
+  "title": "IF-AIP: A machine learning method for the identification of anti-inflammatory peptides using multi-feature fusion strategy",
+  "authors": [
+   [
+    "Gaffar",
+    "Saima"
+   ],
+   [
+    "Hassan",
+    "Mir Tanveerul"
+   ],
+   [
+    "Tayara",
+    "Hilal"
+   ],
+   [
+    "Chong",
+    "Kil To"
+   ]
+  ],
+  "year": 2024,
+  "container": "Computers in Biology and Medicine",
+  "volume": "168",
+  "issue": "",
+  "pages": "107724",
+  "doi": "10.1016/j.compbiomed.2023.107724",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "record": "https://api.crossref.org/works/10.1016/j.compbiomed.2023.107724",
+  "source": "CrossRef"
+ },
+ "wang2026": {
+  "title": "AIPFusion-Net: an interaction-fusion framework for anti-inflammatory peptide prediction using protein language model embeddings, local sequence patterns, and handcrafted descriptors",
+  "authors": [
+   [
+    "Wang",
+    "Wentao"
+   ],
+   [
+    "Yang",
+    "Weidong"
+   ],
+   [
+    "Li",
+    "Hongmei"
+   ],
+   [
+    "Cui",
+    "Zhenyu"
+   ],
+   [
+    "Shen",
+    "Dan"
+   ]
+  ],
+  "year": 2026,
+  "container": "Frontiers in Molecular Biosciences",
+  "volume": "13",
+  "issue": "",
+  "pages": "",
+  "doi": "10.3389/fmolb.2026.1952395",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA",
+  "record": "https://api.crossref.org/works/10.3389/fmolb.2026.1952395",
+  "source": "CrossRef"
  }
 }
