@@ -30,8 +30,10 @@ REGIMES = ("A", "B", "C")
 N_JOBS = 6
 
 
-def make_cfg(ckpt: str, lam: float, tau: float = 0.07) -> Config:
-    return Config(name=f"{ckpt}_lam{lam:g}_tau{tau:g}", checkpoint=ckpt, lambda_supcon=lam, temperature=tau)
+def make_cfg(ckpt: str, lam: float, tau: float = 0.07, n_views: int = 1, noise: float = 0.0) -> Config:
+    c = Config(name="", checkpoint=ckpt, lambda_supcon=lam, temperature=tau, n_views=n_views, noise_sigma=noise)
+    c.name = c.model_name()
+    return c
 
 
 def available_checkpoints() -> list[str]:
@@ -121,6 +123,16 @@ def s8(only: list[str] | None = None) -> int:
     if only is None:
         mark_stage("S8", "partial" if failed else "complete", t.elapsed(),
                    "lambda + temperature sweeps; missing/failed: " + (", ".join(failed) or "none"))
+    return 0
+
+
+def explore() -> int:
+    """Exploratory (not pre-specified): two-view feature-space augmentation at 8M. Reported separately."""
+    t = Timer()
+    for noise in (0.0, 0.1):
+        for lam in LAMBDAS:
+            cross_validate(config=make_cfg(HEADLINE, lam, 0.07, n_views=2, noise=noise), seeds=SEEDS, n_jobs=N_JOBS)
+    mark_stage("S8b_explore", "complete", t.elapsed(), "exploratory two-view augmentation, 8M, noise 0 and 0.1")
     return 0
 
 
@@ -257,8 +269,8 @@ def s10() -> int:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["configs", "s7", "s8", "s9", "s10"])
+    ap.add_argument("stage", choices=["configs", "s7", "s8", "s9", "s10", "explore"])
     ap.add_argument("--only", nargs="+", help="s8 only: run just these checkpoints (does not mark the stage)")
     a = ap.parse_args()
     sys.exit({"configs": lambda: print(write_configs()) or 0, "s7": s7, "s8": lambda: s8(a.only), "s9": s9,
-              "s10": s10}[a.stage]())
+              "s10": s10, "explore": explore}[a.stage]())

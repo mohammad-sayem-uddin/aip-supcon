@@ -56,15 +56,25 @@ class Config:
     batch_size: int = 128
     max_epochs: int = 200
     patience: int = 20
+    n_views: int = 1  # 2 = feature-space augmentation (two stochastic dropout views); exploratory only
+    noise_sigma: float = 0.0  # Gaussian noise (std, on standardised features) added to each view when n_views == 2
 
     def key(self) -> str:
         d = asdict(self)
         d.pop("name")
+        if d["n_views"] == 1 and d["noise_sigma"] == 0.0:  # keep keys of the pre-specified grid unchanged
+            d.pop("n_views"); d.pop("noise_sigma")
         d["hidden_dims"] = list(d["hidden_dims"])
         return hashlib.md5(json.dumps(d, sort_keys=True).encode()).hexdigest()[:10]
 
     def model_name(self) -> str:
-        return f"{self.checkpoint}_lam{self.lambda_supcon:g}_tau{self.temperature:g}"
+        base = f"{self.checkpoint}_lam{self.lambda_supcon:g}_tau{self.temperature:g}"
+        if self.n_views == 2:
+            base += f"_v2n{self.noise_sigma:g}"
+        return base
+
+    def family(self) -> str:
+        return "deep" if (self.n_views == 1 and self.noise_sigma == 0.0) else "deep_explore"
 
     @staticmethod
     def from_yaml(path: str | Path) -> "Config":
@@ -138,9 +148,18 @@ def train_fold(X_train, y_train, X_val, y_val, config: Config, seed: int = 0):
             idx = perm[i : i + config.batch_size]
             if len(idx) < 2:
                 continue
-            out = model(Xt[idx])
-            l_bce = bce(out["logit"], yt[idx])
-            l_sc = supcon(out["projection"], yt_long[idx])
+            xb = Xt[idx]
+            if config.n_views == 2:
+                o1 = model(xb + config.noise_sigma * torch.randn_like(xb))
+                o2 = model(xb + config.noise_sigma * torch.randn_like(xb))
+                logit = torch.cat([o1["logit"], o2["logit"]])
+                proj = torch.cat([o1["projection"], o2["projection"]])
+                yb, ylb = torch.cat([yt[idx]] * 2), torch.cat([yt_long[idx]] * 2)
+            else:
+                out = model(xb)
+                logit, proj, yb, ylb = out["logit"], out["projection"], yt[idx], yt_long[idx]
+            l_bce = bce(logit, yb)
+            l_sc = supcon(proj, ylb)
             loss = l_bce + config.lambda_supcon * l_sc
             opt.zero_grad(set_to_none=True)
             loss.backward()
@@ -208,7 +227,7 @@ def run_one_fold(task: tuple) -> dict:
     model, hist = train_fold(sc.transform(X[tr]), y[tr], sc.transform(X[va]), y[va], cfg, seed=1000 * seed + fold)
     secs = time.time() - t0
     prob = _predict(model, torch.as_tensor(sc.transform(X[va]), dtype=torch.float32))
-    return _result_row(cfg, cfg.model_name(), "deep", "cv", "cv", seed, fold, hist[0]["best_epoch"], len(hist),
+    return _result_row(cfg, cfg.model_name(), cfg.family(), "cv", "cv", seed, fold, hist[0]["best_epoch"], len(hist),
                        secs, 0.5, y[va], prob)
 
 

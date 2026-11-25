@@ -1,0 +1,62 @@
+{
+  "esm2_t6_8M_lam0_tau0.07": {
+    "checkpoint": "esm2_t6_8M",
+    "lambda": 0.0,
+    "tau": 0.07,
+    "role": "baseline"
+  },
+  "esm2_t6_8M_lam2_tau0.07": {
+    "checkpoint": "esm2_t6_8M",
+    "lambda": 2.0,
+    "tau": 0.07,
+    "role": "best"
+  },
+  "esm2_t6_8M_lam0.1_tau0.07": {
+    "checkpoint": "esm2_t6_8M",
+    "lambda": 0.1,
+    "tau": 0.07,
+    "role": "sweep"
+  },
+  "esm2_t6_8M_lam0.25_tau0.07": {
+    "checkpoint": "esm2_t6_8M",
+    "lambda": 0.25,
+    "tau": 0.07,
+    "role": "sweep"
+  },
+  "esm2_t6_8M_lam0.5_tau0.07": {
+    "checkpoint": "esm2_t6_8M",
+    "lambda": 0.5,
+    "tau": 0.07,
+    "role": "sweep"
+  },
+  "esm2_t6_8M_lam1_tau0.07": {
+    "checkpoint": "esm2_t6_8M",
+    "lambda": 1.0,
+    "tau": 0.07,
+    "role": "sweep"
+  },
+  "esm2_t12_35M_lam0_tau0.07": {
+    "checkpoint": "esm2_t12_35M",
+    "lambda": 0.0,
+    "tau": 0.07,
+    "role": "baseline"
+  },
+  "esm2_t12_35M_lam0.5_tau0.07": {
+    "checkpoint": "esm2_t12_35M",
+    "lambda": 0.5,
+    "tau": 0.07,
+    "role": "best"
+  },
+  "esm2_t30_150M_lam0_tau0.07": {
+    "checkpoint": "esm2_t30_150M",
+    "lambda": 0.0,
+    "tau": 0.07,
+    "role": "baseline"
+  },
+  "esm2_t30_150M_lam2_tau0.07": {
+    "checkpoint": "esm2_t30_150M",
+    "lambda": 2.0,
+    "tau": 0.07,
+    "role": "best"
+  }
+}
