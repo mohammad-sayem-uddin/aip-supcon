@@ -1,0 +1,154 @@
+# 2026-11-25T12:31:51 C1_pooling: 125 CV tasks, 25 final tasks left
+2026-11-25T12:32:01, esm650_mean|mlp, seed=0, fold=2, MCC=0.2457, elapsed=7s
+2026-11-25T12:32:01, esm650_mean|mlp, seed=0, fold=0, MCC=0.2781, elapsed=8s
+2026-11-25T12:32:02, esm650_mean|mlp, seed=1, fold=0, MCC=0.2874, elapsed=8s
+2026-11-25T12:32:02, esm650_mean|mlp, seed=0, fold=4, MCC=0.2629, elapsed=9s
+2026-11-25T12:32:03, esm650_mean|mlp, seed=0, fold=3, MCC=0.2786, elapsed=9s
+2026-11-25T12:32:05, esm650_mean|mlp, seed=1, fold=1, MCC=0.1910, elapsed=5s
+2026-11-25T12:32:06, esm650_mean|mlp, seed=0, fold=1, MCC=0.2172, elapsed=12s
+2026-11-25T12:32:06, esm650_mean|mlp, seed=1, fold=2, MCC=0.1518, elapsed=5s
+2026-11-25T12:32:07, esm650_mean|mlp, seed=1, fold=3, MCC=0.2345, elapsed=5s
+2026-11-25T12:32:10, esm650_mean|mlp, seed=2, fold=1, MCC=0.1752, elapsed=5s
+2026-11-25T12:32:12, esm650_mean|mlp, seed=1, fold=4, MCC=0.2248, elapsed=10s
+2026-11-25T12:32:13, esm650_mean|mlp, seed=2, fold=3, MCC=0.2458, elapsed=7s
+2026-11-25T12:32:14, esm650_mean|mlp, seed=2, fold=2, MCC=0.2256, elapsed=8s
+2026-11-25T12:32:14, esm650_mean|mlp, seed=2, fold=4, MCC=0.2599, elapsed=8s
+2026-11-25T12:32:17, esm650_mean|mlp, seed=3, fold=1, MCC=0.2348, elapsed=5s
+2026-11-25T12:32:20, esm650_mean|mlp, seed=3, fold=2, MCC=0.2627, elapsed=8s
+2026-11-25T12:32:21, esm650_mean|mlp, seed=2, fold=0, MCC=0.2550, elapsed=18s
+2026-11-25T12:32:22, esm650_mean|mlp, seed=3, fold=0, MCC=0.2543, elapsed=12s
+2026-11-25T12:32:22, esm650_mean|mlp, seed=4, fold=0, MCC=0.1892, elapsed=5s
+2026-11-25T12:32:23, esm650_mean|mlp, seed=3, fold=3, MCC=0.3123, elapsed=10s
+2026-11-25T12:32:27, esm650_mean|mlp, seed=4, fold=2, MCC=0.2053, elapsed=6s
+2026-11-25T12:32:28, esm650_max|mlp, seed=0, fold=0, MCC=0.2372, elapsed=5s
+2026-11-25T12:32:29, esm650_mean|mlp, seed=3, fold=4, MCC=0.2540, elapsed=14s
+2026-11-25T12:32:30, esm650_mean|mlp, seed=4, fold=4, MCC=0.2080, elapsed=8s
+2026-11-25T12:32:31, esm650_mean|mlp, seed=4, fold=1, MCC=0.2290, elapsed=10s
+2026-11-25T12:32:33, esm650_max|mlp, seed=0, fold=1, MCC=0.1966, elapsed=5s
+2026-11-25T12:32:33, esm650_mean|mlp, seed=4, fold=3, MCC=0.2435, elapsed=11s
+2026-11-25T12:32:34, esm650_max|mlp, seed=0, fold=2, MCC=0.2278, elapsed=6s
+2026-11-25T12:32:34, esm650_max|mlp, seed=0, fold=3, MCC=0.2278, elapsed=6s
+2026-11-25T12:32:36, esm650_max|mlp, seed=0, fold=4, MCC=0.1535, elapsed=6s
+2026-11-25T12:32:36, esm650_max|mlp, seed=1, fold=0, MCC=0.2420, elapsed=5s
+2026-11-25T12:32:38, esm650_max|mlp, seed=1, fold=2, MCC=0.1633, elapsed=5s
+2026-11-25T12:32:39, esm650_max|mlp, seed=1, fold=4, MCC=0.1770, elapsed=5s
+2026-11-25T12:32:39, esm650_max|mlp, seed=1, fold=3, MCC=0.2100, elapsed=6s
+2026-11-25T12:32:41, esm650_max|mlp, seed=1, fold=1, MCC=0.1985, elapsed=8s
+2026-11-25T12:32:41, esm650_max|mlp, seed=2, fold=0, MCC=0.2727, elapsed=5s
+2026-11-25T12:32:41, esm650_max|mlp, seed=2, fold=1, MCC=0.2531, elapsed=5s
+2026-11-25T12:32:45, esm650_max|mlp, seed=2, fold=4, MCC=0.2701, elapsed=5s
+2026-11-25T12:32:46, esm650_max|mlp, seed=3, fold=1, MCC=0.2405, elapsed=5s
+2026-11-25T12:32:46, esm650_max|mlp, seed=3, fold=2, MCC=0.2030, elapsed=5s
+2026-11-25T12:32:50, esm650_max|mlp, seed=2, fold=3, MCC=0.1715, elapsed=10s
+2026-11-25T12:32:50, esm650_max|mlp, seed=3, fold=3, MCC=0.2009, elapsed=6s
+2026-11-25T12:32:51, esm650_max|mlp, seed=2, fold=2, MCC=0.2308, elapsed=12s
+2026-11-25T12:32:54, esm650_max|mlp, seed=3, fold=0, MCC=0.1809, elapsed=13s
+2026-11-25T12:32:56, esm650_max|mlp, seed=4, fold=2, MCC=0.2148, elapsed=5s
+2026-11-25T12:32:56, esm650_max|mlp, seed=4, fold=1, MCC=0.1668, elapsed=6s
+2026-11-25T12:32:57, esm650_max|mlp, seed=4, fold=3, MCC=0.1984, elapsed=6s
+2026-11-25T12:32:57, esm650_max|mlp, seed=4, fold=0, MCC=0.1777, elapsed=11s
+2026-11-25T12:32:58, esm650_max|mlp, seed=3, fold=4, MCC=0.1804, elapsed=12s
+2026-11-25T12:33:03, esm650_max|mlp, seed=4, fold=4, MCC=0.2264, elapsed=9s
+2026-11-25T12:33:05, esm650_meanmax|mlp, seed=0, fold=0, MCC=0.2514, elapsed=10s
+2026-11-25T12:33:06, esm650_meanmax|mlp, seed=0, fold=2, MCC=0.2742, elapsed=10s
+2026-11-25T12:33:06, esm650_meanmax|mlp, seed=0, fold=4, MCC=0.2409, elapsed=9s
+2026-11-25T12:33:07, esm650_meanmax|mlp, seed=0, fold=1, MCC=0.2574, elapsed=10s
+2026-11-25T12:33:09, esm650_meanmax|mlp, seed=0, fold=3, MCC=0.2484, elapsed=11s
+2026-11-25T12:33:13, esm650_meanmax|mlp, seed=1, fold=0, MCC=0.2862, elapsed=10s
+2026-11-25T12:33:17, esm650_meanmax|mlp, seed=1, fold=2, MCC=0.2301, elapsed=10s
+2026-11-25T12:33:17, esm650_meanmax|mlp, seed=1, fold=1, MCC=0.2088, elapsed=12s
+2026-11-25T12:33:18, esm650_meanmax|mlp, seed=1, fold=4, MCC=0.1912, elapsed=11s
+2026-11-25T12:33:20, esm650_meanmax|mlp, seed=2, fold=0, MCC=0.2375, elapsed=11s
+2026-11-25T12:33:22, esm650_meanmax|mlp, seed=2, fold=1, MCC=0.2230, elapsed=9s
+2026-11-25T12:33:30, esm650_meanmax|mlp, seed=2, fold=2, MCC=0.2807, elapsed=13s
+2026-11-25T12:33:30, esm650_meanmax|mlp, seed=2, fold=4, MCC=0.2219, elapsed=12s
+2026-11-25T12:33:31, esm650_meanmax|mlp, seed=2, fold=3, MCC=0.2118, elapsed=13s
+2026-11-25T12:33:35, esm650_meanmax|mlp, seed=3, fold=0, MCC=0.2627, elapsed=15s
+2026-11-25T12:33:35, esm650_meanmax|mlp, seed=1, fold=3, MCC=0.2311, elapsed=29s
+2026-11-25T12:33:40, esm650_meanmax|mlp, seed=3, fold=1, MCC=0.2040, elapsed=18s
+2026-11-25T12:33:42, esm650_meanmax|mlp, seed=3, fold=3, MCC=0.2426, elapsed=11s
+2026-11-25T12:33:42, esm650_meanmax|mlp, seed=3, fold=2, MCC=0.2312, elapsed=12s
+2026-11-25T12:33:45, esm650_meanmax|mlp, seed=4, fold=0, MCC=0.2183, elapsed=10s
+2026-11-25T12:33:51, esm650_meanmax|mlp, seed=4, fold=1, MCC=0.1850, elapsed=15s
+2026-11-25T12:33:54, esm650_cls|mlp, seed=0, fold=0, MCC=0.2408, elapsed=9s
+2026-11-25T12:33:56, esm650_meanmax|mlp, seed=3, fold=4, MCC=0.2044, elapsed=26s
+2026-11-25T12:33:57, esm650_cls|mlp, seed=0, fold=1, MCC=0.2975, elapsed=7s
+2026-11-25T12:33:58, esm650_meanmax|mlp, seed=4, fold=2, MCC=0.2202, elapsed=18s
+2026-11-25T12:33:58, esm650_meanmax|mlp, seed=4, fold=3, MCC=0.2614, elapsed=17s
+2026-11-25T12:34:00, esm650_cls|mlp, seed=0, fold=2, MCC=0.2957, elapsed=6s
+2026-11-25T12:34:03, esm650_cls|mlp, seed=0, fold=3, MCC=0.3145, elapsed=6s
+2026-11-25T12:34:04, esm650_cls|mlp, seed=1, fold=0, MCC=0.2829, elapsed=6s
+2026-11-25T12:34:05, esm650_cls|mlp, seed=1, fold=1, MCC=0.3401, elapsed=6s
+2026-11-25T12:34:07, esm650_cls|mlp, seed=1, fold=2, MCC=0.2565, elapsed=7s
+2026-11-25T12:34:07, esm650_cls|mlp, seed=0, fold=4, MCC=0.2661, elapsed=10s
+2026-11-25T12:34:10, esm650_cls|mlp, seed=1, fold=3, MCC=0.3089, elapsed=8s
+2026-11-25T12:34:12, esm650_cls|mlp, seed=1, fold=4, MCC=0.2227, elapsed=8s
+2026-11-25T12:34:12, esm650_cls|mlp, seed=2, fold=1, MCC=0.2069, elapsed=5s
+2026-11-25T12:34:13, esm650_cls|mlp, seed=2, fold=0, MCC=0.3339, elapsed=8s
+2026-11-25T12:34:14, esm650_cls|mlp, seed=2, fold=2, MCC=0.2850, elapsed=6s
+2026-11-25T12:34:16, esm650_meanmax|mlp, seed=4, fold=4, MCC=0.2400, elapsed=34s
+2026-11-25T12:34:19, esm650_cls|mlp, seed=2, fold=3, MCC=0.2312, elapsed=8s
+2026-11-25T12:34:19, esm650_cls|mlp, seed=3, fold=0, MCC=0.2946, elapsed=6s
+2026-11-25T12:34:19, esm650_cls|mlp, seed=3, fold=1, MCC=0.2654, elapsed=6s
+2026-11-25T12:34:23, esm650_cls|mlp, seed=2, fold=4, MCC=0.2827, elapsed=11s
+2026-11-25T12:34:24, esm650_cls|mlp, seed=3, fold=2, MCC=0.2278, elapsed=10s
+2026-11-25T12:34:25, esm650_cls|mlp, seed=3, fold=4, MCC=0.2898, elapsed=6s
+2026-11-25T12:34:25, esm650_cls|mlp, seed=4, fold=1, MCC=0.2081, elapsed=6s
+2026-11-25T12:34:25, esm650_cls|mlp, seed=4, fold=0, MCC=0.2893, elapsed=6s
+2026-11-25T12:34:26, esm650_cls|mlp, seed=3, fold=3, MCC=0.2053, elapsed=9s
+2026-11-25T12:34:31, esm650_cls|mlp, seed=4, fold=2, MCC=0.2947, elapsed=8s
+2026-11-25T12:34:33, esm650_cls|mlp, seed=4, fold=3, MCC=0.2778, elapsed=9s
+2026-11-25T12:34:34, esm650_cls|mlp, seed=4, fold=4, MCC=0.2923, elapsed=9s
+2026-11-25T12:35:01, esm650_firstlast|mlp, seed=0, fold=0, MCC=0.2026, elapsed=35s
+2026-11-25T12:35:06, esm650_firstlast|mlp, seed=0, fold=3, MCC=0.1358, elapsed=35s
+2026-11-25T12:35:13, esm650_firstlast|mlp, seed=1, fold=0, MCC=0.2096, elapsed=40s
+2026-11-25T12:35:14, esm650_firstlast|mlp, seed=0, fold=2, MCC=0.1973, elapsed=48s
+2026-11-25T12:35:37, esm650_firstlast|mlp, seed=0, fold=1, MCC=0.1883, elapsed=71s
+2026-11-25T12:35:39, esm650_firstlast|mlp, seed=1, fold=2, MCC=0.1886, elapsed=33s
+2026-11-25T12:35:51, esm650_firstlast|mlp, seed=0, fold=4, MCC=0.1861, elapsed=78s
+2026-11-25T12:35:57, esm650_firstlast|mlp, seed=1, fold=4, MCC=0.1592, elapsed=44s
+2026-11-25T12:36:06, esm650_firstlast|mlp, seed=1, fold=1, MCC=0.1973, elapsed=65s
+2026-11-25T12:36:07, esm650_firstlast|mlp, seed=1, fold=3, MCC=0.2308, elapsed=53s
+2026-11-25T12:36:30, esm650_firstlast|mlp, seed=2, fold=2, MCC=0.2122, elapsed=39s
+2026-11-25T12:36:33, esm650_firstlast|mlp, seed=2, fold=3, MCC=0.1969, elapsed=36s
+2026-11-25T12:36:41, esm650_firstlast|mlp, seed=2, fold=1, MCC=0.1781, elapsed=62s
+2026-11-25T12:36:52, esm650_firstlast|mlp, seed=2, fold=4, MCC=0.2088, elapsed=46s
+2026-11-25T12:37:05, esm650_firstlast|mlp, seed=3, fold=2, MCC=0.2173, elapsed=32s
+2026-11-25T12:37:07, esm650_firstlast|mlp, seed=3, fold=0, MCC=0.1606, elapsed=60s
+2026-11-25T12:37:07, esm650_firstlast|mlp, seed=2, fold=0, MCC=0.1907, elapsed=90s
+2026-11-25T12:37:09, esm650_firstlast|mlp, seed=3, fold=1, MCC=0.1827, elapsed=39s
+2026-11-25T12:37:11, esm650_firstlast|mlp, seed=3, fold=3, MCC=0.2342, elapsed=30s
+# slice end: 6 CV tasks and 25 final tasks not started
+# 2026-11-25T12:37:28 C1_pooling: 6 CV tasks, 25 final tasks left
+2026-11-25T12:38:11, esm650_firstlast|mlp, seed=4, fold=2, MCC=0.1484, elapsed=39s
+2026-11-25T12:38:21, esm650_firstlast|mlp, seed=4, fold=1, MCC=0.2154, elapsed=50s
+2026-11-25T12:38:22, esm650_firstlast|mlp, seed=3, fold=4, MCC=0.2360, elapsed=50s
+2026-11-25T12:38:22, esm650_firstlast|mlp, seed=4, fold=3, MCC=0.1805, elapsed=50s
+2026-11-25T12:38:24, esm650_firstlast|mlp, seed=4, fold=4, MCC=0.2398, elapsed=53s
+2026-11-25T12:38:24, esm650_firstlast|mlp, seed=4, fold=0, MCC=0.1733, elapsed=53s
+2026-11-25T12:38:38, FINAL esm650_mean|mlp seed=3 cached
+2026-11-25T12:38:39, FINAL esm650_max|mlp seed=0 cached
+2026-11-25T12:38:39, FINAL esm650_mean|mlp seed=0 cached
+2026-11-25T12:38:42, FINAL esm650_mean|mlp seed=2 cached
+2026-11-25T12:38:42, FINAL esm650_mean|mlp seed=1 cached
+2026-11-25T12:38:45, FINAL esm650_max|mlp seed=2 cached
+2026-11-25T12:38:46, FINAL esm650_max|mlp seed=3 cached
+2026-11-25T12:38:46, FINAL esm650_mean|mlp seed=4 cached
+2026-11-25T12:38:49, FINAL esm650_max|mlp seed=4 cached
+2026-11-25T12:38:56, FINAL esm650_meanmax|mlp seed=0 cached
+2026-11-25T12:39:04, FINAL esm650_meanmax|mlp seed=3 cached
+2026-11-25T12:39:05, FINAL esm650_meanmax|mlp seed=4 cached
+2026-11-25T12:39:05, FINAL esm650_max|mlp seed=1 cached
+2026-11-25T12:39:05, FINAL esm650_cls|mlp seed=0 cached
+2026-11-25T12:39:07, FINAL esm650_meanmax|mlp seed=2 cached
+2026-11-25T12:39:09, FINAL esm650_meanmax|mlp seed=1 cached
+2026-11-25T12:39:17, FINAL esm650_cls|mlp seed=3 cached
+2026-11-25T12:39:19, FINAL esm650_cls|mlp seed=1 cached
+2026-11-25T12:39:19, FINAL esm650_cls|mlp seed=2 cached
+2026-11-25T12:39:21, FINAL esm650_cls|mlp seed=4 cached
+2026-11-25T12:40:14, FINAL esm650_firstlast|mlp seed=1 cached
+2026-11-25T12:40:15, FINAL esm650_firstlast|mlp seed=0 cached
+2026-11-25T12:40:15, FINAL esm650_firstlast|mlp seed=4 cached
+2026-11-25T12:40:16, FINAL esm650_firstlast|mlp seed=2 cached
+2026-11-25T12:40:25, FINAL esm650_firstlast|mlp seed=3 cached
+# slice end: 0 CV tasks and 0 final tasks not started

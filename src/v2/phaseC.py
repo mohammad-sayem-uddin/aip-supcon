@@ -157,31 +157,67 @@ def final_task(task):
     return {"feats": feats, "clf": clf, "phase": phase, "seed": seed, "ep": ep, "secs": time.time() - t0, "probs": ps}
 
 
-def run_models(models: list[tuple[str, str, str]], tag: str) -> None:
-    """models: [(features_name, classifier, phase)]. CV (25 runs) + final (5 seeds) per model; resumable."""
+CACHE_C = V2 / "final_cache_c"
+PROG_C = R / "phase_c_progress.log"
+
+
+def _prog(line: str) -> None:
+    import os
+    with open(PROG_C, "a") as f:
+        f.write(line + "\n")
+        f.flush()
+        os.fsync(f.fileno())
+
+
+def _final_cached(task):
+    r = final_task(task)
+    CACHE_C.mkdir(parents=True, exist_ok=True)
+    import pickle
+    with open(CACHE_C / f"{r['feats']}__{r['clf']}_seed{r['seed']}.pkl", "wb") as fh:
+        pickle.dump(r, fh)
+    return r["feats"], r["clf"], r["seed"]
+
+
+def run_models(models: list[tuple[str, str, str]], tag: str, budget: float | None = None) -> int:
+    """models: [(features_name, classifier, phase)]. CV (25 runs) + final (5 seeds) per model; resumable and foreground-sliced."""
+    from datetime import datetime
+    from src.v2.phaseB import rolling
     t = Timer()
     done = set()
     if OUT.exists():
-        d = pd.read_csv(OUT, usecols=["model", "eval_set", "seed", "fold"])
-        done = set(map(tuple, d.to_numpy()))
+        d = pd.read_csv(OUT, usecols=["model", "eval_set", "seed", "fold"])[["model", "eval_set", "seed", "fold"]]
+        done = {(m, e, int(s), int(f)) for m, e, s, f in d.to_numpy()}
     cv_tasks = [(f, c, ph, s, k) for f, c, ph in models for s in SEEDS for k in range(5) if (f"{f}|{c}", "cv", s, k) not in done]
-    fin_tasks = [(f, c, ph, s) for f, c, ph in models for s in SEEDS if (f"{f}|{c}", "ind_425", s, -1) not in done]
-    log.info("%s: %d CV tasks, %d final tasks", tag, len(cv_tasks), len(fin_tasks))
-    prog = ProgressLogger(len(cv_tasks) + len(fin_tasks), tag, log)
-    finals: dict[tuple, list] = {}
+    fin_tasks = [(f, c, ph, s) for f, c, ph in models for s in SEEDS
+                 if (f"{f}|{c}", "ind_425", s, -1) not in done and not (CACHE_C / f"{f}__{c}_seed{s}.pkl").exists()]
+    _prog(f"# {datetime.now().isoformat(timespec='seconds')} {tag}: {len(cv_tasks)} CV tasks, {len(fin_tasks)} final tasks left")
+
+    def on_cv(r):
+        pd.DataFrame([r])[COLS].to_csv(OUT, mode="a", header=not OUT.exists(), index=False)
+        _prog(f"{datetime.now().isoformat(timespec='seconds')}, {r['model']}, seed={r['seed']}, fold={r['fold']}, MCC={r['mcc']:.4f}, elapsed={r['train_seconds']:.0f}s")
+
+    left_cv = rolling(cv_tasks, cv_task, on_cv, N_JOBS, budget)
+    left_fin = len(fin_tasks)
+    if left_cv == 0:
+        left_fin = rolling(fin_tasks, _final_cached, lambda r: _prog(f"{datetime.now().isoformat(timespec='seconds')}, FINAL {r[0]}|{r[1]} seed={r[2]} cached"),
+                           N_JOBS, budget)
+    _prog(f"# slice end: {left_cv} CV tasks and {left_fin} final tasks not started")
+    if left_cv or left_fin:
+        return left_cv + left_fin
+    assemble_models(models)
+    mark(tag, "complete", t.elapsed(), f"{len(models)} models")
+    return 0
+
+
+def assemble_models(models) -> None:
+    import pickle
     labels = {(ts, rg): pd.read_csv(PROC / f"{ts}_regime_{rg.lower()}.csv") for ts, rg in TESTS}
-    with ProcessPoolExecutor(max_workers=N_JOBS, mp_context=mp.get_context("spawn")) as ex:
-        futs = [ex.submit(cv_task, tk) for tk in cv_tasks] + [ex.submit(final_task, tk) for tk in fin_tasks]
-        for fu in as_completed(futs):
-            r = fu.result()
-            if "probs" in r:
-                finals.setdefault((r["feats"], r["clf"], r["phase"]), []).append(r)
-            else:
-                pd.DataFrame([r])[COLS].to_csv(OUT, mode="a", header=not OUT.exists(), index=False)
-            prog.step()
     (V2 / "predictions").mkdir(exist_ok=True)
-    for (f, c, ph), rs in finals.items():
-        rs.sort(key=lambda r: r["seed"])
+    have = set(pd.read_csv(OUT, usecols=["model", "eval_set"]).query("eval_set == 'ind_425'")["model"]) if OUT.exists() else set()
+    for f, c, ph in models:
+        if f"{f}|{c}" in have:
+            continue
+        rs = [pickle.load(open(CACHE_C / f"{f}__{c}_seed{s}.pkl", "rb")) for s in SEEDS]
         rows = []
         for j, (ts, rg) in enumerate(TESTS):
             df = labels[(ts, rg)]
@@ -195,7 +231,6 @@ def run_models(models: list[tuple[str, str, str]], tag: str) -> None:
                 d[f"prob_seed{r['seed']}"] = p
             pd.DataFrame(d).to_csv(V2 / "predictions" / f"{f}__{c}_{ts}_{rg}.csv", index=False)
         pd.DataFrame(rows)[COLS].to_csv(OUT, mode="a", header=not OUT.exists(), index=False)
-    mark(tag, "complete", t.elapsed(), f"{len(models)} models")
 
 
 # ---------------------------------------------------------------- phases
@@ -246,14 +281,16 @@ def c1_attention() -> None:
     mark("C1_attention", "complete", t.elapsed(), "attention pooling over 650M residues")
 
 
-def c1() -> None:
+def c1(budget: float | None = None) -> int:
     for p in POOLINGS:
         materialise(f"esm650_{p}", esm_builder("esm2_t33_650M", p))
-    run_models([(f"esm650_{p}", "mlp", "C1") for p in POOLINGS], "C1_pooling")
-    c1_attention()
+    left = run_models([(f"esm650_{p}", "mlp", "C1") for p in POOLINGS], "C1_pooling", budget)
+    if left == 0:
+        c1_attention()
+    return left
 
 
-def c2() -> None:
+def c2(budget: float | None = None) -> int:
     materialise("hand", hand_builder())
     for ck, short in (("esm2_t33_650M", "esm650"), ("esm2_t6_8M", "esm8")):
         materialise(f"{short}_mean", esm_builder(ck, "mean"))
@@ -262,12 +299,15 @@ def c2() -> None:
     for short in ("esm650", "esm8"):
         models += [(f"{short}_mean", c, "C2") for c in ("rf", "lgbm", "mlp")]
         models += [(f"{short}_fusion", c, "C2") for c in ("rf", "lgbm", "mlp")]
-    run_models(models, "C2_fusion")
+    return run_models(models, "C2_fusion", budget)
 
 
 if __name__ == "__main__":
-    w = sys.argv[1] if len(sys.argv) > 1 else "all"
-    if w in ("c1", "all"):
-        c1()
-    if w in ("c2", "all"):
-        c2()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("what", choices=["c1", "c2"])
+    ap.add_argument("--budget", type=float, default=None)
+    ap.add_argument("--jobs", type=int, default=6)
+    a = ap.parse_args()
+    N_JOBS = a.jobs
+    print("tasks not started:", c1(a.budget) if a.what == "c1" else c2(a.budget))

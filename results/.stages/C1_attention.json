@@ -1,0 +1,7 @@
+{
+  "stage": "C1_attention",
+  "status": "complete",
+  "wall_seconds": 310.55137610435486,
+  "notes": "attention pooling over 650M residues",
+  "finished_at": "2026-11-25T12:45:39"
+}
