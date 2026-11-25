@@ -2,3 +2,4 @@ checkpoint,hf_id,device,gpu,dim,n_sequences,batch_size,embed_seconds,download_se
 esm2_t6_8M,facebook/esm2_t6_8M_UR50D,cpu,,320,4641,32,26.31,15.41,341.7,2026-11-21T17:20:50
 esm2_t12_35M,facebook/esm2_t12_35M_UR50D,cpu,,480,4641,32,57.0,18.82,379.8,2026-11-21T17:24:44
 esm2_t30_150M,facebook/esm2_t30_150M_UR50D,cpu,,640,4641,32,65.96,33.0,910.2,2026-11-25T07:23:17
+esm2_t33_650M,facebook/esm2_t33_650M_UR50D,cpu,,1280,4641,32,3033.47,123.26,1578.2,2026-11-25T08:15:57

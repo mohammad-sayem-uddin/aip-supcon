@@ -51,3 +51,18 @@ For each seed s the 5 folds use StratifiedKFold(shuffle, random_state=s), and th
 _2026-11-25_
 
 While the session was idle the venv lost its python symlinks and torch's compiled libraries (macOS refused to load them); I rebuilt .venv from requirements.txt (pinned) and restarted the embeddings that had failed because of it. Disk free space swings between ~0.1 and ~8 GB for reasons outside this project, so embed.py has a free-space preflight that writes a BLOCKERS entry instead of risking a full disk.
+
+## D11: Exploratory two-view feature-space augmentation (not part of the pre-specified grid)
+_2026-11-25_
+
+The playbook names feature-space augmentation as the first thing to try if SupCon results are flat, and the 8M sweep was flat, so I ran two stochastic dropout views per sample (with and without Gaussian input noise sigma=0.1 on standardised features) over all six lambdas at 8M. Rows are stored with family `deep_explore`, kept out of every selection step and headline table to avoid selecting on extra comparisons; CV MCC stayed within about 0.271-0.278 for all 12 configs (lambda=0 two-view baseline 0.274), so augmentation does not change the conclusion.
+
+## D12: Best lambda sits on the edge of the pre-specified grid
+_2026-11-25_
+
+Lambda=2.0 was CV-best at 8M and 150M, the upper end of the grid {0,...,2}. I did not extend the grid (it was specified in the brief and extending it after seeing results would add selection freedom); the mean CV gain at lambda=2 is 0.006 MCC against a fold/seed std of about 0.023, so extending would be unlikely to change the conclusion, but it is listed in NEXT ACTIONS.
+
+## D13: Statistics use seed-ensemble predictions
+_2026-11-25_
+
+DeLong, McNemar and bootstrap CIs compare the mean probability of the 5 seeds' final models (one prediction vector per model, as the paired tests require); y_pred uses threshold 0.5. Seed-to-seed variance is reported separately in stats_per_seed.csv (per-seed MCC/AUROC difference and per-seed DeLong p-value), because the ensemble comparison treats test-sample noise only and ignores training noise.
