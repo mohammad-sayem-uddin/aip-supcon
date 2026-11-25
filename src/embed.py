@@ -24,6 +24,8 @@ CHECKPOINTS = {
     "esm2_t30_150M": ("facebook/esm2_t30_150M_UR50D", 640),
     "esm2_t33_650M": ("facebook/esm2_t33_650M_UR50D", 1280),
 }
+# approximate size of the safetensors weights in MB (used for the disk-space preflight)
+WEIGHT_MB = {"esm2_t6_8M": 35, "esm2_t12_35M": 140, "esm2_t30_150M": 600, "esm2_t33_650M": 2600}
 
 
 def _resolve(checkpoint: str) -> tuple[str, str]:
@@ -141,9 +143,21 @@ def run(checkpoint: str, device: str | None, batch_size: int, purge: bool, force
     EMB_DIR.mkdir(exist_ok=True)
     hub = Path.home() / ".cache" / "huggingface" / "hub" / ("models--" + hf.replace("/", "--"))
     existed = hub.exists()
+    need_mb = 1.3 * WEIGHT_MB[short] + 200
+    free_mb = shutil.disk_usage(ROOT).free / 1e6
+    if free_mb < need_mb:
+        from src.utils import append_note
+        append_note("BLOCKERS.md", f"S3 {short}: not enough free disk",
+                    f"Free disk {free_mb:.0f} MB < {need_mb:.0f} MB needed (weights ~{WEIGHT_MB[short]} MB). "
+                    f"Not attempted to avoid filling the disk.\n\nTo run elsewhere (e.g. Kaggle GPU or a machine with space):\n"
+                    f"`python -m src.embed --checkpoint {short} --purge-model` then copy "
+                    f"`embeddings/{short}_*.npy/.json` and `results/embedding_timings.csv` rows back.")
+        log.error("%s skipped: free %.0f MB < needed %.0f MB", short, free_mb, need_mb)
+        mark_stage(f"S3_{short}", "failed", t_all.elapsed(), "insufficient disk")
+        return
     t_dl = time.time()
     from huggingface_hub import snapshot_download
-    snapshot_download(hf)
+    snapshot_download(hf, allow_patterns=["*.json", "*.txt", "model.safetensors"])
     dl_seconds = time.time() - t_dl
     log.info("checkpoint ready (download/verify %.1fs)", dl_seconds)
 

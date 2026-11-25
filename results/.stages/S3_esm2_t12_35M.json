@@ -1,0 +1,7 @@
+{
+  "stage": "S3_esm2_t12_35M",
+  "status": "complete",
+  "wall_seconds": 77.49484705924988,
+  "notes": "device=cpu, embed 57.0s",
+  "finished_at": "2026-11-21T17:24:44"
+}

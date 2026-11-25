@@ -106,3 +106,18 @@ def append_note(fname: str, heading: str, body: str) -> None:
         p.write_text(f"# {fname.replace('.md', '')}\n\n")
     with open(p, "a") as fh:
         fh.write(f"## {heading}\n_{datetime.now().isoformat(timespec='seconds')}_\n\n{body.strip()}\n\n")
+
+
+class ProgressLogger:
+    """Logs a progress line at most every `every` seconds (used for stages > 30 min)."""
+
+    def __init__(self, total: int, name: str, logger: logging.Logger, every: float = 300.0) -> None:
+        self.total, self.name, self.logger, self.every = total, name, logger, every
+        self.done, self.t0, self.last = 0, time.time(), time.time()
+
+    def step(self, n: int = 1) -> None:
+        self.done += n
+        if time.time() - self.last >= self.every:
+            self.last = time.time()
+            self.logger.info("PROGRESS %s: %d/%d (%.0f%%) after %.1f min", self.name, self.done, self.total,
+                             100 * self.done / self.total, (time.time() - self.t0) / 60)

@@ -1,0 +1,7 @@
+{
+  "stage": "S5",
+  "status": "complete",
+  "wall_seconds": 25.0,
+  "notes": "trial: lambda=0 (MCC .2575) and lambda=0.5 (MCC .2754), seed 0 x 5 folds; sane",
+  "finished_at": "2026-11-25T07:23:27"
+}
