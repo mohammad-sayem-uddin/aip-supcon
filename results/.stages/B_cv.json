@@ -2,6 +2,6 @@
   "stage": "B_cv",
   "status": "complete",
   "wall_seconds": 0.0,
-  "notes": "CV complete for ['B6_attnpool']",
-  "finished_at": "2026-11-25T13:26:33"
+  "notes": "CV complete: B3,B4,B6 on local CPU; B2,B5 on Kaggle GPU (450 runs in ~27 min); 750 rows",
+  "finished_at": "2026-11-25T13:47:38"
 }

@@ -304,3 +304,4 @@
 2026-11-25T13:27:36, FINAL B6_attnpool_esm2_t6_8M_lam2_tau0.07, seed=3 cached
 2026-11-25T13:27:38, FINAL B6_attnpool_esm2_t6_8M_lam2_tau0.07, seed=4 cached
 # final slice end: 0 jobs still to start
+# 2026-11-25T13:47:38 Kaggle B2_cnn and B5_transformer CV+final merged (device_map.json). Phase B complete: 750 CV rows

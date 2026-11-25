@@ -1,0 +1,9 @@
+{
+ "B2_cnn": "Kaggle GPU (2x Tesla T4), kernel aip-phase-b-gpu",
+ "B5_transformer": "Kaggle GPU (2x Tesla T4), kernel aip-phase-b-gpu",
+ "B3_bilstm": "local Apple M1 CPU",
+ "B4_cnn_bilstm": "local Apple M1 CPU",
+ "B6_attnpool": "local Apple M1 CPU (Kaggle duplicate ignored)",
+ "B1_mlp": "v1 run, local CPU",
+ "C3_finetune": "Kaggle GPU (2x Tesla T4), kernel aip-c3-finetune-gpu"
+}

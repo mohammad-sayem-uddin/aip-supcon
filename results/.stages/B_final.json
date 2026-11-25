@@ -2,6 +2,6 @@
   "stage": "B_final",
   "status": "complete",
   "wall_seconds": 184.21010398864746,
-  "notes": "final models for ['B6_attnpool']",
-  "finished_at": "2026-11-25T13:27:40"
+  "notes": "final models for B2-B6 (lambda=0 and lambda*), Regimes A/B/C, 5 seeds",
+  "finished_at": "2026-11-25T13:47:38"
 }
