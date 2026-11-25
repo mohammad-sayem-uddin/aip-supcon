@@ -733,6 +733,14 @@
  },
  "khosla2020": {
   "title": "Supervised Contrastive Learning",
+  "year": 2020,
+  "doi": "",
+  "issue": "",
+  "pages": "",
+  "volume": "33",
+  "record": "https://proceedings.neurips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html",
+  "source": "publisher page",
+  "type": "inproceedings",
   "authors": [
    [
     "Khosla",
@@ -771,21 +779,19 @@
     "Dilip"
    ]
   ],
-  "year": 2020,
-  "container": "",
-  "volume": "",
-  "issue": "",
-  "pages": "",
-  "doi": "",
-  "type": "arxiv",
-  "publisher": "",
-  "record": "https://arxiv.org/abs/2004.11362",
-  "source": "arXiv",
-  "arxiv": "2004.11362",
-  "journal_ref": ""
+  "container": "Advances in Neural Information Processing Systems",
+  "arxiv": "2004.11362"
  },
  "vaswani2017": {
   "title": "Attention Is All You Need",
+  "year": 2017,
+  "doi": "",
+  "issue": "",
+  "pages": "",
+  "volume": "30",
+  "record": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+  "source": "publisher page",
+  "type": "inproceedings",
   "authors": [
    [
     "Vaswani",
@@ -809,32 +815,30 @@
    ],
    [
     "Gomez",
-    "Aidan N."
+    "Aidan N"
    ],
    [
     "Kaiser",
-    "Lukasz"
+    "\u0141ukasz"
    ],
    [
     "Polosukhin",
     "Illia"
    ]
   ],
-  "year": 2017,
-  "container": "",
-  "volume": "",
-  "issue": "",
-  "pages": "",
-  "doi": "",
-  "type": "arxiv",
-  "publisher": "",
-  "record": "https://arxiv.org/abs/1706.03762",
-  "source": "arXiv",
-  "arxiv": "1706.03762",
-  "journal_ref": ""
+  "container": "Advances in Neural Information Processing Systems",
+  "arxiv": "1706.03762"
  },
  "ilse2018": {
   "title": "Attention-based Deep Multiple Instance Learning",
+  "year": 2018,
+  "doi": "",
+  "issue": "",
+  "pages": "2127-2136",
+  "volume": "80",
+  "record": "https://proceedings.mlr.press/v80/ilse18a.html",
+  "source": "publisher page",
+  "type": "inproceedings",
   "authors": [
    [
     "Ilse",
@@ -842,25 +846,15 @@
    ],
    [
     "Tomczak",
-    "Jakub M."
+    "Jakub"
    ],
    [
     "Welling",
     "Max"
    ]
   ],
-  "year": 2018,
-  "container": "",
-  "volume": "",
-  "issue": "",
-  "pages": "",
-  "doi": "",
-  "type": "arxiv",
-  "publisher": "",
-  "record": "https://arxiv.org/abs/1802.04712",
-  "source": "arXiv",
-  "arxiv": "1802.04712",
-  "journal_ref": ""
+  "container": "Proceedings of the 35th International Conference on Machine Learning",
+  "arxiv": "1802.04712"
  },
  "loshchilov2017": {
   "title": "Decoupled Weight Decay Regularization",
@@ -889,6 +883,14 @@
  },
  "paszke2019": {
   "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
+  "year": 2019,
+  "doi": "",
+  "issue": "",
+  "pages": "",
+  "volume": "32",
+  "record": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/bdbca288fee7f92f2bfa9f7012727740-Abstract.html",
+  "source": "publisher page",
+  "type": "inproceedings",
   "authors": [
    [
     "Paszke",
@@ -935,7 +937,7 @@
     "Alban"
    ],
    [
-    "K\u00f6pf",
+    "Kopf",
     "Andreas"
    ],
    [
@@ -944,7 +946,7 @@
    ],
    [
     "DeVito",
-    "Zach"
+    "Zachary"
    ],
    [
     "Raison",
@@ -975,21 +977,19 @@
     "Soumith"
    ]
   ],
-  "year": 2019,
-  "container": "",
-  "volume": "",
-  "issue": "",
-  "pages": "",
-  "doi": "",
-  "type": "arxiv",
-  "publisher": "",
-  "record": "https://arxiv.org/abs/1912.01703",
-  "source": "arXiv",
-  "arxiv": "1912.01703",
-  "journal_ref": ""
+  "container": "Advances in Neural Information Processing Systems",
+  "arxiv": "1912.01703"
  },
  "pedregosa2012": {
   "title": "Scikit-learn: Machine Learning in Python",
+  "year": 2011,
+  "doi": "",
+  "issue": "85",
+  "pages": "2825-2830",
+  "volume": "12",
+  "record": "https://jmlr.org/papers/v12/pedregosa11a.html",
+  "source": "publisher page",
+  "type": "article",
   "authors": [
    [
     "Pedregosa",
@@ -1018,18 +1018,6 @@
    [
     "Blondel",
     "Mathieu"
-   ],
-   [
-    "M\u00fcller",
-    "Andreas"
-   ],
-   [
-    "Nothman",
-    "Joel"
-   ],
-   [
-    "Louppe",
-    "Gilles"
    ],
    [
     "Prettenhofer",
@@ -1068,7 +1056,188 @@
     "\u00c9douard"
    ]
   ],
-  "year": 2012,
+  "container": "Journal of Machine Learning Research",
+  "arxiv": "1201.0490"
+ },
+ "ke2017": {
+  "title": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree",
+  "year": 2017,
+  "doi": "",
+  "issue": "",
+  "pages": "",
+  "volume": "30",
+  "record": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html",
+  "source": "publisher page",
+  "type": "inproceedings",
+  "authors": [
+   [
+    "Ke",
+    "Guolin"
+   ],
+   [
+    "Meng",
+    "Qi"
+   ],
+   [
+    "Finley",
+    "Thomas"
+   ],
+   [
+    "Wang",
+    "Taifeng"
+   ],
+   [
+    "Chen",
+    "Wei"
+   ],
+   [
+    "Ma",
+    "Weidong"
+   ],
+   [
+    "Ye",
+    "Qiwei"
+   ],
+   [
+    "Liu",
+    "Tie-Yan"
+   ]
+  ],
+  "container": "Advances in Neural Information Processing Systems"
+ },
+ "ioffe2015": {
+  "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+  "year": 2015,
+  "doi": "",
+  "issue": "",
+  "pages": "448-456",
+  "volume": "37",
+  "record": "https://proceedings.mlr.press/v37/ioffe15.html",
+  "source": "publisher page",
+  "type": "inproceedings",
+  "authors": [
+   [
+    "Ioffe",
+    "Sergey"
+   ],
+   [
+    "Szegedy",
+    "Christian"
+   ]
+  ],
+  "container": "Proceedings of the 32nd International Conference on Machine Learning"
+ },
+ "srivastava2014": {
+  "title": "Dropout: A Simple Way to Prevent Neural Networks from Overfitting",
+  "year": 2014,
+  "doi": "",
+  "issue": "56",
+  "pages": "1929-1958",
+  "volume": "15",
+  "record": "https://jmlr.org/papers/v15/srivastava14a.html",
+  "source": "publisher page",
+  "type": "article",
+  "authors": [
+   [
+    "Srivastava",
+    "Nitish"
+   ],
+   [
+    "Hinton",
+    "Geoffrey"
+   ],
+   [
+    "Krizhevsky",
+    "Alex"
+   ],
+   [
+    "Sutskever",
+    "Ilya"
+   ],
+   [
+    "Salakhutdinov",
+    "Ruslan"
+   ]
+  ],
+  "container": "Journal of Machine Learning Research"
+ },
+ "vandermaaten2008": {
+  "title": "Visualizing Data using t-SNE",
+  "year": 2008,
+  "doi": "",
+  "issue": "86",
+  "pages": "2579-2605",
+  "volume": "9",
+  "record": "https://jmlr.org/papers/v9/vandermaaten08a.html",
+  "source": "publisher page",
+  "type": "article",
+  "authors": [
+   [
+    "van der Maaten",
+    "Laurens"
+   ],
+   [
+    "Hinton",
+    "Geoffrey"
+   ]
+  ],
+  "container": "Journal of Machine Learning Research"
+ },
+ "breiman2001": {
+  "title": "Random Forests",
+  "authors": [
+   [
+    "Breiman",
+    "Leo"
+   ]
+  ],
+  "year": 2001,
+  "container": "Machine Learning",
+  "volume": "45",
+  "issue": "1",
+  "pages": "5-32",
+  "doi": "10.1023/a:1010933404324",
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "record": "https://api.crossref.org/works/10.1023/a:1010933404324",
+  "source": "CrossRef"
+ },
+ "cortes1995": {
+  "title": "Support-vector networks",
+  "authors": [
+   [
+    "Cortes",
+    "Corinna"
+   ],
+   [
+    "Vapnik",
+    "Vladimir"
+   ]
+  ],
+  "year": 1995,
+  "container": "Machine Learning",
+  "volume": "20",
+  "issue": "3",
+  "pages": "273-297",
+  "doi": "10.1007/bf00994018",
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "record": "https://api.crossref.org/works/10.1007/bf00994018",
+  "source": "CrossRef"
+ },
+ "loshchilov2016": {
+  "title": "SGDR: Stochastic Gradient Descent with Warm Restarts",
+  "authors": [
+   [
+    "Loshchilov",
+    "Ilya"
+   ],
+   [
+    "Hutter",
+    "Frank"
+   ]
+  ],
+  "year": 2016,
   "container": "",
   "volume": "",
   "issue": "",
@@ -1076,9 +1245,9 @@
   "doi": "",
   "type": "arxiv",
   "publisher": "",
-  "record": "https://arxiv.org/abs/1201.0490",
+  "record": "https://arxiv.org/abs/1608.03983",
   "source": "arXiv",
-  "arxiv": "1201.0490",
-  "journal_ref": "Journal of Machine Learning Research (2011)"
+  "arxiv": "1608.03983",
+  "journal_ref": ""
  }
 }

@@ -1,0 +1,6 @@
+2026-11-25T20:06:50Z completion run started
+2026-11-25T20:07:25Z 1.1 figures regenerated (needs visual check)
+2026-11-25T20:07:36Z 1.1 DONE: 5.9b, F1, F5 viewed and accepted (F1 redesigned as 8-mer sharing bars; F5 as heat map)
+2026-11-25T20:07:37Z 1.2 DONE: repo URL in Ch4 (public, HTTP 200); archive DOI remains an author TODO
+2026-11-25T20:11:59Z 1.3 DONE: bibliography completed (ke2017, breiman2001, cortes1995, ioffe2015, srivastava2014, vandermaaten2008, loshchilov2016 added; khosla/vaswani/paszke/ilse/pedregosa upgraded to publisher record; loshchilov2017 stays arXiv)
+2026-11-25T20:12:16Z 1.4 DONE: all 8 docx pass Office XSD validation (validate.py); Word itself not available

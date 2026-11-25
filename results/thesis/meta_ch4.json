@@ -3,11 +3,12 @@
  "cited": [
   "paszke2019",
   "pedregosa2012",
+  "ke2017",
   "cock2009",
   "wolf2020"
  ],
  "todos": [
-  "add the public address or archive identifier of the repository and confirm that its visibility permits the citation"
+  "a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account"
  ],
  "citation_needed": [],
  "unresolved_refs": [],
