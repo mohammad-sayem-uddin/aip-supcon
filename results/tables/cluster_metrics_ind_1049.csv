@@ -1,4 +1,4 @@
 panel,test_set,silhouette,davies_bouldin
 (a) Raw frozen ESM-2 (8M),ind_1049,0.006545573472976685,18.544072492276538
 "(b) Encoder output, lambda = 0",ind_1049,0.00933276116847992,9.348887739727445
-"(c) Encoder output, lambda = 2",ind_1049,0.013433380052447319,7.97706278622929
+"(c) Encoder output, lambda = 2",ind_1049,0.008229274302721024,8.272469592044636

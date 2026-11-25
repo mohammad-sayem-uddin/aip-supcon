@@ -17,3 +17,4 @@ CV,"5-fold stratified, scaler fitted on training fold only"
 Embedding time esm2_t6_8M (cpu),26.3 s for 4641 sequences
 Embedding time esm2_t12_35M (cpu),57.0 s for 4641 sequences
 Embedding time esm2_t30_150M (cpu),66.0 s for 4641 sequences
+Embedding time esm2_t33_650M (cpu),3033.5 s for 4641 sequences

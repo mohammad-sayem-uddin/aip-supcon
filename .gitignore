@@ -9,3 +9,4 @@ __pycache__/
 /*.fasta
 .pytest_cache/
 results/models/*.pt
+results/latents/

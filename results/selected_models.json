@@ -9,7 +9,7 @@
     "checkpoint": "esm2_t6_8M",
     "lambda": 2.0,
     "tau": 0.07,
-    "role": "best"
+    "role": "sweep"
   },
   "esm2_t6_8M_lam0.1_tau0.07": {
     "checkpoint": "esm2_t6_8M",
@@ -57,6 +57,24 @@
     "checkpoint": "esm2_t30_150M",
     "lambda": 2.0,
     "tau": 0.07,
+    "role": "best"
+  },
+  "esm2_t6_8M_lam2_tau0.1": {
+    "checkpoint": "esm2_t6_8M",
+    "lambda": 2.0,
+    "tau": 0.1,
+    "role": "best"
+  },
+  "esm2_t33_650M_lam0_tau0.07": {
+    "checkpoint": "esm2_t33_650M",
+    "lambda": 0.0,
+    "tau": 0.07,
+    "role": "baseline"
+  },
+  "esm2_t33_650M_lam1_tau0.05": {
+    "checkpoint": "esm2_t33_650M",
+    "lambda": 1.0,
+    "tau": 0.05,
     "role": "best"
   }
 }

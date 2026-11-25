@@ -66,3 +66,8 @@ Lambda=2.0 was CV-best at 8M and 150M, the upper end of the grid {0,...,2}. I di
 _2026-11-25_
 
 DeLong, McNemar and bootstrap CIs compare the mean probability of the 5 seeds' final models (one prediction vector per model, as the paired tests require); y_pred uses threshold 0.5. Seed-to-seed variance is reported separately in stats_per_seed.csv (per-seed MCC/AUROC difference and per-seed DeLong p-value), because the ensemble comparison treats test-sample noise only and ignores training noise.
+
+## D14: Headline model per checkpoint is (lambda*, tau*) from CV, in the pre-specified order
+_2026-11-25_
+
+The first S9 pass trained the 8M "best" model at the default tau=0.07 because the 8M temperature sweep had not yet run; the sweep then selected tau=0.1 at lambda=2. Following the order lambda sweep -> temperature sweep at best lambda -> final models, I trained (lambda=2, tau=0.1) and made it the headline 8M model; the earlier (lambda=2, tau=0.07) model stays in the lambda ablation and in every table, so nothing is hidden. Roles are now assigned deterministically at the end of S9.

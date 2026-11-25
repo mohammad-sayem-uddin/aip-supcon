@@ -1,0 +1,324 @@
+2026-11-21 17:19:15,549 [data] INFO clean_benchmark: 3790 rows; 37 conflicted sequences -> dropped 74 rows -> 3716 rows
+2026-11-21 17:19:15,550 [data] INFO clean_benchmark: dropped 0 same-label duplicates -> 3716 rows
+2026-11-21 17:19:15,730 [data] INFO S1 gate PASSED: all 14 numbers match
+2026-11-21 17:19:25,905 [data] INFO identity prefilter: 4 of 12 pairs need alignment
+2026-11-21 17:19:25,912 [data] INFO identity prefilter: 1 of 2 pairs need alignment
+2026-11-21 17:19:26,802 [data] INFO identity prefilter: 411 of 1579300 pairs need alignment
+2026-11-21 17:19:26,880 [data] INFO Ind_425: identity screen 0.1s
+2026-11-21 17:19:26,888 [data] INFO Ind_425 Regime C (<0.9 identity): 162 sequences
+2026-11-21 17:19:26,957 [data] INFO identity prefilter: 413 of 3898084 pairs need alignment
+2026-11-21 17:19:26,973 [data] INFO Ind_1049: identity screen 0.1s
+2026-11-21 17:19:26,982 [data] INFO Ind_1049 Regime C (<0.9 identity): 716 sequences
+2026-11-21 17:20:09,180 [embed] INFO esm2_t6_8M: 4641 unique sequences across 3 datasets, device=cpu
+2026-11-21 17:20:24,601 [embed] INFO checkpoint ready (download/verify 15.4s)
+2026-11-21 17:20:35,369 [embed] INFO padding-invariance assertion passed (max diff 7.00e-07)
+2026-11-21 17:20:50,962 [embed] INFO DONE esm2_t6_8M: 26.3s embed, peak RSS 342 MB
+2026-11-21 17:21:04,604 [embed] INFO esm2_t12_35M: 4641 unique sequences across 3 datasets, device=cpu
+2026-11-21 17:21:51,224 [embed] INFO esm2_t30_150M: 4641 unique sequences across 3 datasets, device=cpu
+2026-11-21 17:21:59,463 [data] INFO identity prefilter: 4 of 12 pairs need alignment
+2026-11-21 17:21:59,472 [data] INFO identity prefilter: 1 of 2 pairs need alignment
+2026-11-21 17:23:28,703 [embed] INFO esm2_t12_35M: 4641 unique sequences across 3 datasets, device=cpu
+2026-11-21 17:23:47,529 [embed] INFO checkpoint ready (download/verify 18.8s)
+2026-11-21 17:24:00,223 [embed] INFO padding-invariance assertion passed (max diff 6.11e-07)
+2026-11-21 17:24:44,653 [embed] INFO DONE esm2_t12_35M: 57.0s embed, peak RSS 380 MB
+2026-11-21 17:24:44,658 [embed] INFO purged downloaded checkpoint cache /Users/sayemuddin/.cache/huggingface/hub/models--facebook--esm2_t12_35M_UR50D to save disk
+2026-11-25 07:21:38,749 [embed] INFO esm2_t30_150M: 4641 unique sequences across 3 datasets, device=cpu
+2026-11-25 07:21:40,085 [data] INFO identity prefilter: 4 of 12 pairs need alignment
+2026-11-25 07:21:40,087 [data] INFO identity prefilter: 1 of 2 pairs need alignment
+2026-11-25 07:21:57,843 [train] INFO esm2_t6_8M_lam0_tau0.07: 5 CV runs in 11.4s | MCC 0.2575 AUROC 0.6665
+2026-11-25 07:22:11,121 [train] INFO esm2_t6_8M_lam0.5_tau0.07: 5 CV runs in 13.3s | MCC 0.2754 AUROC 0.6713
+2026-11-25 07:22:11,750 [embed] INFO checkpoint ready (download/verify 33.0s)
+2026-11-25 07:22:20,824 [embed] INFO padding-invariance assertion passed (max diff 9.54e-07)
+2026-11-25 07:22:54,253 [embed] INFO padding-invariance assertion passed (max diff 7.00e-07)
+2026-11-25 07:23:17,770 [embed] INFO DONE esm2_t30_150M: 66.0s embed, peak RSS 910 MB
+2026-11-25 07:23:17,772 [embed] INFO purged downloaded checkpoint cache /Users/sayemuddin/.cache/huggingface/hub/models--facebook--esm2_t30_150M_UR50D to save disk
+2026-11-25 07:23:19,877 [embed] INFO esm2_t33_650M: 4641 unique sequences across 3 datasets, device=cpu
+2026-11-25 07:24:43,267 [baselines] INFO baseline AAC_SVM: CV (5 seeds x 5 folds)
+2026-11-25 07:25:23,132 [embed] INFO checkpoint ready (download/verify 123.3s)
+2026-11-25 07:25:57,642 [embed] INFO padding-invariance assertion passed (max diff 2.86e-06)
+2026-11-25 07:26:01,363 [baselines] INFO baseline AAC_SVM CV: MCC 0.2934 AUROC 0.6996
+2026-11-25 07:26:01,364 [baselines] INFO baseline AAC_SVM: final models for independent sets
+2026-11-25 07:26:37,011 [baselines] INFO baseline AAC_SVM done in 113.8s
+2026-11-25 07:26:37,022 [baselines] INFO baseline AAC_RF: CV (5 seeds x 5 folds)
+2026-11-25 07:26:56,336 [baselines] INFO baseline AAC_RF CV: MCC 0.4291 AUROC 0.7727
+2026-11-25 07:26:56,338 [baselines] INFO baseline AAC_RF: final models for independent sets
+2026-11-25 07:27:03,008 [baselines] INFO baseline AAC_RF done in 26.0s
+2026-11-25 07:27:03,013 [baselines] INFO baseline AAC_DPC_CTD_LGBM: CV (5 seeds x 5 folds)
+2026-11-25 07:27:29,519 [baselines] INFO baseline AAC_DPC_CTD_LGBM CV: MCC 0.3859 AUROC 0.7566
+2026-11-25 07:27:29,521 [baselines] INFO baseline AAC_DPC_CTD_LGBM: final models for independent sets
+2026-11-25 07:27:43,437 [baselines] INFO baseline AAC_DPC_CTD_LGBM done in 40.4s
+2026-11-25 07:27:43,444 [baselines] INFO baseline esm2_t6_8M_LR: CV (5 seeds x 5 folds)
+2026-11-25 07:28:01,352 [baselines] INFO baseline esm2_t6_8M_LR CV: MCC 0.2140 AUROC 0.6405
+2026-11-25 07:28:01,354 [baselines] INFO baseline esm2_t6_8M_LR: final models for independent sets
+2026-11-25 07:28:05,057 [baselines] INFO baseline esm2_t6_8M_LR done in 21.6s
+2026-11-25 07:28:05,063 [baselines] INFO baseline esm2_t12_35M_LR: CV (5 seeds x 5 folds)
+2026-11-25 07:28:24,223 [baselines] INFO baseline esm2_t12_35M_LR CV: MCC 0.2058 AUROC 0.6393
+2026-11-25 07:28:24,224 [baselines] INFO baseline esm2_t12_35M_LR: final models for independent sets
+2026-11-25 07:28:29,152 [baselines] INFO baseline esm2_t12_35M_LR done in 24.1s
+2026-11-25 07:28:29,156 [baselines] INFO baseline esm2_t30_150M_LR: CV (5 seeds x 5 folds)
+2026-11-25 07:29:00,801 [baselines] INFO baseline esm2_t30_150M_LR CV: MCC 0.2599 AUROC 0.6756
+2026-11-25 07:29:00,803 [baselines] INFO baseline esm2_t30_150M_LR: final models for independent sets
+2026-11-25 07:29:10,825 [baselines] INFO baseline esm2_t30_150M_LR done in 41.7s
+2026-11-25 07:30:12,367 [train] INFO esm2_t6_8M_lam0_tau0.07: 20 CV runs in 43.1s | MCC 0.2715 AUROC 0.6662
+2026-11-25 07:31:20,723 [train] INFO esm2_t6_8M_lam0.1_tau0.07: 25 CV runs in 68.3s | MCC 0.2694 AUROC 0.6662
+2026-11-25 07:32:13,971 [train] INFO esm2_t6_8M_lam0.25_tau0.07: 25 CV runs in 53.2s | MCC 0.2715 AUROC 0.6674
+2026-11-25 07:32:56,755 [train] INFO esm2_t6_8M_lam0.5_tau0.07: 20 CV runs in 42.8s | MCC 0.2711 AUROC 0.6670
+2026-11-25 07:33:50,853 [train] INFO esm2_t6_8M_lam1_tau0.07: 25 CV runs in 54.0s | MCC 0.2702 AUROC 0.6672
+2026-11-25 07:34:42,943 [train] INFO esm2_t6_8M_lam2_tau0.07: 25 CV runs in 52.1s | MCC 0.2746 AUROC 0.6702
+2026-11-25 07:34:42,946 [pipeline] INFO PROGRESS lambda sweep esm2_t6_8M: 6/6 (100%) after 5.2 min
+2026-11-25 07:34:43,030 [pipeline] INFO S7 best lambda at esm2_t6_8M = 2
+                 mean     std  count
+lambda_supcon                       
+0.00           0.2687  0.0229     25
+0.10           0.2694  0.0223     25
+0.25           0.2715  0.0243     25
+0.50           0.2720  0.0233     25
+1.00           0.2702  0.0227     25
+2.00           0.2746  0.0235     25
+2026-11-25 07:36:23,404 [train] INFO esm2_t12_35M_lam0_tau0.07: 25 CV runs in 60.2s | MCC 0.2623 AUROC 0.6670
+2026-11-25 07:37:38,545 [train] INFO esm2_t12_35M_lam0.1_tau0.07: 25 CV runs in 75.1s | MCC 0.2688 AUROC 0.6636
+2026-11-25 07:39:01,870 [train] INFO esm2_t12_35M_lam0.25_tau0.07: 25 CV runs in 83.3s | MCC 0.2657 AUROC 0.6667
+2026-11-25 07:40:02,870 [train] INFO esm2_t12_35M_lam0.5_tau0.07: 25 CV runs in 61.0s | MCC 0.2691 AUROC 0.6660
+2026-11-25 07:41:01,801 [train] INFO esm2_t12_35M_lam1_tau0.07: 25 CV runs in 58.9s | MCC 0.2657 AUROC 0.6660
+2026-11-25 07:41:01,805 [pipeline] INFO PROGRESS lambda sweep esm2_t12_35M: 5/6 (83%) after 5.6 min
+2026-11-25 07:42:05,363 [train] INFO esm2_t12_35M_lam2_tau0.07: 25 CV runs in 63.5s | MCC 0.2651 AUROC 0.6656
+2026-11-25 07:43:03,846 [train] INFO esm2_t12_35M_lam0.5_tau0.05: 25 CV runs in 58.4s | MCC 0.2663 AUROC 0.6663
+2026-11-25 07:43:03,860 [train] INFO esm2_t12_35M_lam0.5_tau0.07: all CV rows already present, skipping
+2026-11-25 07:44:04,127 [train] INFO esm2_t12_35M_lam0.5_tau0.1: 25 CV runs in 60.1s | MCC 0.2633 AUROC 0.6663
+2026-11-25 07:44:53,501 [train] INFO esm2_t12_35M_lam0.5_tau0.5: 25 CV runs in 49.4s | MCC 0.2602 AUROC 0.6647
+2026-11-25 07:44:53,537 [pipeline] INFO S8 esm2_t12_35M: best lambda 0.5, best tau 0.07
+               mean     std  count
+temperature                       
+0.05         0.2663  0.0294     25
+0.07         0.2691  0.0318     25
+0.10         0.2633  0.0300     25
+0.50         0.2602  0.0307     25
+2026-11-25 07:45:55,310 [train] INFO esm2_t30_150M_lam0_tau0.07: 25 CV runs in 61.7s | MCC 0.2961 AUROC 0.6844
+2026-11-25 07:46:50,306 [train] INFO esm2_t30_150M_lam0.1_tau0.07: 25 CV runs in 55.0s | MCC 0.2924 AUROC 0.6809
+2026-11-25 07:48:05,215 [train] INFO esm2_t30_150M_lam0.25_tau0.07: 25 CV runs in 74.9s | MCC 0.2971 AUROC 0.6843
+2026-11-25 07:48:55,293 [train] INFO esm2_t30_150M_lam0.5_tau0.07: 25 CV runs in 50.1s | MCC 0.2946 AUROC 0.6828
+2026-11-25 07:49:54,916 [train] INFO esm2_t30_150M_lam1_tau0.07: 25 CV runs in 59.6s | MCC 0.2950 AUROC 0.6838
+2026-11-25 07:49:54,919 [pipeline] INFO PROGRESS lambda sweep esm2_t30_150M: 5/6 (83%) after 5.0 min
+2026-11-25 07:50:44,557 [train] INFO esm2_t30_150M_lam2_tau0.07: 25 CV runs in 49.6s | MCC 0.2973 AUROC 0.6848
+2026-11-25 07:51:52,396 [train] INFO esm2_t30_150M_lam2_tau0.05: 25 CV runs in 67.8s | MCC 0.2925 AUROC 0.6806
+2026-11-25 07:51:52,422 [train] INFO esm2_t30_150M_lam2_tau0.07: all CV rows already present, skipping
+2026-11-25 07:52:48,503 [train] INFO esm2_t30_150M_lam2_tau0.1: 25 CV runs in 55.0s | MCC 0.2962 AUROC 0.6838
+2026-11-25 07:53:45,432 [train] INFO esm2_t30_150M_lam2_tau0.5: 25 CV runs in 56.9s | MCC 0.2968 AUROC 0.6842
+2026-11-25 07:53:45,455 [pipeline] INFO S8 esm2_t30_150M: best lambda 2, best tau 0.07
+               mean     std  count
+temperature                       
+0.05         0.2925  0.0198     25
+0.07         0.2973  0.0192     25
+0.10         0.2962  0.0222     25
+0.50         0.2968  0.0252     25
+2026-11-25 07:54:28,001 [pipeline] INFO S9 done esm2_t6_8M_lam0_tau0.07
+2026-11-25 07:54:50,496 [pipeline] INFO S9 done esm2_t6_8M_lam2_tau0.07
+2026-11-25 07:55:09,994 [pipeline] INFO S9 done esm2_t6_8M_lam0.1_tau0.07
+2026-11-25 07:55:27,084 [pipeline] INFO S9 done esm2_t6_8M_lam0.25_tau0.07
+2026-11-25 07:55:51,616 [pipeline] INFO S9 done esm2_t6_8M_lam0.5_tau0.07
+2026-11-25 07:56:09,182 [data] INFO identity prefilter: 4 of 12 pairs need alignment
+2026-11-25 07:56:09,188 [data] INFO identity prefilter: 1 of 2 pairs need alignment
+2026-11-25 07:56:17,930 [pipeline] INFO S9 done esm2_t6_8M_lam1_tau0.07
+2026-11-25 07:56:44,393 [pipeline] INFO S9 done esm2_t12_35M_lam0_tau0.07
+2026-11-25 07:57:10,410 [pipeline] INFO S9 done esm2_t12_35M_lam0.5_tau0.07
+2026-11-25 07:57:32,834 [pipeline] INFO S9 done esm2_t30_150M_lam0_tau0.07
+2026-11-25 07:57:57,161 [pipeline] INFO S9 done esm2_t30_150M_lam2_tau0.07
+2026-11-25 08:04:07,809 [tables] INFO table T3_1_dataset_composition written (4 rows)
+2026-11-25 08:04:07,814 [tables] INFO table T3_2_data_cleaning_audit written (9 rows)
+2026-11-25 08:04:07,818 [tables] INFO table T3_3_regimes_and_identity_screen written (12 rows)
+2026-11-25 08:04:09,538 [tables] INFO table T4_1_hyperparameters written (18 rows)
+2026-11-25 08:04:09,549 [tables] INFO table T5_1_cv_results written (6 rows)
+2026-11-25 08:04:09,565 [tables] INFO table T5_2_ind425 written (30 rows)
+2026-11-25 08:04:09,621 [tables] INFO table T5_3_ind1049 written (30 rows)
+2026-11-25 08:04:09,641 [tables] INFO table T5_2b_deep_tuned_threshold written (60 rows)
+2026-11-25 08:04:09,654 [tables] INFO table T5_4_lambda_ablation written (6 rows)
+2026-11-25 08:04:09,668 [tables] INFO table T5_5_checkpoint_ablation written (3 rows)
+2026-11-25 08:04:09,678 [tables] INFO table T5_5b_temperature_sweep written (9 rows)
+2026-11-25 08:04:09,683 [tables] INFO table T5_6_significance written (42 rows)
+2026-11-25 08:04:09,696 [tables] INFO table T5_6b_per_seed_consistency written (42 rows)
+2026-11-25 08:04:09,708 [tables] INFO table T5_7_comparison_published written (36 rows)
+2026-11-25 08:04:23,261 [tables] INFO table T3_1_dataset_composition written (4 rows)
+2026-11-25 08:04:23,272 [tables] INFO table T3_2_data_cleaning_audit written (9 rows)
+2026-11-25 08:04:23,275 [tables] INFO table T3_3_regimes_and_identity_screen written (12 rows)
+2026-11-25 08:04:25,138 [tables] INFO table T4_1_hyperparameters written (18 rows)
+2026-11-25 08:04:25,150 [tables] INFO table T5_1_cv_results written (6 rows)
+2026-11-25 08:04:25,166 [tables] INFO table T5_2_ind425 written (30 rows)
+2026-11-25 08:04:25,233 [tables] INFO table T5_3_ind1049 written (30 rows)
+2026-11-25 08:04:25,255 [tables] INFO table T5_2b_deep_tuned_threshold written (60 rows)
+2026-11-25 08:04:25,271 [tables] INFO table T5_4_lambda_ablation written (6 rows)
+2026-11-25 08:04:25,287 [tables] INFO table T5_5_checkpoint_ablation written (3 rows)
+2026-11-25 08:04:25,295 [tables] INFO table T5_5b_temperature_sweep written (9 rows)
+2026-11-25 08:04:25,298 [tables] INFO table T5_6_significance written (42 rows)
+2026-11-25 08:04:25,308 [tables] INFO table T5_6b_per_seed_consistency written (42 rows)
+2026-11-25 08:04:25,319 [tables] INFO table T5_7_comparison_published written (36 rows)
+2026-11-25 08:04:36,015 [visualize] INFO figure F5.1 ROC Ind_425 B done
+2026-11-25 08:04:39,534 [visualize] INFO figure F5.1 ROC Ind_1049 B done
+2026-11-25 08:04:42,922 [visualize] INFO figure F5.1 ROC Ind_425 A done
+2026-11-25 08:04:46,579 [visualize] INFO figure F5.1 ROC Ind_1049 A done
+2026-11-25 08:04:46,803 [visualize] INFO figure F5.2 PR Ind_425 B done
+2026-11-25 08:04:47,239 [visualize] INFO figure F5.2 PR Ind_1049 B done
+2026-11-25 08:04:53,469 [visualize] INFO figure F5.3 t-SNE Ind_1049 done
+2026-11-25 08:04:55,687 [visualize] INFO figure F5.3 t-SNE Ind_425 done
+2026-11-25 08:04:55,932 [visualize] INFO figure F5.4 lambda sweep done
+2026-11-25 08:04:56,313 [visualize] INFO figure F5.5 leakage gap done
+2026-11-25 08:04:56,714 [visualize] INFO figure F5.6 confusion matrices done
+2026-11-25 08:05:09,573 [visualize] INFO figure FA training curves done
+2026-11-25 08:06:49,800 [train] INFO esm2_t6_8M_lam0_tau0.07_v2n0: 25 CV runs in 76.4s | MCC 0.2743 AUROC 0.6687
+2026-11-25 08:08:12,471 [train] INFO esm2_t6_8M_lam0.1_tau0.07_v2n0: 25 CV runs in 82.6s | MCC 0.2709 AUROC 0.6680
+2026-11-25 08:09:36,609 [train] INFO esm2_t6_8M_lam0.25_tau0.07_v2n0: 25 CV runs in 84.1s | MCC 0.2738 AUROC 0.6684
+2026-11-25 08:11:07,356 [train] INFO esm2_t6_8M_lam0.5_tau0.07_v2n0: 25 CV runs in 90.7s | MCC 0.2753 AUROC 0.6714
+2026-11-25 08:12:28,943 [train] INFO esm2_t6_8M_lam1_tau0.07_v2n0: 25 CV runs in 81.6s | MCC 0.2729 AUROC 0.6683
+2026-11-25 08:13:46,390 [train] INFO esm2_t6_8M_lam2_tau0.07_v2n0: 25 CV runs in 77.4s | MCC 0.2731 AUROC 0.6686
+2026-11-25 08:15:24,844 [train] INFO esm2_t6_8M_lam0_tau0.07_v2n0.1: 25 CV runs in 98.4s | MCC 0.2739 AUROC 0.6678
+2026-11-25 08:15:57,306 [embed] INFO DONE esm2_t33_650M: 3033.5s embed, peak RSS 1578 MB
+2026-11-25 08:15:57,317 [embed] INFO purged downloaded checkpoint cache /Users/sayemuddin/.cache/huggingface/hub/models--facebook--esm2_t33_650M_UR50D to save disk
+2026-11-25 08:16:43,710 [train] INFO esm2_t6_8M_lam0.1_tau0.07_v2n0.1: 25 CV runs in 78.8s | MCC 0.2751 AUROC 0.6716
+2026-11-25 08:17:51,896 [train] INFO esm2_t6_8M_lam0.25_tau0.07_v2n0.1: 25 CV runs in 68.2s | MCC 0.2728 AUROC 0.6714
+2026-11-25 08:19:10,812 [train] INFO esm2_t6_8M_lam0.5_tau0.07_v2n0.1: 25 CV runs in 78.9s | MCC 0.2756 AUROC 0.6698
+2026-11-25 08:20:21,149 [train] INFO esm2_t6_8M_lam1_tau0.07_v2n0.1: 25 CV runs in 70.3s | MCC 0.2730 AUROC 0.6679
+2026-11-25 08:21:47,172 [train] INFO esm2_t6_8M_lam2_tau0.07_v2n0.1: 25 CV runs in 86.0s | MCC 0.2778 AUROC 0.6687
+2026-11-25 08:21:55,883 [train] INFO esm2_t6_8M_lam0_tau0.07: all CV rows already present, skipping
+2026-11-25 08:21:55,889 [train] INFO esm2_t6_8M_lam0.1_tau0.07: all CV rows already present, skipping
+2026-11-25 08:21:55,893 [train] INFO esm2_t6_8M_lam0.25_tau0.07: all CV rows already present, skipping
+2026-11-25 08:21:55,898 [train] INFO esm2_t6_8M_lam0.5_tau0.07: all CV rows already present, skipping
+2026-11-25 08:21:55,904 [train] INFO esm2_t6_8M_lam1_tau0.07: all CV rows already present, skipping
+2026-11-25 08:21:55,909 [train] INFO esm2_t6_8M_lam2_tau0.07: all CV rows already present, skipping
+2026-11-25 08:22:42,920 [train] INFO esm2_t6_8M_lam2_tau0.05: 25 CV runs in 47.0s | MCC 0.2732 AUROC 0.6673
+2026-11-25 08:22:42,927 [train] INFO esm2_t6_8M_lam2_tau0.07: all CV rows already present, skipping
+2026-11-25 08:23:37,939 [train] INFO esm2_t6_8M_lam2_tau0.1: 25 CV runs in 55.0s | MCC 0.2780 AUROC 0.6689
+2026-11-25 08:24:22,362 [train] INFO esm2_t6_8M_lam2_tau0.5: 25 CV runs in 44.4s | MCC 0.2716 AUROC 0.6675
+2026-11-25 08:24:22,375 [pipeline] INFO S8 esm2_t6_8M: best lambda 2, best tau 0.1
+               mean     std  count
+temperature                       
+0.05         0.2732  0.0239     25
+0.07         0.2746  0.0235     25
+0.10         0.2780  0.0248     25
+0.50         0.2716  0.0218     25
+2026-11-25 08:24:22,380 [train] INFO esm2_t12_35M_lam0_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,387 [train] INFO esm2_t12_35M_lam0.1_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,393 [train] INFO esm2_t12_35M_lam0.25_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,398 [train] INFO esm2_t12_35M_lam0.5_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,403 [train] INFO esm2_t12_35M_lam1_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,408 [train] INFO esm2_t12_35M_lam2_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,418 [train] INFO esm2_t12_35M_lam0.5_tau0.05: all CV rows already present, skipping
+2026-11-25 08:24:22,423 [train] INFO esm2_t12_35M_lam0.5_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,428 [train] INFO esm2_t12_35M_lam0.5_tau0.1: all CV rows already present, skipping
+2026-11-25 08:24:22,433 [train] INFO esm2_t12_35M_lam0.5_tau0.5: all CV rows already present, skipping
+2026-11-25 08:24:22,440 [pipeline] INFO S8 esm2_t12_35M: best lambda 0.5, best tau 0.07
+               mean     std  count
+temperature                       
+0.05         0.2663  0.0294     25
+0.07         0.2691  0.0318     25
+0.10         0.2633  0.0300     25
+0.50         0.2602  0.0307     25
+2026-11-25 08:24:22,443 [train] INFO esm2_t30_150M_lam0_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,448 [train] INFO esm2_t30_150M_lam0.1_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,452 [train] INFO esm2_t30_150M_lam0.25_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,456 [train] INFO esm2_t30_150M_lam0.5_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,461 [train] INFO esm2_t30_150M_lam1_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,466 [train] INFO esm2_t30_150M_lam2_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,474 [train] INFO esm2_t30_150M_lam2_tau0.05: all CV rows already present, skipping
+2026-11-25 08:24:22,483 [train] INFO esm2_t30_150M_lam2_tau0.07: all CV rows already present, skipping
+2026-11-25 08:24:22,488 [train] INFO esm2_t30_150M_lam2_tau0.1: all CV rows already present, skipping
+2026-11-25 08:24:22,492 [train] INFO esm2_t30_150M_lam2_tau0.5: all CV rows already present, skipping
+2026-11-25 08:24:22,499 [pipeline] INFO S8 esm2_t30_150M: best lambda 2, best tau 0.07
+               mean     std  count
+temperature                       
+0.05         0.2925  0.0198     25
+0.07         0.2973  0.0192     25
+0.10         0.2962  0.0222     25
+0.50         0.2968  0.0252     25
+2026-11-25 08:25:35,399 [train] INFO esm2_t33_650M_lam0_tau0.07: 25 CV runs in 72.9s | MCC 0.2935 AUROC 0.6867
+2026-11-25 08:26:50,195 [train] INFO esm2_t33_650M_lam0.1_tau0.07: 25 CV runs in 74.8s | MCC 0.2934 AUROC 0.6833
+2026-11-25 08:28:15,076 [train] INFO esm2_t33_650M_lam0.25_tau0.07: 25 CV runs in 84.9s | MCC 0.2936 AUROC 0.6860
+2026-11-25 08:29:45,241 [train] INFO esm2_t33_650M_lam0.5_tau0.07: 25 CV runs in 90.2s | MCC 0.2935 AUROC 0.6852
+2026-11-25 08:29:45,242 [pipeline] INFO PROGRESS lambda sweep esm2_t33_650M: 4/6 (67%) after 5.4 min
+2026-11-25 08:30:54,342 [train] INFO esm2_t33_650M_lam1_tau0.07: 25 CV runs in 69.1s | MCC 0.2973 AUROC 0.6872
+2026-11-25 08:31:56,545 [train] INFO esm2_t33_650M_lam2_tau0.07: 25 CV runs in 62.2s | MCC 0.2947 AUROC 0.6836
+2026-11-25 08:33:11,623 [train] INFO esm2_t33_650M_lam1_tau0.05: 25 CV runs in 75.1s | MCC 0.2993 AUROC 0.6865
+2026-11-25 08:33:11,631 [train] INFO esm2_t33_650M_lam1_tau0.07: all CV rows already present, skipping
+2026-11-25 08:34:12,624 [train] INFO esm2_t33_650M_lam1_tau0.1: 25 CV runs in 61.0s | MCC 0.2972 AUROC 0.6841
+2026-11-25 08:35:15,986 [train] INFO esm2_t33_650M_lam1_tau0.5: 25 CV runs in 63.4s | MCC 0.2951 AUROC 0.6843
+2026-11-25 08:35:16,006 [pipeline] INFO S8 esm2_t33_650M: best lambda 1, best tau 0.05
+               mean     std  count
+temperature                       
+0.05         0.2993  0.0178     25
+0.07         0.2973  0.0199     25
+0.10         0.2972  0.0222     25
+0.50         0.2951  0.0230     25
+2026-11-25 08:35:28,026 [pipeline] INFO S9 skip esm2_t6_8M_lam0_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,074 [pipeline] INFO S9 done esm2_t6_8M_lam2_tau0.1
+2026-11-25 08:35:56,074 [pipeline] INFO S9 skip esm2_t6_8M_lam0.1_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,074 [pipeline] INFO S9 skip esm2_t6_8M_lam0.25_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,074 [pipeline] INFO S9 skip esm2_t6_8M_lam0.5_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,074 [pipeline] INFO S9 skip esm2_t6_8M_lam1_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,121 [pipeline] INFO S9 skip esm2_t12_35M_lam0_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,121 [pipeline] INFO S9 skip esm2_t12_35M_lam0.5_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,160 [pipeline] INFO S9 skip esm2_t30_150M_lam0_tau0.07 (already in final_results.csv)
+2026-11-25 08:35:56,160 [pipeline] INFO S9 skip esm2_t30_150M_lam2_tau0.07 (already in final_results.csv)
+2026-11-25 08:36:19,949 [pipeline] INFO S9 done esm2_t33_650M_lam0_tau0.07
+2026-11-25 08:36:45,644 [pipeline] INFO S9 done esm2_t33_650M_lam1_tau0.05
+2026-11-25 08:42:58,450 [tables] INFO table T3_1_dataset_composition written (4 rows)
+2026-11-25 08:42:58,455 [tables] INFO table T3_2_data_cleaning_audit written (9 rows)
+2026-11-25 08:42:58,457 [tables] INFO table T3_3_regimes_and_identity_screen written (12 rows)
+2026-11-25 08:42:59,630 [tables] INFO table T4_1_hyperparameters written (19 rows)
+2026-11-25 08:42:59,645 [tables] INFO table T5_1_cv_results written (7 rows)
+2026-11-25 08:42:59,665 [tables] INFO table T5_2_ind425 written (33 rows)
+2026-11-25 08:42:59,730 [tables] INFO table T5_3_ind1049 written (33 rows)
+2026-11-25 08:42:59,759 [tables] INFO table T5_2b_deep_tuned_threshold written (78 rows)
+2026-11-25 08:42:59,770 [tables] INFO table T5_4_lambda_ablation written (6 rows)
+2026-11-25 08:42:59,790 [tables] INFO table T5_5_checkpoint_ablation written (4 rows)
+2026-11-25 08:42:59,806 [tables] INFO table T5_5b_temperature_sweep written (16 rows)
+2026-11-25 08:42:59,814 [tables] INFO table T5_6_significance written (54 rows)
+2026-11-25 08:42:59,828 [tables] INFO table T5_6b_per_seed_consistency written (54 rows)
+2026-11-25 08:42:59,842 [tables] INFO table T5_7_comparison_published written (42 rows)
+2026-11-25 08:43:05,767 [visualize] INFO figure F5.1 ROC Ind_425 B done
+2026-11-25 08:43:09,594 [visualize] INFO figure F5.1 ROC Ind_1049 B done
+2026-11-25 08:43:13,080 [visualize] INFO figure F5.1 ROC Ind_425 A done
+2026-11-25 08:43:16,793 [visualize] INFO figure F5.1 ROC Ind_1049 A done
+2026-11-25 08:43:17,032 [visualize] INFO figure F5.2 PR Ind_425 B done
+2026-11-25 08:43:17,271 [visualize] INFO figure F5.2 PR Ind_1049 B done
+2026-11-25 08:43:24,238 [visualize] INFO figure F5.3 t-SNE Ind_1049 done
+2026-11-25 08:43:26,892 [visualize] INFO figure F5.3 t-SNE Ind_425 done
+2026-11-25 08:43:27,156 [visualize] INFO figure F5.4 lambda sweep done
+2026-11-25 08:43:27,567 [visualize] INFO figure F5.5 leakage gap done
+2026-11-25 08:43:27,964 [visualize] INFO figure F5.6 confusion matrices done
+2026-11-25 08:43:39,096 [visualize] INFO figure FA training curves done
+2026-11-25 08:44:15,469 [pipeline] INFO S9 skip esm2_t6_8M_lam0_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,469 [pipeline] INFO S9 skip esm2_t6_8M_lam2_tau0.1 (already in final_results.csv)
+2026-11-25 08:44:15,469 [pipeline] INFO S9 skip esm2_t6_8M_lam0.1_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,469 [pipeline] INFO S9 skip esm2_t6_8M_lam0.25_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,469 [pipeline] INFO S9 skip esm2_t6_8M_lam0.5_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,469 [pipeline] INFO S9 skip esm2_t6_8M_lam1_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,517 [pipeline] INFO S9 skip esm2_t12_35M_lam0_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,517 [pipeline] INFO S9 skip esm2_t12_35M_lam0.5_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,560 [pipeline] INFO S9 skip esm2_t30_150M_lam0_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,560 [pipeline] INFO S9 skip esm2_t30_150M_lam2_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,671 [pipeline] INFO S9 skip esm2_t33_650M_lam0_tau0.07 (already in final_results.csv)
+2026-11-25 08:44:15,671 [pipeline] INFO S9 skip esm2_t33_650M_lam1_tau0.05 (already in final_results.csv)
+2026-11-25 08:50:31,914 [tables] INFO table T3_1_dataset_composition written (4 rows)
+2026-11-25 08:50:31,918 [tables] INFO table T3_2_data_cleaning_audit written (9 rows)
+2026-11-25 08:50:31,920 [tables] INFO table T3_3_regimes_and_identity_screen written (12 rows)
+2026-11-25 08:50:32,853 [tables] INFO table T4_1_hyperparameters written (19 rows)
+2026-11-25 08:50:32,864 [tables] INFO table T5_1_cv_results written (6 rows)
+2026-11-25 08:50:32,878 [tables] INFO table T5_2_ind425 written (33 rows)
+2026-11-25 08:50:32,929 [tables] INFO table T5_3_ind1049 written (33 rows)
+2026-11-25 08:50:32,953 [tables] INFO table T5_2b_deep_tuned_threshold written (78 rows)
+2026-11-25 08:50:32,963 [tables] INFO table T5_4_lambda_ablation written (6 rows)
+2026-11-25 08:50:32,980 [tables] INFO table T5_5_checkpoint_ablation written (4 rows)
+2026-11-25 08:50:32,990 [tables] INFO table T5_5b_temperature_sweep written (16 rows)
+2026-11-25 08:50:32,993 [tables] INFO table T5_6_significance written (54 rows)
+2026-11-25 08:50:33,001 [tables] INFO table T5_6b_per_seed_consistency written (54 rows)
+2026-11-25 08:50:33,012 [tables] INFO table T5_7_comparison_published written (42 rows)
+2026-11-25 08:50:37,630 [visualize] INFO figure F5.1 ROC Ind_425 B done
+2026-11-25 08:50:40,647 [visualize] INFO figure F5.1 ROC Ind_1049 B done
+2026-11-25 08:50:43,394 [visualize] INFO figure F5.1 ROC Ind_425 A done
+2026-11-25 08:50:47,137 [visualize] INFO figure F5.1 ROC Ind_1049 A done
+2026-11-25 08:50:47,373 [visualize] INFO figure F5.2 PR Ind_425 B done
+2026-11-25 08:50:47,592 [visualize] INFO figure F5.2 PR Ind_1049 B done
+2026-11-25 08:50:54,336 [visualize] INFO figure F5.3 t-SNE Ind_1049 done
+2026-11-25 08:50:56,787 [visualize] INFO figure F5.3 t-SNE Ind_425 done
+2026-11-25 08:50:57,093 [visualize] INFO figure F5.4 lambda sweep done
+2026-11-25 08:50:57,509 [visualize] INFO figure F5.5 leakage gap done
+2026-11-25 08:50:57,885 [visualize] INFO figure F5.6 confusion matrices done
+2026-11-25 08:51:09,262 [visualize] INFO figure FA training curves done

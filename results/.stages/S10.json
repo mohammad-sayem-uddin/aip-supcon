@@ -1,7 +1,7 @@
 {
   "stage": "S10",
   "status": "complete",
-  "wall_seconds": 334.54727816581726,
+  "wall_seconds": 1074.1937170028687,
   "notes": "DeLong, McNemar, bootstrap CIs written",
-  "finished_at": "2026-11-25T08:03:53"
+  "finished_at": "2026-11-25T08:50:29"
 }

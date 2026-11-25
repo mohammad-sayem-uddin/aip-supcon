@@ -206,6 +206,11 @@ def s9() -> int:
                     d[f"prob_seed{SEEDS[i]}"] = p
                 pd.DataFrame(d).to_csv(RESULTS / "predictions" / f"{cfg.model_name()}_{ts}_{rg}.csv", index=False)
             log.info("S9 done %s", cfg.model_name())
+    for ck in available_checkpoints():
+        best_name = final_configs(ck)[1].model_name()  # protocol: lambda* by CV, then tau* by CV at lambda*
+        for name, d in selected.items():
+            if d["checkpoint"] == ck:
+                d["role"] = "baseline" if d["lambda"] == 0 else ("best" if name == best_name else "sweep")
     if rows:
         append_results(pd.DataFrame(rows)[RESULT_COLUMNS], RESULTS / "final_results.csv")
         append_results(pd.DataFrame(rows_tuned)[RESULT_COLUMNS], RESULTS / "final_results_tuned.csv")
