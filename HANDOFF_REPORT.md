@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T14:59:35 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-25T15:02:48 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -397,7 +397,7 @@ To answer whether fine-tuned 8M beats frozen 650M, the comparison was added to P
 ## V2-D15: The "inflation is largest for high-capacity models" claim is not stated as given
 _2026-11-26_
 
-The overnight brief asked Chapters 1, 5 and 6 to say that the leakage inflation is largest for high-capacity models. The A-minus-B MCC gap does not support that as a monotonic statement: it is smallest for linear classifiers on frozen embeddings (about 0.05 to 0.09) and for LightGBM (0.04 to 0.06), large for the random forest (0.249 / 0.177), the RBF SVM (0.229 / 0.184), the CNN (0.285 / 0.211), the 8M MLP (0.237 / 0.150) and the 650M fusion random forest (0.337 / 0.188), and the frozen 650M MLP, the Transformer and the fine-tuned 8M model are no larger than AAC + RF. The thesis therefore says "largest for flexible non-linear models, not a monotonic function of capacity" (Ch. 1, 5.4.3, 6.1, abstract) and does not test differences between gaps formally.
+The overnight brief asked Chapters 1, 5 and 6 to say that the leakage inflation is largest for high-capacity models. The A-minus-B MCC gap does not support that as a monotonic statement: it is smallest for linear classifiers on frozen embeddings (about 0.05 to 0.09) and for LightGBM (0.04 to 0.06), large for the random forest (0.249 / 0.177), the RBF SVM (0.229 / 0.184), the CNN (0.285 / 0.211), the 8M MLP (0.237 / 0.150) and the 650M fusion random forest (0.337 / 0.188), and the frozen 650M MLP, the Transformer and the fine-tuned 8M model are no larger than AAC + RF. The thesis therefore says "largest for flexible non-linear models, not a monotonic function of capacity" (Ch. 1, 5.4.3, 6.1, abstract) and does not test differences between gaps formally. Approved by the author after the overnight run.
 
 ## V2-D16: Chapter 1 reframed around three measured findings; Chapter 2 rebuilt on verified sources only
 _2026-11-26_
