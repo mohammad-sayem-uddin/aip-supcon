@@ -5258,3 +5258,107 @@ temperature
 2026-11-25 13:52:54,255 [data] INFO identity prefilter: 140 of 1364510 pairs need alignment
 2026-11-25 13:52:54,285 [data] INFO identity prefilter: 119 of 2221430 pairs need alignment
 2026-11-25 13:56:52,656 [phaseE] INFO Phase E: 124 comparisons; raw sig 41; family-BH sig 26; global-BH sig 25
+2026-11-25 14:06:45,299 [data] INFO identity prefilter: 411 of 1579300 pairs need alignment
+2026-11-25 14:06:45,331 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:06:45,348 [data] INFO identity prefilter: 12 of 1579300 pairs need alignment
+2026-11-25 14:06:45,365 [data] INFO identity prefilter: 16 of 1579300 pairs need alignment
+2026-11-25 14:06:45,382 [data] INFO identity prefilter: 21 of 1579300 pairs need alignment
+2026-11-25 14:06:45,400 [data] INFO identity prefilter: 14 of 1579300 pairs need alignment
+2026-11-25 14:06:45,417 [data] INFO identity prefilter: 8 of 1579300 pairs need alignment
+2026-11-25 14:06:45,435 [data] INFO identity prefilter: 12 of 1579300 pairs need alignment
+2026-11-25 14:06:45,453 [data] INFO identity prefilter: 18 of 1579300 pairs need alignment
+2026-11-25 14:06:45,470 [data] INFO identity prefilter: 18 of 1579300 pairs need alignment
+2026-11-25 14:06:45,488 [data] INFO identity prefilter: 22 of 1579300 pairs need alignment
+2026-11-25 14:06:45,505 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:06:45,523 [data] INFO identity prefilter: 15 of 1579300 pairs need alignment
+2026-11-25 14:06:45,540 [data] INFO identity prefilter: 18 of 1579300 pairs need alignment
+2026-11-25 14:06:45,557 [data] INFO identity prefilter: 23 of 1579300 pairs need alignment
+2026-11-25 14:06:45,576 [data] INFO identity prefilter: 11 of 1579300 pairs need alignment
+2026-11-25 14:06:45,594 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:06:45,611 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:06:45,630 [data] INFO identity prefilter: 13 of 1579300 pairs need alignment
+2026-11-25 14:06:45,647 [data] INFO identity prefilter: 24 of 1579300 pairs need alignment
+2026-11-25 14:06:45,663 [data] INFO identity prefilter: 9 of 1579300 pairs need alignment
+2026-11-25 14:06:45,714 [data] INFO identity prefilter: 413 of 3898084 pairs need alignment
+2026-11-25 14:06:45,768 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:06:45,809 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:06:45,847 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:06:45,884 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:06:45,930 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:06:45,983 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:06:46,023 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:06:46,063 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:06:46,100 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:06:46,137 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:06:46,174 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:06:46,212 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:06:46,251 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:06:46,293 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:06:46,358 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:06:46,413 [data] INFO identity prefilter: 0 of 3898084 pairs need alignment
+2026-11-25 14:06:46,454 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:06:46,497 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:06:46,537 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:06:46,578 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:09:43,301 [data] INFO identity prefilter: 411 of 1579300 pairs need alignment
+2026-11-25 14:09:43,332 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:09:43,353 [data] INFO identity prefilter: 12 of 1579300 pairs need alignment
+2026-11-25 14:09:43,374 [data] INFO identity prefilter: 16 of 1579300 pairs need alignment
+2026-11-25 14:09:43,394 [data] INFO identity prefilter: 21 of 1579300 pairs need alignment
+2026-11-25 14:09:43,415 [data] INFO identity prefilter: 14 of 1579300 pairs need alignment
+2026-11-25 14:09:43,435 [data] INFO identity prefilter: 8 of 1579300 pairs need alignment
+2026-11-25 14:09:43,455 [data] INFO identity prefilter: 12 of 1579300 pairs need alignment
+2026-11-25 14:09:43,477 [data] INFO identity prefilter: 18 of 1579300 pairs need alignment
+2026-11-25 14:09:43,498 [data] INFO identity prefilter: 18 of 1579300 pairs need alignment
+2026-11-25 14:09:43,519 [data] INFO identity prefilter: 22 of 1579300 pairs need alignment
+2026-11-25 14:09:43,540 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:09:43,561 [data] INFO identity prefilter: 15 of 1579300 pairs need alignment
+2026-11-25 14:09:43,583 [data] INFO identity prefilter: 18 of 1579300 pairs need alignment
+2026-11-25 14:09:43,602 [data] INFO identity prefilter: 23 of 1579300 pairs need alignment
+2026-11-25 14:09:43,621 [data] INFO identity prefilter: 11 of 1579300 pairs need alignment
+2026-11-25 14:09:43,640 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:09:43,658 [data] INFO identity prefilter: 19 of 1579300 pairs need alignment
+2026-11-25 14:09:43,675 [data] INFO identity prefilter: 13 of 1579300 pairs need alignment
+2026-11-25 14:09:43,692 [data] INFO identity prefilter: 24 of 1579300 pairs need alignment
+2026-11-25 14:09:43,709 [data] INFO identity prefilter: 9 of 1579300 pairs need alignment
+2026-11-25 14:09:43,759 [data] INFO identity prefilter: 413 of 3898084 pairs need alignment
+2026-11-25 14:09:43,828 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:09:43,884 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:09:43,940 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:09:44,011 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:09:44,106 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:09:44,148 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:09:44,194 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:09:44,233 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:09:44,275 [data] INFO identity prefilter: 4 of 3898084 pairs need alignment
+2026-11-25 14:09:44,319 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:09:44,359 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:09:44,399 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:09:44,444 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:09:44,490 [data] INFO identity prefilter: 3 of 3898084 pairs need alignment
+2026-11-25 14:09:44,530 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:09:44,570 [data] INFO identity prefilter: 0 of 3898084 pairs need alignment
+2026-11-25 14:09:44,610 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:09:44,653 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:09:44,701 [data] INFO identity prefilter: 2 of 3898084 pairs need alignment
+2026-11-25 14:09:44,752 [data] INFO identity prefilter: 1 of 3898084 pairs need alignment
+2026-11-25 14:28:31,387 [phaseA] INFO AIPpred_benchmark        n=3145 unique=3145 pos/neg=1258/1887 nonstandard=0
+2026-11-25 14:28:31,388 [phaseA] INFO AIPpred_independent      n=1049 unique=1049 pos/neg=420/629 nonstandard=0
+2026-11-25 14:28:31,389 [phaseA] INFO PreAIP_training          n=3145 unique=3145 pos/neg=1258/1887 nonstandard=0
+2026-11-25 14:28:31,389 [phaseA] INFO PreAIP_test              n=1049 unique=1049 pos/neg=420/629 nonstandard=0
+2026-11-25 14:28:31,390 [phaseA] INFO AntiInflam_training      n=1699 unique=1699 pos/neg=690/1009 nonstandard=0
+2026-11-25 14:28:31,390 [phaseA] INFO AntiInflam_validation    n=425 unique=425 pos/neg=173/252 nonstandard=0
+2026-11-25 14:28:31,392 [phaseA] INFO local_Benchmark          n=3790 unique=3753 pos/neg=1451/2339 nonstandard=0
+2026-11-25 14:28:31,392 [phaseA] INFO local_Ind_425            n=425 unique=425 pos/neg=173/252 nonstandard=0
+2026-11-25 14:28:31,392 [phaseA] INFO local_Ind_1049           n=1049 unique=1049 pos/neg=420/629 nonstandard=0
+2026-11-25 14:28:31,408 [phaseA] INFO A2 reproduction (211 / 298): True | raw 211/298 clean 211/298
+2026-11-25 14:28:31,421 [phaseA] INFO provenance facts: {"aippred_bench_x_aippred_ind": 0, "antiinflam_train_x_antiinflam_val": 0, "aippred_bench_x_antiinflam_val": 211, "antiinflam_train_x_aippred_ind": 298, "local_benchmark_unique": 3753, "aippred_bench_unique": 3145, "n_extras_not_in_aippred_bench": 612, "extras_in_antiinflam_train": 612, "extras_in_aippred_ind": 298, "extras_in_antiinflam_val": 0, "aippred_bench_seqs_absent_locally": 4, "label_conflicts_in_local_benchmark": 37, "label_conflicts_already_in_AIPpred_benchmark_files": 0, "conflicts_in_AIPpred_bench_that_equal_local_conflicts": 0, "preaip_training_equals_aippred_benchmark": true, "preaip_test_equals_aippred_independent": true}
+2026-11-25 14:28:31,659 [data] INFO identity prefilter: 27 of 3299105 pairs need alignment
+2026-11-25 14:28:31,717 [data] INFO identity prefilter: 315 of 1336625 pairs need alignment
+2026-11-25 14:28:31,741 [data] INFO identity prefilter: 434 of 1782251 pairs need alignment
+2026-11-25 14:28:31,767 [data] INFO identity prefilter: 212 of 722075 pairs need alignment
+2026-11-25 14:28:31,816 [data] INFO identity prefilter: 413 of 3898084 pairs need alignment
+2026-11-25 14:28:31,842 [data] INFO identity prefilter: 411 of 1579300 pairs need alignment
+2026-11-25 14:28:33,080 [data] INFO identity prefilter: 4332 of 3898084 pairs need alignment
+2026-11-25 14:28:33,204 [data] INFO identity prefilter: 4744 of 1579300 pairs need alignment
+2026-11-25 14:36:26,023 [phaseE] INFO Phase E: 126 comparisons; raw sig 42; family-BH sig 27; global-BH sig 26
