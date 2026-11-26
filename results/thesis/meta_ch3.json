@@ -27,11 +27,17 @@
   "delong1988",
   "mcnemar1947",
   "efron1979",
-  "benjamini1995"
+  "benjamini1995",
+  "paszke2019",
+  "pedregosa2012",
+  "cock2009",
+  "wolf2020"
  ],
- "todos": [],
+ "todos": [
+  "a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account"
+ ],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 19,
+ "tables": 23,
  "figures": 2
 }

@@ -1,8 +1,8 @@
 const fs = require('fs');
 const { chapter, ROOT, THESIS, REFS } = require('./lib.js');
-const L = chapter(7, 'REFERENCES', 'REFERENCES thesis.docx');
+const L = chapter(6, 'REFERENCES', 'REFERENCES thesis.docx');
 const cited = new Set();
-for (let i = 1; i <= 6; i++) { const m = JSON.parse(fs.readFileSync(`${THESIS}/meta_ch${i}.json`, 'utf8')); m.cited.forEach((k) => cited.add(k)); }
+for (let i = 1; i <= 5; i++) { const m = JSON.parse(fs.readFileSync(`${THESIS}/meta_ch${i}.json`, 'utf8')); m.cited.forEach((k) => cited.add(k)); }
 const ini = (g) => g.split(/[\s.]+/).filter(Boolean).map((x) => x[0].toUpperCase() + '.').join(' ');
 const fmtAuth = (a) => { const s = a.map(([f, g]) => (g ? `${f}, ${ini(g)}` : f)); return s.length === 1 ? s[0] : s.length <= 20 ? `${s.slice(0, -1).join(', ')}, & ${s[s.length - 1]}` : `${s.slice(0, 19).join(', ')}, ... ${s[s.length - 1]}`; };
 const keys = [...cited].filter((k) => REFS[k]).sort((a, b) => REFS[a].authors[0][0].localeCompare(REFS[b].authors[0][0]) || REFS[a].year - REFS[b].year);

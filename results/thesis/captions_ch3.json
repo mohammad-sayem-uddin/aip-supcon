@@ -124,5 +124,29 @@
   "kind": "Table",
   "number": "3.19",
   "text": "Minimum detectable effect (80% power, two-sided α = 0.05) of the paired comparisons of λ > 0 with λ = 0 for each test set and regime. Source: results/v2/mde_summary.csv, derived from results/tables/T5.11_corrected_significance.csv."
+ },
+ {
+  "label": "tab:software",
+  "kind": "Table",
+  "number": "3.20",
+  "text": "Main software packages and versions on the local machine (from requirements.txt). The Kaggle kernels used their pre-installed PyTorch and scikit-learn."
+ },
+ {
+  "label": "tab:stages",
+  "kind": "Table",
+  "number": "3.21",
+  "text": "Compute time recorded for each stage of the experiments (results/.stages and results/v2/kaggle_runtimes.csv). Times are the wall-clock time that the stage runner recorded for its last execution; a stage that was resumed or re-run shows that execution only, and the time spent writing code is not included."
+ },
+ {
+  "label": "tab:devices",
+  "kind": "Table",
+  "number": "3.22",
+  "text": "Device on which each architecture and the fine-tuning experiment were trained (results/v2/device_map.json)."
+ },
+ {
+  "label": "tab:hyper",
+  "kind": "Table",
+  "number": "3.23",
+  "text": "Training hyperparameters and search ranges. Source: results/v2/methods_parameters.csv."
  }
 ]

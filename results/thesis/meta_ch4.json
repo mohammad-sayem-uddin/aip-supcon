@@ -1,17 +1,22 @@
 {
  "file": "CHAPTER 4 thesis.docx",
  "cited": [
-  "paszke2019",
-  "pedregosa2012",
-  "ke2017",
-  "cock2009",
-  "wolf2020"
+  "benjamini1995",
+  "vandermaaten2008",
+  "gupta2017",
+  "manavalan2018",
+  "khatun2019",
+  "zhao2021",
+  "zhang2021",
+  "gaffar2024",
+  "wang2026",
+  "deng2022"
  ],
  "todos": [
-  "a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account"
+  "results of fine-tuning the 150M and 650M checkpoints are not yet in results/tables/T5.13*; run python -m src.v2.finish_completion fetch and analyse, then rebuild this chapter"
  ],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 4,
- "figures": 0
+ "tables": 20,
+ "figures": 9
 }

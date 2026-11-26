@@ -62,3 +62,31 @@ AIPStack independent sets 2 and 3 are still not obtainable (GitHub 404; Wayback 
 ## 5. Fine-tuning scale axis (task 2.2) and other protein language models (task 3.1)
 
 See section 6 below once those runs finish (filled in at the end of the run).
+
+## 6. Restructure from six chapters to five (assembly run, Part 1)
+
+_2026-11-26_
+
+DIU's structure (Guidelines p.8 → `SWE_Thesis Template_2024.pdf` Table of Content) is Introduction, Literature Review, Methodology, Results and Discussion, Conclusion. The thesis was remapped accordingly:
+
+| Was | Now |
+|---|---|
+| Ch 1 Introduction | Chapter 1 Introduction |
+| Ch 2 Literature Review | Chapter 2 Literature Review |
+| Ch 3 Materials and Methods | Chapter 3 Methodology, sections 3.1–3.9 |
+| Ch 4 Implementation and Experimental Setup | Chapter 3 Methodology, sections 3.10–3.16 |
+| Ch 5 Results and Discussion | Chapter 4 Results and Discussion |
+| Ch 6 Conclusions and Future Work | Chapter 5 Conclusion |
+
+`src/thesis/ch4.js` was merged into `ch3.js` and deleted; `ch5.js` → `ch4.js` and `ch6.js` → `ch5.js` (git mv); `references.js` moved from chapter 7 to chapter 6 internally. Every section heading, table number, figure number, equation number and cross-reference was renumbered in one simultaneous pass; both build passes report **0 unresolved references**.
+
+**Nothing was lost.** A sentence-level diff of the rendered text before and after (1,012 → 1,026 sentences over 40 characters) leaves 19 differences, every one of which is either the renumbering itself, one of the five new Summary sections, or one of the six wording changes listed below. Total words went from 36,871 to 37,283; the +412 is the five Summary sections.
+
+### Wording changed because the merge forced it (not silent)
+
+1. **Chapter 3's closing paragraph and Chapter 4's opening paragraph were merged into one transition.** The old Ch 3 ended "The implementation of these procedures, the hardware and software environment, and the reproducibility arrangements are described in Chapter 4, and the results obtained with them are reported in Chapter 5."; the old Ch 4 opened "This chapter describes how the methods of Chapter 3 were implemented and run: ... It also lists the places where the execution departed from the plan ...". Both pointed at the same list of topics, and after the merge both would have been self-referential. They are now one paragraph that keeps every item from both and ends "The results obtained with these procedures are reported in Chapter 4."
+2. **Section 1.7 (Organisation of the Thesis)** described six chapters and, after renumbering, named "Chapter 3" twice. Its two sentences for the old Chapters 3 and 4 are now one sentence for the new Chapter 3, and the parentheticals were updated to the new titles ("Methodology", "Conclusion").
+3. **"over the grids that Chapter 3 pre-specified"** (old 4.3, now 3.12) became **"over the grids pre-specified in Section 3.7.3"** — it now sits inside Chapter 3, so the chapter-level pointer had to become a section-level one.
+4. **"each configuration was trained 25 times (Chapter 3)"** (old 4.4, now 3.13) became **"(Section 3.7.5)"**, for the same reason.
+5. **Chapter titles**: "Materials and Methods" → "Methodology" and "Conclusions and Future Work" → "Conclusion", to match the template's chapter names. No section inside either chapter changed.
+6. **Five Summary sections added** (1.10, 3.17, 4.11, 5.6; Chapter 2 already had 2.8 Summary), one short paragraph each, as the template requires. They restate the structure of their own chapter and introduce no claim that is not already made and sourced earlier in that chapter.

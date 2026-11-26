@@ -1,26 +1,176 @@
 [
  {
-  "label": "tab:software",
+  "label": "tab:cv",
   "kind": "Table",
   "number": "4.1",
-  "text": "Main software packages and versions on the local machine (from requirements.txt). The Kaggle kernels used their pre-installed PyTorch and scikit-learn."
+  "text": "Five-fold cross-validated performance on Benchmark_clean (mean ± standard deviation over 25 runs; 15 runs for the fine-tuning experiment). Shaded rows name the group of models below them. Rows with λ > 0 use the CV-selected λ and τ. Source: results/thesis/ch5_data.json, built from the cross-validation result files."
  },
  {
-  "label": "tab:stages",
+  "label": "tab:ind425",
   "kind": "Table",
   "number": "4.2",
-  "text": "Compute time recorded for each stage of the experiments (results/.stages and results/v2/kaggle_runtimes.csv). Times are the wall-clock time that the stage runner recorded for its last execution; a stage that was resumed or re-run shows that execution only, and the time spent writing code is not included."
+  "text": "Performance on Ind_425 (425 sequences in Regime A, 214 in Regime B, 162 in Regime C), mean over the five final models of each configuration. Shaded rows name the group below them."
  },
  {
-  "label": "tab:devices",
+  "label": "tab:ind1049",
   "kind": "Table",
   "number": "4.3",
-  "text": "Device on which each architecture and the fine-tuning experiment were trained (results/v2/device_map.json)."
+  "text": "Performance on Ind_1049 (1,049 sequences in Regime A, 751 in Regime B, 716 in Regime C), mean over the five final models of each configuration. Shaded rows name the group below them."
  },
  {
-  "label": "tab:hyper",
+  "label": "tab:gaps",
   "kind": "Table",
   "number": "4.4",
-  "text": "Training hyperparameters and search ranges. Source: results/v2/methods_parameters.csv."
+  "text": "Drop in performance from Regime A (as distributed) to Regime B (exact matches removed) and to Regime C (identity ≥ 0.9 also removed), for the models evaluated in all regimes. Positive values mean that the score is lower after removal. Source: results/thesis/ch5_data.json."
+ },
+ {
+  "label": "fig:gap",
+  "kind": "Figure",
+  "number": "4.1",
+  "text": "MCC of six models on Ind_425 and Ind_1049 in Regime A (as distributed), Regime B (exact matches removed) and Regime C (identity ≥ 0.9 also removed)."
+ },
+ {
+  "label": "tab:gapc",
+  "kind": "Table",
+  "number": "4.5",
+  "text": "Contrasts between the leakage gaps (MCC in Regime A minus MCC in Regime B) of model families. Differences of mean gaps, with the 95% bootstrap interval and the Benjamini–Hochberg adjusted p-value for the average of the two test sets; the model-level Mann–Whitney p-value counts each model once. Source: results/tables/T5.12b_leakage_gap_family_contrasts.csv."
+ },
+ {
+  "label": "tab:xb",
+  "kind": "Table",
+  "number": "4.6",
+  "text": "Cross-benchmark evaluation: MCC of AAC + RF and of the frozen 650M multilayer perceptron (λ = 0) for each pairing of a training set with an independent set, in Regime A and Regime B. The numbers of test sequences are given for each regime. Cells in which Regime A equals Regime B are pairings within one lineage."
+ },
+ {
+  "label": "fig:xb",
+  "kind": "Figure",
+  "number": "4.2",
+  "text": "MCC of AAC + RF, the frozen 650M multilayer perceptron and the frozen 8M multilayer perceptron (λ = 0) for each combination of training set (rows) and independent set (columns), in Regimes A, B and C."
+ },
+ {
+  "label": "tab:lambda",
+  "kind": "Table",
+  "number": "4.7",
+  "text": "Effect of the SupCon weight λ on the multilayer perceptron with the frozen 8M embedding (τ = 0.07). Cross-validated scores are the mean ± standard deviation over 25 runs; the independent-set MCC is the mean over five final models."
+ },
+ {
+  "label": "fig:lambda",
+  "kind": "Figure",
+  "number": "4.3",
+  "text": "Cross-validated MCC as a function of λ for the multilayer perceptron on four ESM-2 checkpoints (mean ± standard deviation over 25 runs). The dotted line marks λ = 0, the model without the contrastive term."
+ },
+ {
+  "label": "tab:checkpoints",
+  "kind": "Table",
+  "number": "4.8",
+  "text": "Effect of the best SupCon weight at the four ESM-2 checkpoints (multilayer perceptron). The Regime B columns give MCC at λ = 0 and at the selected λ, mean over five final models."
+ },
+ {
+  "label": "tab:tau",
+  "kind": "Table",
+  "number": "4.9",
+  "text": "Temperature sweep at the selected λ of each checkpoint (cross-validated, mean ± standard deviation over 25 runs)."
+ },
+ {
+  "label": "tab:arch",
+  "kind": "Table",
+  "number": "4.10",
+  "text": "The contrast λ* versus λ = 0 in six architectures on the frozen 8M embedding, Regime B. ΔMCC is for the seed-ensemble predictions; the p-values are DeLong p-values for the AUROC difference, raw and Benjamini–Hochberg adjusted. The rows B2 to B6 are the 10 comparisons of H2, adjusted within that family; the row B1 belongs to the family \"λ contrasts in Phase B\" and is not part of H2."
+ },
+ {
+  "label": "fig:arch",
+  "kind": "Figure",
+  "number": "4.4",
+  "text": "Regime B MCC of the six architectures at λ = 0 and at the cross-validation-selected λ (mean ± standard deviation of the five final models). The bars are means of single models, whereas Table 4.10 uses seed-ensemble predictions, so that the differences in the figure and in the table do not coincide exactly."
+ },
+ {
+  "label": "tab:survivors",
+  "kind": "Table",
+  "number": "4.11",
+  "text": "The λ-contrasts that remain significant after Benjamini–Hochberg correction (within family or globally). A negative ΔAUROC means that the model with the contrastive term ranks peptides worse."
+ },
+ {
+  "label": "tab:families",
+  "kind": "Table",
+  "number": "4.12",
+  "text": "Number of comparisons in each family of tests, with the number significant at 5% before correction, after correction within the family, and after the global correction over all comparisons. Source: results/tables/T5.11_corrected_significance.csv."
+ },
+ {
+  "label": "fig:tsne",
+  "kind": "Figure",
+  "number": "4.5",
+  "text": "t-SNE (van der Maaten and Hinton, 2008) projections of the Regime B sequences of Ind_1049 for one 8M model (seed 0): raw frozen embedding, encoder output at λ = 0 and encoder output at λ = 2, coloured by class, with silhouette and Davies–Bouldin values in the panel titles."
+ },
+ {
+  "label": "tab:pool5",
+  "kind": "Table",
+  "number": "4.13",
+  "text": "Pooling variants on the frozen 650M embedding (multilayer perceptron, λ = 0), with AAC + RF for reference. Cross-validated scores are means over 25 runs; the Regime B columns are means over five final models."
+ },
+ {
+  "label": "fig:pooling",
+  "kind": "Figure",
+  "number": "4.6",
+  "text": "Regime B MCC of the six pooling variants (mean ± standard deviation of the five final models); the dashed line is AAC + RF."
+ },
+ {
+  "label": "tab:fusion",
+  "kind": "Table",
+  "number": "4.14",
+  "text": "Hand-crafted features, ESM-2 embeddings and their concatenation with three classifiers. Cross-validated scores are means over 25 runs; the Regime B columns are means over five final models."
+ },
+ {
+  "label": "tab:ft5",
+  "kind": "Table",
+  "number": "4.15",
+  "text": "The fine-tuned 8M model and its comparators. Cross-validated scores: 15 runs for the fine-tuned and frozen-control rows, 25 runs for the others; Regime B columns are means over the final models."
+ },
+ {
+  "label": "fig:fusionft",
+  "kind": "Figure",
+  "number": "4.7",
+  "text": "MCC in Regime B of the fusion and fine-tuning models and of the baselines on Ind_425 (n = 214) and Ind_1049 (n = 751), mean over the five final models of each configuration, ordered by the MCC on Ind_1049."
+ },
+ {
+  "label": "tab:reptests",
+  "kind": "Table",
+  "number": "4.16",
+  "text": "Paired comparisons of the representation study (exploratory). ΔMCC is for the first model minus the second; the p-values are DeLong p-values for the AUROC difference, raw and BH-adjusted within the family. Source: results/tables/T5.11_corrected_significance.csv."
+ },
+ {
+  "label": "tab:c4",
+  "kind": "Table",
+  "number": "4.17",
+  "text": "Frozen ProtBERT and ProtT5-XL (encoder) embeddings, mean-pooled over residues, with the classifiers of the frozen ESM-2 models (λ = 0). Cross-validated scores are means over the runs; the independent-set columns are means over five final models in Regime B. Source: results/tables/T5.14a_c4_other_plms_summary.csv."
+ },
+ {
+  "label": "tab:c4_tests",
+  "kind": "Table",
+  "number": "4.18",
+  "text": "Paired comparisons of the other protein language models with ESM-2 650M (same classifier) and with AAC + RF in Regime B (exploratory family); ΔMCC with its 95% bootstrap interval, DeLong p-values raw and Benjamini–Hochberg adjusted. Source: results/tables/T5.14_c4_other_plms_tests.csv."
+ },
+ {
+  "label": "tab:published",
+  "kind": "Table",
+  "number": "4.19",
+  "text": "Published performance figures, each read from the table named in the last column of the open-access full text of the cited paper (results/tables/T5_7_published_reported.csv gives paper, PMCID, table and row), and the results of this thesis on the same files. Values printed as percentages were divided by 100. The papers use different training collections and protocols, so the values are not directly comparable. n/a: not publicly available (paper not open access and no usable figure returned on retry, or value given only in a figure image rather than text or a table)."
+ },
+ {
+  "label": "tab:mde5",
+  "kind": "Table",
+  "number": "4.20",
+  "text": "Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on each test set and regime: median over the comparisons, with the smallest and largest value for MCC in brackets, and the median for AUROC."
+ },
+ {
+  "label": "fig:f1",
+  "kind": "Figure",
+  "number": "4.8",
+  "text": "Share of the peptides of Benchmark_clean that share at least one 8-mer with another peptide of the same class and with a peptide of the other class, for the positive (n = 1,414) and the negative (n = 2,302) peptides."
+ },
+ {
+  "label": "fig:f5",
+  "kind": "Figure",
+  "number": "4.9",
+  "text": "AUROC of each model in Regime B (both test sets pooled) by peptide length group; the last row is a logistic regression on length and its square alone. The colour scale is centred on 0.5 (chance); the number of peptides of each group is given under the column label. Values below 0.5 mean that the model ranks the peptides of that group in the wrong order."
  }
 ]
