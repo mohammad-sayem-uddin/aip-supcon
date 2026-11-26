@@ -17,6 +17,13 @@
  ],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 20,
- "figures": 9
+ "tables": 14,
+ "figures": 5,
+ "words": {
+  "prose": 6825,
+  "heading": 190,
+  "caption": 822,
+  "table": 2910,
+  "equation": 0
+ }
 }

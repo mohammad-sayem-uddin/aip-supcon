@@ -1,0 +1,58 @@
+[
+ {
+  "label": "tab:layers_b1",
+  "kind": "Table",
+  "number": "B.1",
+  "text": "Layers of model B1. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 14,
+  "tableWords": 62
+ },
+ {
+  "label": "tab:layers_b2",
+  "kind": "Table",
+  "number": "B.2",
+  "text": "Layers of model B2. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 14,
+  "tableWords": 114
+ },
+ {
+  "label": "tab:layers_b3",
+  "kind": "Table",
+  "number": "B.3",
+  "text": "Layers of model B3. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 14,
+  "tableWords": 89
+ },
+ {
+  "label": "tab:layers_b4",
+  "kind": "Table",
+  "number": "B.4",
+  "text": "Layers of model B4. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 14,
+  "tableWords": 94
+ },
+ {
+  "label": "tab:layers_b5",
+  "kind": "Table",
+  "number": "B.5",
+  "text": "Layers of model B5. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 14,
+  "tableWords": 99
+ },
+ {
+  "label": "tab:layers_b6",
+  "kind": "Table",
+  "number": "B.6",
+  "text": "Layers of model B6. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 14,
+  "tableWords": 93
+ },
+ {
+  "label": "tab:stages",
+  "kind": "Table",
+  "number": "B.7",
+  "text": "Compute time recorded for each stage of the experiments (results/.stages and results/v2/kaggle_runtimes.csv). Times are the wall-clock time that the stage runner recorded for its last execution; a stage that was resumed or re-run shows that execution only, and the time spent writing code is not included. Cited in Section 3.11.",
+  "captionWords": 50,
+  "tableWords": 207
+ }
+]

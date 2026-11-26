@@ -55,11 +55,15 @@ function rich(str, base, ctx) {
   return out.flatMap((r) => r);
 }
 
+// words, as a plain-text reader would count them: tags stripped, whitespace collapsed
+const wcount = (x) => String(x).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().split(' ').filter(Boolean).length;
+
 const border = { style: BorderStyle.SINGLE, size: 4, color: '808080' };
 const borders = { top: border, bottom: border, left: border, right: border };
 
-function chapter(no, title, outFile) {
-  const ctx = { todos: [], needed: [], used: new Set(), unresolved: [], labels: [] };
+function chapter(no, title, outFile, opts = {}) {
+  const NUM = opts.numberAs || no;   // appendices number as A.1, B.1 ...
+  const ctx = { todos: [], needed: [], used: new Set(), unresolved: [], labels: [], wc: { prose: 0, heading: 0, caption: 0, table: 0, equation: 0 } };
   const LABELS = loadLabels();
   const out = [];
   let tabNo = 0, figNo = 0;
@@ -79,12 +83,15 @@ function chapter(no, title, outFile) {
     },
     citN(k) { const t = citeText(k, true); if (!t) { ctx.needed.push(`unknown key ${k}`); return '[CITATION NEEDED]'; } ctx.used.add(k); return t; },
     needed(note) { return `<cn>${note}</cn>`; },
-    P(str, opts = {}) { return new Paragraph({ children: rich(str, {}, ctx), spacing: { after: 160, line: 259 }, ...opts }); },
-    H1: (t) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text: t, font: 'Times New Roman', bold: true, size: 48, color: '000000' })], spacing: { before: 0, after: 240 }, keepNext: true }),
-    H2: (t) => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun({ text: t, font: 'Times New Roman', bold: true, size: 36, color: '000000' })], spacing: { before: 360, after: 160 }, keepNext: true }),
-    H3: (t) => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun({ text: t, font: 'Times New Roman', bold: true, size: 28, color: '000000' })], spacing: { before: 240, after: 120 }, keepNext: true }),
+    P(str, opts = {}) { ctx.wc.prose += wcount(str); return new Paragraph({ children: rich(str, {}, ctx), spacing: { after: 160, line: 259 }, ...opts }); },
+    H1: (t) => (ctx.wc.heading += wcount(t), new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text: t, font: 'Times New Roman', bold: true, size: 48, color: '000000' })], spacing: { before: 0, after: 240 }, keepNext: true })),
+    H2: (t) => (ctx.wc.heading += wcount(t), new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun({ text: t, font: 'Times New Roman', bold: true, size: 36, color: '000000' })], spacing: { before: 360, after: 160 }, keepNext: true })),
+    H3: (t) => (ctx.wc.heading += wcount(t), new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun({ text: t, font: 'Times New Roman', bold: true, size: 28, color: '000000' })], spacing: { before: 240, after: 120 }, keepNext: true })),
     pageBreak: () => new Paragraph({ children: [new PageBreak()] }),
     table(rows, widths, opts = {}) {
+      let tw = 0; rows.forEach((r) => r.forEach((c) => { tw += wcount(c); }));
+      ctx.wc.table += tw;
+      if (ctx.captions && ctx.captions.length) { const last = ctx.captions[ctx.captions.length - 1]; last.tableWords = (last.tableWords || 0) + tw; }
       const fs_ = opts.size || 18;
       const total = widths.reduce((a, b) => a + b, 0);
       return new Table({
@@ -102,20 +109,20 @@ function chapter(no, title, outFile) {
       });
     },
     caption(label, text) {
-      tabNo += 1; ctx.labels.push([label, `Table ${no}.${tabNo}`]);
-      ctx.captions = ctx.captions || []; ctx.captions.push({ label, kind: 'Table', number: `${no}.${tabNo}`, text });
-      return new Paragraph({ keepNext: true, spacing: { before: 200, after: 80 }, children: [new TextRun({ text: `Table ${no}.${tabNo}: `, bold: true, size: 20 }), ...rich(text, { size: 20 }, ctx)] });
+      tabNo += 1; ctx.wc.caption += wcount(text); ctx.labels.push([label, `Table ${NUM}.${tabNo}`]);
+      ctx.captions = ctx.captions || []; ctx.captions.push({ label, kind: 'Table', number: `${NUM}.${tabNo}`, text, captionWords: wcount(text) });
+      return new Paragraph({ keepNext: true, spacing: { before: 200, after: 80 }, children: [new TextRun({ text: `Table ${NUM}.${tabNo}: `, bold: true, size: 20 }), ...rich(text, { size: 20 }, ctx)] });
     },
     afterTable: () => new Paragraph({ spacing: { after: 120 }, children: [] }),
     figure(label, file, text, widthPx) {
       const b = fs.readFileSync(`${ROOT}/figures/${file}`);
       const w = b.readUInt32BE(16), h = b.readUInt32BE(20);
-      figNo += 1; ctx.labels.push([label, `Figure ${no}.${figNo}`]);
-      ctx.captions = ctx.captions || []; ctx.captions.push({ label, kind: 'Figure', number: `${no}.${figNo}`, text });
+      figNo += 1; ctx.wc.caption += wcount(text); ctx.labels.push([label, `Figure ${NUM}.${figNo}`]);
+      ctx.captions = ctx.captions || []; ctx.captions.push({ label, kind: 'Figure', number: `${NUM}.${figNo}`, text, captionWords: wcount(text) });
       return [
         new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 160, after: 60 }, keepNext: true,
-          children: [new ImageRun({ type: 'png', data: b, transformation: { width: widthPx, height: Math.round(widthPx * h / w) }, altText: { title: `Figure ${no}.${figNo}`, description: text, name: file } })] }),
-        new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: `Figure ${no}.${figNo}: `, bold: true, size: 20 }), ...rich(text, { size: 20 }, ctx)] }),
+          children: [new ImageRun({ type: 'png', data: b, transformation: { width: widthPx, height: Math.round(widthPx * h / w) }, altText: { title: `Figure ${NUM}.${figNo}`, description: text, name: file } })] }),
+        new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: `Figure ${NUM}.${figNo}: `, bold: true, size: 20 }), ...rich(text, { size: 20 }, ctx)] }),
       ];
     },
     async build() {
@@ -130,7 +137,7 @@ function chapter(no, title, outFile) {
       });
       fs.writeFileSync(`${ROOT}/${outFile}`, await Packer.toBuffer(doc));
       fs.writeFileSync(`${THESIS}/labels_ch${no}.csv`, 'label,number\n' + ctx.labels.map((l) => l.join(',')).join('\n') + '\n');
-      fs.writeFileSync(`${THESIS}/meta_ch${no}.json`, JSON.stringify({ file: outFile, cited: [...ctx.used], todos: ctx.todos, citation_needed: ctx.needed, unresolved_refs: [...new Set(ctx.unresolved)], tables: tabNo, figures: figNo }, null, 1));
+      fs.writeFileSync(`${THESIS}/meta_ch${no}.json`, JSON.stringify({ file: outFile, cited: [...ctx.used], todos: ctx.todos, citation_needed: ctx.needed, unresolved_refs: [...new Set(ctx.unresolved)], tables: tabNo, figures: figNo, words: ctx.wc }, null, 1));
       fs.writeFileSync(`${THESIS}/captions_ch${no}.json`, JSON.stringify(ctx.captions || [], null, 1));
       console.log(`ch${no}: ${outFile} tables ${tabNo} figures ${figNo} cited ${ctx.used.size} todos ${ctx.todos.length} needed ${ctx.needed.length} unresolved ${[...new Set(ctx.unresolved)].length}`);
     },

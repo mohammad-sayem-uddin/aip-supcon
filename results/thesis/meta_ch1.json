@@ -40,5 +40,12 @@
  "citation_needed": [],
  "unresolved_refs": [],
  "tables": 0,
- "figures": 0
+ "figures": 0,
+ "words": {
+  "prose": 3864,
+  "heading": 42,
+  "caption": 0,
+  "table": 0,
+  "equation": 0
+ }
 }

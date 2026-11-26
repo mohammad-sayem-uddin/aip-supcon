@@ -5,5 +5,12 @@
  "citation_needed": [],
  "unresolved_refs": [],
  "tables": 0,
- "figures": 0
+ "figures": 0,
+ "words": {
+  "prose": 2130,
+  "heading": 1,
+  "caption": 0,
+  "table": 0,
+  "equation": 0
+ }
 }

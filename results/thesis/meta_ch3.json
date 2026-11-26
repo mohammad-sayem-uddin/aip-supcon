@@ -38,6 +38,13 @@
  ],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 23,
- "figures": 2
+ "tables": 16,
+ "figures": 2,
+ "words": {
+  "prose": 8723,
+  "heading": 198,
+  "caption": 348,
+  "table": 992,
+  "equation": 0
+ }
 }

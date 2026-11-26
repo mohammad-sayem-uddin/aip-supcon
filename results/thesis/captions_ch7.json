@@ -1,0 +1,34 @@
+[
+ {
+  "label": "tab:ind425",
+  "kind": "Table",
+  "number": "A.1",
+  "text": "Performance on Ind_425 (425 sequences in Regime A, 214 in Regime B, 162 in Regime C), mean over the five final models of each configuration. Shaded rows are the composition-based references. Cited in Section 4.2.",
+  "captionWords": 35,
+  "tableWords": 535
+ },
+ {
+  "label": "tab:ind1049",
+  "kind": "Table",
+  "number": "A.2",
+  "text": "Performance on Ind_1049 (1,049 sequences in Regime A, 751 in Regime B, 716 in Regime C), mean over the five final models of each configuration. Shaded rows are the composition-based references. Cited in Section 4.2.",
+  "captionWords": 35,
+  "tableWords": 535
+ },
+ {
+  "label": "tab:tau",
+  "kind": "Table",
+  "number": "A.3",
+  "text": "Temperature sweep at the selected λ of each checkpoint (cross-validated, mean ± standard deviation over 25 runs). Cited in Section 4.5.2.",
+  "captionWords": 21,
+  "tableWords": 167
+ },
+ {
+  "label": "tab:reptests",
+  "kind": "Table",
+  "number": "A.4",
+  "text": "Paired comparisons of the representation study (exploratory). ΔMCC is for the first model minus the second; the p-values are DeLong p-values for the AUROC difference, raw and Benjamini-Hochberg adjusted within the exploratory family. Cited in Section 4.6.",
+  "captionWords": 37,
+  "tableWords": 441
+ }
+]
