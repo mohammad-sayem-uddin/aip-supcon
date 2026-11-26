@@ -188,6 +188,9 @@ function chapter(no, title, outFile, opts = {}) {
       }
       return new Table({
         width: { size: total, type: WidthType.DXA }, columnWidths: widths, alignment: AlignmentType.CENTER,
+        // the rules live on the cells; clear the table-level defaults so no vertical
+        // border survives in the XML for Word to honour
+        borders: { top: NONE, bottom: NONE, left: NONE, right: NONE, insideHorizontal: NONE, insideVertical: NONE },
         rows: rows.map((r, ri) => new TableRow({
           tableHeader: ri === 0, cantSplit: true,
           children: r.map((c, ci) => new TableCell({
