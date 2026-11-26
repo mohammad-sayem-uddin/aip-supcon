@@ -73,8 +73,8 @@
   "label": "fig:tsne",
   "kind": "Figure",
   "number": "4.3",
-  "text": "t-SNE (van der Maaten and Hinton, 2008) projections of the Regime B sequences of Ind_1049 for one 8M model (seed 0): raw frozen embedding, encoder output at λ = 0 and encoder output at λ = 2, coloured by class, with silhouette and Davies–Bouldin values in the panel titles.",
-  "captionWords": 49
+  "text": "t-SNE (van der Maaten and Hinton, 2008) projections of the Regime B sequences of Ind_1049 for one 8M model (seed 0): raw frozen embedding, encoder output at λ = 0 and encoder output at λ = 2, with the two classes distinguished by marker shape (open circles non-AIP, filled triangles AIP) so that the panels read in black and white, and silhouette and Davies-Bouldin values in the panel titles.",
+  "captionWords": 69
  },
  {
   "label": "tab:pool5",

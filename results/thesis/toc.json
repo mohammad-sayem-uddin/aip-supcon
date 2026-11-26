@@ -603,6 +603,12 @@
    "label": "tab:aip_predictors"
   },
   {
+   "kind": "Figure",
+   "number": "3.1",
+   "short": "Overall methodology.",
+   "label": "fig:method"
+  },
+  {
    "kind": "Table",
    "number": "3.1",
    "short": "Composition of the three distributed files and of the cleaned training collection...",
@@ -616,8 +622,8 @@
   },
   {
    "kind": "Figure",
-   "number": "3.1",
-   "short": "The two source resources and the distributed files.",
+   "number": "3.2",
+   "short": "Provenance of the three files and the origin of the overlap.",
    "label": "fig:lineage"
   },
   {
@@ -651,6 +657,12 @@
    "label": "tab:regimes"
   },
   {
+   "kind": "Figure",
+   "number": "3.3",
+   "short": "The three evaluation regimes.",
+   "label": "fig:regimes"
+  },
+  {
    "kind": "Table",
    "number": "3.8",
    "short": "Identity screen of the independent sets against Benchmark_clean, and the...",
@@ -676,9 +688,15 @@
   },
   {
    "kind": "Figure",
-   "number": "3.2",
+   "number": "3.4",
    "short": "The network used for the mean-pooled reference model B1.",
    "label": "fig:aipnet"
+  },
+  {
+   "kind": "Figure",
+   "number": "3.5",
+   "short": "Cross-validation and splitting protocol.",
+   "label": "fig:splits"
   },
   {
    "kind": "Table",

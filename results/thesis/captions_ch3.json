@@ -1,5 +1,12 @@
 [
  {
+  "label": "fig:method",
+  "kind": "Figure",
+  "number": "3.1",
+  "text": "Overall methodology. The three distributed files are first traced to their published sources and audited for duplication, label conflict and training-test overlap; cleaning produces Benchmark_clean; every model is then scored under three evaluation regimes that progressively remove overlap between the training collection and the test sets. Hatching distinguishes the audit steps (dotted) and the evaluation regimes (diagonal); dashed outlines mark the modelling steps.",
+  "captionWords": 63
+ },
+ {
   "label": "tab:dataset_composition",
   "kind": "Table",
   "number": "3.1",
@@ -18,9 +25,9 @@
  {
   "label": "fig:lineage",
   "kind": "Figure",
-  "number": "3.1",
-  "text": "The two source resources and the distributed files. Within each resource the training and independent sets share no sequence (green statement); the cross-resource pairings share the numbers of sequences shown. Counts from results/tables/T3.5_cross_benchmark_leakage.csv and results/provenance.csv.",
-  "captionWords": 35
+  "number": "3.2",
+  "text": "Provenance of the three files and the origin of the overlap. A: inside each resource the training and test sets share no sequence. B: the distributed training file combines the AIPpred benchmark with 612 AntiInflam training sequences, so each resource's test set meets the other resource's training data, and 211 of the 425 sequences of Ind_425 and 298 of the 1,049 of Ind_1049 occur in the training file. Counts from results/tables/T3.5_cross_benchmark_leakage.csv and results/provenance.csv.",
+  "captionWords": 73
  },
  {
   "label": "tab:conflicts",
@@ -63,6 +70,13 @@
   "tableWords": 67
  },
  {
+  "label": "fig:regimes",
+  "kind": "Figure",
+  "number": "3.3",
+  "text": "The three evaluation regimes. Bar length is the number of test sequences that survive each regime, and the hatching distinguishes them; the counts are those of Table 3.7. Only the test sets change: the training collection is the same in all three.",
+  "captionWords": 42
+ },
+ {
   "label": "tab:identity",
   "kind": "Table",
   "number": "3.8",
@@ -97,9 +111,16 @@
  {
   "label": "fig:aipnet",
   "kind": "Figure",
-  "number": "3.2",
-  "text": "The network used for the mean-pooled reference model B1. The two heads share one encoder, so that both the cross-entropy and the contrastive gradients update the same representation.",
-  "captionWords": 28
+  "number": "3.4",
+  "text": "The network used for the mean-pooled reference model B1. The frozen ESM-2 encoder is used as a feature extractor only; one shared encoder feeds two heads, so the cross-entropy gradient (solid) and the contrastive gradient (dashed) update the same representation. The weight λ sets how much the contrastive term contributes.",
+  "captionWords": 50
+ },
+ {
+  "label": "fig:splits",
+  "kind": "Figure",
+  "number": "3.5",
+  "text": "Cross-validation and splitting protocol. Each of the five folds is held out in turn (cross-hatched); the scaler and the positive-class weight are fitted on the training part of that fold only and then applied to the held-out part, so no information from the held-out peptides reaches the model. The folds are redrawn for each of five seeds, giving 25 runs per configuration. Final models (dashed) are trained on all of Benchmark_clean with a stratified 10 per cent hold-out for early stopping.",
+  "captionWords": 81
  },
  {
   "label": "tab:training",
