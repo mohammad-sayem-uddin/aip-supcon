@@ -33,11 +33,11 @@ def fetch():
         out.mkdir(exist_ok=True); print(kaggle("kernels", "output", f"{USER}/{k}", "-p", str(out))[-120:])
         if kind == "scale":
             SC.mkdir(parents=True, exist_ok=True); (SC / "predictions").mkdir(exist_ok=True)
-            for f in glob.glob(str(out / "finetune_scale_*.csv")): shutil.copy(f, SC / f"{Path(f).stem}__{k}.csv")
-            for f in glob.glob(str(out / "predictions" / "*.csv")): shutil.copy(f, SC / "predictions" / Path(f).name)
+            for f in glob.glob(str(out / "**" / "finetune_scale_*.csv"), recursive=True): shutil.copy(f, SC / f"{Path(f).stem}__{k}.csv")
+            for f in glob.glob(str(out / "**" / "predictions" / "*.csv"), recursive=True): shutil.copy(f, SC / "predictions" / Path(f).name)
         else:
             C4.mkdir(parents=True, exist_ok=True)
-            for f in glob.glob(str(out / "*.npz")): shutil.copy(f, C4 / Path(f).name)
+            for f in glob.glob(str(out / "**" / "*.npz"), recursive=True): shutil.copy(f, C4 / Path(f).name)
         (out / ".fetched").write_text("ok"); print("fetched", k)
     free_gpu = sum(1 for k in ("aip-ft-s150-gpu", "aip-ft-s650a-gpu") if st[k] in ("COMPLETE", "ERROR"))
     if st.get("aip-ft-s650b-gpu") in ("NOT PUSHED", "") and free_gpu:

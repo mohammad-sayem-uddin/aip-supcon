@@ -10,7 +10,13 @@ L.add(L.H1('REFERENCES'));
 for (const k of keys) {
   const r = REFS[k]; let t = `${fmtAuth(r.authors)} (${r.year}). ${r.title.replace(/\.$/, '')}.`;
   if (r.source === 'arXiv') t += ` <i>arXiv preprint</i> arXiv:${r.arxiv}. https://arxiv.org/abs/${r.arxiv}`;
-  else if (r.type === 'inproceedings') { t += ` In <i>${r.container}</i>`; if (r.volume && /Neural/.test(r.container)) t += ` (Vol. ${r.volume})`; else if (r.volume) t += ` (PMLR ${r.volume}`; if (r.pages) t += `, pp. ${r.pages})`; else if (/PMLR/.test(t)) t += ')'; t += `. ${r.record}`; }
+  else if (r.type === 'inproceedings') {
+    t += ` In <i>${r.container}</i>`;
+    const neurips = r.volume && /Neural/.test(r.container);
+    if (neurips) t += ` (Vol. ${r.volume}`; else if (r.volume) t += ` (PMLR ${r.volume}`;
+    if (neurips || r.volume) { if (r.pages) t += `, pp. ${r.pages}`; t += ')'; }
+    t += `. ${r.record}`;
+  }
   else { t += r.container ? ` <i>${r.container}</i>` : ''; if (r.volume) t += `, <i>${r.volume}</i>`; if (r.issue) t += `(${r.issue})`; if (r.pages) t += `, ${r.pages}`; t += '.'; if (r.doi) t += ` https://doi.org/${r.doi}`; else if (r.source === 'publisher page') t += ` ${r.record}`; }
   L.add(L.P(t));
 }

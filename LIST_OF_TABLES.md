@@ -84,7 +84,11 @@ Table 5.15: The fine-tuned 8M model and its comparators. .......... [page]
 
 Table 5.16: Paired comparisons of the representation study (exploratory). .......... [page]
 
-Table 5.17: Published performance figures, each read from the table named in the last column of the open-access full text of the cited paper... .......... [page]
+Table 5.17: Frozen ProtBERT and ProtT5-XL (encoder) embeddings, mean-pooled over residues, with the classifiers of the frozen ESM-2 models (λ = 0). .......... [page]
 
-Table 5.18: Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on each test set and regime: median over the... .......... [page]
+Table 5.18: Paired comparisons of the other protein language models with ESM-2 650M (same classifier) and with AAC + RF in Regime B (exploratory... .......... [page]
+
+Table 5.19: Published performance figures, each read from the table named in the last column of the open-access full text of the cited paper... .......... [page]
+
+Table 5.20: Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on each test set and regime: median over the... .......... [page]
 

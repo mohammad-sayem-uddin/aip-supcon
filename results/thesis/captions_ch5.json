@@ -138,15 +138,27 @@
   "text": "Paired comparisons of the representation study (exploratory). ΔMCC is for the first model minus the second; the p-values are DeLong p-values for the AUROC difference, raw and BH-adjusted within the family. Source: results/tables/T5.11_corrected_significance.csv."
  },
  {
-  "label": "tab:published",
+  "label": "tab:c4",
   "kind": "Table",
   "number": "5.17",
-  "text": "Published performance figures, each read from the table named in the last column of the open-access full text of the cited paper (results/tables/T5_7_published_reported.csv gives paper, PMCID, table and row), and the results of this thesis on the same files. Values printed as percentages were divided by 100. The papers use different training collections and protocols, so the values are not directly comparable. TODO: not obtainable from the source (paper not open access, or value only in a figure)."
+  "text": "Frozen ProtBERT and ProtT5-XL (encoder) embeddings, mean-pooled over residues, with the classifiers of the frozen ESM-2 models (λ = 0). Cross-validated scores are means over the runs; the independent-set columns are means over five final models in Regime B. Source: results/tables/T5.14a_c4_other_plms_summary.csv."
+ },
+ {
+  "label": "tab:c4_tests",
+  "kind": "Table",
+  "number": "5.18",
+  "text": "Paired comparisons of the other protein language models with ESM-2 650M (same classifier) and with AAC + RF in Regime B (exploratory family); ΔMCC with its 95% bootstrap interval, DeLong p-values raw and Benjamini–Hochberg adjusted. Source: results/tables/T5.14_c4_other_plms_tests.csv."
+ },
+ {
+  "label": "tab:published",
+  "kind": "Table",
+  "number": "5.19",
+  "text": "Published performance figures, each read from the table named in the last column of the open-access full text of the cited paper (results/tables/T5_7_published_reported.csv gives paper, PMCID, table and row), and the results of this thesis on the same files. Values printed as percentages were divided by 100. The papers use different training collections and protocols, so the values are not directly comparable. n/a: not publicly available (paper not open access and no usable figure returned on retry, or value given only in a figure image rather than text or a table)."
  },
  {
   "label": "tab:mde5",
   "kind": "Table",
-  "number": "5.18",
+  "number": "5.20",
   "text": "Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on each test set and regime: median over the comparisons, with the smallest and largest value for MCC in brackets, and the median for AUROC."
  },
  {

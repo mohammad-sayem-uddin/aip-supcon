@@ -1,6 +1,6 @@
 # HANDOFF REPORT (v1 + v2 extension)
 
-_Generated 2026-11-25T18:24:33 by `python -m src.v2.report`; rebuilt after every stage._
+_Generated 2026-11-26T06:14:28 by `python -m src.v2.report`; rebuilt after every stage._
 
 ## Deliverables (EXECUTION_PLAN_v2.md)
 
@@ -230,7 +230,7 @@ Mean over 5 seeds of each model's per-seed metrics (threshold 0.5). Gap = Regime
 | results/v2/null_control_identity.csv | 126 |
 | results/v2/pooling_dimensions.csv | 5 |
 | results/v2/regime_composition.csv | 7 |
-| results/v2/repr_results_v2.csv | 1100 |
+| results/v2/repr_results_v2.csv | 1210 |
 | results/v2/sequence_validation.csv | 9 |
 | results/v2/supcon_floor.csv | 2 |
 
@@ -318,10 +318,10 @@ _2026-11-26_
 
 The full text and supplementary tables came from Europe PMC. The repository github.com/Nicole-DH/AIPStack still returns 404; the Wayback Machine holds one snapshot of the repository front page (2024-04-16) but not the `datasets` directory (404 for both requests tried). The supplementary files mmc2/mmc3 contain only performance tables. To close: obtain the datasets from the authors (the paper names a lead contact).
 
-## C4 (ProtBERT / ProtT5) and fine-tuning of 150M / 650M: running on Kaggle at the time of writing
+## C4: ProtT5 done, ProtBERT could not be completed; fine-tuning of 150M / 650M: 150M and 650M(a) errored, 650M(b) running
 _2026-11-26_
 
-Kernels `aip-ft-s150-gpu`, `aip-ft-s650a-gpu`, `aip-c4bert-cpu`, `aip-c4t5-cpu` were pushed; `aip-ft-s650b-gpu` is pushed by `fetch` when a GPU slot is free. Each kernel checks the sha256 of the weights against the official Hugging Face record and stops on a mismatch (this stopped the first ProtBERT mirror, which was a different checkpoint). Finish with `PYTHONPATH=. .venv/bin/python -m src.v2.finish_completion fetch` and then `analyse` (see the docstring of that script). The first 650M smoke run ran out of GPU memory in AdamW; fixed with `foreach=False`.
+Checked once on 2026-11-26 (not polled): `aip-ft-s150-gpu` and `aip-ft-s650a-gpu` both ended in `ERROR` (cause not investigated further — would need re-running under `kaggle kernels status -v` or opening the kernel's own log); `aip-ft-s650b-gpu` was pushed fresh by this check (its GPU slot had just freed up) and its state is unknown as of writing. `aip-c4t5-cpu` completed and its embeddings (`c4_prott5_mean.npz`) were analysed: ProtT5-XL (encoder), mean-pooled, under the same MLP/random-forest classifiers as the ESM-2 models, does not improve on AAC + RF in Regime B (Table 5.17/5.18 of Chapter 5, Section 5.6.4) — consistent with the thesis's ESM-2 finding. `aip-c4bert-cpu` also reported `COMPLETE`, but its output contained only the downloaded HuggingFace model weights (`pytorch_model.bin`), not computed embeddings; the kernel evidently did not reach (or did not save) the embedding-extraction step. The 1.49 GB download filled the Mac's disk (ENOSPC) before this was noticed; the weights were deleted once confirmed to contain nothing usable (user approved deleting after extraction — there was nothing to extract). `src/v2/finish_completion.py`'s `fetch()` globbed only the kernel output's top level (`out / "*.npz"`), which would have missed `aip-c4t5-cpu`'s own output too (its `.npz` was in an `out/` subdirectory) had it not been copied by hand this time; fixed to glob recursively. To finish C4: re-push `aip-c4bert-cpu` (check its script actually writes an `.npz`, not just the downloaded weights, before completing) and re-run `fetch`/`analyse`.
 
 ## D3 (AMP / ACP transfer): not attempted
 _2026-11-26_
@@ -458,6 +458,18 @@ _2026-11-26_
 
 Extended `src/thesis/lib.js`'s `caption()`/`figure()` helpers to also record each caption's full text (not just its number) into a new `results/thesis/captions_chN.json` per chapter, written on every build; this is additive and does not change `labels_chN.csv`, `meta_chN.json`, or any rendered `.docx` output (verified: both build passes produced identical table/figure/citation counts before and after the change). Generated four new content-only files at the project root from that data and from the `H1`/`H2`/`H3` headings already in `src/thesis/*.js`: `TABLE_OF_CONTENTS.md` (96 headings across Abstract through Chapter 6), `LIST_OF_TABLES.md` (42 entries) and `LIST_OF_FIGURES.md` (11 entries, both built from the 53 verified caption strings across Chapters 2-5), and `LIST_OF_ABBREVIATIONS.md` (28 entries, each checked against where the thesis itself first uses or spells out the term; bibliography-only abbreviations such as IEEE/NAR/PMLR, which appear solely inside reference-list journal names, were excluded as not genuinely used by the thesis's own argument). Page numbers in the TOC and the two lists are left as `[page]` because the six chapters are still eight separate `.docx` files rather than one paginated document; filling them in requires combining the files first, which this run did not do. Wrote `FRONT_MATTER_PLACEHOLDERS.md` for the declaration, AI-use disclosure, acknowledgements and approval page, each left as an explicit bracketed placeholder per the run's instruction not to guess the university's required wording; the four newly-arrived template/policy PDFs in the project directory were deliberately not opened for this, since no chat message has yet pointed to them as the source to use.
 
+## V2-D23: Autonomous run, Priority 4 — IF-AIP/AIEpred retry, Kaggle C4 check, proofread
+
+_2026-11-26_
+
+**4.1.** Retried IF-AIP (`10.1016/j.compbiomed.2023.107724`) and AIEpred (`10.1109/tcbb.2020.2968419`) via Scite `read_fulltext`/`get_pdf_link` and SciSpace `search`/`extract_data`; both confirmed closed access with no usable absolute performance figures (IF-AIP's SciSpace record gives only relative improvements over compared methods; AIEpred's gives neither). `results/tables/T5_7_published_reported.csv` and the corresponding cells of Table 5.19 (`tab:published`, formerly numbered 5.16 before the C4 tables were inserted) changed from `TODO` to `n/a`, with the retry documented in the cell note and in the surrounding prose of `ch5.js` Section 5.7 and the limitation in Section 5.10.
+
+**4.2.** Ran `src.v2.finish_completion fetch` once (not polled). Result: `aip-ft-s150-gpu` and `aip-ft-s650a-gpu` both `ERROR`; `aip-ft-s650b-gpu` was pushed fresh by this call and is still running (not followed up further, per "do not poll"); `aip-c4bert-cpu` and `aip-c4t5-cpu` both reported `COMPLETE`. The fetch script's glob (`out / "*.npz"`) only checks the top level of each kernel's output and missed both kernels' actual output subdirectories; the ProtT5 kernel's embeddings (`out/c4_prott5_mean.npz`, 19 MB) were copied into `results/v2/c4/` by hand and `python -m src.v2.phaseC4 run 480` / `stats` run, producing `results/tables/T5.14_c4_other_plms_tests.csv` and `T5.14a_c4_other_plms_summary.csv` (ProtT5-XL encoder, mean-pooled, MLP and random forest, vs ESM-2 650M and vs AAC + RF — no improvement over AAC + RF, consistent with the thesis's ESM-2 finding). The ProtBERT kernel's "COMPLETE" output turned out to contain only the downloaded HuggingFace model weights (`pytorch_model.bin`, 1.49 GB) and no computed embeddings; this consumed the Mac's remaining disk space mid-run (ENOSPC, see below) and, once confirmed to contain nothing usable, was deleted with the user's explicit approval ("Delete after extracting"). `BLOCKERS_v2.md` updated accordingly. `ch5.js` Section 5.6.4, `ch4.js` Section 4.7 and `ch6.js`'s Future Work item 5 updated to state what was actually obtained (ProtT5 yes, ProtBERT no) rather than "not attempted."
+
+**Disk-full incident.** Mid-proofread, the ProtBERT download filled the disk to 0 bytes free, which blocked every further file write (including an in-progress edit to `references.js`). The run paused and reported this to the user rather than attempting any cleanup unilaterally; the user approved deleting the downloaded checkpoints after extraction. No data was lost — the disk-full state left all files exactly as they were (writes fail atomically, not partially, on this filesystem) — but the background fetch that caused it and the recovery are recorded here as a one-time environmental incident, not a thesis finding.
+
+**4.3.** Full proofread of all six chapters (plus Abstract and References); findings and fixes in `PROOFREAD_REPORT.md`. Two formatting/grammar bugs fixed (a missing-parenthesis citation in `ch2.js`; a stray trailing parenthesis after NeurIPS page ranges in `references.js`, affecting the Khosla, Vaswani and Paszke entries). Three sentences in `ch4.js`/`ch5.js`/`ch6.js` updated from "not attempted" to report the ProtT5 result obtained in 4.2, per the rule against leaving a now-false claim uncorrected. No substantive argument or conclusion was rewritten; all eight `.docx` files re-pass Office XML validation after every change in this entry.
+
 
 Choices made autonomously during the overnight run, each with the reasoning.
 
@@ -554,7 +566,7 @@ Ranked, most important first:
 | Chapter 2 Literature Review | complete | 6 | 1 | 0 | 34 | 0 | 0 |
 | Chapter 3 Materials and Methods | complete | 21 | 19 | 2 | 27 | 0 | 0 |
 | Chapter 4 Implementation and Experimental Setup | complete (with TODO) | 6 | 4 | 0 | 5 | 1 | 0 |
-| Chapter 5 Results and Discussion | complete (with TODO) | 31 | 18 | 9 | 10 | 3 | 0 |
+| Chapter 5 Results and Discussion | complete (with TODO) | 31 | 20 | 9 | 10 | 1 | 0 |
 | Chapter 6 Conclusions and Future Work | complete | 4 | 0 | 0 | 0 | 0 | 0 |
 
 
@@ -564,8 +576,6 @@ Ranked, most important first:
 
 - Chapter 4 Implementation and Experimental Setup: a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account
 - Chapter 5 Results and Discussion: results of fine-tuning the 150M and 650M checkpoints are not yet in results/tables/T5.13*; run python -m src.v2.finish_completion fetch and analyse, then rebuild this chapter
-- Chapter 5 Results and Discussion: results for ProtBERT and ProtT5 are not yet in results/tables/T5.14*; run python -m src.v2.finish_completion fetch and analyse, then rebuild this chapter
-- Chapter 5 Results and Discussion: the own figures of IF-AIP and AIEpred and the SN and SP of AIPStack: need full texts that are not open access, or the data behind a figure
 - Table 5.16 is intentionally TODO beyond the abstract-level figures: needs the full texts of AntiInflam, AIPpred, PreAIP and AIPStack (the PreAIP and AIPStack pages could not be read automatically).
 - Figures 5.9b, F1 and F5 are not in the thesis (raw model keys as labels / overlapping legend): regenerate with readable labels if wanted.
 - Chapters 1 and 2 are short (4 pages each) because only verified sources are used: add literature only from papers you can verify, then add them to `CANDIDATES` in `src/thesis/build_bib.py`.

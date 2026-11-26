@@ -578,3 +578,65 @@
 2026-11-25T13:02:20, FINAL esm8_fusion|mlp seed=1 cached
 2026-11-25T13:02:21, FINAL esm8_fusion|mlp seed=4 cached
 # slice end: 0 CV tasks and 0 final tasks not started
+# 2026-11-25T18:36:38 C4_other_plms: 50 CV tasks, 10 final tasks left
+2026-11-25T18:36:43, prott5_mean|mlp, seed=0, fold=0, MCC=0.2320, elapsed=3s
+2026-11-25T18:36:45, prott5_mean|mlp, seed=0, fold=1, MCC=0.1704, elapsed=6s
+2026-11-25T18:36:45, prott5_mean|mlp, seed=0, fold=2, MCC=0.2747, elapsed=2s
+2026-11-25T18:36:48, prott5_mean|mlp, seed=0, fold=4, MCC=0.2508, elapsed=3s
+2026-11-25T18:36:49, prott5_mean|mlp, seed=0, fold=3, MCC=0.2402, elapsed=4s
+2026-11-25T18:36:51, prott5_mean|mlp, seed=1, fold=0, MCC=0.2670, elapsed=2s
+2026-11-25T18:36:52, prott5_mean|mlp, seed=1, fold=1, MCC=0.2042, elapsed=3s
+2026-11-25T18:36:53, prott5_mean|mlp, seed=1, fold=2, MCC=0.2003, elapsed=2s
+2026-11-25T18:36:55, prott5_mean|mlp, seed=1, fold=3, MCC=0.2785, elapsed=3s
+2026-11-25T18:36:56, prott5_mean|mlp, seed=1, fold=4, MCC=0.2407, elapsed=3s
+2026-11-25T18:36:57, prott5_mean|mlp, seed=2, fold=0, MCC=0.1968, elapsed=3s
+2026-11-25T18:36:59, prott5_mean|mlp, seed=2, fold=1, MCC=0.2312, elapsed=3s
+2026-11-25T18:37:01, prott5_mean|mlp, seed=2, fold=2, MCC=0.2718, elapsed=3s
+2026-11-25T18:37:02, prott5_mean|mlp, seed=2, fold=3, MCC=0.1598, elapsed=3s
+2026-11-25T18:37:05, prott5_mean|mlp, seed=3, fold=0, MCC=0.1901, elapsed=4s
+2026-11-25T18:37:06, prott5_mean|mlp, seed=2, fold=4, MCC=0.2615, elapsed=5s
+2026-11-25T18:37:08, prott5_mean|mlp, seed=3, fold=1, MCC=0.2405, elapsed=2s
+2026-11-25T18:37:09, prott5_mean|mlp, seed=3, fold=2, MCC=0.2257, elapsed=3s
+2026-11-25T18:37:10, prott5_mean|mlp, seed=3, fold=3, MCC=0.2546, elapsed=2s
+2026-11-25T18:37:11, prott5_mean|mlp, seed=3, fold=4, MCC=0.2753, elapsed=2s
+2026-11-25T18:37:14, prott5_mean|mlp, seed=4, fold=0, MCC=0.2499, elapsed=3s
+2026-11-25T18:37:15, prott5_mean|mlp, seed=4, fold=1, MCC=0.2041, elapsed=4s
+2026-11-25T18:37:16, prott5_mean|mlp, seed=4, fold=2, MCC=0.1891, elapsed=2s
+2026-11-25T18:37:17, prott5_mean|mlp, seed=4, fold=3, MCC=0.2179, elapsed=2s
+2026-11-25T18:37:18, prott5_mean|mlp, seed=4, fold=4, MCC=0.2156, elapsed=2s
+2026-11-25T18:37:36, prott5_mean|rf, seed=0, fold=0, MCC=0.1917, elapsed=19s
+2026-11-25T18:37:37, prott5_mean|rf, seed=0, fold=1, MCC=0.2098, elapsed=19s
+2026-11-25T18:37:55, prott5_mean|rf, seed=0, fold=2, MCC=0.3017, elapsed=19s
+2026-11-25T18:37:55, prott5_mean|rf, seed=0, fold=3, MCC=0.2105, elapsed=19s
+2026-11-25T18:38:13, prott5_mean|rf, seed=0, fold=4, MCC=0.2262, elapsed=19s
+2026-11-25T18:38:14, prott5_mean|rf, seed=1, fold=0, MCC=0.2535, elapsed=19s
+2026-11-25T18:38:32, prott5_mean|rf, seed=1, fold=1, MCC=0.2496, elapsed=18s
+2026-11-25T18:38:32, prott5_mean|rf, seed=1, fold=2, MCC=0.1638, elapsed=18s
+2026-11-25T18:38:50, prott5_mean|rf, seed=1, fold=3, MCC=0.2313, elapsed=19s
+2026-11-25T18:38:51, prott5_mean|rf, seed=1, fold=4, MCC=0.2641, elapsed=19s
+2026-11-25T18:39:09, prott5_mean|rf, seed=2, fold=0, MCC=0.2098, elapsed=19s
+2026-11-25T18:39:10, prott5_mean|rf, seed=2, fold=1, MCC=0.1892, elapsed=19s
+2026-11-25T18:39:28, prott5_mean|rf, seed=2, fold=2, MCC=0.2737, elapsed=19s
+2026-11-25T18:39:30, prott5_mean|rf, seed=2, fold=3, MCC=0.1439, elapsed=19s
+2026-11-25T18:39:48, prott5_mean|rf, seed=2, fold=4, MCC=0.3231, elapsed=20s
+2026-11-25T18:39:49, prott5_mean|rf, seed=3, fold=0, MCC=0.2046, elapsed=20s
+2026-11-25T18:40:07, prott5_mean|rf, seed=3, fold=1, MCC=0.2380, elapsed=19s
+2026-11-25T18:40:08, prott5_mean|rf, seed=3, fold=2, MCC=0.2135, elapsed=19s
+2026-11-25T18:40:27, prott5_mean|rf, seed=3, fold=3, MCC=0.2537, elapsed=20s
+2026-11-25T18:40:29, prott5_mean|rf, seed=3, fold=4, MCC=0.2808, elapsed=20s
+2026-11-25T18:40:47, prott5_mean|rf, seed=4, fold=0, MCC=0.2765, elapsed=20s
+2026-11-25T18:40:48, prott5_mean|rf, seed=4, fold=1, MCC=0.1982, elapsed=20s
+2026-11-25T18:41:07, prott5_mean|rf, seed=4, fold=2, MCC=0.2018, elapsed=20s
+2026-11-25T18:41:08, prott5_mean|rf, seed=4, fold=3, MCC=0.2077, elapsed=20s
+2026-11-25T18:41:26, prott5_mean|rf, seed=4, fold=4, MCC=0.2417, elapsed=18s
+2026-11-25T18:41:33, FINAL prott5_mean|mlp seed=1 cached
+2026-11-25T18:41:33, FINAL prott5_mean|mlp seed=0 cached
+2026-11-25T18:41:36, FINAL prott5_mean|mlp seed=2 cached
+2026-11-25T18:41:36, FINAL prott5_mean|mlp seed=3 cached
+2026-11-25T18:41:39, FINAL prott5_mean|mlp seed=4 cached
+2026-11-25T18:42:03, FINAL prott5_mean|rf seed=0 cached
+2026-11-25T18:42:06, FINAL prott5_mean|rf seed=1 cached
+2026-11-25T18:42:29, FINAL prott5_mean|rf seed=2 cached
+2026-11-25T18:42:32, FINAL prott5_mean|rf seed=3 cached
+2026-11-25T18:42:53, FINAL prott5_mean|rf seed=4 cached
+# slice end: 0 CV tasks and 0 final tasks not started
