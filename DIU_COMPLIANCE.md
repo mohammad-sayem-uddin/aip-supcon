@@ -35,7 +35,8 @@ Every rule below was measured from the generated files - `AIP THESIS - Mohammad 
 
 One check fails, and it cannot be closed without you: the document still holds material only you can supply.
 
-1. **Front-matter placeholders.** The thesis title, student ID, academic session, submission month and year, supervisor name and position, date of birth, the acknowledgements, the dedication and the AI-disclosure wording are all deliberate and all marked in brackets. The check counts them, so it stays red until they are filled in.
+1. **Front-matter placeholders.** The thesis title, student ID, academic session, submission month and year, supervisor name and position, date of birth, the acknowledgements and the dedication are all deliberate and all marked in brackets. The check counts them, so it stays red until they are filled in. `PLACEHOLDERS.md` lists each one with the page it is on and the exact string to search for.
+   There is no AI-disclosure block: neither `DIU_Thesis Guidelines.pdf` nor `SWE_Thesis Template_2024.pdf` mentions one anywhere, so none was invented. If your department does require a declaration, it is a front-matter page and can be added.
 2. **Two TODO markers in the text.** Both are flagged in yellow rather than hidden: a permanent archive identifier (a Zenodo DOI for the submitted commit), which needs your own account, and the fine-tuning results at 150M and 650M, which need the Kaggle kernels to finish (`BLOCKERS_v2.md`). Neither is something this run can supply.
 3. **Three choices.** Which classification box to tick on the declaration page (CONFIDENTIAL, RESTRICTED or OPEN ACCESS); whether the page number sits at the page centre (the Guidelines, and the current setting) or at the right as `demo.pdf` has it, which the single flag `PAGE_NUMBER_POSITION` in `src/thesis/lib.js` switches throughout; and whether to add the word 'Continued' by hand to whichever tables break across a page (see below).
 

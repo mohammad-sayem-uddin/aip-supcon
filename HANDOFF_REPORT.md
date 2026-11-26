@@ -135,7 +135,17 @@ duplicate is gone and B.3 cites Table B.12.
 - `[SUPERVISOR FULL NAME]` and `[SUPERVISOR POSITION]`
 - `[DATE OF BIRTH]`
 - the acknowledgements and the dedication, both personal to you
-- the **AI-disclosure wording**, left blank as you asked while you confirm DIU's policy
+
+`PLACEHOLDERS.md` lists each one with the page it appears on and the exact string to
+search for in Word.
+
+**On the AI disclosure**: you asked for it to be left as a placeholder while you confirmed
+DIU's policy. There is no such block in the thesis, because neither `DIU_Thesis
+Guidelines.pdf` nor `SWE_Thesis Template_2024.pdf` mentions a disclosure of any kind —
+searching both for "artificial intelligence", "AI", "generative" and "disclosure" returns
+nothing. Rather than invent a page and a wording the department has not asked for, none was
+added. If your department does require one, it is a front-matter page and takes a few
+minutes to add once you have the required wording.
 
 **Decisions:**
 
