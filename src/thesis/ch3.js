@@ -16,9 +16,9 @@ const cit = (...k) => L.cit(...k), citN = (k) => L.citN(k);
 const lgbS = F.par['baselines|LightGBM'];
 const lgb = { n: /n_estimators=(\d+)/.exec(lgbS)[1], lr: /learning_rate=([\d.]+)/.exec(lgbS)[1], leaves: /num_leaves=(\d+)/.exec(lgbS)[1], es: /early stopping (\d+) rounds/.exec(lgbS)[1] };
 const EQ = { ident: 1, pool: 2, bce: 3, supcon: 4, comb: 5, perAnchor: 6, floor: 7, acc: 8, sens: 9, spec: 10, prec: 11, f1: 12, mcc: 13, auroc: 14, auprc: 15, delong: 16, mcnemar: 17, bh: 18, mde: 19 };
-const E = (k) => `(3.${EQ[k]})`;
+const E = (k) => `3.${EQ[k]}`;   // template prints equation numbers bare: 'Equation 3.2'
 let eqSeen = 0;
-function eq(key, ...children) { eqSeen += 1; if (EQ[key] !== eqSeen) throw new Error(`equation order ${key}`); return M.eqPara(`(3.${EQ[key]})`, ...children); }
+function eq(key, ...children) { eqSeen += 1; if (EQ[key] !== eqSeen) throw new Error(`equation order ${key}`); return M.eqPara(`3.${EQ[key]}`, ...children); }
 function P_(pair, key) { return Number(F.pairs[pair][key]).toLocaleString('en-US'); }
 // ====================================================================== TITLE
 add(H1('CHAPTER 3: METHODOLOGY'));
