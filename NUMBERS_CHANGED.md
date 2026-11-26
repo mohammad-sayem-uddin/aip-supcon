@@ -90,3 +90,66 @@ DIU's structure (Guidelines p.8 → `SWE_Thesis Template_2024.pdf` Table of Cont
 4. **"each configuration was trained 25 times (Chapter 3)"** (old 4.4, now 3.13) became **"(Section 3.7.5)"**, for the same reason.
 5. **Chapter titles**: "Materials and Methods" → "Methodology" and "Conclusions and Future Work" → "Conclusion", to match the template's chapter names. No section inside either chapter changed.
 6. **Five Summary sections added** (1.10, 3.17, 4.11, 5.6; Chapter 2 already had 2.8 Summary), one short paragraph each, as the template requires. They restate the structure of their own chapter and introduce no claim that is not already made and sourced earlier in that chapter.
+
+## 7. Wording changed by the word-budget work (second pass)
+
+The target of 22,000–23,000 words on definition (b) was confirmed as a requirement, so the
+cutting continued past the point where the first pass stopped. **Nothing was deleted.**
+Everything moved went to an appendix, which sits outside the count and inside the thesis.
+Where compression forced a wording change, it is listed here.
+
+### Moved, not cut
+
+| Material | From | To | Words |
+|---|---|---|---|
+| The provenance of every published figure, the reason for each `n/a`, and the three observations drawn from Table A.13 | Section 4.7 | Appendix A, new Section A.1 | 268 |
+| The verification of the embedding cache (the padded-batch assertion and its tolerance, the residue-vector counts, the half-precision comparison and its largest absolute difference) | Section 3.5.2 | Appendix B, Section B.5 | 158 |
+
+Section 4.7 keeps the one like-for-like comparison — AIPFusion-Net against AAC + RF in
+Regimes A and B on byte-identical files — because that is the comparison the chapter's
+argument rests on, and cites Section A.1 for the rest. Section 3.5.2 keeps the statement
+that the embeddings were cached once per unique sequence and verified, and cites
+Appendix B for the checks and their tolerances.
+
+### Values no longer recited in the body
+
+Each of these is still printed, in full and to the same precision, in the appendix table
+the sentence cites. Only the recitation of the value in the running prose was dropped.
+
+- **Section 4.1.** The AUROC of the fine-tuned 8M model in cross-validation; the MCC of
+  the 35M and 150M multilayer perceptrons at λ = 0 (the sentence now gives the span from
+  8M to 650M, and the ranking claim is unchanged). Table A.2 carries all of them.
+- **Section 4.4.4.** The parenthetical names of the crossed cells ("AIPpred benchmark to
+  the AntiInflam validation set"), which Figure 4.3 labels on its own axes. Every score in
+  the sentence is unchanged.
+- **Section 4.6.1.** The six pooling values are all still given; three of them moved from a
+  list into parentheses after the variant they belong to.
+
+### Compressed, no value or claim removed
+
+Roughly 90 sentences across Sections 3.1–3.6, 4.1–4.3, 4.5–4.7 and the whole of Chapter 5
+were tightened — "is not applicable to this input" → "does not apply to this input",
+"the difference between the 150M and 650M models is negligible" → "the 150M and 650M
+models are indistinguishable", and so on. Six figure captions in Chapter 3 and six in
+Chapter 4 were shortened the same way; no caption lost a panel label, a count, a source
+line or a greyscale reading hint.
+
+Chapter 5 is a restatement of Chapters 1–4 by construction, so it absorbed the largest
+share of this compression (1,656 → 1,587 words). Its four objective answers, four
+contributions, six items of future work and all six limitations are intact, with every
+interval, p-value and minimum-detectable-effect statement unchanged.
+
+### What was not touched, as instructed
+
+Chapters 1 and 2; every methodology detail needed to reproduce the work (relocation to an
+appendix is not removal); the leakage finding and its mechanism (Sections 3.2.2, 4.4 and
+the two tables deliberately kept in the body, `tab:overlap` and `tab:gaps`); Section 4.10
+and Section 5.3, the limitations; and every statistical caveat, confidence interval and
+minimum-detectable-effect statement.
+
+### One duplicate removed
+
+`tab:hyper` and `tab:training` printed the same rows (`results/v2/methods_parameters.csv`)
+under two numbers, in the old Sections 3.12 and 3.15. The restructure dropped one of the
+two printings but left Appendix B B.3 citing the number that no longer existed. B.3 now
+cites Table B.12 (`tab:training`), and `relocate.js` records why.

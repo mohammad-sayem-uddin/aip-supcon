@@ -1,56 +1,160 @@
 [
  {
-  "label": "tab:layers_b1",
+  "label": "tab:software",
   "kind": "Table",
   "number": "B.1",
-  "text": "Layers of model B1. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
-  "captionWords": 14,
+  "text": "Main software packages and versions on the local machine (from requirements.txt). The Kaggle kernels used their pre-installed PyTorch and scikit-learn.",
+  "captionWords": 20,
+  "tableWords": 75
+ },
+ {
+  "label": "tab:devices",
+  "kind": "Table",
+  "number": "B.2",
+  "text": "Device on which each architecture and the fine-tuning experiment were trained (results/v2/device_map.json).",
+  "captionWords": 12,
+  "tableWords": 62
+ },
+ {
+  "label": "tab:dataset_composition",
+  "kind": "Table",
+  "number": "B.3",
+  "text": "Composition of the three distributed files and of the cleaned training collection (Benchmark_clean, Section 3.3). Source: results/data_audit.csv.",
+  "captionWords": 17,
+  "tableWords": 43
+ },
+ {
+  "label": "tab:provenance",
+  "kind": "Table",
+  "number": "B.4",
+  "text": "Provenance of the three local files, established by comparison with the downloaded original files. Source: results/provenance.csv.",
+  "captionWords": 16,
+  "tableWords": 67
+ },
+ {
+  "label": "tab:conflicts",
+  "kind": "Table",
+  "number": "B.5",
+  "text": "Duplicates and label conflicts in Benchmark_Dataset and their origin. Sources: results/data_audit.csv and results/v2/lineage_shared_training.csv.",
+  "captionWords": 13,
+  "tableWords": 65
+ },
+ {
+  "label": "tab:hashes",
+  "kind": "Table",
+  "number": "B.6",
+  "text": "SHA-256 digests of the local data files and of the files in the AIPFusion-Net repository, downloaded from raw.githubusercontent.com/ChenYH7693/AIPFusion-Net/main/AIPData/ on 2026-11-26. Source: results/v2/aipfusion_repo_check.csv.",
+  "captionWords": 22,
+  "tableWords": 28
+ },
+ {
+  "label": "tab:cleaning",
+  "kind": "Table",
+  "number": "B.7",
+  "text": "Cleaning of Benchmark_Dataset, with the number of rows after each step. Source: results/data_audit.csv.",
+  "captionWords": 13,
+  "tableWords": 40
+ },
+ {
+  "label": "tab:identity",
+  "kind": "Table",
+  "number": "B.8",
+  "text": "Identity screen of the independent sets against Benchmark_clean, and the shuffled-composition null control. Sources: results/identity_screen.csv and results/v2/null_control_identity.csv.",
+  "captionWords": 17,
+  "tableWords": 63
+ },
+ {
+  "label": "tab:esm",
+  "kind": "Table",
+  "number": "B.9",
+  "text": "The ESM-2 checkpoints used as frozen feature extractors. Embedding times are single measurements for all unique sequences on the CPU of the machine used. Source: results/embedding_timings.csv and results/v2/methods_parameters.csv.",
+  "captionWords": 28,
+  "tableWords": 45
+ },
+ {
+  "label": "tab:pooling",
+  "kind": "Table",
+  "number": "B.10",
+  "text": "Pooling variants compared on frozen ESM-2 650M embeddings. Dimensions from results/v2/pooling_dimensions.csv.",
+  "captionWords": 11,
+  "tableWords": 68
+ },
+ {
+  "label": "tab:finetune",
+  "kind": "Table",
+  "number": "B.11",
+  "text": "Fine-tuning protocol for the ESM-2 8M checkpoint and its frozen control. Source: results/v2/methods_parameters.csv.",
+  "captionWords": 13,
+  "tableWords": 90
+ },
+ {
+  "label": "tab:training",
+  "kind": "Table",
+  "number": "B.12",
+  "text": "Training settings of the multilayer perceptron and of the residue-level models. Source: results/v2/methods_parameters.csv.",
+  "captionWords": 13,
+  "tableWords": 69
+ },
+ {
+  "label": "tab:mde",
+  "kind": "Table",
+  "number": "B.13",
+  "text": "Minimum detectable effect (80% power, two-sided α = 0.05) of the paired comparisons of λ > 0 with λ = 0 for each test set and regime. Source: results/v2/mde_summary.csv, derived from results/tables/T5.11_corrected_significance.csv.",
+  "captionWords": 32,
+  "tableWords": 63
+ },
+ {
+  "label": "tab:layers_b1",
+  "kind": "Table",
+  "number": "B.14",
+  "text": "Layers of model B1. Dropout and normalisation as described above. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 12,
   "tableWords": 62
  },
  {
   "label": "tab:layers_b2",
   "kind": "Table",
-  "number": "B.2",
-  "text": "Layers of model B2. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
-  "captionWords": 14,
+  "number": "B.15",
+  "text": "Layers of model B2. Dropout and normalisation as described above. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 12,
   "tableWords": 114
  },
  {
   "label": "tab:layers_b3",
   "kind": "Table",
-  "number": "B.3",
-  "text": "Layers of model B3. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
-  "captionWords": 14,
+  "number": "B.16",
+  "text": "Layers of model B3. Dropout and normalisation as described above. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 12,
   "tableWords": 89
  },
  {
   "label": "tab:layers_b4",
   "kind": "Table",
-  "number": "B.4",
-  "text": "Layers of model B4. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
-  "captionWords": 14,
+  "number": "B.17",
+  "text": "Layers of model B4. Dropout and normalisation as described above. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 12,
   "tableWords": 94
  },
  {
   "label": "tab:layers_b5",
   "kind": "Table",
-  "number": "B.5",
-  "text": "Layers of model B5. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
-  "captionWords": 14,
+  "number": "B.18",
+  "text": "Layers of model B5. Dropout and normalisation as described above. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 12,
   "tableWords": 99
  },
  {
   "label": "tab:layers_b6",
   "kind": "Table",
-  "number": "B.6",
-  "text": "Layers of model B6. Dropout and normalisation as described in Section 3.6. Source: results/v2/architecture_layers.csv.",
-  "captionWords": 14,
+  "number": "B.19",
+  "text": "Layers of model B6. Dropout and normalisation as described above. Source: results/v2/architecture_layers.csv.",
+  "captionWords": 12,
   "tableWords": 93
  },
  {
   "label": "tab:stages",
   "kind": "Table",
-  "number": "B.7",
+  "number": "B.20",
   "text": "Compute time recorded for each stage of the experiments (results/.stages and results/v2/kaggle_runtimes.csv). Times are the wall-clock time that the stage runner recorded for its last execution; a stage that was resumed or re-run shows that execution only, and the time spent writing code is not included. Cited in Section 3.11.",
   "captionWords": 50,
   "tableWords": 207

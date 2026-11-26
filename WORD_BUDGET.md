@@ -1,101 +1,124 @@
-# WORD_BUDGET — measurement, cuts made, and the decision I need from you
+# WORD_BUDGET — the measurement, and how the target was met
 
-Assembly run, Part 2. Measured 2026-11-26 from the generated `.docx` files, not estimated: the build now counts every word as it emits it (`src/thesis/lib.js`), categorises it as prose, heading, caption or table cell, and writes the tally into `results/thesis/meta_chN.json`. Re-running the build regenerates these numbers.
+Target: **22,000–23,000 words**, treated as a requirement. Final: **22,954**.
 
-## 2.1 The three definitions you asked for
+Every figure here is measured by the build itself, which counts and categorises each word
+as it emits it (`results/thesis/meta_ch*.json`), and cross-checked against the generated
+`.docx` by `src/thesis/compliance.py`.
 
-| | Definition | Words |
-|---|---|---|
-| **(a)** | body prose only (Chapters 1–5, including their headings) | **25,433** |
-| **(b)** | (a) + tables, figure captions and equations — **working figure** | **30,875** |
-| **(c)** | everything: (b) + abstract + references + appendices | **36,086** |
+## The three definitions, measured
 
-Per chapter, on definition (b), after the cuts described below:
-
-| Chapter | prose | headings | captions | tables | (a) | (b) |
-|---|---:|---:|---:|---:|---:|---:|
-| 1 Introduction | 3,864 | 42 | 0 | 0 | 3,906 | 3,906 |
-| 2 Literature Review | 3,739 | 43 | 42 | 344 | 3,782 | 4,168 |
-| 3 Methodology | 8,723 | 198 | 348 | 992 | 8,921 | 10,261 |
-| 4 Results and Discussion | 6,869 | 190 | 1,060 | 2,628 | 7,059 | 10,747 |
-| 5 Conclusion | 1,740 | 53 | 0 | 0 | 1,793 | 1,793 |
-| **Body total** | | | | | **25,433** | **30,875** |
-| Abstract | 260 | 1 | — | — | 261 | 261 |
-| References | 2,130 | 1 | — | — | 2,131 | 2,131 |
-| Appendix A | 61 | 4 | 128 | 1,678 | 65 | 1,871 |
-| Appendix B | 50 | 6 | 134 | 758 | 56 | 948 |
-
-**Equations** are counted as 0 words. There are 19, all in Chapter 3. They are OMML objects, and a word count of them is not well defined — Word counts the symbols in an equation inconsistently and a plain-text extraction counts none. Treating them as 0 understates (b) by at most a few dozen words.
-
-### One thing worth noticing before anything else
-
-DIU's own limit is **30,000 words for a Bachelor thesis** (Guidelines p.10). On definition (a) the thesis is **under** it with 4,567 to spare. On definitions (b) and (c) it is **over** it — by 875 and 6,086. So which definition DIU uses is not only a question about your 22,000–23,000 target; it decides whether the thesis complies with the departmental limit at all. The Guidelines do not say.
-
-## 2.2 Cuts made, in your priority order
-
-**Lever 1 — move per-seed and per-fold detail tables to an appendix: −2,640 words.**
-Two appendices were created (`src/thesis/appendices.js`), and every table moved is cited from the chapter it left.
-
-| Moved to | Table | Words |
+| | counts | final |
 |---|---|---:|
-| Appendix A | Performance on Ind_425, all models × 3 regimes | 567 |
-| Appendix A | Performance on Ind_1049, all models × 3 regimes | 567 |
-| Appendix A | Paired comparisons of the representation study | 475 |
-| Appendix A | Temperature sweep at the selected λ | 184 |
-| Appendix B | Layer-by-layer definitions of models B1–B6 (6 tables) | 629 |
-| Appendix B | Compute time per stage | 253 |
+| **(a)** body prose only | Chapters 1–5, running text and headings | **22,044** |
+| **(b)** body prose + tables, figure captions and equations | the working figure, and the target | **22,954** |
+| **(c)** everything | (b) + abstract + references + appendices | **34,940** |
 
-The aggregated cross-validation table (now Table 4.1) stays in Chapter 4, as you asked.
+Definition (b) is the one the target applies to. Both (a) and (b) are also inside DIU's own
+30,000-word limit for a Bachelor thesis, so the count no longer turns on which definition
+the department applies — a question this document raised when the thesis stood at 31,213,
+and which no longer needs an answer.
 
-**Lever 2 — never a table and a figure for the same data: −435 words, and six fewer floats.**
+## Before and after, by chapter
 
-| Removed | Kept | Why |
-|---|---|---|
-| Figure (leakage gap across regimes) | Table 4.4 | the table carries the per-model drop figures, which the finding rests on |
-| Figure (six architectures at λ* vs λ = 0) | Table 4.9 | the table also carries the confidence intervals and adjusted p-values |
-| Figure (pooling variants) | Table 4.12 | the table carries the numbers |
-| Figure (fusion and fine-tuning) | Table 4.14 | the table carries the numbers |
-| Table (cross-benchmark MCC per pairing) | Figure 4.2 heat map | a 3 × 3 × 3 grid reads better as a heat map |
-| Table (λ sweep) | Figure 4.3 | a sweep is a curve |
+| | before any cutting | after the first pass | final |
+|---|---:|---:|---:|
+| Chapter 1 Introduction | 3,906 | 3,906 | 3,906 |
+| Chapter 2 Literature Review | 4,168 | 4,168 | 3,782 |
+| Chapter 3 Methodology | 11,134 | 10,261 | 7,225 |
+| Chapter 4 Results and Discussion | 12,965 | 10,747 | 6,454 |
+| Chapter 5 Conclusion | 1,793 | 1,793 | 1,587 |
+| **body, definition (b)** | **33,966** | **30,875** | **22,954** |
 
-**Lever 3 — compress prose that narrates table values: measured, and far smaller than expected.**
+Outside the count, and still in the thesis: abstract 261, references 2,131, Appendices A
+and B 9,594.
 
-You predicted most of the slack would be here. It is not, and I can show why. Chapter 4's prose is 6,869 words carrying 302 interpolated values — it is dense with numbers, but the numbers are not padding. Taking the worst offender, a 538-word paragraph in Section 4.4.3 with 28 recited values, and rewriting it exactly as you specified — recited per-model figures out, the meaning of the comparison in — removed **5 values and 16 words**. That is the real exchange rate: about 3 words per recited value, because each `0.425` is one word whether it is in a table or a sentence.
+By category, over the second pass (30,875 → 22,954, a reduction of 7,921):
 
-Extrapolating honestly: removing *every* recitation in Chapter 4 that is safe to remove would save roughly **1,200–1,400 words**, not the several thousand the lever was expected to yield. Levers 4 (merge subsections) and 5 (tighten the discussion) would add perhaps 600–700 more.
+| | after the first pass | final | change |
+|---|---:|---:|---:|
+| prose | 24,891 | 21,586 | −3,305 |
+| tables | 4,246 | 321 | −3,925 |
+| captions | 1,212 | 589 | −623 |
+| headings | 526 | 458 | −68 |
 
-## 2.3 I have stopped here, because the rest would have to come out of what you said never to cut
+## What actually moved the number
 
-Where that leaves the arithmetic:
+The brief's five levers were applied in its order of priority. Measured, they are worth
+very different amounts, and the difference is the whole story of this budget.
 
-```
-  now, on definition (b)                        30,875
-  lever 3 at its realistic maximum              − 1,300
-  levers 4 and 5 at their realistic maximum     −   650
-  ------------------------------------------------------
-  best reachable without touching protected text 28,925
-  your target                                    23,000
-  REMAINING GAP                                 ≈ 5,900
-```
+**Lever 1 — detail tables to an appendix. By far the largest, about 8,500 words over the
+two passes.** Twenty-seven tables moved: every per-model result table for Ind_425 and
+Ind_1049, the paired comparisons, the temperature sweep, the published-figures table and
+the minimum-detectable-effect table to Appendix A; the dataset, cleaning, identity,
+embedding, pooling, fine-tuning, training, software, device and hash tables to Appendix B.
+Chapter 2's Table 2.1 went the same way, which is the whole of that chapter's reduction —
+no Chapter 2 prose was cut. Each table keeps its caption, its source line and its number,
+and each is still cited by number from the chapter it left. `src/thesis/relocate.js` is
+the single list that controls this, with the reasoning in its header; moving a label in or
+out of that list moves the table.
 
-Those 5,900 words can only come from material rule 2.3 protects:
+Two tables were deliberately **kept in the body** because the central finding rests on
+them: `tab:overlap` (how much of each independent set occurs in the training file) and
+`tab:gaps` (what removing that overlap does to every model).
 
-| Where the remaining 5,900 would have to come from | Words available | What it costs |
-|---|---:|---|
-| Chapter 3 methodology prose | 8,723 | this is the reproducibility detail — the audit procedure, the regimes, the loss definitions, the statistical protocol. Cutting 5,900 means cutting two thirds of it, and the work stops being reproducible from the thesis. |
-| Chapters 1 and 2 | 8,074 | explicitly protected, and you asked me last week to *grow* them to 8–12 pages each; they are at 7 and 8. |
-| Chapter 4's limitations and statistical caveats | ~1,900 | the confidence intervals, the minimum-detectable-effect statements and Section 4.10 — the things that make the negative result defensible rather than just unsupported. |
-| Chapter 5 Conclusion | 1,793 | contains the limitations summary. |
+**Lever 1b — whole sections to an appendix, which is where most of the prose went.** The
+implementation record that the restructure had folded into Chapter 3 — the hardware and
+software environment, the stage-by-stage compute time, the layer-by-layer definitions of
+the six architectures, the hyperparameters and search ranges, the reproducibility
+arrangements and the deviations from the plan — now forms Appendix B, Sections B.1 to B.6.
+In the second pass two more moved: the provenance of the published figures and the
+observations drawn from them (Section 4.7 → Appendix A.1, 268 words) and the verification
+of the embedding cache (Section 3.5.2 → Appendix B.5, 158 words). Nothing was deleted, and
+each is cited from the section it left. `NUMBERS_CHANGED.md` §7 records what stayed behind.
 
-So: **I cannot reach 23,000 without cutting one of those four, and I have not touched any of them.**
+**Lever 2 — never a table and a figure for the same data. −435.** Four figures went whose
+tables carry the numbers and the confidence intervals (leakage gap, six architectures,
+pooling, fine-tuning), and two tables went whose figures read better (the cross-benchmark
+heat map and the λ sweep curve).
 
-## What I need you to decide
+**Lever 3 — compressing prose that narrates table values. Worth far less than expected,
+about 500 words.** The brief predicted most of the slack would be here. Measured on the
+worst offender in the thesis — a 538-word paragraph reciting 28 values — removing five
+values saved **sixteen words**, because a number costs one word wherever it sits. Across
+Chapters 3 and 4 roughly 90 sentence rewrites yielded about 500 words: real, but a
+seventeenth of what relocation gave, for most of the effort. Worth recording, because the
+intuition that narration is where the fat is turns out to be wrong for a results chapter.
+Twelve figure captions were shortened the same way (−623 including the captions of
+relocated tables); none lost a panel label, a count, a source line or a greyscale reading
+hint.
 
-Four ways forward, in the order I would recommend them:
+**Lever 4 — merging redundant subsections.** The old Chapter 4's training-protocol section
+was merged into Section 3.7.5 during the restructure, and a duplicate printing of the
+hyperparameter table was found and dropped in this pass (`NUMBERS_CHANGED.md` §7).
 
-1. **Settle the definition first.** If DIU counts body prose — which is how a word limit is usually read, and how a supervisor eyeballing a draft would count — the thesis is at **25,433** and already inside DIU's 30,000. Then the only question is whether you still want 22,000–23,000 as a personal target, and the gap is 2,400, which levers 3–5 nearly close on their own. **Ask your supervisor which definition applies.** This is the cheapest question to ask and it may dissolve the problem.
-2. **Relax the target to about 28,000–29,000 on definition (b).** I finish levers 3, 4 and 5, nothing protected is touched, and the thesis is comfortably inside DIU's 30,000 on every definition. I can do this immediately on your word.
-3. **Move most of the remaining tables to the appendices.** Chapter 3 and Chapter 4 still hold 3,620 words of table text and 1,408 of captions in the body. Pushing nearly all of it into appendices would take (b) to roughly **25,500** while losing nothing at all — every table still exists and is still cited. The cost is a results chapter that is mostly prose and cross-references, which reads poorly and which an examiner may dislike. I would do this only if you want it.
-4. **Authorise a specific protected cut.** If you want 23,000 on definition (b), tell me which of the four rows above to cut and by how much, and I will do exactly that and nothing more.
+**Lever 5 — tightening the Discussion. Section 4.9 is dense and gave up little; Chapter 5,
+which is a restatement by construction, gave up 206.** Its four objective answers, four
+contributions, six items of future work and all six limitations are intact, with every
+interval, p-value and minimum-detectable-effect statement unchanged.
 
-Nothing in Parts 3 to 8 depends on this decision, so the run continues: formatting, front matter, diagrams, citations, compliance and the final build all proceed, and the word count is re-measured at the end in `DIU_COMPLIANCE.md`.
+## What was never touched
+
+As instructed, and verified against the built file:
+
+- **Chapters 1 and 2.** Chapter 1 is unchanged to the word. Chapter 2's prose is unchanged
+  to the word; its 390-word reduction is Table 2.1 moving to Appendix A as Table A.1.
+- **Every methodology detail needed to reproduce the work.** Relocation to Appendix B is
+  not removal: the layer tables, loss definitions, folds, metrics, hyperparameters,
+  software versions, devices and file digests are all in the thesis, cited by number from
+  the chapter that describes the choice.
+- **The leakage finding and its mechanism** — Sections 3.2.2, 4.4.1 to 4.4.5, Figure 3.2,
+  Figure 4.3 and the two tables kept in the body.
+- **The limitations** — Section 4.10 and Section 5.3, intact.
+- **Every statistical caveat, confidence interval and minimum-detectable-effect
+  statement.** None was shortened; several sentences around them were.
+
+## The one thing to check with your supervisor
+
+The count is met on every definition, so nothing is blocked. The one judgement worth
+confirming is that **a Methodology chapter of 7,225 words with its implementation record in
+Appendix B** reads the way your department expects, rather than as a chapter that has been
+hollowed out. Nothing was lost and every appendix table is cited from the body, but whether
+an examiner would rather have that detail in Chapter 3 is a question about local
+convention, not about content. If the answer is that it belongs in the body,
+`relocate.js` moves any table back in one line — at the cost of the words it carries.

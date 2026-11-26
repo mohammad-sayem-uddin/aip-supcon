@@ -2,7 +2,13 @@ const fs = require('fs');
 const { chapter, ROOT, THESIS, REFS } = require('./lib.js');
 const L = chapter(6, 'REFERENCES', 'REFERENCES thesis.docx');
 const cited = new Set();
-for (let i = 1; i <= 5; i++) { const m = JSON.parse(fs.readFileSync(`${THESIS}/meta_ch${i}.json`, 'utf8')); m.cited.forEach((k) => cited.add(k)); }
+// chapters 1-5 and both appendices (6 is this file); a source cited only in an appendix
+// still belongs in the reference list
+for (const i of [1, 2, 3, 4, 5, 7, 8]) {
+  const f = `${THESIS}/meta_ch${i}.json`;
+  if (!fs.existsSync(f)) continue;
+  JSON.parse(fs.readFileSync(f, 'utf8')).cited.forEach((k) => cited.add(k));
+}
 const ini = (g) => g.split(/[\s.]+/).filter(Boolean).map((x) => x[0].toUpperCase() + '.').join(' ');
 const fmtAuth = (a) => { const s = a.map(([f, g]) => (g ? `${f}, ${ini(g)}` : f)); return s.length === 1 ? s[0] : s.length <= 20 ? `${s.slice(0, -1).join(', ')}, & ${s[s.length - 1]}` : `${s.slice(0, 19).join(', ')}, ... ${s[s.length - 1]}`; };
 

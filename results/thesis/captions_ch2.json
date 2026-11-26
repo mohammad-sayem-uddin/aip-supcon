@@ -1,10 +1,1 @@
-[
- {
-  "label": "tab:aip_predictors",
-  "kind": "Table",
-  "number": "2.1",
-  "text": "Reported performance of AIP predictors discussed in this chapter, with whether a check for sequence overlap between training and test partitions is stated in the available text. Sources: the papers cited in the first column; figures as verified in CITATION_AUDIT.md and results/tables/T5_7_published_reported.csv.",
-  "captionWords": 42,
-  "tableWords": 348
- }
-]
+[]

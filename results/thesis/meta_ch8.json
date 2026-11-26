@@ -1,22 +1,82 @@
 {
  "file": "APPENDIX B thesis.docx",
- "cited": [],
- "todos": [],
+ "cited": [
+  "paszke2019",
+  "pedregosa2012",
+  "ke2017",
+  "cock2009",
+  "wolf2020"
+ ],
+ "todos": [
+  "a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account"
+ ],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 7,
+ "tables": 20,
  "figures": 0,
  "words": {
-  "prose": 50,
-  "heading": 6,
-  "caption": 134,
-  "table": 758,
+  "prose": 1780,
+  "heading": 72,
+  "caption": 349,
+  "table": 1536,
   "equation": 0
  },
  "headings": [
   {
    "level": 1,
    "text": "APPENDIX B: MODEL AND IMPLEMENTATION DETAIL"
+  },
+  {
+   "level": 2,
+   "text": "B.1 Hardware and software environment"
+  },
+  {
+   "level": 2,
+   "text": "B.2 Organisation of the experiments and compute time"
+  },
+  {
+   "level": 2,
+   "text": "B.3 Hyperparameters and search ranges"
+  },
+  {
+   "level": 2,
+   "text": "B.5 Reproducibility"
+  },
+  {
+   "level": 2,
+   "text": "B.6 Deviations from the plan"
+  },
+  {
+   "level": 2,
+   "text": "B.7 Tables cited from Chapter 3"
+  },
+  {
+   "level": 2,
+   "text": "B.4 The six architectures"
+  },
+  {
+   "level": 3,
+   "text": "B1: multilayer perceptron on the mean-pooled vector"
+  },
+  {
+   "level": 3,
+   "text": "B2: one-dimensional convolutional network"
+  },
+  {
+   "level": 3,
+   "text": "B3: bidirectional long short-term memory network"
+  },
+  {
+   "level": 3,
+   "text": "B4: convolutional network followed by a bidirectional LSTM"
+  },
+  {
+   "level": 3,
+   "text": "B5: Transformer encoder"
+  },
+  {
+   "level": 3,
+   "text": "B6: attention pooling"
   }
  ]
 }

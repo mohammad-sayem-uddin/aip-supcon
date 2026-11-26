@@ -6,7 +6,10 @@ __pycache__/
 *.pyc
 .DS_Store
 /*.docx
-/*.pdf        # generated: the thesis renders from src/thesis, and demo.pdf etc. are reference material
+# generated: the thesis renders from src/thesis. demo.pdf and the DIU templates are
+# other people's documents and reference material, and are not redistributed here.
+# (A comment must be on its own line: git does not strip trailing comments from a pattern.)
+/*.pdf
 /*.fasta
 .pytest_cache/
 results/models/*.pt

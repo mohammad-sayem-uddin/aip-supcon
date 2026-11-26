@@ -51,6 +51,15 @@ def find(pages, needle, start=0):
     return None
 
 
+def find_nospace(pages, needle, start=0):
+    """find, ignoring whitespace entirely: survives a tab the PDF swallowed"""
+    nd = re.sub(r"\s+", "", needle).lower()
+    for i in range(start, len(pages)):
+        if nd and nd in re.sub(r"\s+", "", pages[i][1]).lower():
+            return i
+    return None
+
+
 def first_line(txt):
     for ln in txt.strip().splitlines():
         if ln.strip():
@@ -99,22 +108,35 @@ def main(pdf):
             missing.append(e["key"])
 
     # tables and figures: match the caption itself - the number AND the opening words of
-    # its title - so an in-text mention of "Table 3.1" cannot be mistaken for the caption
+    # its title - so an in-text mention of "Table 3.1" cannot be mistaken for the caption.
+    # The number and the title are separated by a tab, which pdftotext renders as spaces
+    # for a one-digit number but swallows entirely for a two-digit one ("Table A.10The
+    # fine-tuned ..."), so the second attempt drops whitespace from both sides. There is
+    # deliberately no looser fallback: matching on the number alone would find the first
+    # in-text citation of the table instead of the table, and record the wrong page.
     for c in toc["captions"]:
         key = f"{c['kind']}:{c['number']}"
         lead = " ".join(c["short"].split()[:5])
-        i = find(pages, f"{c['kind']} {c['number']} {lead}", body_start)
+        needle = f"{c['kind']} {c['number']} {lead}"
+        i = find(pages, needle, body_start)
         if i is None:
-            i = find(pages, f"{c['kind']} {c['number']}", body_start)
+            i = find_nospace(pages, needle, body_start)
         if i is not None and pages[i][0]:
             pagemap[key] = pages[i][0]
         else:
             missing.append(key)
 
-    for letter, title in (("A", "APPENDIX A"), ("B", "APPENDIX B")):
-        i = find(pages, title, body_start)
+    # The appendix itself opens a page with "APPENDIX A" as its first line. Searching the
+    # body text for "Appendix A" instead would land on the first chapter that mentions it
+    # ("Table A.13 of Appendix A ..."), which is what the List of Appendices used to show.
+    for letter in ("A", "B"):
+        want = f"appendix {letter.lower()}"
+        i = next((k for k in range(body_start, len(pages))
+                  if first_line(pages[k][1]) == want), None)
         if i is not None and pages[i][0]:
             pagemap[f"Appendix:{letter}"] = pages[i][0]
+        else:
+            missing.append(f"Appendix:{letter}")
 
     (THESIS / "pagemap.json").write_text(json.dumps(pagemap, indent=1))
     print(f"pagemap.json: {len(pagemap)} entries located, {len(missing)} not found")

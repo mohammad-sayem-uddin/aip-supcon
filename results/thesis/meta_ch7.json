@@ -4,19 +4,23 @@
  "todos": [],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 4,
+ "tables": 18,
  "figures": 0,
  "words": {
-  "prose": 61,
-  "heading": 4,
-  "caption": 128,
-  "table": 1678,
+  "prose": 359,
+  "heading": 14,
+  "caption": 724,
+  "table": 4760,
   "equation": 0
  },
  "headings": [
   {
    "level": 1,
    "text": "APPENDIX A: DETAILED RESULTS"
+  },
+  {
+   "level": 2,
+   "text": "A.1 Provenance of the published figures, and what they show"
   }
  ]
 }

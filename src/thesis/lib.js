@@ -22,6 +22,10 @@ const TEXT_WIDTH = PAGE.width - MARGIN.left - MARGIN.right;
 const LINE_DOUBLE = 480;                        // 240 = single; Guidelines: double for body text
 const LINE_SINGLE = 240;                        // tables, captions, references
 const INDENT_FIRST = 720;                       // first-line indent, as the template sets it
+// Where a caption's title starts. The stop must clear the widest label the thesis
+// produces ("Figure A.18"), because a tab stop that its label overruns collapses to
+// nothing and the caption then prints as "Table A.18Paired comparisons ...". One inch does.
+const CAPTION_TAB = 1440;
 
 // Where the page number sits. The Guidelines say bottom centre; the approved demo.pdf
 // puts it bottom right with the copyright notice on the left. Guidelines win by default.
@@ -30,6 +34,12 @@ const FOOTER_TEXT = '\u00A9Daffodil International University';
 
 // ------------------------------------------------------------------ references (verified bibliography only)
 const REFS = JSON.parse(fs.readFileSync(`${THESIS}/references.json`, 'utf8'));
+
+// tables that are rendered in an appendix rather than in their chapter (see relocate.js).
+// The chapter still cites them by number; nothing is deleted.
+const RELOC = require('./relocate.js');
+const RELOCATED = new Map();              // label -> 'A' | 'B'
+for (const [app, labels] of Object.entries(RELOC)) labels.forEach((l) => RELOCATED.set(l, app));
 const fam = (k) => REFS[k].authors.map((a) => a[0]);
 function citeText(k, narrative) {
   if (!REFS[k]) return null;
@@ -108,7 +118,7 @@ function footerParagraph() {
 
 function chapter(no, title, outFile, opts = {}) {
   const NUM = opts.numberAs || no;   // appendices number as A.1, B.1 ...
-  const ctx = { todos: [], needed: [], used: new Set(), unresolved: [], labels: [], headings: [], wc: { prose: 0, heading: 0, caption: 0, table: 0, equation: 0 } };
+  const ctx = { todos: [], needed: [], used: new Set(), unresolved: [], labels: [], headings: [], relocated: [], pendingReloc: null, wc: { prose: 0, heading: 0, caption: 0, table: 0, equation: 0 } };
   const LABELS = loadLabels();
   const out = [];
   let tabNo = 0, figNo = 0;
@@ -163,6 +173,11 @@ function chapter(no, title, outFile, opts = {}) {
     })),
     pageBreak: () => new Paragraph({ children: [new PageBreak()] }),
     table(rows, widths, opts = {}) {
+      if (ctx.pendingReloc) {
+        const r = ctx.pendingReloc; ctx.pendingReloc = null;
+        ctx.relocated.push({ label: r.label, appendix: r.appendix, text: r.text, rows, widths, opts });
+        return new Paragraph({ children: [] });
+      }
       let tw = 0; rows.forEach((r) => r.forEach((c) => { tw += wcount(c); }));
       ctx.wc.table += tw;
       if (ctx.captions && ctx.captions.length) { const last = ctx.captions[ctx.captions.length - 1]; last.tableWords = (last.tableWords || 0) + tw; }
@@ -204,11 +219,15 @@ function chapter(no, title, outFile, opts = {}) {
       });
     },
     caption(label, text) {
+      if (RELOCATED.has(label) && !opts.isAppendix) {   // numbered and rendered by the appendix instead
+        ctx.pendingReloc = { label, text, appendix: RELOCATED.get(label) };
+        return new Paragraph({ children: [] });
+      }
       tabNo += 1; ctx.wc.caption += wcount(text); ctx.labels.push([label, `Table ${NUM}.${tabNo}`]);
       ctx.captions = ctx.captions || []; ctx.captions.push({ label, kind: 'Table', number: `${NUM}.${tabNo}`, text, captionWords: wcount(text) });
       return new Paragraph({
         keepNext: true, spacing: { before: 240, after: 120, line: LINE_SINGLE },
-        tabStops: [{ type: TabStopType.LEFT, position: INDENT_FIRST + 360 }],
+        tabStops: [{ type: TabStopType.LEFT, position: CAPTION_TAB }],
         children: [new TextRun({ text: `Table ${NUM}.${tabNo}\t`, font: BODY_FONT, size: BODY_SIZE }),
                    ...rich(text, { font: BODY_FONT, size: BODY_SIZE }, ctx)],
       });
@@ -229,7 +248,7 @@ function chapter(no, title, outFile, opts = {}) {
         new Paragraph({ spacing: { after: 0, line: LINE_SINGLE }, children: [] }),   // the one blank line the Guidelines require
         new Paragraph({
           spacing: { before: 0, after: 240, line: LINE_SINGLE },
-          tabStops: [{ type: TabStopType.LEFT, position: INDENT_FIRST + 360 }],
+          tabStops: [{ type: TabStopType.LEFT, position: CAPTION_TAB }],
           children: [new TextRun({ text: `Figure ${NUM}.${figNo}\t`, font: BODY_FONT, size: BODY_SIZE }),
                      ...rich(text, { font: BODY_FONT, size: BODY_SIZE }, ctx)],
         }),
@@ -249,6 +268,7 @@ function chapter(no, title, outFile, opts = {}) {
       fs.writeFileSync(`${THESIS}/labels_ch${no}.csv`, 'label,number\n' + ctx.labels.map((l) => l.join(',')).join('\n') + '\n');
       fs.writeFileSync(`${THESIS}/meta_ch${no}.json`, JSON.stringify({ file: outFile, cited: [...ctx.used], todos: ctx.todos, citation_needed: ctx.needed, unresolved_refs: [...new Set(ctx.unresolved)], tables: tabNo, figures: figNo, words: ctx.wc, headings: ctx.headings }, null, 1));
       fs.writeFileSync(`${THESIS}/captions_ch${no}.json`, JSON.stringify(ctx.captions || [], null, 1));
+      if (ctx.relocated.length) fs.writeFileSync(`${THESIS}/relocated_ch${no}.json`, JSON.stringify(ctx.relocated));
       console.log(`ch${no}: ${outFile} tables ${tabNo} figures ${figNo} cited ${ctx.used.size} todos ${ctx.todos.length} needed ${ctx.needed.length} unresolved ${[...new Set(ctx.unresolved)].length}`);
     },
   };

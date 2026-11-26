@@ -1,20 +1,7 @@
 label,number
-tab:cv,Table 4.1
-tab:gaps,Table 4.2
-tab:gapc,Table 4.3
+tab:gaps,Table 4.1
 fig:xb,Figure 4.1
 fig:lambda,Figure 4.2
-tab:checkpoints,Table 4.4
-tab:arch,Table 4.5
-tab:survivors,Table 4.6
-tab:families,Table 4.7
 fig:tsne,Figure 4.3
-tab:pool5,Table 4.8
-tab:fusion,Table 4.9
-tab:ft5,Table 4.10
-tab:c4,Table 4.11
-tab:c4_tests,Table 4.12
-tab:published,Table 4.13
-tab:mde5,Table 4.14
 fig:f1,Figure 4.4
 fig:f5,Figure 4.5

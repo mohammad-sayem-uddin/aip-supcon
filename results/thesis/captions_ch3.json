@@ -3,68 +3,28 @@
   "label": "fig:method",
   "kind": "Figure",
   "number": "3.1",
-  "text": "Overall methodology. The three distributed files are first traced to their published sources and audited for duplication, label conflict and training-test overlap; cleaning produces Benchmark_clean; every model is then scored under three evaluation regimes that progressively remove overlap between the training collection and the test sets. Hatching distinguishes the audit steps (dotted) and the evaluation regimes (diagonal); dashed outlines mark the modelling steps.",
-  "captionWords": 63
- },
- {
-  "label": "tab:dataset_composition",
-  "kind": "Table",
-  "number": "3.1",
-  "text": "Composition of the three distributed files and of the cleaned training collection (Benchmark_clean, Section 3.3). Source: results/data_audit.csv.",
-  "captionWords": 17,
-  "tableWords": 43
- },
- {
-  "label": "tab:provenance",
-  "kind": "Table",
-  "number": "3.2",
-  "text": "Provenance of the three local files, established by comparison with the downloaded original files. Source: results/provenance.csv.",
-  "captionWords": 16,
-  "tableWords": 67
+  "text": "Overall methodology. The three distributed files are traced to their published sources and audited, cleaning produces Benchmark_clean, and every model is then scored under three evaluation regimes that progressively remove training-test overlap. Hatching distinguishes the audit steps (dotted) from the evaluation regimes (diagonal); dashed outlines mark the modelling steps.",
+  "captionWords": 49
  },
  {
   "label": "fig:lineage",
   "kind": "Figure",
   "number": "3.2",
-  "text": "Provenance of the three files and the origin of the overlap. A: inside each resource the training and test sets share no sequence. B: the distributed training file combines the AIPpred benchmark with 612 AntiInflam training sequences, so each resource's test set meets the other resource's training data, and 211 of the 425 sequences of Ind_425 and 298 of the 1,049 of Ind_1049 occur in the training file. Counts from results/tables/T3.5_cross_benchmark_leakage.csv and results/provenance.csv.",
-  "captionWords": 73
- },
- {
-  "label": "tab:conflicts",
-  "kind": "Table",
-  "number": "3.3",
-  "text": "Duplicates and label conflicts in Benchmark_Dataset and their origin. Sources: results/data_audit.csv and results/v2/lineage_shared_training.csv.",
-  "captionWords": 13,
-  "tableWords": 65
+  "text": "Provenance of the three files and the origin of the overlap. A: inside each resource the training and test sets share no sequence. B: the distributed training file combines the AIPpred benchmark with 612 AntiInflam training sequences, so each resource's test set meets the other's training data, and 211 of the 425 sequences of Ind_425 and 298 of the 1,049 of Ind_1049 occur in the training file. Source: results/tables/T3.5_cross_benchmark_leakage.csv.",
+  "captionWords": 69
  },
  {
   "label": "tab:overlap",
   "kind": "Table",
-  "number": "3.4",
-  "text": "Exact overlap between each training set and each independent set, by direction, with the number of independent-set sequences at identity of 0.9 or more to the training set. Percentages are of the independent set. Source: results/tables/T3.5_cross_benchmark_leakage.csv.",
-  "captionWords": 36,
+  "number": "3.1",
+  "text": "Exact overlap between each training set and each independent set, by direction, with the number of independent-set sequences at identity 0.9 or more to the training set. Percentages are of the independent set. Source: results/tables/T3.5_cross_benchmark_leakage.csv.",
+  "captionWords": 35,
   "tableWords": 78
- },
- {
-  "label": "tab:hashes",
-  "kind": "Table",
-  "number": "3.5",
-  "text": "SHA-256 digests of the local data files and of the files in the AIPFusion-Net repository, downloaded from raw.githubusercontent.com/ChenYH7693/AIPFusion-Net/main/AIPData/ on 2026-11-26. Source: results/v2/aipfusion_repo_check.csv.",
-  "captionWords": 22,
-  "tableWords": 28
- },
- {
-  "label": "tab:cleaning",
-  "kind": "Table",
-  "number": "3.6",
-  "text": "Cleaning of Benchmark_Dataset, with the number of rows after each step. Source: results/data_audit.csv.",
-  "captionWords": 13,
-  "tableWords": 40
  },
  {
   "label": "tab:regimes",
   "kind": "Table",
-  "number": "3.7",
+  "number": "3.2",
   "text": "Size and class composition of the three evaluation regimes for each independent set. Source: results/v2/regime_composition.csv.",
   "captionWords": 15,
   "tableWords": 67
@@ -73,93 +33,21 @@
   "label": "fig:regimes",
   "kind": "Figure",
   "number": "3.3",
-  "text": "The three evaluation regimes. Bar length is the number of test sequences that survive each regime, and the hatching distinguishes them; the counts are those of Table 3.7. Only the test sets change: the training collection is the same in all three.",
-  "captionWords": 42
- },
- {
-  "label": "tab:identity",
-  "kind": "Table",
-  "number": "3.8",
-  "text": "Identity screen of the independent sets against Benchmark_clean, and the shuffled-composition null control. Sources: results/identity_screen.csv and results/v2/null_control_identity.csv.",
-  "captionWords": 17,
-  "tableWords": 63
- },
- {
-  "label": "tab:esm",
-  "kind": "Table",
-  "number": "3.9",
-  "text": "The ESM-2 checkpoints used as frozen feature extractors. Embedding times are single measurements for all unique sequences on the CPU of the machine used. Source: results/embedding_timings.csv and results/v2/methods_parameters.csv.",
-  "captionWords": 28,
-  "tableWords": 45
- },
- {
-  "label": "tab:pooling",
-  "kind": "Table",
-  "number": "3.10",
-  "text": "Pooling variants compared on frozen ESM-2 650M embeddings. Dimensions from results/v2/pooling_dimensions.csv.",
-  "captionWords": 11,
-  "tableWords": 68
- },
- {
-  "label": "tab:finetune",
-  "kind": "Table",
-  "number": "3.11",
-  "text": "Fine-tuning protocol for the ESM-2 8M checkpoint and its frozen control. Source: results/v2/methods_parameters.csv.",
-  "captionWords": 13,
-  "tableWords": 90
+  "text": "The three evaluation regimes. Bar length is the number of test sequences surviving each regime, distinguished by hatching; the counts are those of Table 3.2. Only the test sets change; the training collection is the same in all three.",
+  "captionWords": 39
  },
  {
   "label": "fig:aipnet",
   "kind": "Figure",
   "number": "3.4",
-  "text": "The network used for the mean-pooled reference model B1. The frozen ESM-2 encoder is used as a feature extractor only; one shared encoder feeds two heads, so the cross-entropy gradient (solid) and the contrastive gradient (dashed) update the same representation. The weight λ sets how much the contrastive term contributes.",
-  "captionWords": 50
+  "text": "The network used for the mean-pooled reference model B1. The frozen ESM-2 encoder serves as a feature extractor only; one shared encoder feeds two heads, so the cross-entropy gradient (solid) and the contrastive gradient (dashed) update the same representation, the weight λ setting how much the contrastive term contributes.",
+  "captionWords": 49
  },
  {
   "label": "fig:splits",
   "kind": "Figure",
   "number": "3.5",
-  "text": "Cross-validation and splitting protocol. Each of the five folds is held out in turn (cross-hatched); the scaler and the positive-class weight are fitted on the training part of that fold only and then applied to the held-out part, so no information from the held-out peptides reaches the model. The folds are redrawn for each of five seeds, giving 25 runs per configuration. Final models (dashed) are trained on all of Benchmark_clean with a stratified 10 per cent hold-out for early stopping.",
-  "captionWords": 81
- },
- {
-  "label": "tab:training",
-  "kind": "Table",
-  "number": "3.12",
-  "text": "Training settings of the multilayer perceptron and of the residue-level models. Source: results/v2/methods_parameters.csv.",
-  "captionWords": 13,
-  "tableWords": 69
- },
- {
-  "label": "tab:mde",
-  "kind": "Table",
-  "number": "3.13",
-  "text": "Minimum detectable effect (80% power, two-sided α = 0.05) of the paired comparisons of λ > 0 with λ = 0 for each test set and regime. Source: results/v2/mde_summary.csv, derived from results/tables/T5.11_corrected_significance.csv.",
-  "captionWords": 32,
-  "tableWords": 63
- },
- {
-  "label": "tab:software",
-  "kind": "Table",
-  "number": "3.14",
-  "text": "Main software packages and versions on the local machine (from requirements.txt). The Kaggle kernels used their pre-installed PyTorch and scikit-learn.",
-  "captionWords": 20,
-  "tableWords": 75
- },
- {
-  "label": "tab:devices",
-  "kind": "Table",
-  "number": "3.15",
-  "text": "Device on which each architecture and the fine-tuning experiment were trained (results/v2/device_map.json).",
-  "captionWords": 12,
-  "tableWords": 62
- },
- {
-  "label": "tab:hyper",
-  "kind": "Table",
-  "number": "3.16",
-  "text": "Training hyperparameters and search ranges. Source: results/v2/methods_parameters.csv.",
-  "captionWords": 7,
-  "tableWords": 69
+  "text": "Cross-validation and splitting protocol. Each of the five folds is held out in turn (cross-hatched); the scaler and the positive-class weight are fitted on the training part only and applied to the held-out part, so no information from the held-out peptides reaches the model. The folds are redrawn for each of five seeds, giving 25 runs per configuration. Final models (dashed) are trained on all of Benchmark_clean with a stratified 10 per cent hold-out for early stopping.",
+  "captionWords": 77
  }
 ]

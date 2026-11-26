@@ -1,5 +1,19 @@
 label,number
-tab:ind425,Table A.1
-tab:ind1049,Table A.2
-tab:tau,Table A.3
-tab:reptests,Table A.4
+tab:aip_predictors,Table A.1
+tab:cv,Table A.2
+tab:gapc,Table A.3
+tab:checkpoints,Table A.4
+tab:arch,Table A.5
+tab:survivors,Table A.6
+tab:families,Table A.7
+tab:pool5,Table A.8
+tab:fusion,Table A.9
+tab:ft5,Table A.10
+tab:c4,Table A.11
+tab:c4_tests,Table A.12
+tab:published,Table A.13
+tab:mde5,Table A.14
+tab:ind425,Table A.15
+tab:ind1049,Table A.16
+tab:tau,Table A.17
+tab:reptests,Table A.18

@@ -1,149 +1,45 @@
 [
  {
-  "label": "tab:cv",
-  "kind": "Table",
-  "number": "4.1",
-  "text": "Five-fold cross-validated performance on Benchmark_clean (mean ± standard deviation over 25 runs; 15 runs for the fine-tuning experiment). Shaded rows name the group of models below them. Rows with λ > 0 use the CV-selected λ and τ. Source: results/thesis/ch5_data.json, built from the cross-validation result files.",
-  "captionWords": 46,
-  "tableWords": 1009
- },
- {
   "label": "tab:gaps",
   "kind": "Table",
-  "number": "4.2",
-  "text": "Drop in performance from Regime A (as distributed) to Regime B (exact matches removed) and to Regime C (identity ≥ 0.9 also removed), for the models evaluated in all regimes. Positive values mean that the score is lower after removal. Source: results/thesis/ch5_data.json.",
-  "captionWords": 42,
+  "number": "4.1",
+  "text": "Drop in performance from Regime A (as distributed) to Regime B (exact matches removed) and to Regime C (identity ≥ 0.9 also removed), for the models evaluated in all regimes. Positive values mean a lower score after removal. Source: results/thesis/ch5_data.json.",
+  "captionWords": 40,
   "tableWords": 176
- },
- {
-  "label": "tab:gapc",
-  "kind": "Table",
-  "number": "4.3",
-  "text": "Contrasts between the leakage gaps (MCC in Regime A minus MCC in Regime B) of model families. Differences of mean gaps, with the 95% bootstrap interval and the Benjamini–Hochberg adjusted p-value for the average of the two test sets; the model-level Mann–Whitney p-value counts each model once. Source: results/tables/T5.12b_leakage_gap_family_contrasts.csv.",
-  "captionWords": 49,
-  "tableWords": 174
  },
  {
   "label": "fig:xb",
   "kind": "Figure",
   "number": "4.1",
-  "text": "MCC of AAC + RF, the frozen 650M multilayer perceptron and the frozen 8M multilayer perceptron (λ = 0) for each combination of training set (rows) and independent set (columns), in Regimes A, B and C.",
-  "captionWords": 36
+  "text": "MCC of AAC + RF and of the frozen 650M and 8M multilayer perceptrons (λ = 0) for each combination of training set (rows) and independent set (columns), in Regimes A, B and C.",
+  "captionWords": 34
  },
  {
   "label": "fig:lambda",
   "kind": "Figure",
   "number": "4.2",
-  "text": "Cross-validated MCC as a function of λ for the multilayer perceptron on four ESM-2 checkpoints (mean ± standard deviation over 25 runs). The dotted line marks λ = 0, the model without the contrastive term.",
-  "captionWords": 35
- },
- {
-  "label": "tab:checkpoints",
-  "kind": "Table",
-  "number": "4.4",
-  "text": "Effect of the best SupCon weight at the four ESM-2 checkpoints (multilayer perceptron). The Regime B columns give MCC at λ = 0 and at the selected λ, mean over five final models.",
-  "captionWords": 33,
-  "tableWords": 89
- },
- {
-  "label": "tab:arch",
-  "kind": "Table",
-  "number": "4.5",
-  "text": "The contrast λ* versus λ = 0 in six architectures on the frozen 8M embedding, Regime B. ΔMCC is for the seed-ensemble predictions; the p-values are DeLong p-values for the AUROC difference, raw and Benjamini–Hochberg adjusted. The rows B2 to B6 are the 10 comparisons of H2, adjusted within that family; the row B1 belongs to the family \"λ contrasts in Phase B\" and is not part of H2.",
-  "captionWords": 69,
-  "tableWords": 119
- },
- {
-  "label": "tab:survivors",
-  "kind": "Table",
-  "number": "4.6",
-  "text": "The λ-contrasts that remain significant after Benjamini–Hochberg correction (within family or globally). A negative ΔAUROC means that the model with the contrastive term ranks peptides worse.",
-  "captionWords": 26,
-  "tableWords": 113
- },
- {
-  "label": "tab:families",
-  "kind": "Table",
-  "number": "4.7",
-  "text": "Number of comparisons in each family of tests, with the number significant at 5% before correction, after correction within the family, and after the global correction over all comparisons. Source: results/tables/T5.11_corrected_significance.csv.",
-  "captionWords": 31,
-  "tableWords": 96
+  "text": "Cross-validated MCC against λ for the multilayer perceptron on four ESM-2 checkpoints (mean ± standard deviation over 25 runs). The dotted line marks λ = 0, the model without the contrastive term.",
+  "captionWords": 32
  },
  {
   "label": "fig:tsne",
   "kind": "Figure",
   "number": "4.3",
-  "text": "t-SNE (van der Maaten and Hinton, 2008) projections of the Regime B sequences of Ind_1049 for one 8M model (seed 0): raw frozen embedding, encoder output at λ = 0 and encoder output at λ = 2, with the two classes distinguished by marker shape (open circles non-AIP, filled triangles AIP) so that the panels read in black and white, and silhouette and Davies-Bouldin values in the panel titles.",
-  "captionWords": 69
- },
- {
-  "label": "tab:pool5",
-  "kind": "Table",
-  "number": "4.8",
-  "text": "Pooling variants on the frozen 650M embedding (multilayer perceptron, λ = 0), with AAC + RF for reference. Cross-validated scores are means over 25 runs; the Regime B columns are means over five final models.",
-  "captionWords": 35,
-  "tableWords": 92
- },
- {
-  "label": "tab:fusion",
-  "kind": "Table",
-  "number": "4.9",
-  "text": "Hand-crafted features, ESM-2 embeddings and their concatenation with three classifiers. Cross-validated scores are means over 25 runs; the Regime B columns are means over five final models.",
-  "captionWords": 27,
-  "tableWords": 185
- },
- {
-  "label": "tab:ft5",
-  "kind": "Table",
-  "number": "4.10",
-  "text": "The fine-tuned 8M model and its comparators. Cross-validated scores: 15 runs for the fine-tuned and frozen-control rows, 25 runs for the others; Regime B columns are means over the final models.",
-  "captionWords": 31,
-  "tableWords": 76
- },
- {
-  "label": "tab:c4",
-  "kind": "Table",
-  "number": "4.11",
-  "text": "Frozen ProtBERT and ProtT5-XL (encoder) embeddings, mean-pooled over residues, with the classifiers of the frozen ESM-2 models (λ = 0). Cross-validated scores are means over the runs; the independent-set columns are means over five final models in Regime B. Source: results/tables/T5.14a_c4_other_plms_summary.csv.",
-  "captionWords": 41,
-  "tableWords": 40
- },
- {
-  "label": "tab:c4_tests",
-  "kind": "Table",
-  "number": "4.12",
-  "text": "Paired comparisons of the other protein language models with ESM-2 650M (same classifier) and with AAC + RF in Regime B (exploratory family); ΔMCC with its 95% bootstrap interval, DeLong p-values raw and Benjamini–Hochberg adjusted. Source: results/tables/T5.14_c4_other_plms_tests.csv.",
-  "captionWords": 37,
-  "tableWords": 155
- },
- {
-  "label": "tab:published",
-  "kind": "Table",
-  "number": "4.13",
-  "text": "Published performance figures, each read from the table named in the last column of the open-access full text of the cited paper (results/tables/T5_7_published_reported.csv gives paper, PMCID, table and row), and the results of this thesis on the same files. Values printed as percentages were divided by 100. The papers use different training collections and protocols, so the values are not directly comparable. n/a: not publicly available (paper not open access and no usable figure returned on retry, or value given only in a figure image rather than text or a table).",
-  "captionWords": 91,
-  "tableWords": 530
- },
- {
-  "label": "tab:mde5",
-  "kind": "Table",
-  "number": "4.14",
-  "text": "Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on each test set and regime: median over the comparisons, with the smallest and largest value for MCC in brackets, and the median for AUROC.",
-  "captionWords": 38,
-  "tableWords": 56
+  "text": "t-SNE (van der Maaten and Hinton, 2008) projections of the Regime B sequences of Ind_1049 for one 8M model (seed 0): raw frozen embedding, encoder output at λ = 0 and at λ = 2. Classes are distinguished by marker shape (open circles non-AIP, filled triangles AIP); silhouette and Davies-Bouldin values are in the panel titles.",
+  "captionWords": 56
  },
  {
   "label": "fig:f1",
   "kind": "Figure",
   "number": "4.4",
-  "text": "Share of the peptides of Benchmark_clean that share at least one 8-mer with another peptide of the same class and with a peptide of the other class, for the positive (n = 1,414) and the negative (n = 2,302) peptides.",
-  "captionWords": 40
+  "text": "Share of the peptides of Benchmark_clean sharing at least one 8-mer with another peptide of the same class and with a peptide of the other class, for the positive (n = 1,414) and the negative (n = 2,302) peptides.",
+  "captionWords": 39
  },
  {
   "label": "fig:f5",
   "kind": "Figure",
   "number": "4.5",
-  "text": "AUROC of each model in Regime B (both test sets pooled) by peptide length group; the last row is a logistic regression on length and its square alone. The colour scale is centred on 0.5 (chance); the number of peptides of each group is given under the column label. Values below 0.5 mean that the model ranks the peptides of that group in the wrong order.",
-  "captionWords": 66
+  "text": "AUROC of each model in Regime B (both test sets pooled) by peptide length group; the last row is a logistic regression on length and its square alone. The number of peptides of each group is given under the column label. Values below 0.5 mean that the model ranks that group in the wrong order.",
+  "captionWords": 55
  }
 ]

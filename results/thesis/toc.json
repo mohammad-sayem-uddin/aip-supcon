@@ -225,36 +225,6 @@
    "key": "H:3.6 Model architectures"
   },
   {
-   "level": 3,
-   "title": "3.6.1 B1: multilayer perceptron on the mean-pooled vector",
-   "key": "H:3.6.1 B1: multilayer perceptron on the mean-pooled vector"
-  },
-  {
-   "level": 3,
-   "title": "3.6.2 B2: one-dimensional convolutional network",
-   "key": "H:3.6.2 B2: one-dimensional convolutional network"
-  },
-  {
-   "level": 3,
-   "title": "3.6.3 B3: bidirectional long short-term memory network",
-   "key": "H:3.6.3 B3: bidirectional long short-term memory network"
-  },
-  {
-   "level": 3,
-   "title": "3.6.4 B4: convolutional network followed by a bidirectional LSTM",
-   "key": "H:3.6.4 B4: convolutional network followed by a bidirectional LSTM"
-  },
-  {
-   "level": 3,
-   "title": "3.6.5 B5: Transformer encoder",
-   "key": "H:3.6.5 B5: Transformer encoder"
-  },
-  {
-   "level": 3,
-   "title": "3.6.6 B6: attention pooling",
-   "key": "H:3.6.6 B6: attention pooling"
-  },
-  {
    "level": 2,
    "title": "3.7 Loss functions",
    "key": "H:3.7 Loss functions"
@@ -326,43 +296,13 @@
   },
   {
    "level": 2,
-   "title": "3.10 Hardware and Software Environment",
-   "key": "H:3.10 Hardware and Software Environment"
+   "title": "3.13 Pre-registration and Analysis Tiers",
+   "key": "H:3.13 Pre-registration and Analysis Tiers"
   },
   {
    "level": 2,
-   "title": "3.11 Organisation of the Experiments and Compute Time",
-   "key": "H:3.11 Organisation of the Experiments and Compute Time"
-  },
-  {
-   "level": 2,
-   "title": "3.12 Hyperparameters and Search Ranges",
-   "key": "H:3.12 Hyperparameters and Search Ranges"
-  },
-  {
-   "level": 2,
-   "title": "3.13 Training Protocol",
-   "key": "H:3.13 Training Protocol"
-  },
-  {
-   "level": 2,
-   "title": "3.14 Pre-registration and Analysis Tiers",
-   "key": "H:3.14 Pre-registration and Analysis Tiers"
-  },
-  {
-   "level": 2,
-   "title": "3.15 Reproducibility",
-   "key": "H:3.15 Reproducibility"
-  },
-  {
-   "level": 2,
-   "title": "3.16 Deviations from the Plan and Problems Encountered",
-   "key": "H:3.16 Deviations from the Plan and Problems Encountered"
-  },
-  {
-   "level": 2,
-   "title": "3.17 Summary",
-   "key": "H:3.17 Summary"
+   "title": "3.14 Summary",
+   "key": "H:3.14 Summary"
   },
   {
    "level": 1,
@@ -597,28 +537,10 @@
  ],
  "captions": [
   {
-   "kind": "Table",
-   "number": "2.1",
-   "short": "Reported performance of AIP predictors discussed in this chapter, with whether a check for...",
-   "label": "tab:aip_predictors"
-  },
-  {
    "kind": "Figure",
    "number": "3.1",
    "short": "Overall methodology.",
    "label": "fig:method"
-  },
-  {
-   "kind": "Table",
-   "number": "3.1",
-   "short": "Composition of the three distributed files and of the cleaned training collection...",
-   "label": "tab:dataset_composition"
-  },
-  {
-   "kind": "Table",
-   "number": "3.2",
-   "short": "Provenance of the three local files, established by comparison with the downloaded original...",
-   "label": "tab:provenance"
   },
   {
    "kind": "Figure",
@@ -628,31 +550,13 @@
   },
   {
    "kind": "Table",
-   "number": "3.3",
-   "short": "Duplicates and label conflicts in Benchmark_Dataset and their origin.",
-   "label": "tab:conflicts"
-  },
-  {
-   "kind": "Table",
-   "number": "3.4",
+   "number": "3.1",
    "short": "Exact overlap between each training set and each independent set, by direction, with the...",
    "label": "tab:overlap"
   },
   {
    "kind": "Table",
-   "number": "3.5",
-   "short": "SHA-256 digests of the local data files and of the files in the AIPFusion-Net repository,...",
-   "label": "tab:hashes"
-  },
-  {
-   "kind": "Table",
-   "number": "3.6",
-   "short": "Cleaning of Benchmark_Dataset, with the number of rows after each step.",
-   "label": "tab:cleaning"
-  },
-  {
-   "kind": "Table",
-   "number": "3.7",
+   "number": "3.2",
    "short": "Size and class composition of the three evaluation regimes for each independent set.",
    "label": "tab:regimes"
   },
@@ -661,30 +565,6 @@
    "number": "3.3",
    "short": "The three evaluation regimes.",
    "label": "fig:regimes"
-  },
-  {
-   "kind": "Table",
-   "number": "3.8",
-   "short": "Identity screen of the independent sets against Benchmark_clean, and the...",
-   "label": "tab:identity"
-  },
-  {
-   "kind": "Table",
-   "number": "3.9",
-   "short": "The ESM-2 checkpoints used as frozen feature extractors.",
-   "label": "tab:esm"
-  },
-  {
-   "kind": "Table",
-   "number": "3.10",
-   "short": "Pooling variants compared on frozen ESM-2 650M embeddings.",
-   "label": "tab:pooling"
-  },
-  {
-   "kind": "Table",
-   "number": "3.11",
-   "short": "Fine-tuning protocol for the ESM-2 8M checkpoint and its frozen control.",
-   "label": "tab:finetune"
   },
   {
    "kind": "Figure",
@@ -700,87 +580,21 @@
   },
   {
    "kind": "Table",
-   "number": "3.12",
-   "short": "Training settings of the multilayer perceptron and of the residue-level models.",
-   "label": "tab:training"
-  },
-  {
-   "kind": "Table",
-   "number": "3.13",
-   "short": "Minimum detectable effect (80% power, two-sided α = 0.05) of the paired comparisons of λ >...",
-   "label": "tab:mde"
-  },
-  {
-   "kind": "Table",
-   "number": "3.14",
-   "short": "Main software packages and versions on the local machine (from requirements.txt).",
-   "label": "tab:software"
-  },
-  {
-   "kind": "Table",
-   "number": "3.15",
-   "short": "Device on which each architecture and the fine-tuning experiment were trained...",
-   "label": "tab:devices"
-  },
-  {
-   "kind": "Table",
-   "number": "3.16",
-   "short": "Training hyperparameters and search ranges.",
-   "label": "tab:hyper"
-  },
-  {
-   "kind": "Table",
    "number": "4.1",
-   "short": "Five-fold cross-validated performance on Benchmark_clean (mean ± standard deviation over 25...",
-   "label": "tab:cv"
-  },
-  {
-   "kind": "Table",
-   "number": "4.2",
    "short": "Drop in performance from Regime A (as distributed) to Regime B (exact matches removed) and...",
    "label": "tab:gaps"
   },
   {
-   "kind": "Table",
-   "number": "4.3",
-   "short": "Contrasts between the leakage gaps (MCC in Regime A minus MCC in Regime B) of model families.",
-   "label": "tab:gapc"
-  },
-  {
    "kind": "Figure",
    "number": "4.1",
-   "short": "MCC of AAC + RF, the frozen 650M multilayer perceptron and the frozen 8M multilayer...",
+   "short": "MCC of AAC + RF and of the frozen 650M and 8M multilayer perceptrons (λ = 0) for each...",
    "label": "fig:xb"
   },
   {
    "kind": "Figure",
    "number": "4.2",
-   "short": "Cross-validated MCC as a function of λ for the multilayer perceptron on four ESM-2...",
+   "short": "Cross-validated MCC against λ for the multilayer perceptron on four ESM-2 checkpoints (mean...",
    "label": "fig:lambda"
-  },
-  {
-   "kind": "Table",
-   "number": "4.4",
-   "short": "Effect of the best SupCon weight at the four ESM-2 checkpoints (multilayer perceptron).",
-   "label": "tab:checkpoints"
-  },
-  {
-   "kind": "Table",
-   "number": "4.5",
-   "short": "The contrast λ* versus λ = 0 in six architectures on the frozen 8M embedding, Regime B.",
-   "label": "tab:arch"
-  },
-  {
-   "kind": "Table",
-   "number": "4.6",
-   "short": "The λ-contrasts that remain significant after Benjamini–Hochberg correction (within family...",
-   "label": "tab:survivors"
-  },
-  {
-   "kind": "Table",
-   "number": "4.7",
-   "short": "Number of comparisons in each family of tests, with the number significant at 5% before...",
-   "label": "tab:families"
   },
   {
    "kind": "Figure",
@@ -789,51 +603,9 @@
    "label": "fig:tsne"
   },
   {
-   "kind": "Table",
-   "number": "4.8",
-   "short": "Pooling variants on the frozen 650M embedding (multilayer perceptron, λ = 0), with AAC + RF...",
-   "label": "tab:pool5"
-  },
-  {
-   "kind": "Table",
-   "number": "4.9",
-   "short": "Hand-crafted features, ESM-2 embeddings and their concatenation with three classifiers.",
-   "label": "tab:fusion"
-  },
-  {
-   "kind": "Table",
-   "number": "4.10",
-   "short": "The fine-tuned 8M model and its comparators.",
-   "label": "tab:ft5"
-  },
-  {
-   "kind": "Table",
-   "number": "4.11",
-   "short": "Frozen ProtBERT and ProtT5-XL (encoder) embeddings, mean-pooled over residues, with the...",
-   "label": "tab:c4"
-  },
-  {
-   "kind": "Table",
-   "number": "4.12",
-   "short": "Paired comparisons of the other protein language models with ESM-2 650M (same classifier)...",
-   "label": "tab:c4_tests"
-  },
-  {
-   "kind": "Table",
-   "number": "4.13",
-   "short": "Published performance figures, each read from the table named in the last column of the...",
-   "label": "tab:published"
-  },
-  {
-   "kind": "Table",
-   "number": "4.14",
-   "short": "Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on...",
-   "label": "tab:mde5"
-  },
-  {
    "kind": "Figure",
    "number": "4.4",
-   "short": "Share of the peptides of Benchmark_clean that share at least one 8-mer with another peptide...",
+   "short": "Share of the peptides of Benchmark_clean sharing at least one 8-mer with another peptide of...",
    "label": "fig:f1"
   },
   {
@@ -845,66 +617,228 @@
   {
    "kind": "Table",
    "number": "A.1",
+   "short": "Reported performance of AIP predictors discussed in this chapter, with whether a check for...",
+   "label": "tab:aip_predictors"
+  },
+  {
+   "kind": "Table",
+   "number": "A.2",
+   "short": "Five-fold cross-validated performance on Benchmark_clean (mean ± standard deviation over 25...",
+   "label": "tab:cv"
+  },
+  {
+   "kind": "Table",
+   "number": "A.3",
+   "short": "Contrasts between the leakage gaps (MCC in Regime A minus MCC in Regime B) of model families.",
+   "label": "tab:gapc"
+  },
+  {
+   "kind": "Table",
+   "number": "A.4",
+   "short": "Effect of the best SupCon weight at the four ESM-2 checkpoints (multilayer perceptron).",
+   "label": "tab:checkpoints"
+  },
+  {
+   "kind": "Table",
+   "number": "A.5",
+   "short": "The contrast λ* versus λ = 0 in six architectures on the frozen 8M embedding, Regime B.",
+   "label": "tab:arch"
+  },
+  {
+   "kind": "Table",
+   "number": "A.6",
+   "short": "The λ-contrasts that remain significant after Benjamini–Hochberg correction (within family...",
+   "label": "tab:survivors"
+  },
+  {
+   "kind": "Table",
+   "number": "A.7",
+   "short": "Number of comparisons in each family of tests, with the number significant at 5% before...",
+   "label": "tab:families"
+  },
+  {
+   "kind": "Table",
+   "number": "A.8",
+   "short": "Pooling variants on the frozen 650M embedding (multilayer perceptron, λ = 0), with AAC + RF...",
+   "label": "tab:pool5"
+  },
+  {
+   "kind": "Table",
+   "number": "A.9",
+   "short": "Hand-crafted features, ESM-2 embeddings and their concatenation with three classifiers.",
+   "label": "tab:fusion"
+  },
+  {
+   "kind": "Table",
+   "number": "A.10",
+   "short": "The fine-tuned 8M model and its comparators.",
+   "label": "tab:ft5"
+  },
+  {
+   "kind": "Table",
+   "number": "A.11",
+   "short": "Frozen ProtBERT and ProtT5-XL (encoder) embeddings, mean-pooled over residues, with the...",
+   "label": "tab:c4"
+  },
+  {
+   "kind": "Table",
+   "number": "A.12",
+   "short": "Paired comparisons of the other protein language models with ESM-2 650M (same classifier)...",
+   "label": "tab:c4_tests"
+  },
+  {
+   "kind": "Table",
+   "number": "A.13",
+   "short": "Published performance figures, each read from the table named in the last column of the...",
+   "label": "tab:published"
+  },
+  {
+   "kind": "Table",
+   "number": "A.14",
+   "short": "Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on...",
+   "label": "tab:mde5"
+  },
+  {
+   "kind": "Table",
+   "number": "A.15",
    "short": "Performance on Ind_425 (425 sequences in Regime A, 214 in Regime B, 162 in Regime C), mean...",
    "label": "tab:ind425"
   },
   {
    "kind": "Table",
-   "number": "A.2",
+   "number": "A.16",
    "short": "Performance on Ind_1049 (1,049 sequences in Regime A, 751 in Regime B, 716 in Regime C),...",
    "label": "tab:ind1049"
   },
   {
    "kind": "Table",
-   "number": "A.3",
+   "number": "A.17",
    "short": "Temperature sweep at the selected λ of each checkpoint (cross-validated, mean ± standard...",
    "label": "tab:tau"
   },
   {
    "kind": "Table",
-   "number": "A.4",
+   "number": "A.18",
    "short": "Paired comparisons of the representation study (exploratory).",
    "label": "tab:reptests"
   },
   {
    "kind": "Table",
    "number": "B.1",
+   "short": "Main software packages and versions on the local machine (from requirements.txt).",
+   "label": "tab:software"
+  },
+  {
+   "kind": "Table",
+   "number": "B.2",
+   "short": "Device on which each architecture and the fine-tuning experiment were trained...",
+   "label": "tab:devices"
+  },
+  {
+   "kind": "Table",
+   "number": "B.3",
+   "short": "Composition of the three distributed files and of the cleaned training collection...",
+   "label": "tab:dataset_composition"
+  },
+  {
+   "kind": "Table",
+   "number": "B.4",
+   "short": "Provenance of the three local files, established by comparison with the downloaded original...",
+   "label": "tab:provenance"
+  },
+  {
+   "kind": "Table",
+   "number": "B.5",
+   "short": "Duplicates and label conflicts in Benchmark_Dataset and their origin.",
+   "label": "tab:conflicts"
+  },
+  {
+   "kind": "Table",
+   "number": "B.6",
+   "short": "SHA-256 digests of the local data files and of the files in the AIPFusion-Net repository,...",
+   "label": "tab:hashes"
+  },
+  {
+   "kind": "Table",
+   "number": "B.7",
+   "short": "Cleaning of Benchmark_Dataset, with the number of rows after each step.",
+   "label": "tab:cleaning"
+  },
+  {
+   "kind": "Table",
+   "number": "B.8",
+   "short": "Identity screen of the independent sets against Benchmark_clean, and the...",
+   "label": "tab:identity"
+  },
+  {
+   "kind": "Table",
+   "number": "B.9",
+   "short": "The ESM-2 checkpoints used as frozen feature extractors.",
+   "label": "tab:esm"
+  },
+  {
+   "kind": "Table",
+   "number": "B.10",
+   "short": "Pooling variants compared on frozen ESM-2 650M embeddings.",
+   "label": "tab:pooling"
+  },
+  {
+   "kind": "Table",
+   "number": "B.11",
+   "short": "Fine-tuning protocol for the ESM-2 8M checkpoint and its frozen control.",
+   "label": "tab:finetune"
+  },
+  {
+   "kind": "Table",
+   "number": "B.12",
+   "short": "Training settings of the multilayer perceptron and of the residue-level models.",
+   "label": "tab:training"
+  },
+  {
+   "kind": "Table",
+   "number": "B.13",
+   "short": "Minimum detectable effect (80% power, two-sided α = 0.05) of the paired comparisons of λ >...",
+   "label": "tab:mde"
+  },
+  {
+   "kind": "Table",
+   "number": "B.14",
    "short": "Layers of model B1.",
    "label": "tab:layers_b1"
   },
   {
    "kind": "Table",
-   "number": "B.2",
+   "number": "B.15",
    "short": "Layers of model B2.",
    "label": "tab:layers_b2"
   },
   {
    "kind": "Table",
-   "number": "B.3",
+   "number": "B.16",
    "short": "Layers of model B3.",
    "label": "tab:layers_b3"
   },
   {
    "kind": "Table",
-   "number": "B.4",
+   "number": "B.17",
    "short": "Layers of model B4.",
    "label": "tab:layers_b4"
   },
   {
    "kind": "Table",
-   "number": "B.5",
+   "number": "B.18",
    "short": "Layers of model B5.",
    "label": "tab:layers_b5"
   },
   {
    "kind": "Table",
-   "number": "B.6",
+   "number": "B.19",
    "short": "Layers of model B6.",
    "label": "tab:layers_b6"
   },
   {
    "kind": "Table",
-   "number": "B.7",
+   "number": "B.20",
    "short": "Compute time recorded for each stage of the experiments (results/.stages and...",
    "label": "tab:stages"
   }

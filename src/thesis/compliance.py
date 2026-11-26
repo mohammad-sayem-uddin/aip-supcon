@@ -347,23 +347,28 @@ def write_report(docx, pdf, npages, a, b, c):
     for rule, status, ev in results:
         mark = "PASS" if status == "PASS" else "**FAIL**"
         lines.append(f"| {rule} | {mark} | {ev.replace(chr(124), chr(59))} |")
+    nfail = sum(1 for _, st, _ in results if st != "PASS")
     lines += ["", "## What still needs your decision", "",
-      "Three checks fail. None of them can be closed without you.", "",
-      "1. **Word count against your 22,000-23,000 target.** The thesis is at "
-      f"{b:,} on definition (b) and {a:,} on definition (a). Everything that could be cut without "
-      "touching the material you protected has been cut; `WORD_BUDGET.md` sets out the four ways "
-      "forward and what each costs. Until you choose one, this check stays red.",
-      "2. **Word count against DIU's own 30,000 limit.** Met on definition (a), exceeded on (b). "
-      "Which definition the department counts decides whether this is a real problem or not, and the "
-      "Guidelines do not say. Worth one question to your supervisor.",
-      "3. **Two TODO markers remain in the text.** Both are flagged in yellow rather than hidden: "
+      f"{'One check fails' if nfail == 1 else f'{nfail} checks fail'}, and it cannot be closed "
+      "without you: the document still holds material only you can supply.", "",
+      "1. **Front-matter placeholders.** The thesis title, student ID, academic session, submission "
+      "month and year, supervisor name and position, date of birth, the acknowledgements, the "
+      "dedication and the AI-disclosure wording are all deliberate and all marked in brackets. "
+      "The check counts them, so it stays red until they are filled in.",
+      "2. **Two TODO markers in the text.** Both are flagged in yellow rather than hidden: "
       "a permanent archive identifier (a Zenodo DOI for the submitted commit), which needs your own "
       "account, and the fine-tuning results at 150M and 650M, which need the Kaggle kernels to finish "
       "(`BLOCKERS_v2.md`). Neither is something this run can supply.",
+      "3. **Three choices.** Which classification box to tick on the declaration page "
+      "(CONFIDENTIAL, RESTRICTED or OPEN ACCESS); whether the page number sits at the page centre "
+      "(the Guidelines, and the current setting) or at the right as `demo.pdf` has it, which the "
+      "single flag `PAGE_NUMBER_POSITION` in `src/thesis/lib.js` switches throughout; and whether to "
+      "add the word 'Continued' by hand to whichever tables break across a page (see below).",
       "",
-      "Placeholders in the front matter are deliberate and marked: thesis title, student ID, academic "
-      "session, submission month and year, supervisor name and position, date of birth, the "
-      "acknowledgements, the dedication and the AI-disclosure wording.",
+      f"The word count is inside your 22,000-23,000 target: {b:,} on definition (b) (body prose plus "
+      f"tables, figure captions and equations) and {a:,} on definition (a) (body prose alone). Both "
+      "are also inside DIU's own 30,000 limit, so the count no longer depends on which definition "
+      "the department applies. `WORD_BUDGET.md` lists every cut and relocation that got it there.",
       "", "## Judgement calls and deviations, stated plainly", "",
       "- **Figure numbering.** The brief asked for Figure 3.3 to be the architecture and 3.4 the "
       "evaluation regimes. Figure numbers must follow the order figures appear in, and the regimes "

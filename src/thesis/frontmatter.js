@@ -49,12 +49,27 @@ const signature = (caption) => [
   line(caption, { align: AlignmentType.LEFT, after: 240 }),
 ];
 // a dot-leader row for the Table of Content and the lists
-const leader = (left, page, indent = 0) => new Paragraph({
-  spacing: { after: 0, line: LINE_SINGLE },
-  indent: { left: indent, hanging: 0 },
-  tabStops: [{ type: TabStopType.RIGHT, position: TEXT_WIDTH }],
-  children: [new TextRun({ text: `${left}\t${page}`, font: BODY_FONT, size: BODY_SIZE })],
-});
+// Left-aligned, not justified: the document default is justified, and justification
+// stretches the tab between a caption's number and its title to the full line, which
+// pushed short entries ("Table A.10  The fine-tuned 8M model...") across the page and
+// their page number onto a line of its own. The left stop puts every title in the same
+// column whatever the width of the number beside it.
+const leader = (left, page, indent = 0) => {
+  // An entry that carries its own tab ("Table A.10<tab>The fine-tuned ...") gets a hanging
+  // indent rather than a left tab stop, for two reasons: every title then starts in the
+  // same column whatever the width of the number, and a wrapped line starts past that
+  // column, so the tab before the page number can only reach the right stop. With a left
+  // tab stop instead, a short continuation line ("were trained...") sat before the stop
+  // and swallowed the page number's tab, printing the number mid-line.
+  const col = left.includes('\t') ? 1500 : 0;
+  return new Paragraph({
+    alignment: AlignmentType.LEFT,
+    spacing: { after: 0, line: LINE_SINGLE },
+    indent: { left: indent + col, hanging: col },
+    tabStops: [{ type: TabStopType.RIGHT, position: TEXT_WIDTH }],
+    children: [new TextRun({ text: `${left}\t${page}`, font: BODY_FONT, size: BODY_SIZE })],
+  });
+};
 
 // ================================================================ 1. title page (short)
 // spacing chosen to sit the four blocks where the template sits them: the title high on

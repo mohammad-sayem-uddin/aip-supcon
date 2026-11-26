@@ -39,13 +39,13 @@
  "todos": [],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 1,
+ "tables": 0,
  "figures": 0,
  "words": {
   "prose": 3739,
   "heading": 43,
-  "caption": 42,
-  "table": 348,
+  "caption": 0,
+  "table": 0,
   "equation": 0
  },
  "headings": [

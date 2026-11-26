@@ -27,24 +27,18 @@
   "delong1988",
   "mcnemar1947",
   "efron1979",
-  "benjamini1995",
-  "paszke2019",
-  "pedregosa2012",
-  "cock2009",
-  "wolf2020"
+  "benjamini1995"
  ],
- "todos": [
-  "a permanent archive identifier (for example a Zenodo DOI for the submitted commit) has not been created; this needs the author's own account"
- ],
+ "todos": [],
  "citation_needed": [],
  "unresolved_refs": [],
- "tables": 16,
+ "tables": 2,
  "figures": 5,
  "words": {
-  "prose": 8782,
-  "heading": 198,
-  "caption": 594,
-  "table": 992,
+  "prose": 6617,
+  "heading": 130,
+  "caption": 333,
+  "table": 145,
   "equation": 0
  },
  "headings": [
@@ -105,30 +99,6 @@
    "text": "3.6 Model architectures"
   },
   {
-   "level": 3,
-   "text": "3.6.1 B1: multilayer perceptron on the mean-pooled vector"
-  },
-  {
-   "level": 3,
-   "text": "3.6.2 B2: one-dimensional convolutional network"
-  },
-  {
-   "level": 3,
-   "text": "3.6.3 B3: bidirectional long short-term memory network"
-  },
-  {
-   "level": 3,
-   "text": "3.6.4 B4: convolutional network followed by a bidirectional LSTM"
-  },
-  {
-   "level": 3,
-   "text": "3.6.5 B5: Transformer encoder"
-  },
-  {
-   "level": 3,
-   "text": "3.6.6 B6: attention pooling"
-  },
-  {
    "level": 2,
    "text": "3.7 Loss functions"
   },
@@ -186,35 +156,11 @@
   },
   {
    "level": 2,
-   "text": "3.10 Hardware and Software Environment"
+   "text": "3.13 Pre-registration and Analysis Tiers"
   },
   {
    "level": 2,
-   "text": "3.11 Organisation of the Experiments and Compute Time"
-  },
-  {
-   "level": 2,
-   "text": "3.12 Hyperparameters and Search Ranges"
-  },
-  {
-   "level": 2,
-   "text": "3.13 Training Protocol"
-  },
-  {
-   "level": 2,
-   "text": "3.14 Pre-registration and Analysis Tiers"
-  },
-  {
-   "level": 2,
-   "text": "3.15 Reproducibility"
-  },
-  {
-   "level": 2,
-   "text": "3.16 Deviations from the Plan and Problems Encountered"
-  },
-  {
-   "level": 2,
-   "text": "3.17 Summary"
+   "text": "3.14 Summary"
   }
  ]
 }

@@ -1,22 +1,8 @@
 label,number
 fig:method,Figure 3.1
-tab:dataset_composition,Table 3.1
-tab:provenance,Table 3.2
 fig:lineage,Figure 3.2
-tab:conflicts,Table 3.3
-tab:overlap,Table 3.4
-tab:hashes,Table 3.5
-tab:cleaning,Table 3.6
-tab:regimes,Table 3.7
+tab:overlap,Table 3.1
+tab:regimes,Table 3.2
 fig:regimes,Figure 3.3
-tab:identity,Table 3.8
-tab:esm,Table 3.9
-tab:pooling,Table 3.10
-tab:finetune,Table 3.11
 fig:aipnet,Figure 3.4
 fig:splits,Figure 3.5
-tab:training,Table 3.12
-tab:mde,Table 3.13
-tab:software,Table 3.14
-tab:devices,Table 3.15
-tab:hyper,Table 3.16
