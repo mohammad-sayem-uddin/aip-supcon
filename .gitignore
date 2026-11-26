@@ -6,6 +6,7 @@ __pycache__/
 *.pyc
 .DS_Store
 /*.docx
+/*.pdf        # generated: the thesis renders from src/thesis, and demo.pdf etc. are reference material
 /*.fasta
 .pytest_cache/
 results/models/*.pt

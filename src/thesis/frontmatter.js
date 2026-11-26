@@ -57,14 +57,12 @@ const leader = (left, page, indent = 0) => new Paragraph({
 });
 
 // ================================================================ 1. title page (short)
-add(blank(4));
-PH.title.split('\n').forEach((t) => add(line(t, { bold: true })));
-add(blank(6));
-add(line(AUTHOR));
-add(blank(6));
-add(line(`${DEGREE}/Master of Science`.replace('/Master of Science', '')));
-add(blank(2));
-add(line(UNIVERSITY));
+// spacing chosen to sit the four blocks where the template sits them: the title high on
+// the page, the name near the middle, the degree and the university in the lower third
+add(line(PH.title, { bold: true, before: 2000 }));
+add(line(AUTHOR, { before: 5200 }));
+add(line(DEGREE, { before: 4200 }));
+add(line(UNIVERSITY, { before: 1400 }));
 add(pageBreak());
 
 // ================================================================ 2. declaration of thesis and copyright
@@ -162,21 +160,14 @@ add(field('Date', '', 1600));
 add(pageBreak());
 
 // ================================================================ 5. title page (full)
-add(blank(3));
-add(line(PH.title, { bold: true }));
-add(blank(5));
-add(line(AUTHOR));
-add(blank(4));
-add(line('Thesis submitted in fulfillment of the requirements'));
+add(line(PH.title, { bold: true, before: 1700 }));
+add(line(AUTHOR, { before: 3400 }));
+add(line('Thesis submitted in fulfillment of the requirements', { before: 3000 }));
 add(line('for the award of the degree of'));
-add(blank(1));
-add(line(DEGREE));
-add(blank(4));
-add(line(DEPARTMENT));
-add(blank(2));
-add(line(UNIVERSITY));
-add(blank(2));
-add(line(PH.date));
+add(line(DEGREE, { before: 500 }));
+add(line(DEPARTMENT, { before: 2800 }));
+add(line(UNIVERSITY, { before: 900 }));
+add(line(PH.date, { before: 900 }));
 add(pageBreak());
 
 // ================================================================ 6. acknowledgements
