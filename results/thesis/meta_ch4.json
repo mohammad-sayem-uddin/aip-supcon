@@ -25,5 +25,135 @@
   "caption": 822,
   "table": 2910,
   "equation": 0
- }
+ },
+ "headings": [
+  {
+   "level": 1,
+   "text": "CHAPTER 4: RESULTS AND DISCUSSION"
+  },
+  {
+   "level": 2,
+   "text": "4.1 Cross-Validated Performance of All Models"
+  },
+  {
+   "level": 2,
+   "text": "4.2 Performance on the Independent Sets as Distributed (Regime A)"
+  },
+  {
+   "level": 2,
+   "text": "4.3 Performance after Removing the Overlap (Regimes B and C)"
+  },
+  {
+   "level": 2,
+   "text": "4.4 The Impact of Overlap between Training and Test Data"
+  },
+  {
+   "level": 3,
+   "text": "4.4.1 How much of each independent set is shared"
+  },
+  {
+   "level": 3,
+   "text": "4.4.2 The size of the effect"
+  },
+  {
+   "level": 3,
+   "text": "4.4.3 Is the inflation a function of model capacity?"
+  },
+  {
+   "level": 3,
+   "text": "4.4.4 The overlap is a property of the pairing of the files"
+  },
+  {
+   "level": 3,
+   "text": "4.4.5 What this does and does not show"
+  },
+  {
+   "level": 2,
+   "text": "4.5 Does the Contrastive Objective Improve Prediction?"
+  },
+  {
+   "level": 3,
+   "text": "4.5.1 The λ sweep"
+  },
+  {
+   "level": 3,
+   "text": "4.5.2 The other checkpoints and the temperature"
+  },
+  {
+   "level": 3,
+   "text": "4.5.3 The primary hypothesis (H1)"
+  },
+  {
+   "level": 3,
+   "text": "4.5.4 Six architectures (H2)"
+  },
+  {
+   "level": 3,
+   "text": "4.5.5 All comparisons and their correction"
+  },
+  {
+   "level": 3,
+   "text": "4.5.6 Nested cross-validation and in-distribution effects"
+  },
+  {
+   "level": 3,
+   "text": "4.5.7 The latent space"
+  },
+  {
+   "level": 2,
+   "text": "4.6 The Representation: Pooling, Fusion and Fine-Tuning"
+  },
+  {
+   "level": 3,
+   "text": "4.6.1 Pooling"
+  },
+  {
+   "level": 3,
+   "text": "4.6.2 Fusion"
+  },
+  {
+   "level": 3,
+   "text": "4.6.3 Fine-tuning"
+  },
+  {
+   "level": 3,
+   "text": "4.6.4 Fine-tuning at 150M and 650M, and other protein language models"
+  },
+  {
+   "level": 2,
+   "text": "4.7 Comparison with Published Predictors"
+  },
+  {
+   "level": 2,
+   "text": "4.8 Statistical Power: What the Test Sets Could Detect"
+  },
+  {
+   "level": 2,
+   "text": "4.9 Discussion"
+  },
+  {
+   "level": 3,
+   "text": "4.9.1 Evaluation validity"
+  },
+  {
+   "level": 3,
+   "text": "4.9.2 The contrastive objective"
+  },
+  {
+   "level": 3,
+   "text": "4.9.3 Why frozen embeddings underperform composition"
+  },
+  {
+   "level": 3,
+   "text": "4.9.4 The three findings together"
+  },
+  {
+   "level": 2,
+   "text": "4.10 Limitations"
+  },
+  {
+   "level": 2,
+   "text": "4.11 Summary"
+  }
+ ]
 }

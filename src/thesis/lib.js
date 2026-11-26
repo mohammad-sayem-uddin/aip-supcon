@@ -108,7 +108,7 @@ function footerParagraph() {
 
 function chapter(no, title, outFile, opts = {}) {
   const NUM = opts.numberAs || no;   // appendices number as A.1, B.1 ...
-  const ctx = { todos: [], needed: [], used: new Set(), unresolved: [], labels: [], wc: { prose: 0, heading: 0, caption: 0, table: 0, equation: 0 } };
+  const ctx = { todos: [], needed: [], used: new Set(), unresolved: [], labels: [], headings: [], wc: { prose: 0, heading: 0, caption: 0, table: 0, equation: 0 } };
   const LABELS = loadLabels();
   const out = [];
   let tabNo = 0, figNo = 0;
@@ -140,7 +140,7 @@ function chapter(no, title, outFile, opts = {}) {
       });
     },
     H1: (t) => {
-      ctx.wc.heading += wcount(t);
+      ctx.wc.heading += wcount(t); ctx.headings.push({ level: 1, text: String(t) });
       const [head, ...rest] = String(t).split(': ');
       const line = (txt, after) => new Paragraph({
         heading: HeadingLevel.HEADING_1, alignment: AlignmentType.CENTER, keepNext: true,
@@ -149,13 +149,13 @@ function chapter(no, title, outFile, opts = {}) {
       });
       return rest.length ? [line(head, 480), line(rest.join(': '), 720)] : [line(head, 720)];
     },
-    H2: (t) => (ctx.wc.heading += wcount(t), new Paragraph({
+    H2: (t) => (ctx.wc.heading += wcount(t), ctx.headings.push({ level: 2, text: String(t) }), new Paragraph({
       heading: HeadingLevel.HEADING_2, keepNext: true,
       children: [new TextRun({ text: String(t).replace(/^(\d[\d.]*)\s+/, '$1\t'), font: BODY_FONT, bold: true, size: BODY_SIZE, color: '000000' })],
       tabStops: [{ type: TabStopType.LEFT, position: INDENT_FIRST }],
       spacing: { before: 240, after: 120, line: LINE_DOUBLE },
     })),
-    H3: (t) => (ctx.wc.heading += wcount(t), new Paragraph({
+    H3: (t) => (ctx.wc.heading += wcount(t), ctx.headings.push({ level: 3, text: String(t) }), new Paragraph({
       heading: HeadingLevel.HEADING_3, keepNext: true,
       children: [new TextRun({ text: String(t).replace(/^(\d[\d.]*)\s+/, '$1\t'), font: BODY_FONT, bold: true, size: BODY_SIZE, color: '000000' })],
       tabStops: [{ type: TabStopType.LEFT, position: INDENT_FIRST }],
@@ -242,9 +242,9 @@ function chapter(no, title, outFile, opts = {}) {
           children: out,
         }],
       });
-      fs.writeFileSync(`${ROOT}/${outFile}`, await Packer.toBuffer(doc));
+      if (!process.env.THESIS_COMBINED) fs.writeFileSync(`${ROOT}/${outFile}`, await Packer.toBuffer(doc));
       fs.writeFileSync(`${THESIS}/labels_ch${no}.csv`, 'label,number\n' + ctx.labels.map((l) => l.join(',')).join('\n') + '\n');
-      fs.writeFileSync(`${THESIS}/meta_ch${no}.json`, JSON.stringify({ file: outFile, cited: [...ctx.used], todos: ctx.todos, citation_needed: ctx.needed, unresolved_refs: [...new Set(ctx.unresolved)], tables: tabNo, figures: figNo, words: ctx.wc }, null, 1));
+      fs.writeFileSync(`${THESIS}/meta_ch${no}.json`, JSON.stringify({ file: outFile, cited: [...ctx.used], todos: ctx.todos, citation_needed: ctx.needed, unresolved_refs: [...new Set(ctx.unresolved)], tables: tabNo, figures: figNo, words: ctx.wc, headings: ctx.headings }, null, 1));
       fs.writeFileSync(`${THESIS}/captions_ch${no}.json`, JSON.stringify(ctx.captions || [], null, 1));
       console.log(`ch${no}: ${outFile} tables ${tabNo} figures ${figNo} cited ${ctx.used.size} todos ${ctx.todos.length} needed ${ctx.needed.length} unresolved ${[...new Set(ctx.unresolved)].length}`);
     },
@@ -269,4 +269,4 @@ const M = {
     children: [new TextRun('\t'), new DMath({ children }), new TextRun(`\t${numberText}`)] }),
 };
 
-module.exports = { chapter, M, ROOT, THESIS, REFS, D };
+module.exports = { chapter, M, ROOT, THESIS, REFS, D, BODY_FONT, BODY_SIZE, LINE_SINGLE, LINE_DOUBLE, TEXT_WIDTH, INDENT_FIRST, PAGE, MARGIN, PAGE_NUMBER_POSITION, FOOTER_TEXT, footerParagraph };

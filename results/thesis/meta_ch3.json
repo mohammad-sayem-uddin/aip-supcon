@@ -46,5 +46,175 @@
   "caption": 348,
   "table": 992,
   "equation": 0
- }
+ },
+ "headings": [
+  {
+   "level": 1,
+   "text": "CHAPTER 3: METHODOLOGY"
+  },
+  {
+   "level": 2,
+   "text": "3.1 Datasets"
+  },
+  {
+   "level": 2,
+   "text": "3.2 Data integrity audit"
+  },
+  {
+   "level": 3,
+   "text": "3.2.1 Label conflicts within the training collection"
+  },
+  {
+   "level": 3,
+   "text": "3.2.2 Overlap between training and independent sets, by direction"
+  },
+  {
+   "level": 2,
+   "text": "3.3 Data cleaning protocol"
+  },
+  {
+   "level": 2,
+   "text": "3.4 Evaluation regimes"
+  },
+  {
+   "level": 3,
+   "text": "3.4.1 Identity screen"
+  },
+  {
+   "level": 3,
+   "text": "3.4.2 Shuffled-composition null control"
+  },
+  {
+   "level": 2,
+   "text": "3.5 Feature representations"
+  },
+  {
+   "level": 3,
+   "text": "3.5.1 Hand-crafted descriptors"
+  },
+  {
+   "level": 3,
+   "text": "3.5.2 ESM-2 embeddings and pooling variants"
+  },
+  {
+   "level": 3,
+   "text": "3.5.3 Fine-tuning protocol"
+  },
+  {
+   "level": 2,
+   "text": "3.6 Model architectures"
+  },
+  {
+   "level": 3,
+   "text": "3.6.1 B1: multilayer perceptron on the mean-pooled vector"
+  },
+  {
+   "level": 3,
+   "text": "3.6.2 B2: one-dimensional convolutional network"
+  },
+  {
+   "level": 3,
+   "text": "3.6.3 B3: bidirectional long short-term memory network"
+  },
+  {
+   "level": 3,
+   "text": "3.6.4 B4: convolutional network followed by a bidirectional LSTM"
+  },
+  {
+   "level": 3,
+   "text": "3.6.5 B5: Transformer encoder"
+  },
+  {
+   "level": 3,
+   "text": "3.6.6 B6: attention pooling"
+  },
+  {
+   "level": 2,
+   "text": "3.7 Loss functions"
+  },
+  {
+   "level": 3,
+   "text": "3.7.1 Binary cross-entropy with a positive-class weight"
+  },
+  {
+   "level": 3,
+   "text": "3.7.2 Supervised contrastive loss"
+  },
+  {
+   "level": 3,
+   "text": "3.7.3 Combined objective and the roles of λ and τ"
+  },
+  {
+   "level": 3,
+   "text": "3.7.4 The analytic floor of the contrastive loss"
+  },
+  {
+   "level": 3,
+   "text": "3.7.5 Training protocol"
+  },
+  {
+   "level": 2,
+   "text": "3.8 Evaluation metrics"
+  },
+  {
+   "level": 2,
+   "text": "3.9 Statistical protocol"
+  },
+  {
+   "level": 3,
+   "text": "3.9.1 The pre-registered hypothesis"
+  },
+  {
+   "level": 3,
+   "text": "3.9.2 Paired tests"
+  },
+  {
+   "level": 3,
+   "text": "3.9.3 Confidence intervals and effect sizes"
+  },
+  {
+   "level": 3,
+   "text": "3.9.4 Multiplicity"
+  },
+  {
+   "level": 3,
+   "text": "3.9.5 Power and the minimum detectable effect"
+  },
+  {
+   "level": 3,
+   "text": "3.9.6 Nested cross-validation"
+  },
+  {
+   "level": 2,
+   "text": "3.10 Hardware and Software Environment"
+  },
+  {
+   "level": 2,
+   "text": "3.11 Organisation of the Experiments and Compute Time"
+  },
+  {
+   "level": 2,
+   "text": "3.12 Hyperparameters and Search Ranges"
+  },
+  {
+   "level": 2,
+   "text": "3.13 Training Protocol"
+  },
+  {
+   "level": 2,
+   "text": "3.14 Pre-registration and Analysis Tiers"
+  },
+  {
+   "level": 2,
+   "text": "3.15 Reproducibility"
+  },
+  {
+   "level": 2,
+   "text": "3.16 Deviations from the Plan and Problems Encountered"
+  },
+  {
+   "level": 2,
+   "text": "3.17 Summary"
+  }
+ ]
 }

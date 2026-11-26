@@ -47,3 +47,5 @@ add(H2('5.6 Summary'));
 add(P(`This chapter answered each of the four objectives in turn, stated the four contributions of the work, set out the limitations that bear most directly on the conclusions, and listed, in order of expected value, the further work that would address them. The thesis began as a question about a training objective and ended as a finding about evaluation.`));
 
 L.build();
+
+module.exports = L;

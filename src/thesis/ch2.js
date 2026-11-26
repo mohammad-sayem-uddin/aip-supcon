@@ -59,3 +59,5 @@ add(P(`The contribution is a testable and reproducible framework with four eleme
 add(H2('2.8 Summary'));
 add(P(`This chapter reviewed the computational predictors of AIPs from AntiInflam to recent language-model-based methods, the protein language models themselves and evidence on how their behaviour depends on the downstream task, contrastive learning from its self-supervised origin through its supervised form and its first applications to AIP and peptide prediction, and the datasets on which AIP predictors are compared, including the broader methodological literature on data leakage and benchmark contamination in computational biology. It identified three open questions: the independence of the test data, the contribution of frozen language model embeddings beyond composition, and the effect of a supervised contrastive objective. The next chapter describes the materials and methods used to address them.`));
 L.build();
+
+module.exports = L;

@@ -1,0 +1,894 @@
+{
+ "front": [
+  {
+   "title": "DECLARATION OF THESIS AND COPYRIGHT",
+   "key": "Front:declaration"
+  },
+  {
+   "title": "SUPERVISOR'S DECLARATION",
+   "key": "Front:supervisor"
+  },
+  {
+   "title": "STUDENT'S DECLARATION",
+   "key": "Front:student"
+  },
+  {
+   "title": "TITLE PAGE",
+   "key": "Front:title"
+  },
+  {
+   "title": "ACKNOWLEDGEMENTS",
+   "key": "Front:ack"
+  },
+  {
+   "title": "DEDICATION",
+   "key": "Front:dedication"
+  },
+  {
+   "title": "ABSTRACT",
+   "key": "Front:abstract"
+  },
+  {
+   "title": "TABLE OF CONTENT",
+   "key": "Front:toc"
+  },
+  {
+   "title": "LIST OF TABLES",
+   "key": "Front:lot"
+  },
+  {
+   "title": "LIST OF FIGURES",
+   "key": "Front:lof"
+  },
+  {
+   "title": "LIST OF SYMBOLS",
+   "key": "Front:los"
+  },
+  {
+   "title": "LIST OF ABBREVIATIONS",
+   "key": "Front:loa"
+  },
+  {
+   "title": "LIST OF APPENDICES",
+   "key": "Front:loap"
+  }
+ ],
+ "body": [
+  {
+   "level": 1,
+   "title": "CHAPTER 1 INTRODUCTION",
+   "key": "H:CHAPTER 1: INTRODUCTION"
+  },
+  {
+   "level": 2,
+   "title": "1.1 Background and Motivation",
+   "key": "H:1.1 Background and Motivation"
+  },
+  {
+   "level": 2,
+   "title": "1.2 Problem Statement",
+   "key": "H:1.2 Problem Statement"
+  },
+  {
+   "level": 2,
+   "title": "1.3 Research Motivation",
+   "key": "H:1.3 Research Motivation"
+  },
+  {
+   "level": 2,
+   "title": "1.4 Aim of the Research",
+   "key": "H:1.4 Aim of the Research"
+  },
+  {
+   "level": 2,
+   "title": "1.5 Research Objectives",
+   "key": "H:1.5 Research Objectives"
+  },
+  {
+   "level": 2,
+   "title": "1.6 Scope and Contributions",
+   "key": "H:1.6 Scope and Contributions"
+  },
+  {
+   "level": 2,
+   "title": "1.7 Organisation of the Thesis",
+   "key": "H:1.7 Organisation of the Thesis"
+  },
+  {
+   "level": 2,
+   "title": "1.8 Position within the Literature",
+   "key": "H:1.8 Position within the Literature"
+  },
+  {
+   "level": 2,
+   "title": "1.9 Significance of the Study",
+   "key": "H:1.9 Significance of the Study"
+  },
+  {
+   "level": 2,
+   "title": "1.10 Summary",
+   "key": "H:1.10 Summary"
+  },
+  {
+   "level": 1,
+   "title": "CHAPTER 2 LITERATURE REVIEW",
+   "key": "H:CHAPTER 2: LITERATURE REVIEW"
+  },
+  {
+   "level": 2,
+   "title": "2.1 Overview of Anti-Inflammatory Peptides (AIPs)",
+   "key": "H:2.1 Overview of Anti-Inflammatory Peptides (AIPs)"
+  },
+  {
+   "level": 2,
+   "title": "2.2 Traditional Machine Learning Approaches for AIP Prediction",
+   "key": "H:2.2 Traditional Machine Learning Approaches for AIP Prediction"
+  },
+  {
+   "level": 2,
+   "title": "2.3 Deep Learning and Protein Language Models",
+   "key": "H:2.3 Deep Learning and Protein Language Models"
+  },
+  {
+   "level": 2,
+   "title": "2.4 Contrastive Learning",
+   "key": "H:2.4 Contrastive Learning"
+  },
+  {
+   "level": 2,
+   "title": "2.5 Benchmark Datasets and Evaluation in AIP Prediction",
+   "key": "H:2.5 Benchmark Datasets and Evaluation in AIP Prediction"
+  },
+  {
+   "level": 2,
+   "title": "2.6 Research Gap",
+   "key": "H:2.6 Research Gap"
+  },
+  {
+   "level": 2,
+   "title": "2.7 Contribution",
+   "key": "H:2.7 Contribution"
+  },
+  {
+   "level": 2,
+   "title": "2.8 Summary",
+   "key": "H:2.8 Summary"
+  },
+  {
+   "level": 1,
+   "title": "CHAPTER 3 METHODOLOGY",
+   "key": "H:CHAPTER 3: METHODOLOGY"
+  },
+  {
+   "level": 2,
+   "title": "3.1 Datasets",
+   "key": "H:3.1 Datasets"
+  },
+  {
+   "level": 2,
+   "title": "3.2 Data integrity audit",
+   "key": "H:3.2 Data integrity audit"
+  },
+  {
+   "level": 3,
+   "title": "3.2.1 Label conflicts within the training collection",
+   "key": "H:3.2.1 Label conflicts within the training collection"
+  },
+  {
+   "level": 3,
+   "title": "3.2.2 Overlap between training and independent sets, by direction",
+   "key": "H:3.2.2 Overlap between training and independent sets, by direction"
+  },
+  {
+   "level": 2,
+   "title": "3.3 Data cleaning protocol",
+   "key": "H:3.3 Data cleaning protocol"
+  },
+  {
+   "level": 2,
+   "title": "3.4 Evaluation regimes",
+   "key": "H:3.4 Evaluation regimes"
+  },
+  {
+   "level": 3,
+   "title": "3.4.1 Identity screen",
+   "key": "H:3.4.1 Identity screen"
+  },
+  {
+   "level": 3,
+   "title": "3.4.2 Shuffled-composition null control",
+   "key": "H:3.4.2 Shuffled-composition null control"
+  },
+  {
+   "level": 2,
+   "title": "3.5 Feature representations",
+   "key": "H:3.5 Feature representations"
+  },
+  {
+   "level": 3,
+   "title": "3.5.1 Hand-crafted descriptors",
+   "key": "H:3.5.1 Hand-crafted descriptors"
+  },
+  {
+   "level": 3,
+   "title": "3.5.2 ESM-2 embeddings and pooling variants",
+   "key": "H:3.5.2 ESM-2 embeddings and pooling variants"
+  },
+  {
+   "level": 3,
+   "title": "3.5.3 Fine-tuning protocol",
+   "key": "H:3.5.3 Fine-tuning protocol"
+  },
+  {
+   "level": 2,
+   "title": "3.6 Model architectures",
+   "key": "H:3.6 Model architectures"
+  },
+  {
+   "level": 3,
+   "title": "3.6.1 B1: multilayer perceptron on the mean-pooled vector",
+   "key": "H:3.6.1 B1: multilayer perceptron on the mean-pooled vector"
+  },
+  {
+   "level": 3,
+   "title": "3.6.2 B2: one-dimensional convolutional network",
+   "key": "H:3.6.2 B2: one-dimensional convolutional network"
+  },
+  {
+   "level": 3,
+   "title": "3.6.3 B3: bidirectional long short-term memory network",
+   "key": "H:3.6.3 B3: bidirectional long short-term memory network"
+  },
+  {
+   "level": 3,
+   "title": "3.6.4 B4: convolutional network followed by a bidirectional LSTM",
+   "key": "H:3.6.4 B4: convolutional network followed by a bidirectional LSTM"
+  },
+  {
+   "level": 3,
+   "title": "3.6.5 B5: Transformer encoder",
+   "key": "H:3.6.5 B5: Transformer encoder"
+  },
+  {
+   "level": 3,
+   "title": "3.6.6 B6: attention pooling",
+   "key": "H:3.6.6 B6: attention pooling"
+  },
+  {
+   "level": 2,
+   "title": "3.7 Loss functions",
+   "key": "H:3.7 Loss functions"
+  },
+  {
+   "level": 3,
+   "title": "3.7.1 Binary cross-entropy with a positive-class weight",
+   "key": "H:3.7.1 Binary cross-entropy with a positive-class weight"
+  },
+  {
+   "level": 3,
+   "title": "3.7.2 Supervised contrastive loss",
+   "key": "H:3.7.2 Supervised contrastive loss"
+  },
+  {
+   "level": 3,
+   "title": "3.7.3 Combined objective and the roles of λ and τ",
+   "key": "H:3.7.3 Combined objective and the roles of λ and τ"
+  },
+  {
+   "level": 3,
+   "title": "3.7.4 The analytic floor of the contrastive loss",
+   "key": "H:3.7.4 The analytic floor of the contrastive loss"
+  },
+  {
+   "level": 3,
+   "title": "3.7.5 Training protocol",
+   "key": "H:3.7.5 Training protocol"
+  },
+  {
+   "level": 2,
+   "title": "3.8 Evaluation metrics",
+   "key": "H:3.8 Evaluation metrics"
+  },
+  {
+   "level": 2,
+   "title": "3.9 Statistical protocol",
+   "key": "H:3.9 Statistical protocol"
+  },
+  {
+   "level": 3,
+   "title": "3.9.1 The pre-registered hypothesis",
+   "key": "H:3.9.1 The pre-registered hypothesis"
+  },
+  {
+   "level": 3,
+   "title": "3.9.2 Paired tests",
+   "key": "H:3.9.2 Paired tests"
+  },
+  {
+   "level": 3,
+   "title": "3.9.3 Confidence intervals and effect sizes",
+   "key": "H:3.9.3 Confidence intervals and effect sizes"
+  },
+  {
+   "level": 3,
+   "title": "3.9.4 Multiplicity",
+   "key": "H:3.9.4 Multiplicity"
+  },
+  {
+   "level": 3,
+   "title": "3.9.5 Power and the minimum detectable effect",
+   "key": "H:3.9.5 Power and the minimum detectable effect"
+  },
+  {
+   "level": 3,
+   "title": "3.9.6 Nested cross-validation",
+   "key": "H:3.9.6 Nested cross-validation"
+  },
+  {
+   "level": 2,
+   "title": "3.10 Hardware and Software Environment",
+   "key": "H:3.10 Hardware and Software Environment"
+  },
+  {
+   "level": 2,
+   "title": "3.11 Organisation of the Experiments and Compute Time",
+   "key": "H:3.11 Organisation of the Experiments and Compute Time"
+  },
+  {
+   "level": 2,
+   "title": "3.12 Hyperparameters and Search Ranges",
+   "key": "H:3.12 Hyperparameters and Search Ranges"
+  },
+  {
+   "level": 2,
+   "title": "3.13 Training Protocol",
+   "key": "H:3.13 Training Protocol"
+  },
+  {
+   "level": 2,
+   "title": "3.14 Pre-registration and Analysis Tiers",
+   "key": "H:3.14 Pre-registration and Analysis Tiers"
+  },
+  {
+   "level": 2,
+   "title": "3.15 Reproducibility",
+   "key": "H:3.15 Reproducibility"
+  },
+  {
+   "level": 2,
+   "title": "3.16 Deviations from the Plan and Problems Encountered",
+   "key": "H:3.16 Deviations from the Plan and Problems Encountered"
+  },
+  {
+   "level": 2,
+   "title": "3.17 Summary",
+   "key": "H:3.17 Summary"
+  },
+  {
+   "level": 1,
+   "title": "CHAPTER 4 RESULTS AND DISCUSSION",
+   "key": "H:CHAPTER 4: RESULTS AND DISCUSSION"
+  },
+  {
+   "level": 2,
+   "title": "4.1 Cross-Validated Performance of All Models",
+   "key": "H:4.1 Cross-Validated Performance of All Models"
+  },
+  {
+   "level": 2,
+   "title": "4.2 Performance on the Independent Sets as Distributed (Regime A)",
+   "key": "H:4.2 Performance on the Independent Sets as Distributed (Regime A)"
+  },
+  {
+   "level": 2,
+   "title": "4.3 Performance after Removing the Overlap (Regimes B and C)",
+   "key": "H:4.3 Performance after Removing the Overlap (Regimes B and C)"
+  },
+  {
+   "level": 2,
+   "title": "4.4 The Impact of Overlap between Training and Test Data",
+   "key": "H:4.4 The Impact of Overlap between Training and Test Data"
+  },
+  {
+   "level": 3,
+   "title": "4.4.1 How much of each independent set is shared",
+   "key": "H:4.4.1 How much of each independent set is shared"
+  },
+  {
+   "level": 3,
+   "title": "4.4.2 The size of the effect",
+   "key": "H:4.4.2 The size of the effect"
+  },
+  {
+   "level": 3,
+   "title": "4.4.3 Is the inflation a function of model capacity?",
+   "key": "H:4.4.3 Is the inflation a function of model capacity?"
+  },
+  {
+   "level": 3,
+   "title": "4.4.4 The overlap is a property of the pairing of the files",
+   "key": "H:4.4.4 The overlap is a property of the pairing of the files"
+  },
+  {
+   "level": 3,
+   "title": "4.4.5 What this does and does not show",
+   "key": "H:4.4.5 What this does and does not show"
+  },
+  {
+   "level": 2,
+   "title": "4.5 Does the Contrastive Objective Improve Prediction?",
+   "key": "H:4.5 Does the Contrastive Objective Improve Prediction?"
+  },
+  {
+   "level": 3,
+   "title": "4.5.1 The λ sweep",
+   "key": "H:4.5.1 The λ sweep"
+  },
+  {
+   "level": 3,
+   "title": "4.5.2 The other checkpoints and the temperature",
+   "key": "H:4.5.2 The other checkpoints and the temperature"
+  },
+  {
+   "level": 3,
+   "title": "4.5.3 The primary hypothesis (H1)",
+   "key": "H:4.5.3 The primary hypothesis (H1)"
+  },
+  {
+   "level": 3,
+   "title": "4.5.4 Six architectures (H2)",
+   "key": "H:4.5.4 Six architectures (H2)"
+  },
+  {
+   "level": 3,
+   "title": "4.5.5 All comparisons and their correction",
+   "key": "H:4.5.5 All comparisons and their correction"
+  },
+  {
+   "level": 3,
+   "title": "4.5.6 Nested cross-validation and in-distribution effects",
+   "key": "H:4.5.6 Nested cross-validation and in-distribution effects"
+  },
+  {
+   "level": 3,
+   "title": "4.5.7 The latent space",
+   "key": "H:4.5.7 The latent space"
+  },
+  {
+   "level": 2,
+   "title": "4.6 The Representation: Pooling, Fusion and Fine-Tuning",
+   "key": "H:4.6 The Representation: Pooling, Fusion and Fine-Tuning"
+  },
+  {
+   "level": 3,
+   "title": "4.6.1 Pooling",
+   "key": "H:4.6.1 Pooling"
+  },
+  {
+   "level": 3,
+   "title": "4.6.2 Fusion",
+   "key": "H:4.6.2 Fusion"
+  },
+  {
+   "level": 3,
+   "title": "4.6.3 Fine-tuning",
+   "key": "H:4.6.3 Fine-tuning"
+  },
+  {
+   "level": 3,
+   "title": "4.6.4 Fine-tuning at 150M and 650M, and other protein language models",
+   "key": "H:4.6.4 Fine-tuning at 150M and 650M, and other protein language models"
+  },
+  {
+   "level": 2,
+   "title": "4.7 Comparison with Published Predictors",
+   "key": "H:4.7 Comparison with Published Predictors"
+  },
+  {
+   "level": 2,
+   "title": "4.8 Statistical Power: What the Test Sets Could Detect",
+   "key": "H:4.8 Statistical Power: What the Test Sets Could Detect"
+  },
+  {
+   "level": 2,
+   "title": "4.9 Discussion",
+   "key": "H:4.9 Discussion"
+  },
+  {
+   "level": 3,
+   "title": "4.9.1 Evaluation validity",
+   "key": "H:4.9.1 Evaluation validity"
+  },
+  {
+   "level": 3,
+   "title": "4.9.2 The contrastive objective",
+   "key": "H:4.9.2 The contrastive objective"
+  },
+  {
+   "level": 3,
+   "title": "4.9.3 Why frozen embeddings underperform composition",
+   "key": "H:4.9.3 Why frozen embeddings underperform composition"
+  },
+  {
+   "level": 3,
+   "title": "4.9.4 The three findings together",
+   "key": "H:4.9.4 The three findings together"
+  },
+  {
+   "level": 2,
+   "title": "4.10 Limitations",
+   "key": "H:4.10 Limitations"
+  },
+  {
+   "level": 2,
+   "title": "4.11 Summary",
+   "key": "H:4.11 Summary"
+  },
+  {
+   "level": 1,
+   "title": "CHAPTER 5 CONCLUSION",
+   "key": "H:CHAPTER 5: CONCLUSION"
+  },
+  {
+   "level": 2,
+   "title": "5.1 Summary of Findings by Objective",
+   "key": "H:5.1 Summary of Findings by Objective"
+  },
+  {
+   "level": 3,
+   "title": "Objective 1: audit of the benchmark files and the effect of overlap",
+   "key": "H:Objective 1: audit of the benchmark files and the effect of overlap"
+  },
+  {
+   "level": 3,
+   "title": "Objective 2: a reproducible pipeline",
+   "key": "H:Objective 2: a reproducible pipeline"
+  },
+  {
+   "level": 3,
+   "title": "Objective 3: does the contrastive term improve prediction?",
+   "key": "H:Objective 3: does the contrastive term improve prediction?"
+  },
+  {
+   "level": 3,
+   "title": "Objective 4: why frozen embeddings underperform composition",
+   "key": "H:Objective 4: why frozen embeddings underperform composition"
+  },
+  {
+   "level": 2,
+   "title": "5.2 Contributions",
+   "key": "H:5.2 Contributions"
+  },
+  {
+   "level": 2,
+   "title": "5.3 Limitations",
+   "key": "H:5.3 Limitations"
+  },
+  {
+   "level": 2,
+   "title": "5.4 Future Work",
+   "key": "H:5.4 Future Work"
+  },
+  {
+   "level": 2,
+   "title": "5.5 Concluding Remarks",
+   "key": "H:5.5 Concluding Remarks"
+  },
+  {
+   "level": 2,
+   "title": "5.6 Summary",
+   "key": "H:5.6 Summary"
+  },
+  {
+   "level": 1,
+   "title": "REFERENCES",
+   "key": "H:REFERENCES"
+  },
+  {
+   "level": 1,
+   "title": "APPENDIX A DETAILED RESULTS",
+   "key": "H:APPENDIX A: DETAILED RESULTS"
+  },
+  {
+   "level": 1,
+   "title": "APPENDIX B MODEL AND IMPLEMENTATION DETAIL",
+   "key": "H:APPENDIX B: MODEL AND IMPLEMENTATION DETAIL"
+  }
+ ],
+ "captions": [
+  {
+   "kind": "Table",
+   "number": "2.1",
+   "short": "Reported performance of AIP predictors discussed in this chapter, with whether a check for...",
+   "label": "tab:aip_predictors"
+  },
+  {
+   "kind": "Table",
+   "number": "3.1",
+   "short": "Composition of the three distributed files and of the cleaned training collection...",
+   "label": "tab:dataset_composition"
+  },
+  {
+   "kind": "Table",
+   "number": "3.2",
+   "short": "Provenance of the three local files, established by comparison with the downloaded original...",
+   "label": "tab:provenance"
+  },
+  {
+   "kind": "Figure",
+   "number": "3.1",
+   "short": "The two source resources and the distributed files.",
+   "label": "fig:lineage"
+  },
+  {
+   "kind": "Table",
+   "number": "3.3",
+   "short": "Duplicates and label conflicts in Benchmark_Dataset and their origin.",
+   "label": "tab:conflicts"
+  },
+  {
+   "kind": "Table",
+   "number": "3.4",
+   "short": "Exact overlap between each training set and each independent set, by direction, with the...",
+   "label": "tab:overlap"
+  },
+  {
+   "kind": "Table",
+   "number": "3.5",
+   "short": "SHA-256 digests of the local data files and of the files in the AIPFusion-Net repository,...",
+   "label": "tab:hashes"
+  },
+  {
+   "kind": "Table",
+   "number": "3.6",
+   "short": "Cleaning of Benchmark_Dataset, with the number of rows after each step.",
+   "label": "tab:cleaning"
+  },
+  {
+   "kind": "Table",
+   "number": "3.7",
+   "short": "Size and class composition of the three evaluation regimes for each independent set.",
+   "label": "tab:regimes"
+  },
+  {
+   "kind": "Table",
+   "number": "3.8",
+   "short": "Identity screen of the independent sets against Benchmark_clean, and the...",
+   "label": "tab:identity"
+  },
+  {
+   "kind": "Table",
+   "number": "3.9",
+   "short": "The ESM-2 checkpoints used as frozen feature extractors.",
+   "label": "tab:esm"
+  },
+  {
+   "kind": "Table",
+   "number": "3.10",
+   "short": "Pooling variants compared on frozen ESM-2 650M embeddings.",
+   "label": "tab:pooling"
+  },
+  {
+   "kind": "Table",
+   "number": "3.11",
+   "short": "Fine-tuning protocol for the ESM-2 8M checkpoint and its frozen control.",
+   "label": "tab:finetune"
+  },
+  {
+   "kind": "Figure",
+   "number": "3.2",
+   "short": "The network used for the mean-pooled reference model B1.",
+   "label": "fig:aipnet"
+  },
+  {
+   "kind": "Table",
+   "number": "3.12",
+   "short": "Training settings of the multilayer perceptron and of the residue-level models.",
+   "label": "tab:training"
+  },
+  {
+   "kind": "Table",
+   "number": "3.13",
+   "short": "Minimum detectable effect (80% power, two-sided α = 0.05) of the paired comparisons of λ >...",
+   "label": "tab:mde"
+  },
+  {
+   "kind": "Table",
+   "number": "3.14",
+   "short": "Main software packages and versions on the local machine (from requirements.txt).",
+   "label": "tab:software"
+  },
+  {
+   "kind": "Table",
+   "number": "3.15",
+   "short": "Device on which each architecture and the fine-tuning experiment were trained...",
+   "label": "tab:devices"
+  },
+  {
+   "kind": "Table",
+   "number": "3.16",
+   "short": "Training hyperparameters and search ranges.",
+   "label": "tab:hyper"
+  },
+  {
+   "kind": "Table",
+   "number": "4.1",
+   "short": "Five-fold cross-validated performance on Benchmark_clean (mean ± standard deviation over 25...",
+   "label": "tab:cv"
+  },
+  {
+   "kind": "Table",
+   "number": "4.2",
+   "short": "Drop in performance from Regime A (as distributed) to Regime B (exact matches removed) and...",
+   "label": "tab:gaps"
+  },
+  {
+   "kind": "Table",
+   "number": "4.3",
+   "short": "Contrasts between the leakage gaps (MCC in Regime A minus MCC in Regime B) of model families.",
+   "label": "tab:gapc"
+  },
+  {
+   "kind": "Figure",
+   "number": "4.1",
+   "short": "MCC of AAC + RF, the frozen 650M multilayer perceptron and the frozen 8M multilayer...",
+   "label": "fig:xb"
+  },
+  {
+   "kind": "Figure",
+   "number": "4.2",
+   "short": "Cross-validated MCC as a function of λ for the multilayer perceptron on four ESM-2...",
+   "label": "fig:lambda"
+  },
+  {
+   "kind": "Table",
+   "number": "4.4",
+   "short": "Effect of the best SupCon weight at the four ESM-2 checkpoints (multilayer perceptron).",
+   "label": "tab:checkpoints"
+  },
+  {
+   "kind": "Table",
+   "number": "4.5",
+   "short": "The contrast λ* versus λ = 0 in six architectures on the frozen 8M embedding, Regime B.",
+   "label": "tab:arch"
+  },
+  {
+   "kind": "Table",
+   "number": "4.6",
+   "short": "The λ-contrasts that remain significant after Benjamini–Hochberg correction (within family...",
+   "label": "tab:survivors"
+  },
+  {
+   "kind": "Table",
+   "number": "4.7",
+   "short": "Number of comparisons in each family of tests, with the number significant at 5% before...",
+   "label": "tab:families"
+  },
+  {
+   "kind": "Figure",
+   "number": "4.3",
+   "short": "t-SNE (van der Maaten and Hinton, 2008) projections of the Regime B sequences of Ind_1049...",
+   "label": "fig:tsne"
+  },
+  {
+   "kind": "Table",
+   "number": "4.8",
+   "short": "Pooling variants on the frozen 650M embedding (multilayer perceptron, λ = 0), with AAC + RF...",
+   "label": "tab:pool5"
+  },
+  {
+   "kind": "Table",
+   "number": "4.9",
+   "short": "Hand-crafted features, ESM-2 embeddings and their concatenation with three classifiers.",
+   "label": "tab:fusion"
+  },
+  {
+   "kind": "Table",
+   "number": "4.10",
+   "short": "The fine-tuned 8M model and its comparators.",
+   "label": "tab:ft5"
+  },
+  {
+   "kind": "Table",
+   "number": "4.11",
+   "short": "Frozen ProtBERT and ProtT5-XL (encoder) embeddings, mean-pooled over residues, with the...",
+   "label": "tab:c4"
+  },
+  {
+   "kind": "Table",
+   "number": "4.12",
+   "short": "Paired comparisons of the other protein language models with ESM-2 650M (same classifier)...",
+   "label": "tab:c4_tests"
+  },
+  {
+   "kind": "Table",
+   "number": "4.13",
+   "short": "Published performance figures, each read from the table named in the last column of the...",
+   "label": "tab:published"
+  },
+  {
+   "kind": "Table",
+   "number": "4.14",
+   "short": "Minimum detectable effect (80% power, 5% level) for paired comparisons of two models on...",
+   "label": "tab:mde5"
+  },
+  {
+   "kind": "Figure",
+   "number": "4.4",
+   "short": "Share of the peptides of Benchmark_clean that share at least one 8-mer with another peptide...",
+   "label": "fig:f1"
+  },
+  {
+   "kind": "Figure",
+   "number": "4.5",
+   "short": "AUROC of each model in Regime B (both test sets pooled) by peptide length group; the last...",
+   "label": "fig:f5"
+  },
+  {
+   "kind": "Table",
+   "number": "A.1",
+   "short": "Performance on Ind_425 (425 sequences in Regime A, 214 in Regime B, 162 in Regime C), mean...",
+   "label": "tab:ind425"
+  },
+  {
+   "kind": "Table",
+   "number": "A.2",
+   "short": "Performance on Ind_1049 (1,049 sequences in Regime A, 751 in Regime B, 716 in Regime C),...",
+   "label": "tab:ind1049"
+  },
+  {
+   "kind": "Table",
+   "number": "A.3",
+   "short": "Temperature sweep at the selected λ of each checkpoint (cross-validated, mean ± standard...",
+   "label": "tab:tau"
+  },
+  {
+   "kind": "Table",
+   "number": "A.4",
+   "short": "Paired comparisons of the representation study (exploratory).",
+   "label": "tab:reptests"
+  },
+  {
+   "kind": "Table",
+   "number": "B.1",
+   "short": "Layers of model B1.",
+   "label": "tab:layers_b1"
+  },
+  {
+   "kind": "Table",
+   "number": "B.2",
+   "short": "Layers of model B2.",
+   "label": "tab:layers_b2"
+  },
+  {
+   "kind": "Table",
+   "number": "B.3",
+   "short": "Layers of model B3.",
+   "label": "tab:layers_b3"
+  },
+  {
+   "kind": "Table",
+   "number": "B.4",
+   "short": "Layers of model B4.",
+   "label": "tab:layers_b4"
+  },
+  {
+   "kind": "Table",
+   "number": "B.5",
+   "short": "Layers of model B5.",
+   "label": "tab:layers_b5"
+  },
+  {
+   "kind": "Table",
+   "number": "B.6",
+   "short": "Layers of model B6.",
+   "label": "tab:layers_b6"
+  },
+  {
+   "kind": "Table",
+   "number": "B.7",
+   "short": "Compute time recorded for each stage of the experiments (results/.stages and...",
+   "label": "tab:stages"
+  }
+ ]
+}

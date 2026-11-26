@@ -208,3 +208,5 @@ add(H2('4.11 Summary'));
 add(P(`This chapter reported the results. Cross-validated and independent-set performance was given for every model under the three evaluation regimes, and the effect of removing the training-test overlap was quantified for all 48 configurations and traced to the crossing of the two dataset lineages. The contrastive objective was tested against the pre-registered decision rule, in six architectures, with correction for multiple testing, nested cross-validation and an explicit statement of the effect sizes the test sets could detect; no improvement survived. The representation study compared pooling variants, fusion with hand-crafted features and end-to-end fine-tuning against amino acid composition, and the published figures of earlier predictors were set beside these results with their sources. The chapter closed with the discussion and the limitations that qualify every finding in it.`));
 
 L.build();
+
+module.exports = L;

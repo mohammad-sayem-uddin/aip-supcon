@@ -228,3 +228,5 @@ add(H2('3.17 Summary'));
 add(P(`This chapter described both the methods and their implementation. It established the provenance of the three distributed files and audited them for duplication, label conflict and overlap; defined the cleaning that produced Benchmark_clean and the three evaluation regimes that progressively remove training-test overlap; specified the hand-crafted descriptors and the frozen ESM-2 embeddings with their pooling variants; defined the six architectures, the two loss functions and the weight that combines them; and fixed the metrics and the statistical protocol, including the pre-registered hypothesis, the correction for multiple testing and the minimum detectable effect. It then described the hardware and software, the compute time, the hyperparameters and their search ranges, the training protocol, the pre-registration and the reproducibility arrangements, and recorded the points at which execution departed from the plan. The results obtained under these procedures are reported in Chapter 4.`));
 
 L.build().then(() => console.log('equations', eqSeen));
+
+module.exports = L;

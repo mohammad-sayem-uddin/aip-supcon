@@ -47,5 +47,43 @@
   "caption": 42,
   "table": 344,
   "equation": 0
- }
+ },
+ "headings": [
+  {
+   "level": 1,
+   "text": "CHAPTER 2: LITERATURE REVIEW"
+  },
+  {
+   "level": 2,
+   "text": "2.1 Overview of Anti-Inflammatory Peptides (AIPs)"
+  },
+  {
+   "level": 2,
+   "text": "2.2 Traditional Machine Learning Approaches for AIP Prediction"
+  },
+  {
+   "level": 2,
+   "text": "2.3 Deep Learning and Protein Language Models"
+  },
+  {
+   "level": 2,
+   "text": "2.4 Contrastive Learning"
+  },
+  {
+   "level": 2,
+   "text": "2.5 Benchmark Datasets and Evaluation in AIP Prediction"
+  },
+  {
+   "level": 2,
+   "text": "2.6 Research Gap"
+  },
+  {
+   "level": 2,
+   "text": "2.7 Contribution"
+  },
+  {
+   "level": 2,
+   "text": "2.8 Summary"
+  }
+ ]
 }

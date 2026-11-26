@@ -72,3 +72,5 @@ function STAGES() {
 }
 
 Promise.all([A.build(), B.build()]).then(() => console.log('appendices built'));
+
+module.exports = { A, B };

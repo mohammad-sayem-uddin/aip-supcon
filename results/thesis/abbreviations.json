@@ -1,0 +1,147 @@
+[
+ {
+  "abbr": "AIP(s)",
+  "full": "Anti-inflammatory peptide(s)",
+  "firstUsed": "Abstract"
+ },
+ {
+  "abbr": "ESM",
+  "full": "Evolutionary Scale Modeling (the protein language model family, e.g. ESM-2)",
+  "firstUsed": "Abstract"
+ },
+ {
+  "abbr": "MCC",
+  "full": "Matthews correlation coefficient",
+  "firstUsed": "Abstract"
+ },
+ {
+  "abbr": "SupCon",
+  "full": "Supervised contrastive (objective/loss)",
+  "firstUsed": "Abstract"
+ },
+ {
+  "abbr": "IEDB",
+  "full": "Immune Epitope Database",
+  "firstUsed": "Chapter 1"
+ },
+ {
+  "abbr": "IL",
+  "full": "Interleukin (e.g. IL-10)",
+  "firstUsed": "Chapter 1"
+ },
+ {
+  "abbr": "TGF-\u03b2",
+  "full": "Transforming growth factor-\u03b2",
+  "firstUsed": "Chapter 1"
+ },
+ {
+  "abbr": "SVM",
+  "full": "Support vector machine",
+  "firstUsed": "Chapter 1"
+ },
+ {
+  "abbr": "RF",
+  "full": "Random forest",
+  "firstUsed": "Chapter 1"
+ },
+ {
+  "abbr": "AUC",
+  "full": "Area under the curve",
+  "firstUsed": "Chapter 1"
+ },
+ {
+  "abbr": "PLM",
+  "full": "Protein language model",
+  "firstUsed": "Chapter 2"
+ },
+ {
+  "abbr": "CD-HIT",
+  "full": "A sequence-clustering tool used to remove near-duplicate peptides before training (AIPpred, Chapter 2)",
+  "firstUsed": "Chapter 2"
+ },
+ {
+  "abbr": "LSTM",
+  "full": "Long short-term memory (recurrent network unit)",
+  "firstUsed": "Chapter 2"
+ },
+ {
+  "abbr": "CNN",
+  "full": "Convolutional neural network",
+  "firstUsed": "Chapter 2"
+ },
+ {
+  "abbr": "AAC",
+  "full": "Amino acid composition",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "DPC",
+  "full": "Dipeptide composition",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "CTD",
+  "full": "Composition-transition-distribution (descriptor)",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "TP / TN / FP / FN",
+  "full": "True positive / true negative / false positive / false negative",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "AUROC",
+  "full": "Area under the receiver operating characteristic curve",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "AUPRC",
+  "full": "Area under the precision-recall curve",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "MLP",
+  "full": "Multilayer perceptron",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "BCE",
+  "full": "Binary cross-entropy (loss)",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "L2",
+  "full": "Euclidean (L2) norm, used to normalise the contrastive embedding",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "BH",
+  "full": "Benjamini-Hochberg (false-discovery-rate correction)",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "SHA-256",
+  "full": "Secure Hash Algorithm, 256-bit (used to verify file identity against the AIPFusion-Net repository, Chapter 3)",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "CPU / GPU",
+  "full": "Central / graphics processing unit",
+  "firstUsed": "Chapters 3-4"
+ },
+ {
+  "abbr": "CV",
+  "full": "Cross-validation",
+  "firstUsed": "Chapter 3 (acronym); spelled out from Abstract"
+ },
+ {
+  "abbr": "MDE",
+  "full": "Minimum detectable effect",
+  "firstUsed": "Chapter 3"
+ },
+ {
+  "abbr": "t-SNE",
+  "full": "t-distributed stochastic neighbour embedding",
+  "firstUsed": "Chapter 5"
+ }
+]

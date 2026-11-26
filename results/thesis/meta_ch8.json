@@ -12,5 +12,11 @@
   "caption": 134,
   "table": 758,
   "equation": 0
- }
+ },
+ "headings": [
+  {
+   "level": 1,
+   "text": "APPENDIX B: MODEL AND IMPLEMENTATION DETAIL"
+  }
+ ]
 }

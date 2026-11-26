@@ -54,3 +54,5 @@ add(H2('1.10 Summary'));
 add(P(`This chapter introduced anti-inflammatory peptides and the problem of predicting them computationally from sequence alone. It set out the three problems that motivate the work: whether the distributed benchmark test data are independent of the training data, whether frozen protein language model embeddings represent short peptides better than amino acid composition, and whether a supervised contrastive objective sharpens a decision boundary that the two classes make indistinct. It then stated the aim, the four objectives through which it is pursued, the scope of the study and the three contributions that the experiments produced, and placed the work within the three literatures it draws on. The next chapter reviews those literatures in detail.`));
 
 L.build();
+
+module.exports = L;

@@ -12,5 +12,51 @@
   "caption": 0,
   "table": 0,
   "equation": 0
- }
+ },
+ "headings": [
+  {
+   "level": 1,
+   "text": "CHAPTER 5: CONCLUSION"
+  },
+  {
+   "level": 2,
+   "text": "5.1 Summary of Findings by Objective"
+  },
+  {
+   "level": 3,
+   "text": "Objective 1: audit of the benchmark files and the effect of overlap"
+  },
+  {
+   "level": 3,
+   "text": "Objective 2: a reproducible pipeline"
+  },
+  {
+   "level": 3,
+   "text": "Objective 3: does the contrastive term improve prediction?"
+  },
+  {
+   "level": 3,
+   "text": "Objective 4: why frozen embeddings underperform composition"
+  },
+  {
+   "level": 2,
+   "text": "5.2 Contributions"
+  },
+  {
+   "level": 2,
+   "text": "5.3 Limitations"
+  },
+  {
+   "level": 2,
+   "text": "5.4 Future Work"
+  },
+  {
+   "level": 2,
+   "text": "5.5 Concluding Remarks"
+  },
+  {
+   "level": 2,
+   "text": "5.6 Summary"
+  }
+ ]
 }

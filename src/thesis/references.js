@@ -22,3 +22,5 @@ for (const k of keys) {
 }
 L.add(L.P(`<i>${keys.length} entries, each matched to a CrossRef record or an arXiv record (results/thesis/references.json). Venue, volume and page fields are given only where the record has them. Items that could not be verified are listed in CITATIONS_TO_VERIFY.md and are not in this list.</i>`));
 L.build();
+
+module.exports = L;

@@ -1,0 +1,15 @@
+// The abstract text, in one place, so the stand-alone ABSTRACT file and the front
+// matter of the assembled thesis can never drift apart.
+const fs = require('fs');
+const { ROOT } = require('./lib.js');
+const A = JSON.parse(fs.readFileSync(`${ROOT}/results/thesis/ch5_data.json`, 'utf8')).F;
+const f = (x, d = 3) => Number(x).toFixed(d);
+const sg = (x, d = 3) => (x >= 0 ? '+' : '\u2212') + Math.abs(x).toFixed(d);
+const I = (k, s, r) => f(A.ind[k][s][r].mcc);
+const ND = A.nested;
+const text = `Anti-inflammatory peptides (AIPs) are candidate therapeutics, and sequence-based predictors are usually compared on two standard resources, AIPpred and AntiInflam. We audited the distributed benchmark files and found that they share sequences across the training and test boundary: 211 of 425 sequences of one independent set (49.6%) and 298 of 1,049 of the other (28.4%) occur in the training collection, because the training file combines the AIPpred benchmark with AntiInflam training sequences. Removing the overlap lowered the Matthews correlation coefficient (MCC) of all ${Object.keys(A.gaps).length} model configurations, by ${f(A.gap_range_mcc.min, 2)} to ${f(A.gap_range_mcc.max, 2)}; for a random forest on amino acid composition it fell from ${I('AAC_RF', 'ind_425', 'A')} to ${I('AAC_RF', 'ind_425', 'B')} and from ${I('AAC_RF', 'ind_1049', 'A')} to ${I('AAC_RF', 'ind_1049', 'B')}. The inflation was largest for flexible non-linear models, not monotonic in capacity, and absent when training and test data came from one lineage. Under leakage-free evaluation we then asked whether a supervised contrastive (SupCon) objective added to a classifier on frozen ESM-2 embeddings improves prediction. It did not: the pre-registered hypothesis was not supported, none of ten comparisons in five further architectures met the criterion after false-discovery-rate correction, and nested cross-validation gave ${sg(ND.diff)} MCC (95% interval ${sg(ND.lo)} to ${sg(ND.hi)}). The test sets could detect effects of only about 0.08 to 0.14 MCC, so smaller effects are neither confirmed nor excluded. Frozen embeddings underperformed composition (cross-validated MCC ${f(A.cv_mean['esm2_t6_8M_lam0_tau0.07'].mcc, 2)} to ${f(A.cv_mean['esm2_t33_650M_lam0_tau0.07'].mcc, 2)} against ${f(A.cv_mean.AAC_RF.mcc, 2)}); pooling and fusion did not close the gap, but fine-tuning the small 8M model recovered part of the gap. We recommend that future predictors also report performance on non-overlapping test sequences.`;
+module.exports = {
+  text,
+  keywords: 'anti-inflammatory peptides; benchmark leakage; ESM-2; supervised contrastive learning; evaluation',
+  words: text.trim().split(/\s+/).length,
+};
